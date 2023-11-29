@@ -1,4 +1,4 @@
-﻿using Challenge_thu_lam_DA.Model;
+﻿using Do_An.Model;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Challenge_thu_lam_DA.Modify
+namespace Do_An.Modify
 {
     internal class Modify
     {

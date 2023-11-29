@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Challenge_thu_lam_DA.Properties
+namespace Do_An.Properties
 {
 
 

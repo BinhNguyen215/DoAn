@@ -5,8 +5,9 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Do_An.Model;
 
-namespace Challenge_thu_lam_DA
+namespace Do_An
 {
     internal static class Program
     {
@@ -16,6 +17,7 @@ namespace Challenge_thu_lam_DA
         [STAThread]
         static void Main()
         {
+            User user= new User();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form_Login());
