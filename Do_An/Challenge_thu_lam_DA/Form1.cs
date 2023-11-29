@@ -12,16 +12,20 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using Do_An;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.Security.Cryptography;
+using System.Runtime.CompilerServices;
 
 namespace Do_An
 {
     public partial class Form_Login : Form
     {
-
+        //
         static string cnt = "Data Source=LAPTOP-7UOGDK8A;Initial Catalog=DateUser;Integrated Security=True";
         static SqlConnection connection ;
         static SqlDataReader reader;
-
+        //
+        int index = 0;
         public static void testConnection()
         {
 
@@ -87,35 +91,10 @@ namespace Do_An
         {
             tab1_tbx_username.Refresh();
             tab1_tbx_password.Refresh();
-            tbx_email.Refresh();
+            tab3_a.Refresh();
         }
-        private void tabPage1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuSeparator1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuTextBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btn_signin_Click(object sender, EventArgs e)
-        {
-            bunifuPages1.SetPage(0);
-
-        }
-
-        private void btn_signup_Click(object sender, EventArgs e)
-        {
-            bunifuPages1.SetPage(1);
-
-        }
-
+   
+  
         private void btn_si_Click(object sender, EventArgs e)
 
         {
@@ -130,12 +109,12 @@ namespace Do_An
             }
             else
             {
-                tab1_tbx_password.Text = tbx_pw.Text = tbx_email.Text = tbx_name.Text = string.Empty;
+                tab1_tbx_password.Text  = tab3_a.Text = tbx_code.Text = string.Empty;
 
                 this.Visible = false;
-                var home = new frmDashboard(user);
-                home.ShowDialog();
-                if (home.DialogResult != DialogResult.No) { this.Close(); }
+               // var home = new frmDashboard(user);
+               // home.ShowDialog();
+               // if (home.DialogResult != DialogResult.No) { this.Close(); }
                 this.Visible = true;
             }
         }
@@ -161,13 +140,13 @@ namespace Do_An
             return i;
             
         }
-        private void bunifuButton1_Click(object sender, EventArgs e)// sign up
+       /* private void bunifuButton1_Click(object sender, EventArgs e)// sign up
         {
              connection = new SqlConnection(cnt);
             connection.Open();
             string query = $"SELECT * FROM [DateUser].[dbo].[user_pw] WHERE username = @email";
             SqlCommand sqlcmd = new SqlCommand(query, connection);
-            sqlcmd.Parameters.Add("@email",SqlDbType.VarChar,50).Value = tbx_email.Text;
+            sqlcmd.Parameters.Add("@email",SqlDbType.VarChar,50).Value = tab2_tbx_email.Text;
             try
             {
                 reader = sqlcmd.ExecuteReader();
@@ -190,8 +169,8 @@ namespace Do_An
                 int last_ID = getLastId();
                 query = $"INSERT INTO [DateUser].[dbo].[user_pw] values ('{last_ID + 1}',@ten,@email,@password)";
                 sqlcmd = new SqlCommand(query, connection);
-                sqlcmd.Parameters.Add("@ten", SqlDbType.NVarChar, 40).Value = tbx_name.Text;
-                sqlcmd.Parameters.Add("@email", SqlDbType.VarChar, 100).Value = tbx_email.Text.ToString();
+                sqlcmd.Parameters.Add("@ten", SqlDbType.NVarChar, 40).Value = tbx_code.Text;
+                sqlcmd.Parameters.Add("@email", SqlDbType.VarChar, 100).Value = tab2_tbx_email.Text.ToString();
                 sqlcmd.Parameters.Add("@password", SqlDbType.VarChar, 1000).Value = Program.CaculateMD5(tbx_pw.Text);
                 try
                 {
@@ -199,7 +178,7 @@ namespace Do_An
                     connection.Close();
                     MessageBox.Show("Đăng ký thành công");
                     tab1_tbx_password.Text = tbx_pw.Text;
-                    tab1_tbx_username.Text = tbx_email.Text;
+                    tab1_tbx_username.Text = tab2_tbx_email.Text;
                     btn_si_Click(sender, e);
                 }
                 catch (Exception ex)
@@ -208,6 +187,40 @@ namespace Do_An
                     connection.Close();
                 }
             }
+        }*/
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (index==0)
+            {
+                tab2_btn_sendcode.Enabled = false;
+                tab2_tbx_code.Enabled = false;
+                tab2_btn_confirm.Enabled = false;
+            }
+            if(index ==1)
+            {
+
+            }
+            if (string.IsNullOrEmpty(tab3_a.Text))
+            {
+                tab3_btn_sendcode.Enabled = false;
+            }
+            else
+            {
+                
+
+            }
+        }
+
+        private void tab2_tbx_email_TextChanged(object sender, EventArgs e)
+        {
+
+           
+        }
+
+        private void tab2_btn_sendcode_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
