@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Do_An.Properties
+namespace _DoAn.Properties
 {
 
 
