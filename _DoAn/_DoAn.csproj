@@ -221,11 +221,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConnectDB.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="Menu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\User.cs" />
     <Compile Include="Presenters\LoginPresenter.cs" />
