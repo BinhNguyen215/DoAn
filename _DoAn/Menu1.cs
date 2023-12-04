@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace _DoAn
 {
-    public partial class Menu : Form
+    public partial class Menu1 : Form
     {
-        public Menu()
+        public Menu1()
         {
             InitializeComponent();
+        }
+
+        private void bunifuPictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuButton8_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
