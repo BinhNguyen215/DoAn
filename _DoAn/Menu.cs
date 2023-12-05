@@ -15,6 +15,7 @@ namespace _DoAn
         public Menu()
         {
             InitializeComponent();
+                
         }
     }
 }

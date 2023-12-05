@@ -1853,7 +1853,7 @@
         XRl+lPHnnEAnk4HnTY1B2Yw+VxmA5gQ6mYw7b2sMUv+V/+L/Dxvur3jKHG+HAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="bunifuPanel2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="panel.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAA8MAAAKHCAYAAACly5r4AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAA4FSURBVHhe7dnBCcNAEARB5R/P5WejhwzGjmC6CgTay6CZ
