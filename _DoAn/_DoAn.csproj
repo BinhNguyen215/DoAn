@@ -238,6 +238,13 @@
     <Compile Include="Views\LoginView.Designer.cs">
       <DependentUpon>LoginView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Sale\ISaleView.cs" />
+    <Compile Include="Views\Sale\SaleView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Sale\SaleView.Designer.cs">
+      <DependentUpon>SaleView.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
@@ -253,6 +260,9 @@
     </Compile>
     <EmbeddedResource Include="Views\LoginView.resx">
       <DependentUpon>LoginView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Sale\SaleView.resx">
+      <DependentUpon>SaleView.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
