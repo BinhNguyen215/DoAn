@@ -16,15 +16,5 @@ namespace _DoAn
         {
             InitializeComponent();
         }
-
-        private void bunifuPictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuButton8_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

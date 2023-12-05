@@ -39,6 +39,7 @@
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties8 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.bunifuGradientPanel1 = new Bunifu.UI.WinForms.BunifuGradientPanel();
+            this.bunifuPictureBox2 = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.bunifuLabel4 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuPictureBox1 = new Bunifu.UI.WinForms.BunifuPictureBox();
@@ -48,10 +49,9 @@
             this.tbxPassword = new Bunifu.UI.WinForms.BunifuTextBox();
             this.btnSignin = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bunifuFormControlBox1 = new Bunifu.UI.WinForms.BunifuFormControlBox();
-            this.bunifuPictureBox2 = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.bunifuGradientPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuGradientPanel1
@@ -70,11 +70,26 @@
             this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(118)))), ((int)(((byte)(18)))));
             this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(118)))), ((int)(((byte)(18)))));
             this.bunifuGradientPanel1.Location = new System.Drawing.Point(0, 0);
-            this.bunifuGradientPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
-            this.bunifuGradientPanel1.Size = new System.Drawing.Size(611, 706);
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(458, 574);
             this.bunifuGradientPanel1.TabIndex = 0;
+            // 
+            // bunifuPictureBox2
+            // 
+            this.bunifuPictureBox2.AllowFocused = false;
+            this.bunifuPictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bunifuPictureBox2.AutoSizeHeight = true;
+            this.bunifuPictureBox2.BorderRadius = 0;
+            this.bunifuPictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("bunifuPictureBox2.Image")));
+            this.bunifuPictureBox2.IsCircle = true;
+            this.bunifuPictureBox2.Location = new System.Drawing.Point(100, 527);
+            this.bunifuPictureBox2.Name = "bunifuPictureBox2";
+            this.bunifuPictureBox2.Size = new System.Drawing.Size(21, 21);
+            this.bunifuPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuPictureBox2.TabIndex = 4;
+            this.bunifuPictureBox2.TabStop = false;
+            this.bunifuPictureBox2.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Square;
             // 
             // bunifuLabel4
             // 
@@ -82,11 +97,10 @@
             this.bunifuLabel4.AutoEllipsis = false;
             this.bunifuLabel4.CursorType = null;
             this.bunifuLabel4.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.bunifuLabel4.Location = new System.Drawing.Point(167, 646);
-            this.bunifuLabel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuLabel4.Location = new System.Drawing.Point(125, 525);
             this.bunifuLabel4.Name = "bunifuLabel4";
             this.bunifuLabel4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel4.Size = new System.Drawing.Size(326, 32);
+            this.bunifuLabel4.Size = new System.Drawing.Size(214, 21);
             this.bunifuLabel4.TabIndex = 3;
             this.bunifuLabel4.Text = "Copyright by GREEN Company";
             this.bunifuLabel4.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -101,11 +115,10 @@
             this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel1.Font = new System.Drawing.Font("Segoe UI", 26F, System.Drawing.FontStyle.Bold);
             this.bunifuLabel1.ForeColor = System.Drawing.Color.White;
-            this.bunifuLabel1.Location = new System.Drawing.Point(180, 378);
-            this.bunifuLabel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuLabel1.Location = new System.Drawing.Point(141, 309);
             this.bunifuLabel1.Name = "bunifuLabel1";
             this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(256, 70);
+            this.bunifuLabel1.Size = new System.Drawing.Size(174, 47);
             this.bunifuLabel1.TabIndex = 1;
             this.bunifuLabel1.Text = "WELCOME";
             this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -119,10 +132,9 @@
             this.bunifuPictureBox1.BorderRadius = 0;
             this.bunifuPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuPictureBox1.Image")));
             this.bunifuPictureBox1.IsCircle = true;
-            this.bunifuPictureBox1.Location = new System.Drawing.Point(131, 0);
-            this.bunifuPictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuPictureBox1.Location = new System.Drawing.Point(91, 0);
             this.bunifuPictureBox1.Name = "bunifuPictureBox1";
-            this.bunifuPictureBox1.Size = new System.Drawing.Size(354, 354);
+            this.bunifuPictureBox1.Size = new System.Drawing.Size(266, 266);
             this.bunifuPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bunifuPictureBox1.TabIndex = 0;
             this.bunifuPictureBox1.TabStop = false;
@@ -136,11 +148,10 @@
             this.bunifuLabel3.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel3.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold);
             this.bunifuLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(200)))), ((int)(((byte)(53)))));
-            this.bunifuLabel3.Location = new System.Drawing.Point(844, 71);
-            this.bunifuLabel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuLabel3.Location = new System.Drawing.Point(633, 58);
             this.bunifuLabel3.Name = "bunifuLabel3";
             this.bunifuLabel3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel3.Size = new System.Drawing.Size(185, 81);
+            this.bunifuLabel3.Size = new System.Drawing.Size(123, 54);
             this.bunifuLabel3.TabIndex = 1;
             this.bunifuLabel3.Text = "LOGIN";
             this.bunifuLabel3.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -154,12 +165,11 @@
             this.bunifuShapes1.BorderThickness = 2;
             this.bunifuShapes1.FillColor = System.Drawing.Color.Transparent;
             this.bunifuShapes1.FillShape = true;
-            this.bunifuShapes1.Location = new System.Drawing.Point(875, 145);
-            this.bunifuShapes1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuShapes1.Location = new System.Drawing.Point(656, 118);
             this.bunifuShapes1.Name = "bunifuShapes1";
             this.bunifuShapes1.Shape = Bunifu.UI.WinForms.BunifuShapes.Shapes.Line;
             this.bunifuShapes1.Sides = 5;
-            this.bunifuShapes1.Size = new System.Drawing.Size(100, 92);
+            this.bunifuShapes1.Size = new System.Drawing.Size(75, 75);
             this.bunifuShapes1.TabIndex = 2;
             this.bunifuShapes1.Text = "bunifuShapes1";
             // 
@@ -192,8 +202,7 @@
             this.tbxUsername.IconRight = null;
             this.tbxUsername.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.tbxUsername.Lines = new string[0];
-            this.tbxUsername.Location = new System.Drawing.Point(732, 254);
-            this.tbxUsername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbxUsername.Location = new System.Drawing.Point(549, 206);
             this.tbxUsername.MaxLength = 32767;
             this.tbxUsername.MinimumSize = new System.Drawing.Size(1, 1);
             this.tbxUsername.Modified = false;
@@ -219,7 +228,7 @@
             stateProperties4.ForeColor = System.Drawing.Color.Empty;
             stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.tbxUsername.OnIdleState = stateProperties4;
-            this.tbxUsername.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbxUsername.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.tbxUsername.PasswordChar = '\0';
             this.tbxUsername.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.tbxUsername.PlaceholderText = "Enter username";
@@ -229,7 +238,7 @@
             this.tbxUsername.SelectionLength = 0;
             this.tbxUsername.SelectionStart = 0;
             this.tbxUsername.ShortcutsEnabled = true;
-            this.tbxUsername.Size = new System.Drawing.Size(384, 54);
+            this.tbxUsername.Size = new System.Drawing.Size(288, 44);
             this.tbxUsername.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.tbxUsername.TabIndex = 3;
             this.tbxUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -269,8 +278,7 @@
             this.tbxPassword.IconRight = null;
             this.tbxPassword.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.tbxPassword.Lines = new string[0];
-            this.tbxPassword.Location = new System.Drawing.Point(732, 337);
-            this.tbxPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbxPassword.Location = new System.Drawing.Point(549, 274);
             this.tbxPassword.MaxLength = 32767;
             this.tbxPassword.MinimumSize = new System.Drawing.Size(1, 1);
             this.tbxPassword.Modified = false;
@@ -296,7 +304,7 @@
             stateProperties8.ForeColor = System.Drawing.Color.Empty;
             stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.tbxPassword.OnIdleState = stateProperties8;
-            this.tbxPassword.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbxPassword.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.tbxPassword.PasswordChar = '\0';
             this.tbxPassword.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.tbxPassword.PlaceholderText = "Enter password";
@@ -306,7 +314,7 @@
             this.tbxPassword.SelectionLength = 0;
             this.tbxPassword.SelectionStart = 0;
             this.tbxPassword.ShortcutsEnabled = true;
-            this.tbxPassword.Size = new System.Drawing.Size(384, 55);
+            this.tbxPassword.Size = new System.Drawing.Size(288, 45);
             this.tbxPassword.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.tbxPassword.TabIndex = 4;
             this.tbxPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -366,8 +374,7 @@
             this.btnSignin.IdleIconLeftImage = null;
             this.btnSignin.IdleIconRightImage = null;
             this.btnSignin.IndicateFocus = false;
-            this.btnSignin.Location = new System.Drawing.Point(968, 428);
-            this.btnSignin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSignin.Location = new System.Drawing.Point(726, 348);
             this.btnSignin.Name = "btnSignin";
             this.btnSignin.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnSignin.OnDisabledState.BorderRadius = 15;
@@ -401,7 +408,7 @@
             this.btnSignin.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnSignin.OnPressedState.IconLeftImage = null;
             this.btnSignin.OnPressedState.IconRightImage = null;
-            this.btnSignin.Size = new System.Drawing.Size(148, 52);
+            this.btnSignin.Size = new System.Drawing.Size(111, 42);
             this.btnSignin.TabIndex = 5;
             this.btnSignin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnSignin.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -439,8 +446,8 @@
             this.bunifuFormControlBox1.HelpBoxOptions.IconPressedColor = System.Drawing.Color.Black;
             this.bunifuFormControlBox1.HelpBoxOptions.IconSize = new System.Drawing.Size(22, 22);
             this.bunifuFormControlBox1.HelpBoxOptions.PressedColor = System.Drawing.Color.Silver;
-            this.bunifuFormControlBox1.Location = new System.Drawing.Point(1136, 14);
-            this.bunifuFormControlBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.bunifuFormControlBox1.Location = new System.Drawing.Point(852, 11);
+            this.bunifuFormControlBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bunifuFormControlBox1.MaximizeBox = false;
             this.bunifuFormControlBox1.MaximizeBoxOptions.BackColor = System.Drawing.Color.Transparent;
             this.bunifuFormControlBox1.MaximizeBoxOptions.BorderRadius = 0;
@@ -469,31 +476,14 @@
             this.bunifuFormControlBox1.MinimizeBoxOptions.PressedColor = System.Drawing.Color.Silver;
             this.bunifuFormControlBox1.Name = "bunifuFormControlBox1";
             this.bunifuFormControlBox1.ShowDesignBorders = false;
-            this.bunifuFormControlBox1.Size = new System.Drawing.Size(72, 39);
+            this.bunifuFormControlBox1.Size = new System.Drawing.Size(54, 32);
             this.bunifuFormControlBox1.TabIndex = 6;
-            // 
-            // bunifuPictureBox2
-            // 
-            this.bunifuPictureBox2.AllowFocused = false;
-            this.bunifuPictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.bunifuPictureBox2.AutoSizeHeight = true;
-            this.bunifuPictureBox2.BorderRadius = 0;
-            this.bunifuPictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("bunifuPictureBox2.Image")));
-            this.bunifuPictureBox2.IsCircle = true;
-            this.bunifuPictureBox2.Location = new System.Drawing.Point(133, 649);
-            this.bunifuPictureBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuPictureBox2.Name = "bunifuPictureBox2";
-            this.bunifuPictureBox2.Size = new System.Drawing.Size(28, 28);
-            this.bunifuPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuPictureBox2.TabIndex = 4;
-            this.bunifuPictureBox2.TabStop = false;
-            this.bunifuPictureBox2.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Square;
             // 
             // LoginView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1223, 706);
+            this.ClientSize = new System.Drawing.Size(917, 574);
             this.Controls.Add(this.bunifuFormControlBox1);
             this.Controls.Add(this.btnSignin);
             this.Controls.Add(this.tbxPassword);
@@ -502,14 +492,13 @@
             this.Controls.Add(this.bunifuShapes1);
             this.Controls.Add(this.bunifuGradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "LoginView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.bunifuGradientPanel1.ResumeLayout(false);
             this.bunifuGradientPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
