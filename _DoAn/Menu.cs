@@ -1,4 +1,6 @@
-﻿using _DoAn.Views.Sale;
+﻿using _DoAn.Views.Export;
+using _DoAn.Views.Suplier;
+using _DoAn.Views.Sale;
 using _DoAn.Views.Statistic;
 using System;
 using System.Collections.Generic;
@@ -27,8 +29,6 @@ namespace _DoAn
         { 
             InitializeComponent();
             leftBorderbtn = new Panel();
-            leftBorderbtn.Size = new Size(7, 60);
-            panelMenu.Controls.Add(leftBorderbtn);
             this.Text = string.Empty;
             this.ControlBox = false;
             this.DoubleBuffered = true;
@@ -102,6 +102,18 @@ namespace _DoAn
             lbName.Text = "Receipt";
         }
 
+        }
+
+        private void bunifuButton6_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new ExportView(id, name));
+            lbName.Text = "Export";
+        }
+
+        private void bunifuButton4_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new SupplierView());
+            lbName.Text = "Supplier";
         private void pAyToolStripMenuItem_Click(object sender, EventArgs e)
         {
             OpenChildForm(new PaySlipForm(id));
