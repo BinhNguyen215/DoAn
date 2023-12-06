@@ -33,5 +33,20 @@ namespace _DoAn.Presenters
                 return false;
             }
         }
+        public string GetId()
+        {
+            User user = new User();
+            return user.UserID(loginView.username, loginView.password);
+        }
+        public string GetName()
+        {
+            User user = new User();
+            return user.UserName(loginView.username, loginView.password);
+        }
+        public string GetPosition()
+        {
+            User user = new User();
+            return user.GetPosition(loginView.username, loginView.password);
+        }
     }
 }

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using _DoAn.Views.Export;
+using _DoAn.Views.Suplier;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,8 +23,6 @@ namespace _DoAn
         { 
             InitializeComponent();
             leftBorderbtn = new Panel();
-            leftBorderbtn.Size = new Size(7, 60);
-            panelMenu.Controls.Add(leftBorderbtn);
             this.Text = string.Empty;
             this.ControlBox = false;
             this.DoubleBuffered = true;
@@ -54,7 +54,6 @@ namespace _DoAn
 
         private void btnSale_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new SaleForm(id));
             lbName.Text = "Sale";
         }
 
@@ -62,6 +61,18 @@ namespace _DoAn
         {
 
         }
-    }
 
+        private void bunifuButton6_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new ExportView(id, name));
+            lbName.Text = "Export";
+        }
+
+        private void bunifuButton4_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new SupplierView());
+            lbName.Text = "Supplier";
+        }
+    }
+        
 }
