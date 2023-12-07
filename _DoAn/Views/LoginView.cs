@@ -19,7 +19,6 @@ namespace _DoAn.Views
         public LoginView()
         {
             InitializeComponent();
-            
         }
 
         public string username { get => tbxUsername.Text; set => tbxUsername.Text = value; }
@@ -28,27 +27,20 @@ namespace _DoAn.Views
 
         private void btnSignin_Click(object sender, EventArgs e)
         {
-            try
+            LoginPresenter loginPresenter = new LoginPresenter(this);
+            if (loginPresenter.Login())
             {
-                LoginPresenter loginPresenter = new LoginPresenter(this);
-                if(loginPresenter.Login())
-                {
-                    string id = loginPresenter.GetId();
-                    string name = loginPresenter.GetName();
-                    string position = loginPresenter.GetPosition();
-                    Menu menu = new Menu(id, name, position);
-                    //Dialog menu = new Dialog();
-                    this.Hide();
-                    menu.Show();
-                }
-                else
-                {
-                    MessageBox.Show(_message);
-                }
+                string id = loginPresenter.GetId();
+                string name = loginPresenter.GetName();
+                string position = loginPresenter.GetPosition();
+                Menu menu = new Menu(id, name, position);
+                //Dialog menu = new Dialog();
+                this.Hide();
+                menu.Show();
             }
-            catch(Exception ex)
+            else
             {
-                MessageBox.Show("Lỗi "+ex.Message);
+                MessageBox.Show(_message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }

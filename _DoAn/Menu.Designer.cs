@@ -633,7 +633,6 @@
             this.bunifuButton6.TextMarginLeft = 0;
             this.bunifuButton6.TextPadding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.bunifuButton6.UseDefaultRadiusAndThickness = true;
-            this.bunifuButton6.Click += new System.EventHandler(this.bunifuButton6_Click);
             // 
             // btnImport
             // 
@@ -819,7 +818,6 @@
             this.bunifuButton4.TextMarginLeft = 0;
             this.bunifuButton4.TextPadding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.bunifuButton4.UseDefaultRadiusAndThickness = true;
-            this.bunifuButton4.Click += new System.EventHandler(this.bunifuButton4_Click);
             // 
             // bunifuButton3
             // 
