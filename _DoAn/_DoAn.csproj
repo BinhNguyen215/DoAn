@@ -208,6 +208,7 @@
     <Reference Include="System.Web.Services.Description, Version=4.9.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>packages\System.Web.Services.Description.4.9.0\lib\net461\System.Web.Services.Description.dll</HintPath>
     </Reference>
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -227,8 +228,13 @@
     <Compile Include="Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Bill.cs" />
+    <Compile Include="Models\DetailBill.cs" />
+    <Compile Include="Models\Statistic.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Presenters\LoginPresenter.cs" />
+    <Compile Include="Presenters\SalePresenter.cs" />
+    <Compile Include="Presenters\StatisticPresenter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Views\ILoginView.cs" />
@@ -244,6 +250,13 @@
     </Compile>
     <Compile Include="Views\Sale\SaleView.Designer.cs">
       <DependentUpon>SaleView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Statistic\IStatistics.cs" />
+    <Compile Include="Views\Statistic\StatisticsView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Statistic\StatisticsView.Designer.cs">
+      <DependentUpon>StatisticsView.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
@@ -264,6 +277,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Sale\SaleView.resx">
       <DependentUpon>SaleView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Statistic\StatisticsView.resx">
+      <DependentUpon>StatisticsView.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
