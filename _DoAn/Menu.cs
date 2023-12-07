@@ -1,4 +1,6 @@
-﻿using System;
+﻿using _DoAn.Views.Sale;
+using _DoAn.Views.Statistic;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -54,14 +56,24 @@ namespace _DoAn
 
         private void btnSale_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new SaleForm(id));
+            OpenChildForm(new SaleView(id));
             lbName.Text = "Sale";
         }
 
         private void bunifuButton11_Click(object sender, EventArgs e)
         {
+            
+        }
 
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new StatisticsView(name));
+            lbName.Text = "Dashboard";
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
-
 }

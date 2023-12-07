@@ -29,5 +29,23 @@ namespace _DoAn.Models
             else
                 return false;
         }
+        public string UserID(string username, string password)
+        {
+            ConnectDB connect = new ConnectDB();
+            string sqlQuery = "Select Employee_id from Employee where Username = '" + username + "' and Password = '" + password + "'";
+            return connect.GetData(sqlQuery).Rows[0]["Employee_id"].ToString();
+        }
+        public string UserName(string username, string password)
+        {
+            ConnectDB connect = new ConnectDB();
+            string sqlQuery = "Select EmployName from Employee where Username = '" + username + "' and Password = '" + password + "'";
+            return connect.GetData(sqlQuery).Rows[0]["EmployName"].ToString();
+        }
+        public string GetPosition(string username, string password)
+        {
+            ConnectDB connect = new ConnectDB();
+            string sqlQuery = "Select Position from Employee where Username = '" + username + "' and Password = '" + password + "'";
+            return connect.GetData(sqlQuery).Rows[0]["Position"].ToString();
+        }
     }
 }

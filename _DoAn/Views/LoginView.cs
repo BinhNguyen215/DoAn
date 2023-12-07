@@ -27,25 +27,22 @@ namespace _DoAn.Views
 
         private void btnSignin_Click(object sender, EventArgs e)
         {
-            try
+            LoginPresenter loginPresenter = new LoginPresenter(this);
+            if (loginPresenter.Login())
             {
-                LoginPresenter loginPresenter = new LoginPresenter(this);
-                if(loginPresenter.Login())
-                {
-                    MessageBox.Show(_message);
-                /*    Menu menu =new Menu();
-                    menu.ShowDialog();*/
-                }
-                else
-                {
-                    MessageBox.Show(_message);
-                }
+                string id = loginPresenter.GetId();
+                string name = loginPresenter.GetName();
+                string position = loginPresenter.GetPosition();
+                Menu menu = new Menu(id, name, position);
+                //Dialog menu = new Dialog();
+                this.Hide();
+                menu.Show();
             }
-            catch(Exception ex)
+            else
             {
-                MessageBox.Show("Lỗi "+ex.Message);
+                MessageBox.Show(_message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            
+
         }
 
         private void bunifuLabel4_Click(object sender, EventArgs e)
