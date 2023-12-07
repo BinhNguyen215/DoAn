@@ -9,6 +9,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using _DoAn.Views.Accountant;
+using _DoAn.Views.Import;
+using _DoAn.Views.MenuDropDown;
+using TheArtOfDev.HtmlRenderer.Adapters.Entities;
 
 namespace _DoAn
 {
@@ -62,7 +66,46 @@ namespace _DoAn
 
         private void bunifuButton11_Click(object sender, EventArgs e)
         {
-            
+
+        }
+
+        private void btnImport_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new ImportView(id, name));
+            lbName.Text = "Import";
+        }
+
+        private void btnAccountant_Click(object sender, EventArgs e)
+        {
+            Open_DropdownMenu(rjDropdownMenu1, sender);
+        }
+
+        private void DropdownMenu_VisibleChanged(object sender, EventArgs e, Control ctrl)
+        {
+            RJDropdownMenu dropdownMenu = (RJDropdownMenu)sender;
+            if (!DesignMode)
+            {
+            }
+        }
+
+        private void Open_DropdownMenu(RJDropdownMenu dropdownMenu ,object sender)
+        {
+            Control control = (Control)sender;
+            dropdownMenu.VisibleChanged += new EventHandler((sender2, ev)
+                => DropdownMenu_VisibleChanged(sender2, ev, control));
+            dropdownMenu.Show(control, control.Width - dropdownMenu.Width, control.Height);
+        }
+
+        private void recieptToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new ReceiptsForm(id));
+            lbName.Text = "Receipt";
+        }
+
+        private void pAyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new PaySlipForm(id));
+            lbName.Text = "PaySlip";
         }
 
         private void btnHome_Click(object sender, EventArgs e)
