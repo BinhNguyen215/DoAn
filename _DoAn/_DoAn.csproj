@@ -231,6 +231,9 @@
     <Compile Include="Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\DetailExport.cs" />
+    <Compile Include="Models\Export.cs" />
+    <Compile Include="Models\Supplier.cs" />
     <Compile Include="Models\Bill.cs" />
     <Compile Include="Models\DetailBill.cs" />
     <Compile Include="Models\Statistic.cs" />
@@ -247,11 +250,13 @@
     <Compile Include="Presenters\cImport\EditCommand.cs" />
     <Compile Include="Presenters\cImport\Invorker.cs" />
     <Compile Include="Presenters\ImportPresenter.cs" />
+    <Compile Include="Presenters\ExportPresenter.cs" />
     <Compile Include="Presenters\LoginPresenter.cs" />
     <Compile Include="Presenters\SalePresenter.cs" />
     <Compile Include="Presenters\StatisticPresenter.cs" />
     <Compile Include="Presenters\PaySlipPresenter.cs" />
     <Compile Include="Presenters\ReceiptsPresenter.cs" />
+    <Compile Include="Presenters\SupplierPresenter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Views\Accountant\AddPaySlip.cs">
@@ -292,9 +297,26 @@
       <DependentUpon>ImportView.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\LoginView.cs">
+    <Compile Include="Views\Export\ExportView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\LoginView.Designer.cs">
+    <Compile Include="Views\Export\ExportView.Designer.cs">
+      <DependentUpon>ExportView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Export\IExportView.cs" />
+    <Compile Include="Views\Login\ILoginView.cs" />
+    <Compile Include="Views\Login\LoginView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Export\ExportView.Designer.cs">
+      <DependentUpon>ExportView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Export\IExportView.cs" />
+    <Compile Include="Views\Login\ILoginView.cs" />
+    <Compile Include="Views\Login\LoginView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Login\LoginView.Designer.cs">
       <DependentUpon>LoginView.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\MenuDropDown\MenuColorTable.cs" />
@@ -315,6 +337,13 @@
     </Compile>
     <Compile Include="Views\Statistic\StatisticsView.Designer.cs">
       <DependentUpon>StatisticsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Supplier\ISupplierView.cs" />
+    <Compile Include="Views\Supplier\SupplierView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Supplier\SupplierView.Designer.cs">
+      <DependentUpon>SupplierView.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
@@ -346,6 +375,10 @@
       <DependentUpon>ImportView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\LoginView.resx">
+    <EmbeddedResource Include="Views\Export\ExportView.resx">
+      <DependentUpon>ExportView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Login\LoginView.resx">
       <DependentUpon>LoginView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Sale\SaleView.resx">
@@ -353,6 +386,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Statistic\StatisticsView.resx">
       <DependentUpon>StatisticsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Supplier\SupplierView.resx">
+      <DependentUpon>SupplierView.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
