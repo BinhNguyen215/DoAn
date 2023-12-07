@@ -33,8 +33,8 @@ namespace _DoAn.Views
                 if(loginPresenter.Login())
                 {
                     MessageBox.Show(_message);
-                /*    Menu menu =new Menu();
-                    menu.ShowDialog();*/
+                    Menu menu = new Menu();
+                    menu.ShowDialog();
                 }
                 else
                 {
