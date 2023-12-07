@@ -308,6 +308,14 @@
     <Compile Include="Views\Login\LoginView.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Views\Export\ExportView.Designer.cs">
+      <DependentUpon>ExportView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Export\IExportView.cs" />
+    <Compile Include="Views\Login\ILoginView.cs" />
+    <Compile Include="Views\Login\LoginView.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Views\Login\LoginView.Designer.cs">
       <DependentUpon>LoginView.cs</DependentUpon>
     </Compile>
