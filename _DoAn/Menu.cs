@@ -86,6 +86,11 @@ namespace _DoAn
             OpenChildForm(new EmployeeView());
             lbName.Text = "Employee";
         }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 
 }
