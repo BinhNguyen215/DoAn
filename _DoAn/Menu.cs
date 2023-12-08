@@ -1,4 +1,6 @@
-﻿using System;
+﻿using _DoAn.Views.Employee;
+using _DoAn.Views.Product;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -45,6 +47,7 @@ namespace _DoAn
             //End
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
+           
             childForm.Dock = DockStyle.Fill;
             panelDesktop.Controls.Add(childForm);
             panelDesktop.Tag = childForm;
@@ -52,15 +55,36 @@ namespace _DoAn
             childForm.Show();
         }
 
-        private void btnSale_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new SaleForm(id));
-            lbName.Text = "Sale";
-        }
+       
 
         private void bunifuButton11_Click(object sender, EventArgs e)
         {
 
+        }
+
+     
+
+        private void bunifuButton4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnProduct_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new ProductView());
+            lbName.Text = "Product";
+        }
+
+        private void btnSale_Click(object sender, EventArgs e)
+        {
+            //OpenChildForm(new SaleForm(id));
+            lbName.Text = "Sale";
+        }
+
+        private void btnEmployee_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new EmployeeView());
+            lbName.Text = "Employee";
         }
     }
 
