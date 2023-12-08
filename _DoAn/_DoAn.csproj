@@ -239,7 +239,6 @@
     <Compile Include="Models\PaySlip.cs" />
     <Compile Include="Models\Receipts.cs" />
     <Compile Include="Models\Product.cs" />
-    <Compile Include="Models\Product.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Presenters\AddPaySlipPresenter.cs" />
     <Compile Include="Presenters\AddReceiptsPresenter.cs" />
