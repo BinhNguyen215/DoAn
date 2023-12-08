@@ -1,5 +1,7 @@
 ﻿using _DoAn.Views.Sale;
 using _DoAn.Views.Statistic;
+using _DoAn.Views.Employee;
+using _DoAn.Views.Product;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -51,11 +53,32 @@ namespace _DoAn
             //End
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
+           
             childForm.Dock = DockStyle.Fill;
             panelDesktop.Controls.Add(childForm);
             panelDesktop.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
+        }
+
+       
+
+        private void bunifuButton11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+     
+
+        private void bunifuButton4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnProduct_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new ProductView());
+            lbName.Text = "Product";
         }
 
         private void btnSale_Click(object sender, EventArgs e)
