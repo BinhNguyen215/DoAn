@@ -2,6 +2,8 @@
 using _DoAn.Views.Statistic;
 using _DoAn.Views.Employee;
 using _DoAn.Views.Product;
+using _DoAn.Views.Employee;
+using _DoAn.Views.Product;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -122,7 +124,7 @@ namespace _DoAn
         }
 
         private void pAyToolStripMenuItem_Click(object sender, EventArgs e)
-        {
+         {
             OpenChildForm(new PaySlipForm(id));
             lbName.Text = "PaySlip";
         }
@@ -138,6 +140,11 @@ namespace _DoAn
             Application.Exit();
         }
 
-        
+        private void btnEmployee_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new EmployeeView());
+            lbName.Text = "Employee";
+        }
+
     }
 }

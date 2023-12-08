@@ -239,6 +239,7 @@
     <Compile Include="Models\PaySlip.cs" />
     <Compile Include="Models\Receipts.cs" />
     <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\Product.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Presenters\AddPaySlipPresenter.cs" />
     <Compile Include="Presenters\AddReceiptsPresenter.cs" />
@@ -248,11 +249,14 @@
     <Compile Include="Presenters\cImport\EditCommand.cs" />
     <Compile Include="Presenters\cImport\Invorker.cs" />
     <Compile Include="Presenters\ImportPresenter.cs" />
+    <Compile Include="Presenters\EmployeePresenter.cs" />
     <Compile Include="Presenters\LoginPresenter.cs" />
     <Compile Include="Presenters\SalePresenter.cs" />
     <Compile Include="Presenters\StatisticPresenter.cs" />
     <Compile Include="Presenters\PaySlipPresenter.cs" />
     <Compile Include="Presenters\ReceiptsPresenter.cs" />
+    <Compile Include="Presenters\NewEmployeePresenter.cs" />
+    <Compile Include="Presenters\ProductPresenter.cs" />
     <Compile Include="Presenters\NewEmployeePresenter.cs" />
     <Compile Include="Presenters\ProductPresenter.cs" />
     <Compile Include="Program.cs" />
@@ -299,6 +303,20 @@
     <Compile Include="Views\Employee\NewEmployee.Designer.cs">
       <DependentUpon>NewEmployee.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Employee\EmployeeView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Employee\EmployeeView.Designer.cs">
+      <DependentUpon>EmployeeView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Employee\IManageEmployee.cs" />
+    <Compile Include="Views\Employee\INewEmployee.cs" />
+    <Compile Include="Views\Employee\NewEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Employee\NewEmployee.Designer.cs">
+      <DependentUpon>NewEmployee.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\ILoginView.cs" />
     <Compile Include="Views\Import\Command.cs" />
     <Compile Include="Views\Import\IImportView.cs" />
@@ -318,6 +336,13 @@
     <Compile Include="Views\MenuDropDown\MenuRenderer.cs" />
     <Compile Include="Views\MenuDropDown\RJDropdownMenu.cs">
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\Product\IProductView.cs" />
+    <Compile Include="Views\Product\ProductView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Product\ProductView.Designer.cs">
+      <DependentUpon>ProductView.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Product\IProductView.cs" />
     <Compile Include="Views\Product\ProductView.cs">
