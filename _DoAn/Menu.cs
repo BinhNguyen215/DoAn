@@ -64,10 +64,6 @@ namespace _DoAn
             lbName.Text = "Sale";
         }
 
-        private void bunifuButton11_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnImport_Click(object sender, EventArgs e)
         {
@@ -108,13 +104,6 @@ namespace _DoAn
             lbName.Text = "PaySlip";
         }
 
-
-
-
-
-
-
-
         private void btnHome_Click(object sender, EventArgs e)
         {
             OpenChildForm(new StatisticsView(name));
@@ -125,5 +114,7 @@ namespace _DoAn
         {
             Application.Exit();
         }
+
+        
     }
 }
