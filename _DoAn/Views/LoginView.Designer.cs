@@ -105,7 +105,6 @@
             this.bunifuLabel4.Text = "Copyright by GREEN Company";
             this.bunifuLabel4.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel4.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            this.bunifuLabel4.Click += new System.EventHandler(this.bunifuLabel4_Click);
             // 
             // bunifuLabel1
             // 

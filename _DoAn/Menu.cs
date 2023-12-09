@@ -13,6 +13,9 @@ using _DoAn.Views.Accountant;
 using _DoAn.Views.Import;
 using _DoAn.Views.MenuDropDown;
 using TheArtOfDev.HtmlRenderer.Adapters.Entities;
+using _DoAn.Models;
+using _DoAn.Views.Supplier;
+using _DoAn.Views.Export;
 
 namespace _DoAn
 {
@@ -23,6 +26,7 @@ namespace _DoAn
         private string position;
         private Panel leftBorderbtn;
         private Form currentChildForm;
+        
         public Menu()
         { 
             InitializeComponent();
@@ -34,6 +38,7 @@ namespace _DoAn
             this.DoubleBuffered = true;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
         }
+
         public Menu(string id, string name, string position) : this()
         {
             this.id = id;
@@ -115,6 +120,16 @@ namespace _DoAn
             Application.Exit();
         }
 
-        
+        private void btnSuppliers_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new SupplierView());
+            lbName.Text = "Suppliers";
+        }
+
+        private void btnExport_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new ExportView(id, name));
+            lbName.Text = "Export";
+        }
     }
 }
