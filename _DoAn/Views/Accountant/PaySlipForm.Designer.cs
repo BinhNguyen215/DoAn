@@ -95,7 +95,7 @@
             this.dgvPaySlip.EnableHeadersVisualStyles = false;
             this.dgvPaySlip.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(220)))), ((int)(((byte)(188)))));
             this.dgvPaySlip.HeaderBackColor = System.Drawing.Color.ForestGreen;
-            this.dgvPaySlip.HeaderBgColor = System.Drawing.Color.Empty;
+            this.dgvPaySlip.HeaderBackColor = System.Drawing.Color.Empty;
             this.dgvPaySlip.HeaderForeColor = System.Drawing.Color.White;
             this.dgvPaySlip.Location = new System.Drawing.Point(0, 53);
             this.dgvPaySlip.Margin = new System.Windows.Forms.Padding(6);

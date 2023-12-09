@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.Remoting.Services;
 using System.ServiceModel.Channels;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,7 +16,6 @@ namespace _DoAn.Views
     public partial class LoginView : Form, ILoginView
     {
         private string _message;
-
         public LoginView()
         {
             InitializeComponent();
@@ -45,9 +45,5 @@ namespace _DoAn.Views
 
         }
 
-        private void bunifuLabel4_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
