@@ -55,8 +55,7 @@ namespace _DoAn.Views.Supplier
                 btnEdit.Enabled = false;
             }
         }
-
-        private void btnAdd_Click(object sender, EventArgs e)
+        private void btnAdd_Click_1(object sender, EventArgs e)
         {
             SupplierPresenter suplierPresenter = new SupplierPresenter(this);
             if (suplierPresenter.AddData())
@@ -75,8 +74,7 @@ namespace _DoAn.Views.Supplier
                 btnAdd.Enabled = true;
             }
         }
-
-        private void btnEdit_Click(object sender, EventArgs e)
+        private void btnEdit_Click_1(object sender, EventArgs e)
         {
             SupplierPresenter suplierPresenter = new SupplierPresenter(this);
             if (suplierPresenter.CheckInformationEdit())
@@ -101,12 +99,10 @@ namespace _DoAn.Views.Supplier
                 btnEdit.Enabled = true;
             }
         }
-
-        private void btnDelete_Click(object sender, EventArgs e)
+        private void btnDelete_Click_1(object sender, EventArgs e)
         {
-
             DialogResult dr = MessageBox.Show("Are you sure you want to delete this supplier?", "Question", MessageBoxButtons.YesNo,
-                  MessageBoxIcon.Question);
+                 MessageBoxIcon.Question);
 
             if (dr == DialogResult.Yes)
             {
@@ -122,10 +118,8 @@ namespace _DoAn.Views.Supplier
                     suplierPresenter.ClearInformation();
                 }
             }
-
         }
 
-        
         private void tbxSupplierName_TextChanged(object sender, EventArgs e)
         {
             SupplierPresenter suplierPresenter = new SupplierPresenter(this);

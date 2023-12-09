@@ -240,8 +240,7 @@ namespace _DoAn.Views.Import
             else
                 btnCancel.Enabled = true;
         }
-
-        private void btnCreate_Click(object sender, EventArgs e)
+        private void btnCreate_Click_1(object sender, EventArgs e)
         {
             ImportPresenter importPresenter = new ImportPresenter(this);
             if (importPresenter.CheckSuplier())
@@ -285,8 +284,9 @@ namespace _DoAn.Views.Import
                 MessageBox.Show(_message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
             }
-
-        }
+        } 
+    
+  
         public void Createform(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
             ImportPresenter importPresenter = new ImportPresenter(this);
@@ -314,5 +314,7 @@ namespace _DoAn.Views.Import
         {
 
         }
+
+        
     }
 }

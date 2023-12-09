@@ -16,6 +16,9 @@ using TheArtOfDev.HtmlRenderer.Adapters.Entities;
 using _DoAn.Models;
 using _DoAn.Views.Supplier;
 using _DoAn.Views.Export;
+using _DoAn.Views.Product;
+using Bunifu.UI.WinForms.BunifuButton;
+using _DoAn.Views.Employee;
 
 namespace _DoAn
 {
@@ -26,7 +29,8 @@ namespace _DoAn
         private string position;
         private Panel leftBorderbtn;
         private Form currentChildForm;
-        
+        private BunifuIconButton currentButton;
+
         public Menu()
         { 
             InitializeComponent();
@@ -45,6 +49,28 @@ namespace _DoAn
             this.name = name;
             this.position = position;
         }
+
+        private void ActiveButton(object senderbtn)
+        {
+            if (senderbtn != null)
+            {
+              
+
+                currentButton = (BunifuIconButton)senderbtn;
+                //currentButton.BackColor = Color.FromArgb(127, 198, 102);
+                currentButton.BackColor = Color.FromArgb(143, 194, 71);
+           
+ 
+
+                //leftBorderbtn.BackColor = color;
+                //leftBorderbtn.Location = new Point(0, currentButton.Location.Y);
+                //leftBorderbtn.Visible = true;
+                //leftBorderbtn.BringToFront();
+
+            }
+        }
+
+       
         private void OpenChildForm(Form childForm)
         {
             //open only form
@@ -65,6 +91,7 @@ namespace _DoAn
 
         private void btnSale_Click(object sender, EventArgs e)
         {
+            inlicator.Top = ((Control)sender).Top;
             OpenChildForm(new SaleView(id));
             lbName.Text = "Sale";
         }
@@ -72,6 +99,7 @@ namespace _DoAn
 
         private void btnImport_Click(object sender, EventArgs e)
         {
+            inlicator.Top = ((Control)sender).Top;
             OpenChildForm(new ImportView(id, name));
             lbName.Text = "Import";
         }
@@ -99,18 +127,21 @@ namespace _DoAn
 
         private void recieptToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            inlicator.Top = ((Control)sender).Top;
             OpenChildForm(new ReceiptsForm(id));
             lbName.Text = "Receipt";
         }
 
         private void pAyToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            inlicator.Top = ((Control)sender).Top;
             OpenChildForm(new PaySlipForm(id));
             lbName.Text = "PaySlip";
         }
 
         private void btnHome_Click(object sender, EventArgs e)
         {
+            inlicator.Top = ((Control)sender).Top;
             OpenChildForm(new StatisticsView(name));
             lbName.Text = "Dashboard";
         }
@@ -122,14 +153,30 @@ namespace _DoAn
 
         private void btnSuppliers_Click(object sender, EventArgs e)
         {
+            inlicator.Top = ((Control)sender).Top;
             OpenChildForm(new SupplierView());
             lbName.Text = "Suppliers";
         }
 
         private void btnExport_Click(object sender, EventArgs e)
         {
+            inlicator.Top = ((Control)sender).Top;
             OpenChildForm(new ExportView(id, name));
             lbName.Text = "Export";
+        }
+
+        private void btnProduct_Click(object sender, EventArgs e)
+        {
+            inlicator.Top = ((Control)sender).Top;
+            OpenChildForm(new ProductView());
+            lbName.Text = "Product";
+        }
+
+        private void btnEmployee_Click(object sender, EventArgs e)
+        {
+            inlicator.Top = ((Control)sender).Top;
+            OpenChildForm(new EmployeeView());
+            lbName.Text = "Employee";
         }
     }
 }

@@ -68,8 +68,7 @@ namespace _DoAn.Views.Export
         }
 
 
-
-        private void btnAdd_Click(object sender, EventArgs e)
+        private void btnAdd_Click_1(object sender, EventArgs e)
         {
             ExportPresenter exportPresenter = new ExportPresenter(this);
             if (exportPresenter.AddDataToDataGridview())
@@ -100,10 +99,8 @@ namespace _DoAn.Views.Export
             btnDelete.Enabled = true;
 
         }
-
-        private void btnEdit_Click(object sender, EventArgs e)
+        private void btnEdit_Click_1(object sender, EventArgs e)
         {
-
             ExportPresenter exportPresenter = new ExportPresenter(this);
             if (exportPresenter.EditData(dtgvData.CurrentRow.Index))
             {
@@ -118,10 +115,9 @@ namespace _DoAn.Views.Export
                 MessageBox.Show(_message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
             }
-
         }
 
-        private void btnDelete_Click(object sender, EventArgs e)
+        private void btnDelete_Click_1(object sender, EventArgs e)
         {
             ExportPresenter exportPresenter = new ExportPresenter(this);
             if (exportPresenter.DeleteDatainDataGridview())
@@ -139,7 +135,6 @@ namespace _DoAn.Views.Export
                 exportPresenter.ClearInformation();
             }
         }
-
 
         private void btnCreate_Click(object sender, EventArgs e)
         {
@@ -228,6 +223,13 @@ namespace _DoAn.Views.Export
         }
 
        
+
+
+
+
+
+
+
         /* private void dtgvData_CellContentClick(object sender, DataGridViewCellEventArgs e)
 {
 // btnDelete.Enabled = true;

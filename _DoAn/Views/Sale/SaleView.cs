@@ -98,7 +98,7 @@ namespace _DoAn.Views.Sale
             }
         }
 
-        private void btnAdd_Click(object sender, EventArgs e)
+        private void btnAdd_Click_1(object sender, EventArgs e)
         {
             btnCancel.Enabled = true;
             SalePresenter salePresenter = new SalePresenter(this);
@@ -153,6 +153,7 @@ namespace _DoAn.Views.Sale
                 MessageBox.Show("Not yet add product into cart. Please try again.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
         private void Createbill(object sender, PrintPageEventArgs e)
         {
             SalePresenter salePresenter = new SalePresenter(this);
@@ -170,7 +171,7 @@ namespace _DoAn.Views.Sale
             }
         }
 
-        private void btnDelete_Click(object sender, EventArgs e)
+        private void btnDelete_Click_1(object sender, EventArgs e)
         {
             SalePresenter salePresenter = new SalePresenter(this);
             salePresenter.DeleteDatainDataGridview();
@@ -178,10 +179,10 @@ namespace _DoAn.Views.Sale
             btnDelete.Enabled = false;
         }
 
-        private void btnCancel_Click(object sender, EventArgs e)
+        private void btnCancel_Click_1(object sender, EventArgs e)
         {
             DialogResult dr = MessageBox.Show("Are you sure cancel all information?", "Notification", MessageBoxButtons.YesNo,
-               MessageBoxIcon.Question);
+              MessageBoxIcon.Question);
 
             if (dr == DialogResult.Yes)
             {
@@ -311,5 +312,7 @@ namespace _DoAn.Views.Sale
             btnCancel.Enabled = false;
             bunifuGroupBox4.Hide();
         }
+
+       
     }
 }

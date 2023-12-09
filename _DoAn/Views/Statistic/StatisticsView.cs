@@ -93,8 +93,7 @@ namespace _DoAn.Views.Statistic
             statisticPresenter.RetriveData();
             ChartMoneydaybydate();
         }
-
-        private void btnCreate_Click(object sender, EventArgs e)
+        private void btnCreateBill_Click(object sender, EventArgs e)
         {
             PrintDialog printDialog = new PrintDialog();
 
@@ -132,5 +131,7 @@ namespace _DoAn.Views.Statistic
             statisticPresenter.GetProductToday(sDay, sMonth, sYear);
             ChartMoneydaybydate();
         }
+
+       
     }
 }

@@ -1,4 +1,6 @@
 ﻿using _DoAn.Views;
+using _DoAn.Views.Employee;
+using _DoAn.Views.Product;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +19,7 @@ namespace _DoAn
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginView());
+            Application.Run(new Menu());
         }
     }
 }

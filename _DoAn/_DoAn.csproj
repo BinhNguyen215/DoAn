@@ -331,6 +331,11 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ComesticDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ComesticDBDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ConnectDB.cs" />
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
@@ -342,6 +347,7 @@
     <Compile Include="Models\DetailBill.cs" />
     <Compile Include="Models\DetailExport.cs" />
     <Compile Include="Models\Export.cs" />
+    <Compile Include="Models\Product.cs" />
     <Compile Include="Models\Statistic.cs" />
     <Compile Include="Models\DetailImport.cs" />
     <Compile Include="Models\Import.cs" />
@@ -356,9 +362,12 @@
     <Compile Include="Presenters\cImport\DeleteCommand.cs" />
     <Compile Include="Presenters\cImport\EditCommand.cs" />
     <Compile Include="Presenters\cImport\Invorker.cs" />
+    <Compile Include="Presenters\EmployeePresenter.cs" />
     <Compile Include="Presenters\ExportPresenter.cs" />
     <Compile Include="Presenters\ImportPresenter.cs" />
     <Compile Include="Presenters\LoginPresenter.cs" />
+    <Compile Include="Presenters\NewEmployeePresenter.cs" />
+    <Compile Include="Presenters\ProductPresenter.cs" />
     <Compile Include="Presenters\SalePresenter.cs" />
     <Compile Include="Presenters\StatisticPresenter.cs" />
     <Compile Include="Presenters\PaySlipPresenter.cs" />
@@ -394,6 +403,20 @@
     <Compile Include="Views\Accountant\ReceiptsForm.Designer.cs">
       <DependentUpon>ReceiptsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Employee\EmployeeView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Employee\EmployeeView.Designer.cs">
+      <DependentUpon>EmployeeView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Employee\IManageEmployeeView.cs" />
+    <Compile Include="Views\Employee\INewEmployee.cs" />
+    <Compile Include="Views\Employee\NewEmployeeView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Employee\NewEmployeeView.Designer.cs">
+      <DependentUpon>NewEmployeeView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Export\ExportView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -420,6 +443,13 @@
     <Compile Include="Views\MenuDropDown\MenuRenderer.cs" />
     <Compile Include="Views\MenuDropDown\RJDropdownMenu.cs">
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\Product\IProductView.cs" />
+    <Compile Include="Views\Product\ProductView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Product\ProductView.Designer.cs">
+      <DependentUpon>ProductView.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Sale\ISaleView.cs" />
     <Compile Include="Views\Sale\SaleView.cs">
@@ -468,6 +498,12 @@
     <EmbeddedResource Include="Views\Accountant\ReceiptsForm.resx">
       <DependentUpon>ReceiptsForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\Employee\EmployeeView.resx">
+      <DependentUpon>EmployeeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Employee\NewEmployeeView.resx">
+      <DependentUpon>NewEmployeeView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Export\ExportView.resx">
       <DependentUpon>ExportView.cs</DependentUpon>
     </EmbeddedResource>
@@ -476,6 +512,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\LoginView.resx">
       <DependentUpon>LoginView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Product\ProductView.resx">
+      <DependentUpon>ProductView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Sale\SaleView.resx">
       <DependentUpon>SaleView.cs</DependentUpon>
@@ -486,6 +525,17 @@
     <EmbeddedResource Include="Views\Supplier\SupplierView.resx">
       <DependentUpon>SupplierView.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="ComesticDBDataSet.xsc">
+      <DependentUpon>ComesticDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ComesticDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ComesticDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ComesticDBDataSet.xss">
+      <DependentUpon>ComesticDBDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
