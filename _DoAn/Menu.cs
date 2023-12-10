@@ -136,6 +136,7 @@ namespace _DoAn
 
         private void btnHome_Click(object sender, EventArgs e)
         {
+
             inlicator.Top = ((Control)sender).Top;
             OpenChildForm(new StatisticsView(name));
             lbName.Text = "Dashboard";
@@ -179,10 +180,6 @@ namespace _DoAn
             if (!isDropdownMenuOpening)
             {
                 RJDropdownMenu dropdownMenu = (RJDropdownMenu)sender;
-                if (!DesignMode)
-                {
-                    // Perform necessary actions when the visibility changes
-                }
             }
         }
 
