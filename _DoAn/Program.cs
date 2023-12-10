@@ -20,7 +20,7 @@ namespace _DoAn
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new StatisticsView());
+            Application.Run(new LoginView());
         }
     }
 }
