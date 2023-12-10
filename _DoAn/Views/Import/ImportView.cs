@@ -128,8 +128,7 @@ namespace _DoAn.Views.Import
             btnEdit.Enabled = false;
             btnDelete.Enabled = false;
         }
-
-        private void btnAdd_Click(object sender, EventArgs e)
+        private void btnAdd_Click_1(object sender, EventArgs e)
         {
             ImportPresenter importPresenter = new ImportPresenter(this);
             Command add = new AddCommand(importPresenter);
@@ -150,7 +149,7 @@ namespace _DoAn.Views.Import
                 btnAdd.Enabled = true;
             }
         }
-
+       
         private void txtQuantity_TextChanged(object sender, EventArgs e)
         {
             ImportPresenter importPresenter = new ImportPresenter(this);

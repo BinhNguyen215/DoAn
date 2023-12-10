@@ -1069,6 +1069,7 @@
             this.btnAdd.TextMarginLeft = 0;
             this.btnAdd.TextPadding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.btnAdd.UseDefaultRadiusAndThickness = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click_1);
             // 
             // btnCancel
             // 

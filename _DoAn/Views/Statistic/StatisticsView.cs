@@ -93,6 +93,7 @@ namespace _DoAn.Views.Statistic
             statisticPresenter.RetriveData();
             ChartMoneydaybydate();
         }
+
         private void btnCreateBill_Click(object sender, EventArgs e)
         {
             PrintDialog printDialog = new PrintDialog();
