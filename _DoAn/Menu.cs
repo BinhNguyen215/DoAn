@@ -178,5 +178,10 @@ namespace _DoAn
             OpenChildForm(new EmployeeView());
             lbName.Text = "Employee";
         }
+
+        private void Menu_Load(object sender, EventArgs e)
+        {
+            btnHome_Click(sender, e);
+        }
     }
 }
