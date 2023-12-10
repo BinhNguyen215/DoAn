@@ -30,7 +30,7 @@ namespace _DoAn
         private Panel leftBorderbtn;
         private Form currentChildForm;
         private BunifuIconButton currentButton;
-
+        private bool isDropdownMenuOpening = false;
         public Menu()
         { 
             InitializeComponent();
@@ -109,32 +109,27 @@ namespace _DoAn
             Open_DropdownMenu(rjDropdownMenu1, sender);
         }
 
-        private void DropdownMenu_VisibleChanged(object sender, EventArgs e, Control ctrl)
-        {
-            RJDropdownMenu dropdownMenu = (RJDropdownMenu)sender;
-            if (!DesignMode)
-            {
-            }
-        }
+        
 
         private void Open_DropdownMenu(RJDropdownMenu dropdownMenu ,object sender)
         {
-            Control control = (Control)sender;
-            dropdownMenu.VisibleChanged += new EventHandler((sender2, ev)
-                => DropdownMenu_VisibleChanged(sender2, ev, control));
+            Control control = (Control)sender; 
+            isDropdownMenuOpening = true;
+
             dropdownMenu.Show(control, control.Width - dropdownMenu.Width, control.Height);
+            isDropdownMenuOpening = false;
         }
 
         private void recieptToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            inlicator.Top = ((Control)sender).Top;
+            
             OpenChildForm(new ReceiptsForm(id));
             lbName.Text = "Receipt";
         }
 
         private void pAyToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            inlicator.Top = ((Control)sender).Top;
+            
             OpenChildForm(new PaySlipForm(id));
             lbName.Text = "PaySlip";
         }
@@ -177,6 +172,18 @@ namespace _DoAn
             inlicator.Top = ((Control)sender).Top;
             OpenChildForm(new EmployeeView());
             lbName.Text = "Employee";
+        }
+
+        private void rjDropdownMenu1_VisibleChanged(object sender, EventArgs e)
+        {
+            if (!isDropdownMenuOpening)
+            {
+                RJDropdownMenu dropdownMenu = (RJDropdownMenu)sender;
+                if (!DesignMode)
+                {
+                    // Perform necessary actions when the visibility changes
+                }
+            }
         }
     }
 }

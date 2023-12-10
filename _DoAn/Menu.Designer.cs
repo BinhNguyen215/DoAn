@@ -47,6 +47,7 @@
             this.bunifuButton11 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.lbName = new Bunifu.UI.WinForms.BunifuLabel();
             this.panelMenu = new Bunifu.UI.WinForms.BunifuPanel();
+            this.inlicator = new Bunifu.UI.WinForms.BunifuShapes();
             this.btnLogout = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnReport = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnAccountant = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
@@ -63,7 +64,6 @@
             this.rjDropdownMenu1 = new _DoAn.Views.MenuDropDown.RJDropdownMenu(this.components);
             this.recieptToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pAyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.inlicator = new Bunifu.UI.WinForms.BunifuShapes();
             this.bunifuGradientPanel1.SuspendLayout();
             this.bunifuGradientPanel2.SuspendLayout();
             this.panelMenu.SuspendLayout();
@@ -263,6 +263,22 @@
             this.panelMenu.ShowBorders = true;
             this.panelMenu.Size = new System.Drawing.Size(194, 751);
             this.panelMenu.TabIndex = 0;
+            // 
+            // inlicator
+            // 
+            this.inlicator.Angle = 0F;
+            this.inlicator.BackColor = System.Drawing.Color.Transparent;
+            this.inlicator.BorderColor = System.Drawing.Color.Silver;
+            this.inlicator.BorderThickness = 1;
+            this.inlicator.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(194)))), ((int)(((byte)(71)))));
+            this.inlicator.FillShape = true;
+            this.inlicator.Location = new System.Drawing.Point(2, 199);
+            this.inlicator.Name = "inlicator";
+            this.inlicator.Shape = Bunifu.UI.WinForms.BunifuShapes.Shapes.Rectangle;
+            this.inlicator.Sides = 5;
+            this.inlicator.Size = new System.Drawing.Size(7, 54);
+            this.inlicator.TabIndex = 6;
+            this.inlicator.Text = "bunifuShapes1";
             // 
             // btnLogout
             // 
@@ -1276,38 +1292,22 @@
             this.rjDropdownMenu1.MenuItemTextColor = System.Drawing.Color.Empty;
             this.rjDropdownMenu1.Name = "rjDropdownMenu1";
             this.rjDropdownMenu1.PrimaryColor = System.Drawing.Color.Empty;
-            this.rjDropdownMenu1.Size = new System.Drawing.Size(116, 48);
-            this.rjDropdownMenu1.Opened += new System.EventHandler(this.btnAccountant_Click);
+            this.rjDropdownMenu1.Size = new System.Drawing.Size(181, 70);
+            this.rjDropdownMenu1.VisibleChanged += new System.EventHandler(this.rjDropdownMenu1_VisibleChanged);
             // 
             // recieptToolStripMenuItem
             // 
             this.recieptToolStripMenuItem.Name = "recieptToolStripMenuItem";
-            this.recieptToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
+            this.recieptToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.recieptToolStripMenuItem.Text = "Receipt";
             this.recieptToolStripMenuItem.Click += new System.EventHandler(this.recieptToolStripMenuItem_Click);
             // 
             // pAyToolStripMenuItem
             // 
             this.pAyToolStripMenuItem.Name = "pAyToolStripMenuItem";
-            this.pAyToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
+            this.pAyToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.pAyToolStripMenuItem.Text = "Pay Slip";
             this.pAyToolStripMenuItem.Click += new System.EventHandler(this.pAyToolStripMenuItem_Click);
-            // 
-            // inlicator
-            // 
-            this.inlicator.Angle = 0F;
-            this.inlicator.BackColor = System.Drawing.Color.Transparent;
-            this.inlicator.BorderColor = System.Drawing.Color.Silver;
-            this.inlicator.BorderThickness = 1;
-            this.inlicator.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(194)))), ((int)(((byte)(71)))));
-            this.inlicator.FillShape = true;
-            this.inlicator.Location = new System.Drawing.Point(2, 199);
-            this.inlicator.Name = "inlicator";
-            this.inlicator.Shape = Bunifu.UI.WinForms.BunifuShapes.Shapes.Rectangle;
-            this.inlicator.Sides = 5;
-            this.inlicator.Size = new System.Drawing.Size(7, 54);
-            this.inlicator.TabIndex = 6;
-            this.inlicator.Text = "bunifuShapes1";
             // 
             // Menu
             // 
