@@ -272,7 +272,7 @@
             this.inlicator.BorderThickness = 1;
             this.inlicator.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(194)))), ((int)(((byte)(71)))));
             this.inlicator.FillShape = true;
-            this.inlicator.Location = new System.Drawing.Point(2, 199);
+            this.inlicator.Location = new System.Drawing.Point(2, 201);
             this.inlicator.Name = "inlicator";
             this.inlicator.Shape = Bunifu.UI.WinForms.BunifuShapes.Shapes.Rectangle;
             this.inlicator.Sides = 5;

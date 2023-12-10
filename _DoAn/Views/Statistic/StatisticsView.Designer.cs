@@ -70,6 +70,7 @@
             this.bunifuDatePicker1.BorderRadius = 1;
             this.bunifuDatePicker1.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.bunifuDatePicker1.Color = System.Drawing.Color.LightGray;
+            this.bunifuDatePicker1.CustomFormat = "dd-MM-yyyy";
             this.bunifuDatePicker1.DateBorderThickness = Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thin;
             this.bunifuDatePicker1.DateTextAlign = Bunifu.UI.WinForms.BunifuDatePicker.TextAlign.Left;
             this.bunifuDatePicker1.DisabledColor = System.Drawing.Color.Gray;
@@ -90,7 +91,7 @@
             this.bunifuDatePicker1.Name = "bunifuDatePicker1";
             this.bunifuDatePicker1.Size = new System.Drawing.Size(201, 35);
             this.bunifuDatePicker1.TabIndex = 32;
-            this.bunifuDatePicker1.ValueChanged += new System.EventHandler(this.bunifuDatePicker1_ValueChanged);
+            this.bunifuDatePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // panel1
             // 
@@ -133,9 +134,9 @@
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(17, 96);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(41, 20);
+            this.label2.Size = new System.Drawing.Size(56, 20);
             this.label2.TabIndex = 34;
-            this.label2.Text = "Day:";
+            this.label2.Text = "Today:";
             // 
             // label1
             // 
@@ -165,7 +166,7 @@
             this.lbProduct.AutoSize = true;
             this.lbProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbProduct.ForeColor = System.Drawing.Color.White;
-            this.lbProduct.Location = new System.Drawing.Point(68, 96);
+            this.lbProduct.Location = new System.Drawing.Point(83, 96);
             this.lbProduct.Name = "lbProduct";
             this.lbProduct.Size = new System.Drawing.Size(67, 20);
             this.lbProduct.TabIndex = 38;
@@ -178,9 +179,9 @@
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(21, 96);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(41, 20);
+            this.label5.Size = new System.Drawing.Size(56, 20);
             this.label5.TabIndex = 37;
-            this.label5.Text = "Day:";
+            this.label5.Text = "Today:";
             // 
             // lbSumProduct
             // 
@@ -221,7 +222,7 @@
             this.lbRevenueToday.AutoSize = true;
             this.lbRevenueToday.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbRevenueToday.ForeColor = System.Drawing.Color.White;
-            this.lbRevenueToday.Location = new System.Drawing.Point(71, 96);
+            this.lbRevenueToday.Location = new System.Drawing.Point(86, 96);
             this.lbRevenueToday.Name = "lbRevenueToday";
             this.lbRevenueToday.Size = new System.Drawing.Size(67, 20);
             this.lbRevenueToday.TabIndex = 39;
@@ -234,9 +235,9 @@
             this.label9.ForeColor = System.Drawing.Color.White;
             this.label9.Location = new System.Drawing.Point(24, 96);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(41, 20);
+            this.label9.Size = new System.Drawing.Size(56, 20);
             this.label9.TabIndex = 38;
-            this.label9.Text = "Day:";
+            this.label9.Text = "Today:";
             // 
             // lbRevenueThisMonth
             // 

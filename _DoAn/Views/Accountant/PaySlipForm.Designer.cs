@@ -57,7 +57,7 @@
             this.dgvPaySlip.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvPaySlip.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.ForestGreen;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Empty;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(111)))), ((int)(((byte)(27)))));
@@ -72,7 +72,7 @@
             this.dgvPaySlip.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.White;
             this.dgvPaySlip.CurrentTheme.BackColor = System.Drawing.Color.ForestGreen;
             this.dgvPaySlip.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(220)))), ((int)(((byte)(188)))));
-            this.dgvPaySlip.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.ForestGreen;
+            this.dgvPaySlip.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.Empty;
             this.dgvPaySlip.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
             this.dgvPaySlip.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.dgvPaySlip.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(111)))), ((int)(((byte)(27)))));
@@ -94,8 +94,8 @@
             this.dgvPaySlip.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvPaySlip.EnableHeadersVisualStyles = false;
             this.dgvPaySlip.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(220)))), ((int)(((byte)(188)))));
-            this.dgvPaySlip.HeaderBackColor = System.Drawing.Color.ForestGreen;
             this.dgvPaySlip.HeaderBackColor = System.Drawing.Color.Empty;
+            this.dgvPaySlip.HeaderBgColor = System.Drawing.Color.Empty;
             this.dgvPaySlip.HeaderForeColor = System.Drawing.Color.White;
             this.dgvPaySlip.Location = new System.Drawing.Point(0, 53);
             this.dgvPaySlip.Margin = new System.Windows.Forms.Padding(6);
@@ -156,6 +156,7 @@
             this.dateTimePicker1.BorderRadius = 1;
             this.dateTimePicker1.CalendarForeColor = System.Drawing.Color.White;
             this.dateTimePicker1.Color = System.Drawing.Color.Silver;
+            this.dateTimePicker1.CustomFormat = "dd-MM-yyyy";
             this.dateTimePicker1.DateBorderThickness = Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thin;
             this.dateTimePicker1.DateTextAlign = Bunifu.UI.WinForms.BunifuDatePicker.TextAlign.Left;
             this.dateTimePicker1.DisabledColor = System.Drawing.Color.Gray;
@@ -165,6 +166,7 @@
             this.dateTimePicker1.FillDatePicker = false;
             this.dateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dateTimePicker1.ForeColor = System.Drawing.Color.Black;
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker1.Icon = ((System.Drawing.Image)(resources.GetObject("dateTimePicker1.Icon")));
             this.dateTimePicker1.IconColor = System.Drawing.Color.Gray;
             this.dateTimePicker1.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;

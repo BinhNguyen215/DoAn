@@ -235,6 +235,7 @@
             this.dateTimePicker1.BorderRadius = 1;
             this.dateTimePicker1.CalendarForeColor = System.Drawing.Color.White;
             this.dateTimePicker1.Color = System.Drawing.Color.Silver;
+            this.dateTimePicker1.CustomFormat = "dd-MM-yyyy";
             this.dateTimePicker1.DateBorderThickness = Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thin;
             this.dateTimePicker1.DateTextAlign = Bunifu.UI.WinForms.BunifuDatePicker.TextAlign.Left;
             this.dateTimePicker1.DisabledColor = System.Drawing.Color.Gray;
@@ -244,6 +245,7 @@
             this.dateTimePicker1.FillDatePicker = false;
             this.dateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dateTimePicker1.ForeColor = System.Drawing.Color.Black;
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker1.Icon = ((System.Drawing.Image)(resources.GetObject("dateTimePicker1.Icon")));
             this.dateTimePicker1.IconColor = System.Drawing.Color.Gray;
             this.dateTimePicker1.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;

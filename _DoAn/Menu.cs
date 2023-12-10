@@ -180,10 +180,6 @@ namespace _DoAn
             if (!isDropdownMenuOpening)
             {
                 RJDropdownMenu dropdownMenu = (RJDropdownMenu)sender;
-                if (!DesignMode)
-                {
-                    // Perform necessary actions when the visibility changes
-                }
             }
         }
 
