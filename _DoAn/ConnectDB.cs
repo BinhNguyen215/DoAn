@@ -13,7 +13,7 @@ namespace _DoAn
         SqlConnection connect;
         public ConnectDB()
         {
-            this.connect = new SqlConnection(@"Data Source=DESKTOP-7R66M1N;Initial Catalog=ComesticDB;Integrated Security=True");
+            this.connect = new SqlConnection(@"Data Source=DESKTOP-C801P81\BINHNGUYEN;Initial Catalog=ComesticDB;Integrated Security=True");
         }
         public DataTable GetData(string sqlquery)
         {

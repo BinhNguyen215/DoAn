@@ -85,11 +85,12 @@
             this.bunifuDatePicker1.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
             this.bunifuDatePicker1.LeftTextMargin = 5;
             this.bunifuDatePicker1.Location = new System.Drawing.Point(17, 20);
-            this.bunifuDatePicker1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bunifuDatePicker1.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuDatePicker1.MinimumSize = new System.Drawing.Size(4, 35);
             this.bunifuDatePicker1.Name = "bunifuDatePicker1";
             this.bunifuDatePicker1.Size = new System.Drawing.Size(201, 35);
             this.bunifuDatePicker1.TabIndex = 32;
+            this.bunifuDatePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // panel1
             // 
@@ -323,7 +324,7 @@
             this.dtgvBestSeller.HeaderBgColor = System.Drawing.Color.Empty;
             this.dtgvBestSeller.HeaderForeColor = System.Drawing.Color.White;
             this.dtgvBestSeller.Location = new System.Drawing.Point(677, 283);
-            this.dtgvBestSeller.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtgvBestSeller.Margin = new System.Windows.Forms.Padding(2);
             this.dtgvBestSeller.Name = "dtgvBestSeller";
             this.dtgvBestSeller.ReadOnly = true;
             this.dtgvBestSeller.RowHeadersVisible = false;
