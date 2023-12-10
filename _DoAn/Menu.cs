@@ -185,5 +185,10 @@ namespace _DoAn
                 }
             }
         }
+
+        private void Menu_Load(object sender, EventArgs e)
+        {
+            btnHome_Click(sender, e);
+        }
     }
 }
