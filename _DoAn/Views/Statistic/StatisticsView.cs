@@ -89,9 +89,6 @@ namespace _DoAn.Views.Statistic
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
-            StatisticPresenter statisticPresenter = new StatisticPresenter(this);
-            statisticPresenter.RetriveData();
-            ChartMoneydaybydate();
         }
 
         private void btnCreateBill_Click(object sender, EventArgs e)
@@ -133,6 +130,12 @@ namespace _DoAn.Views.Statistic
             ChartMoneydaybydate();
         }
 
-       
+        private void bunifuDatePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+            StatisticPresenter statisticPresenter = new StatisticPresenter(this);
+            statisticPresenter.RetriveData();
+            ChartMoneydaybydate();
+        }
     }
 }

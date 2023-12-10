@@ -133,9 +133,10 @@ namespace _DoAn
             OpenChildForm(new PaySlipForm(id));
             lbName.Text = "PaySlip";
         }
-
+        int flag = 1;
         private void btnHome_Click(object sender, EventArgs e)
         {
+            if(flag==1)
             inlicator.Top = ((Control)sender).Top;
             OpenChildForm(new StatisticsView(name));
             lbName.Text = "Dashboard";
@@ -188,7 +189,9 @@ namespace _DoAn
 
         private void Menu_Load(object sender, EventArgs e)
         {
+            flag = 0;
             btnHome_Click(sender, e);
+            flag = 1;
         }
     }
 }

@@ -1065,7 +1065,7 @@
             this.Controls.Add(this.bunifuPanel1);
             this.Controls.Add(this.label1);
             this.Name = "NewEmployeeView";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NewEmployeeViewForm1";
             this.Load += new System.EventHandler(this.NewEmployeeView_Load);
             this.bunifuPanel1.ResumeLayout(false);

@@ -215,9 +215,7 @@ namespace _DoAn.Views.Employee
                 {
                     lbNofiPhone.Visible = false;
                     bPhone = true;
-                }
-                if (bPhone && bCitizenID&& bEmail) btnSave.Enabled = true;
-                else btnSave.Enabled = false;
+                }          
             }
             btnSaveEnable();
 
@@ -226,7 +224,7 @@ namespace _DoAn.Views.Employee
         private void btnSaveEnable()
         {
             NewEmployeePresenter newEmployeePresenter = new NewEmployeePresenter(this);
-            if (newEmployeePresenter.CheckInformation())
+            if (newEmployeePresenter.CheckInformation()&&bPhone && bCitizenID && bEmail)
             {
                 btnSave.Enabled = true;
             }
@@ -299,8 +297,6 @@ namespace _DoAn.Views.Employee
                     lbNofiCitizenId.Visible = false;
                     bCitizenID = true;
                 }
-                if (bPhone && bCitizenID&&bEmail) btnSave.Enabled = true;
-                else btnSave.Enabled = false;
             }
             btnSaveEnable();
 
