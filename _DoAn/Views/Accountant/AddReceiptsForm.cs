@@ -77,7 +77,7 @@ namespace _DoAn.Views.Accountant
             }
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private void btnSave_Click_1(object sender, EventArgs e)
         {
             AddReceiptsPresenter addReceiptsPresenter = new AddReceiptsPresenter(this);
             if (this._isNew)
@@ -101,7 +101,6 @@ namespace _DoAn.Views.Accountant
 
             }
         }
-
         private void AddReceiptsForm_Load(object sender, EventArgs e)
         {
             if (!this._isNew)
@@ -111,11 +110,11 @@ namespace _DoAn.Views.Accountant
             }
         }
 
-        private void btnCancel_Click(object sender, EventArgs e)
+        private void btnCancel_Click_1(object sender, EventArgs e)
         {
             this.Hide();
-        }
 
+        }
         private void txtValue_TextChanged(object sender, EventArgs e)
         {
             if (System.Text.RegularExpressions.Regex.IsMatch(txtValue.Text, "[^0-9]"))
@@ -125,5 +124,6 @@ namespace _DoAn.Views.Accountant
             }
         }
 
+       
     }
 }

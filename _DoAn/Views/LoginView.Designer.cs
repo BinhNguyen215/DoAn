@@ -227,7 +227,7 @@
             stateProperties4.ForeColor = System.Drawing.Color.Empty;
             stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.tbxUsername.OnIdleState = stateProperties4;
-            this.tbxUsername.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tbxUsername.Padding = new System.Windows.Forms.Padding(3);
             this.tbxUsername.PasswordChar = '\0';
             this.tbxUsername.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.tbxUsername.PlaceholderText = "Enter username";
@@ -242,7 +242,7 @@
             this.tbxUsername.TabIndex = 3;
             this.tbxUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.tbxUsername.TextMarginBottom = 0;
-            this.tbxUsername.TextMarginLeft = 3;
+            this.tbxUsername.TextMarginLeft = 8;
             this.tbxUsername.TextMarginTop = 1;
             this.tbxUsername.TextPlaceholder = "Enter username";
             this.tbxUsername.UseSystemPasswordChar = false;
@@ -303,7 +303,7 @@
             stateProperties8.ForeColor = System.Drawing.Color.Empty;
             stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.tbxPassword.OnIdleState = stateProperties8;
-            this.tbxPassword.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tbxPassword.Padding = new System.Windows.Forms.Padding(3);
             this.tbxPassword.PasswordChar = '\0';
             this.tbxPassword.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.tbxPassword.PlaceholderText = "Enter password";
@@ -313,12 +313,12 @@
             this.tbxPassword.SelectionLength = 0;
             this.tbxPassword.SelectionStart = 0;
             this.tbxPassword.ShortcutsEnabled = true;
-            this.tbxPassword.Size = new System.Drawing.Size(288, 45);
+            this.tbxPassword.Size = new System.Drawing.Size(288, 44);
             this.tbxPassword.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.tbxPassword.TabIndex = 4;
             this.tbxPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.tbxPassword.TextMarginBottom = 0;
-            this.tbxPassword.TextMarginLeft = 3;
+            this.tbxPassword.TextMarginLeft = 8;
             this.tbxPassword.TextMarginTop = 1;
             this.tbxPassword.TextPlaceholder = "Enter password";
             this.tbxPassword.UseSystemPasswordChar = true;

@@ -19,6 +19,7 @@ using _DoAn.Views.Export;
 using _DoAn.Views.Product;
 using Bunifu.UI.WinForms.BunifuButton;
 using _DoAn.Views.Employee;
+using _DoAn.Custom;
 
 namespace _DoAn
 {
@@ -106,6 +107,7 @@ namespace _DoAn
 
         private void btnAccountant_Click(object sender, EventArgs e)
         {
+            inlicator.Top = ((Control)sender).Top;
             Open_DropdownMenu(rjDropdownMenu1, sender);
         }
 
@@ -144,7 +146,8 @@ namespace _DoAn
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
+            
         }
 
         private void btnSuppliers_Click(object sender, EventArgs e)
@@ -184,6 +187,19 @@ namespace _DoAn
         }
 
         private void Menu_Load(object sender, EventArgs e)
+        {
+            flag = 0;
+            btnHome_Click(sender, e);
+            flag = 1;
+        }
+
+        private void btnIn4_Click(object sender, EventArgs e)
+        {
+            ProfileForm p = new ProfileForm(name, position, id);
+            p.Show();
+        }
+
+        private void btnLogo_Click(object sender, EventArgs e)
         {
             flag = 0;
             btnHome_Click(sender, e);

@@ -420,7 +420,7 @@
             this.tbxAddress.MaxLength = 32767;
             this.tbxAddress.MinimumSize = new System.Drawing.Size(1, 1);
             this.tbxAddress.Modified = false;
-            this.tbxAddress.Multiline = false;
+            this.tbxAddress.Multiline = true;
             this.tbxAddress.Name = "tbxAddress";
             stateProperties13.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(189)))), ((int)(((byte)(50)))));
             stateProperties13.FillColor = System.Drawing.Color.Empty;
@@ -455,7 +455,7 @@
             this.tbxAddress.Size = new System.Drawing.Size(301, 113);
             this.tbxAddress.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.tbxAddress.TabIndex = 50;
-            this.tbxAddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbxAddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.tbxAddress.TextMarginBottom = 0;
             this.tbxAddress.TextMarginLeft = 3;
             this.tbxAddress.TextMarginTop = 1;

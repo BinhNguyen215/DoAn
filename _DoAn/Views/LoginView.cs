@@ -36,7 +36,9 @@ namespace _DoAn.Views
                 Menu menu = new Menu(id, name, position);
                 //Dialog menu = new Dialog();
                 this.Hide();
-                menu.Show();
+                menu.ShowDialog();
+                this.Show();
+                tbxPassword.Clear();
             }
             else
             {

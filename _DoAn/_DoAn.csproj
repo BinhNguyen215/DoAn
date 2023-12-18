@@ -337,6 +337,12 @@
       <DependentUpon>ComesticDBDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="ConnectDB.cs" />
+    <Compile Include="Custom\ProfileForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Custom\ProfileForm.Designer.cs">
+      <DependentUpon>ProfileForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -472,6 +478,9 @@
     <Compile Include="Views\Supplier\SupplierView.Designer.cs">
       <DependentUpon>SupplierView.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Custom\ProfileForm.resx">
+      <DependentUpon>ProfileForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
       <SubType>Designer</SubType>

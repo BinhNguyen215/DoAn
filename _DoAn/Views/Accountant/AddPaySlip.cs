@@ -77,7 +77,7 @@ namespace _DoAn.Views.Accountant
             }
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private void btnSave_Click_1(object sender, EventArgs e)
         {
             AddPaySlipPresenter addPaySlipPresenter = new AddPaySlipPresenter(this);
             if (this._isNew)
@@ -109,7 +109,11 @@ namespace _DoAn.Views.Accountant
                 }
             }
         }
+        private void btnCancel_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
 
+        }
         private void AddPaySlip_Load(object sender, EventArgs e)
         {
             if (!this._isNew)
@@ -118,11 +122,7 @@ namespace _DoAn.Views.Accountant
                 txtValue.Enabled = false;
             }
         }
-
-        private void btnCancel_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-        }
+       
 
         private void txtValue_TextChanged(object sender, EventArgs e)
         {
@@ -132,5 +132,7 @@ namespace _DoAn.Views.Accountant
                 txtValue.Text = txtValue.Text.Remove(txtValue.Text.Length - 1);
             }
         }
+
+      
     }
 }

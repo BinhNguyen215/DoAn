@@ -118,7 +118,7 @@ namespace _DoAn.Views.Product
             {
                 MessageBox.Show(_message, "Notification", MessageBoxButtons.OK,
                    MessageBoxIcon.Information);
-
+                productPresenter.ClearInformation();
                 productPresenter.GetProduct();
                 productPresenter.ClearInformation();
             }
@@ -145,6 +145,7 @@ namespace _DoAn.Views.Product
                     btnAdd.Enabled = false;
                     btnEdit.Enabled = false;
                     btnDelete.Enabled = false;
+                    lbNofiWrite.Visible = true;
                 }
                 else
                 {
@@ -167,6 +168,7 @@ namespace _DoAn.Views.Product
                     btnAdd.Enabled = false;
                     btnEdit.Enabled = false;
                     btnDelete.Enabled = false;
+                    lbNofiWrite.Visible = true;
                 }
                 else
                 {
@@ -189,10 +191,21 @@ namespace _DoAn.Views.Product
                 MessageBox.Show("Please enter only numbers.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtPrice.Text = txtPrice.Text.Remove(txtPrice.Text.Length - 1);
             }
-            if (productPresenter.CheckInformation())
-                btnAdd.Enabled = true;
+            if (txtProductName.Text.Length > 0)
+            { 
+                lbNofiWrite.Visible= false;
+            }
             else
+                lbNofiWrite.Visible = true;
+
+            if (productPresenter.CheckInformation())
+            {
+                btnAdd.Enabled = true;
+            }    
+            else
+            {
                 btnAdd.Enabled = false;
+            }    
         }
 
         private void dtgvProduct_DoubleClick(object sender, EventArgs e)
@@ -201,11 +214,13 @@ namespace _DoAn.Views.Product
             {
                 btnEdit.Enabled = true;
                 btnDelete.Enabled = true;
+                lbNofiWrite.Visible = false;
             }
             else
             {
                 btnEdit.Enabled = false;
                 btnDelete.Enabled = false;
+                lbNofiWrite.Visible = true;
             }
 
             ProductPresenter productPresenter = new ProductPresenter(this);
