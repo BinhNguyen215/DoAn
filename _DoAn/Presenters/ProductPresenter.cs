@@ -61,9 +61,10 @@ namespace _DoAn.Presenters
             }
             return true;
         }
-
+        
         public bool AddData()
         {
+            
             if (product.AddProduct(productview.ProductName, productview.Price, productview.Description, productview.Original, productview.Unit, productview.ProductType))
             {
                 productview.message = "Add new product successfully";

@@ -12,10 +12,10 @@ namespace _DoAn.Models
         public DataTable GetTop10ProductData()
         {
             ConnectDB connect = new ConnectDB();
-            string sqlQuery = "SELECT TOP 10 with TIES ProductName as Name , Sum(Quantity) as Sales from Product, DetailBill "
+            string sqlQuery = "SELECT TOP 10 with TIES ProductName as Name , Sum(Quantities) as Sales from Product, DetailBill "
                 + "Where DetailBill.Product_id = Product.Product_id "
                 + "Group BY ProductName "
-                + "Order By Sum(Quantity) DESC";
+                + "Order By Sum(Quantities) DESC";
             return connect.GetData(sqlQuery);
         }
         public string GetImportMonth(string month, string year)
@@ -29,14 +29,14 @@ namespace _DoAn.Models
         {
             //string sMonth = DateTime.Now.ToString("MM");
             ConnectDB connect = new ConnectDB();
-            string sqlQuery = "SELECT SUM(DetailBill.Quantity) as SL from Bill, DetailBill Where Bill.Bill_id = DetailBill.Bill_id and Month(DateBill) ='" + month + "' and Year(DateBill) = '" + year + "'";
+            string sqlQuery = "SELECT SUM(DetailBill.Quantities) as SL from Bill, DetailBill Where Bill.Bill_id = DetailBill.Bill_id and Month(DateBill) ='" + month + "' and Year(DateBill) = '" + year + "'";
             return connect.GetData(sqlQuery).Rows[0]["SL"].ToString();
         }
         public string GetNumberOfProductToday(string day, string month, string year)
         {
             //string sDay = DateTime.Now.ToString("dd");
             ConnectDB connect = new ConnectDB();
-            string sqlQuery = "SELECT SUM(DetailBill.Quantity) as SL from Bill, DetailBill Where Bill.Bill_id = DetailBill.Bill_id and Day(DateBill) ='" + day + "' and Month(DateBill) = '" + month + "' and Year(DateBill) = '" + year + "'";
+            string sqlQuery = "SELECT SUM(DetailBill.Quantities) as SL from Bill, DetailBill Where Bill.Bill_id = DetailBill.Bill_id and Day(DateBill) ='" + day + "' and Month(DateBill) = '" + month + "' and Year(DateBill) = '" + year + "'";
             return connect.GetData(sqlQuery).Rows[0]["SL"].ToString();
         }
         public string GetNumberOfBillMonth(string month, string year)

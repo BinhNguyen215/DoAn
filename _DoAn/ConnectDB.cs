@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace _DoAn
 {
@@ -26,12 +27,19 @@ namespace _DoAn
         {
             cmd.Connection = this.connect;
             connect.Open();
-            if (cmd.ExecuteNonQuery() > 0)
+            try
             {
+                if (cmd.ExecuteNonQuery() > 0)
+                {
+                    connect.Close();
+                    return true;
+                }
                 connect.Close();
-                return true;
             }
-            connect.Close();
+            catch (Exception ex)
+            {
+                MessageBox.Show("Loi roi ba: " + ex.Message);
+            }
             return false;
         }
         public int GetId(SqlCommand cmd)
