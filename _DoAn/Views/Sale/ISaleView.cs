@@ -17,7 +17,8 @@ namespace _DoAn.Views.Sale
         string Product_id { get; set; }
         string Product_Name { get; set; }
         string Price { get; set; }
-        string Quantity { get; set; }
+        string Quantities { get; set; }
+        string Unit_Name{ get; set; }
         string message { get; set; }
         BunifuDataGridView dgvCart { get; set; }
         BunifuDataGridView dgv_ListProduct { get; set; }

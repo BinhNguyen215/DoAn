@@ -20,7 +20,6 @@ namespace _DoAn.Presenters
         {
             saleview = view;
         }
-
         public bool GetProduct()
         {
             DataTable dt = new DataTable();
@@ -28,7 +27,6 @@ namespace _DoAn.Presenters
             saleview.dgv_ListProduct.DataSource = dt;
             return true;
         }
-
         public bool GetBill()
         {
             DataTable dt = new DataTable();
@@ -36,20 +34,17 @@ namespace _DoAn.Presenters
             saleview.dgv_ListProduct.DataSource = dt;
             return true;
         }
-
-
-
         public bool ClearInformation()
         {
             saleview.Product_id = "";
             saleview.Product_Name = "";
             saleview.Price = "";
-            saleview.Quantity = "";
-
+            saleview.Quantities = "";
+            saleview.Unit_Name = "";
             return true;
         }
 
-        public bool RetriveProduct(int index, string id, string name, string price)
+        public bool RetriveProduct(int index, string id, string name, string price,string unit, string quan="1")
         {
             if (index != -1)
             {
@@ -57,42 +52,39 @@ namespace _DoAn.Presenters
                 saleview.Product_id = id;
                 saleview.Product_Name = name;
                 saleview.Price = price;
-                saleview.Quantity = "1";
-
+                saleview.Quantities = quan;
+                saleview.Unit_Name=unit;
             }
             return true;
-
         }
 
-        public bool AddDataToDataGridview()
+        public bool AddDataToDataGridview()//*
         {
             if (CheckInformation())
             {
-
                 bool found = false;
                 if (saleview.dgvCart.Rows.Count > 0)
                 {
                     foreach (DataGridViewRow row in saleview.dgvCart.Rows)
                     {
-                        if (Convert.ToString(row.Cells[0].Value) == saleview.Product_id)
+                        if (Convert.ToString(row.Cells[0].Value) == saleview.Product_id && row.Cells[4].Value==saleview.Unit_Name)
                         {
-                            row.Cells[3].Value = (int.Parse(saleview.Quantity) + Convert.ToInt16(row.Cells[3].Value.ToString()));
-
+                            row.Cells[3].Value = (int.Parse(saleview.Quantities) *Convert.ToInt16(row.Cells[3].Value.ToString()));
                             found = true;
                             return true;
                         }
 
                     }
                     if (!found)
-                    {
-                        saleview.dgvCart.Rows.Add(saleview.Product_id, saleview.Product_Name, saleview.Price, saleview.Quantity);
+                    { 
+                        saleview.dgvCart.Rows.Add(saleview.Product_id, saleview.Product_Name, saleview.Price, saleview.Quantities,saleview.Unit_Name);
                         return true;
                     }
 
                 }
                 else
                 {
-                    saleview.dgvCart.Rows.Add(saleview.Product_id, saleview.Product_Name, saleview.Price, saleview.Quantity);
+                    saleview.dgvCart.Rows.Add(saleview.Product_id, saleview.Product_Name, saleview.Price, saleview.Quantities, saleview.Unit_Name);
                     return true;
                 }
                 return true;
@@ -131,7 +123,9 @@ namespace _DoAn.Presenters
                 return false;
             else if (string.IsNullOrEmpty(saleview.Price))
                 return false;
-            else if (string.IsNullOrEmpty(saleview.Quantity))
+            else if (string.IsNullOrEmpty(saleview.Quantities))
+                return false;
+            else if (string.IsNullOrEmpty(saleview.Unit_Name))
                 return false;
             else
                 return true;
@@ -183,9 +177,9 @@ namespace _DoAn.Presenters
 
                         DetailBill detailBill = new DetailBill();
                         detailBill.AddDetailData(id, row.Cells[0].Value.ToString(), row.Cells[2].Value.ToString(),
-                         row.Cells[3].Value.ToString());
+                         row.Cells[3].Value.ToString(), row.Cells[4].Value.ToString());
 
-                        bill.UpdateProduct(row.Cells[3].Value.ToString(), row.Cells[0].Value.ToString());
+                        bill.UpdateProduct(row.Cells[3].Value.ToString(), row.Cells[0].Value.ToString(), row.Cells[4].Value.ToString());
 
                     }
                 }
@@ -208,7 +202,7 @@ namespace _DoAn.Presenters
             saleview.dgvCart.Refresh();
             return true;
         }
-        public bool Print(System.Drawing.Printing.PrintPageEventArgs e)
+        public bool Print(System.Drawing.Printing.PrintPageEventArgs e) //*
         {
             Graphics graphic = e.Graphics;
 

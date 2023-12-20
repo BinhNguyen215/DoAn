@@ -8,6 +8,7 @@ using System.Drawing;
 using System.Drawing.Printing;
 using System.Linq;
 using System.Reflection.Emit;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -39,7 +40,6 @@ namespace _DoAn.Views.Sale
             get { return txtPhone.Text; }
             set { txtPhone.Text = value; }
         }
-
         private string _id;
         public string Employee
         {
@@ -75,7 +75,18 @@ namespace _DoAn.Views.Sale
         string ISaleView.Product_id { get; set; }
         string ISaleView.Product_Name { get; set; }
         string ISaleView.Price { get; set; }
-        string ISaleView.Quantity { get; set; }
+        string ISaleView.Unit_Name { get; set; }
+
+        public string Quantities
+        {
+            get { return txtQuantities.Text; }
+            set
+            {
+                txtQuantities.Text = value;
+            }
+        }
+       
+       
         public string BillValue
         {
             get { return lbTotal.Text; }
@@ -87,29 +98,23 @@ namespace _DoAn.Views.Sale
             get { return dgvDetailBill; }
             set { dgvDetailBill = value; }
         }
+      
 
         private void dgvListProduct_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            SalePresenter salePresenter = new SalePresenter(this);
-            if (salePresenter.RetriveProduct(dgvListProduct.CurrentRow.Index, dgvListProduct.CurrentRow.Cells[0].Value.ToString()
-                , dgvListProduct.CurrentRow.Cells[1].Value.ToString(), dgvListProduct.CurrentRow.Cells[2].Value.ToString()))
-            {
-                btnAdd.Enabled = true;
-            }
+            checkBoxLv1.Checked = false;
+            checkBoxlv2.Checked = false;
+            btnAdd.Enabled = false;
+
+            lbLv2.Enabled = true;
+            lbLv1.Enabled = true;
+            txtQuantities.Enabled = true;
+            txtQuantities.Text = "1";
+            lbLv2.Text = dgvListProduct.CurrentRow.Cells[3].Value.ToString();
+            lbLv1.Text = dgvListProduct.CurrentRow.Cells[4].Value.ToString();
         }
 
-        private void btnAdd_Click_1(object sender, EventArgs e)
-        {
-            btnCancel.Enabled = true;
-            SalePresenter salePresenter = new SalePresenter(this);
-            if (salePresenter.AddDataToDataGridview())
-            {
-                salePresenter.CalculateTotalPrice();
-                salePresenter.ClearInformation();
-                btnAdd.Enabled = false;
-            }
-        }
-
+       
         private void btnCreateBill_Click(object sender, EventArgs e)
         {
             if (dgvCart.Rows.Count > 0)
@@ -164,8 +169,7 @@ namespace _DoAn.Views.Sale
         {
             SalePresenter salePresenter = new SalePresenter(this);
             if (salePresenter.RetriveProduct(dgvCart.CurrentRow.Index, dgvCart.CurrentRow.Cells[0].Value.ToString()
-                 , dgvCart.CurrentRow.Cells[1].Value.ToString(), dgvCart.CurrentRow.Cells[2].Value.ToString()
-                 ))
+                 , dgvCart.CurrentRow.Cells[1].Value.ToString(), dgvCart.CurrentRow.Cells[2].Value.ToString(), Unit, Quantities.ToString())) // (index,id,price,unitlv1,unitlv2)
             {
                 btnDelete.Enabled = true;
             }
@@ -248,6 +252,18 @@ namespace _DoAn.Views.Sale
                 salePresenter.CalculateTotalPrice();
             }
         }
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            btnCancel.Enabled = true;
+            SalePresenter salePresenter = new SalePresenter(this);
+            if (salePresenter.AddDataToDataGridview())
+            {
+                checkBoxLv1.Checked = checkBoxlv2.Checked = false;
+                salePresenter.CalculateTotalPrice();
+                salePresenter.ClearInformation();
+                btnAdd.Enabled = false;
+            }
+        }
         private string _textEdit = "";
 
         private void dgvCart_CellEnter(object sender, DataGridViewCellEventArgs e)
@@ -313,6 +329,42 @@ namespace _DoAn.Views.Sale
             bunifuGroupBox4.Hide();
         }
 
-       
+ 
+        
+      
+        private string Unit;
+        private void checkBoxlv2_CheckedChanged(object sender, BunifuCheckBox.CheckedChangedEventArgs e)
+        {
+            if(checkBoxlv2.Checked)
+            {
+                checkBoxLv1.Checked = false;
+                Unit = lbLv2.Text;
+                SalePresenter salePresenter = new SalePresenter(this);
+
+                if (salePresenter.RetriveProduct(dgvListProduct.CurrentRow.Index, dgvListProduct.CurrentRow.Cells[0].Value.ToString()
+                  , dgvListProduct.CurrentRow.Cells[1].Value.ToString()
+                  ,(int.Parse(dgvListProduct.CurrentRow.Cells[2].Value.ToString()) / int.Parse(dgvListProduct.CurrentRow.Cells[5].Value.ToString())).ToString()
+                  , Unit, Quantities))
+                {
+                    btnAdd.Enabled = true;
+                }
+            }
+           
+        }
+
+        private void checkBoxLv1_CheckedChanged(object sender, BunifuCheckBox.CheckedChangedEventArgs e)
+        {
+            if (checkBoxLv1.Checked)
+            {
+                checkBoxlv2.Checked = false;
+                Unit = lbLv1.Text;
+                SalePresenter salePresenter = new SalePresenter(this);
+                if (salePresenter.RetriveProduct(dgvListProduct.CurrentRow.Index, dgvListProduct.CurrentRow.Cells[0].Value.ToString()
+                  , dgvListProduct.CurrentRow.Cells[1].Value.ToString(), dgvListProduct.CurrentRow.Cells[2].Value.ToString(), Unit, Quantities))
+                {
+                    btnAdd.Enabled = true;
+                }
+            }
+        }
     }
 }
