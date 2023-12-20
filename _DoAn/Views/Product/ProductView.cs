@@ -86,11 +86,31 @@ namespace _DoAn.Views.Product
             ProductPresenter productPresenter = new ProductPresenter(this);
             productPresenter.GetProductType();
             productPresenter.GetProduct();
-            btnAdd.Enabled = false;
+            btnAdd.Enabled = true;
             btnEdit.Enabled = false;
             btnDelete.Enabled = false;
+            setEnableF();
         }
-
+        private void setEnableF ()
+        {
+            txtDescription.Enabled = false;
+            txtOriginal.Enabled = false;
+            txtProductName.Enabled = false;
+            txtProductId.Enabled = false;
+            txtPrice.Enabled = false;
+            cbProductType.Enabled = false;
+            cbUnit.Enabled = false;
+        }
+        private void setEnableT()
+        {
+            txtDescription.Enabled = true;
+            txtOriginal.Enabled = true;
+            txtProductName.Enabled = true;
+            txtPrice.Enabled = true;
+            cbProductType.Enabled = true;
+            cbUnit.Enabled = true;
+            
+        }
         private void ProductView_DoubleClick(object sender, EventArgs e)
         {
             if (dtgvProduct.CurrentRow.Cells[0].Value.ToString() != "")
@@ -110,27 +130,22 @@ namespace _DoAn.Views.Product
                 dtgvProduct.CurrentRow.Cells[3].Value.ToString(), dtgvProduct.CurrentRow.Cells[4].Value.ToString(),
                 dtgvProduct.CurrentRow.Cells[5].Value.ToString(), dtgvProduct.CurrentRow.Cells[6].Value.ToString());
         }
-
+        int index = 0;// xem đã ấn nút add chưa 1 - có, 0 - chưa, 2 - ấn edit rồi
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            setEnableT();
+            lbNofiWrite.Visible = true;
+            index = 1;
+            btnVisible(false, false, false);
+            btnDone.Enabled= false;
+            btnDone.Visible = true;
             ProductPresenter productPresenter = new ProductPresenter(this);
-            if (productPresenter.AddData())
-            {
-                MessageBox.Show(_message, "Notification", MessageBoxButtons.OK,
-                   MessageBoxIcon.Information);
-                productPresenter.ClearInformation();
-                productPresenter.GetProduct();
-                productPresenter.ClearInformation();
-            }
-            else
-            {
-                MessageBox.Show(_message, "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-            }
+            productPresenter.ClearInformation();
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
+            
             DialogResult dr = MessageBox.Show("Are you sure you want to delete this product?", "Question", MessageBoxButtons.YesNo,
                   MessageBoxIcon.Question);
 
@@ -157,30 +172,13 @@ namespace _DoAn.Views.Product
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            ProductPresenter productPresenter = new ProductPresenter(this);
-            if (productPresenter.CheckInformationEdit())
-            {
-                if (productPresenter.EditData())
-                {
-                    MessageBox.Show(_message, "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    productPresenter.GetProduct();
-                    productPresenter.ClearInformation();
-                    btnAdd.Enabled = false;
-                    btnEdit.Enabled = false;
-                    btnDelete.Enabled = false;
-                    lbNofiWrite.Visible = true;
-                }
-                else
-                {
-                    MessageBox.Show(_message, "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                }
-            }
-            else
-            {
-                MessageBox.Show("Please check information again!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                btnEdit.Enabled = true;
-            }
+            setEnableT();
+            index = 2;
+            btnAdd.Visible=false;
+            btnEdit.Visible=false;
+            btnDelete.Visible=false;
+            btnDone.Visible = true;
+            btnDone.Enabled=true;
         }
 
         private void txtProductName_TextChanged(object sender, EventArgs e)
@@ -198,36 +196,116 @@ namespace _DoAn.Views.Product
             else
                 lbNofiWrite.Visible = true;
 
-            if (productPresenter.CheckInformation())
+            if(index==1)
             {
-                btnAdd.Enabled = true;
-            }    
+                if (productPresenter.CheckInformation())
+                {
+                    btnDone.Enabled = true;
+                }    
+                else
+                {
+                    btnDone.Enabled = false;
+                }    
+            }   
+            if(!string.IsNullOrEmpty(cbUnit.Text))//*
+            {
+                string[] unitSlip= cbUnit.Text.Split('/');
+                lbUnitSmall.Text = unitSlip[0];
+                lbUnitBig.Text = unitSlip[1];
+            }
             else
             {
-                btnAdd.Enabled = false;
-            }    
+                lbUnitBig.Text = "Undefine";
+                lbUnitSmall.Text = "Undefine";
+            }
         }
-
+        private void btnVisible(bool add,bool edit,bool delete)//*
+        {
+            btnAdd.Visible = add;
+            btnEdit.Visible = edit;
+            btnDelete.Visible = delete;
+        }
+        private void btnEnable(bool add, bool edit, bool delete)//*
+        {
+            btnAdd.Enabled = add;
+            btnEdit.Enabled = edit;
+            btnDelete.Enabled = delete;
+        }
         private void dtgvProduct_DoubleClick(object sender, EventArgs e)
         {
+            index = 0;
             if (dtgvProduct.CurrentRow.Cells[0].Value.ToString() != "")
             {
-                btnEdit.Enabled = true;
-                btnDelete.Enabled = true;
+                btnVisible(true, true, true);
+                btnDone.Visible = false;
+                btnEnable(true, true, true);
                 lbNofiWrite.Visible = false;
             }
             else
             {
-                btnEdit.Enabled = false;
-                btnDelete.Enabled = false;
+                btnEnable(false, false, false);
                 lbNofiWrite.Visible = true;
             }
-
+            //*
             ProductPresenter productPresenter = new ProductPresenter(this);
             productPresenter.RetriveProduct(dtgvProduct.CurrentRow.Index, dtgvProduct.CurrentRow.Cells[0].Value.ToString()
                 , dtgvProduct.CurrentRow.Cells[1].Value.ToString(), dtgvProduct.CurrentRow.Cells[2].Value.ToString(),
                 dtgvProduct.CurrentRow.Cells[3].Value.ToString(), dtgvProduct.CurrentRow.Cells[4].Value.ToString(),
-                dtgvProduct.CurrentRow.Cells[5].Value.ToString(), dtgvProduct.CurrentRow.Cells[6].Value.ToString());
+                dtgvProduct.CurrentRow.Cells[5].Value.ToString() +"/"+ dtgvProduct.CurrentRow.Cells[6].Value.ToString(), dtgvProduct.CurrentRow.Cells[7].Value.ToString());
+        }
+
+        private void btn_Done_Click(object sender, EventArgs e)
+        {
+            if (index == 1)
+            {
+                ProductPresenter productPresenter = new ProductPresenter(this);
+                if (productPresenter.AddData())
+                {
+                    MessageBox.Show(_message, "Notification", MessageBoxButtons.OK,
+                       MessageBoxIcon.Information);
+                    productPresenter.ClearInformation();
+                    productPresenter.GetProduct();
+                    productPresenter.ClearInformation();
+                    btnEdit.Enabled = false;
+                    btnDelete.Enabled = false;
+                }
+                else
+                {
+                    MessageBox.Show(_message, "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
+                index = 0;
+            }
+            
+            if (index==2) //ấn edit
+            {
+                ProductPresenter productPresenter = new ProductPresenter(this);
+                if (productPresenter.CheckInformationEdit())
+                {
+                    if (productPresenter.EditData())
+                    {
+                        MessageBox.Show(_message, "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        productPresenter.GetProduct();
+                        productPresenter.ClearInformation();
+                    }
+                    else
+                    {
+                        MessageBox.Show(_message, "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Please check information again!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    btnEdit.Enabled = true;
+                }
+                index = 0;
+            }
+            btnVisible(true, true, true);
+            btnDone.Visible = false;
+            setEnableF();
+            lbNofiWrite.Visible = false;
+
         }
     }
 }

@@ -56,6 +56,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.label2 = new System.Windows.Forms.Label();
             this.cbProductType = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -71,6 +72,11 @@
             this.bunifuGroupBox1 = new Bunifu.UI.WinForms.BunifuGroupBox();
             this.dtgvProduct = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.lbNofiWrite = new Bunifu.UI.WinForms.BunifuLabel();
+            this.btnDone = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.lbUnitSmall = new System.Windows.Forms.Label();
+            this.lbUnitBig = new System.Windows.Forms.Label();
             this.bunifuGroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvProduct)).BeginInit();
             this.SuspendLayout();
@@ -78,51 +84,51 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(498, 334);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(721, 264);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(134, 26);
+            this.label2.Size = new System.Drawing.Size(122, 25);
             this.label2.TabIndex = 17;
             this.label2.Text = "Product type";
             // 
             // cbProductType
             // 
             this.cbProductType.BackColor = System.Drawing.Color.White;
-            this.cbProductType.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.cbProductType.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.cbProductType.FormattingEnabled = true;
-            this.cbProductType.Location = new System.Drawing.Point(502, 369);
-            this.cbProductType.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.cbProductType.Location = new System.Drawing.Point(715, 294);
+            this.cbProductType.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbProductType.Name = "cbProductType";
-            this.cbProductType.Size = new System.Drawing.Size(502, 38);
+            this.cbProductType.Size = new System.Drawing.Size(394, 32);
             this.cbProductType.TabIndex = 16;
             this.cbProductType.TextChanged += new System.EventHandler(this.txtProductName_TextChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(20, 331);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(56, 248);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 26);
+            this.label1.Size = new System.Drawing.Size(48, 25);
             this.label1.TabIndex = 15;
             this.label1.Text = "Unit";
             // 
             // cbUnit
             // 
             this.cbUnit.BackColor = System.Drawing.Color.White;
-            this.cbUnit.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.cbUnit.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.cbUnit.FormattingEnabled = true;
             this.cbUnit.Items.AddRange(new object[] {
-            "Box",
-            "Bottle"});
-            this.cbUnit.Location = new System.Drawing.Point(24, 369);
-            this.cbUnit.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            "Pill/Box",
+            "Pill/Bottle",
+            "Bottle/Bottle",
+            "Type/Type"});
+            this.cbUnit.Location = new System.Drawing.Point(111, 241);
+            this.cbUnit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbUnit.Name = "cbUnit";
-            this.cbUnit.Size = new System.Drawing.Size(406, 38);
+            this.cbUnit.Size = new System.Drawing.Size(316, 32);
             this.cbUnit.TabIndex = 14;
             this.cbUnit.TextChanged += new System.EventHandler(this.txtProductName_TextChanged);
             // 
@@ -145,7 +151,7 @@
             this.txtDescription.CharacterCase = Bunifu.UI.WinForms.BunifuTextBox.CharacterCases.Normal;
             this.txtDescription.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtDescription.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtDescription.DefaultFont = new System.Drawing.Font("Segoe UI", 11F);
+            this.txtDescription.DefaultFont = new System.Drawing.Font("Segoe UI", 14F);
             this.txtDescription.DefaultText = "";
             this.txtDescription.FillColor = System.Drawing.Color.White;
             this.txtDescription.HideSelection = true;
@@ -155,10 +161,10 @@
             this.txtDescription.IconRight = null;
             this.txtDescription.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtDescription.Lines = new string[0];
-            this.txtDescription.Location = new System.Drawing.Point(502, 18);
-            this.txtDescription.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.txtDescription.Location = new System.Drawing.Point(715, 12);
+            this.txtDescription.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtDescription.MaxLength = 32767;
-            this.txtDescription.MinimumSize = new System.Drawing.Size(3, 3);
+            this.txtDescription.MinimumSize = new System.Drawing.Size(2, 2);
             this.txtDescription.Modified = false;
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
@@ -182,7 +188,7 @@
             stateProperties4.ForeColor = System.Drawing.Color.Empty;
             stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtDescription.OnIdleState = stateProperties4;
-            this.txtDescription.Padding = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.txtDescription.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtDescription.PasswordChar = '\0';
             this.txtDescription.PlaceholderForeColor = System.Drawing.Color.DarkGray;
             this.txtDescription.PlaceholderText = "Description";
@@ -192,7 +198,7 @@
             this.txtDescription.SelectionLength = 0;
             this.txtDescription.SelectionStart = 0;
             this.txtDescription.ShortcutsEnabled = true;
-            this.txtDescription.Size = new System.Drawing.Size(504, 214);
+            this.txtDescription.Size = new System.Drawing.Size(453, 162);
             this.txtDescription.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtDescription.TabIndex = 13;
             this.txtDescription.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -223,7 +229,7 @@
             this.txtOriginal.CharacterCase = Bunifu.UI.WinForms.BunifuTextBox.CharacterCases.Normal;
             this.txtOriginal.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtOriginal.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtOriginal.DefaultFont = new System.Drawing.Font("Segoe UI", 11F);
+            this.txtOriginal.DefaultFont = new System.Drawing.Font("Segoe UI", 14F);
             this.txtOriginal.DefaultText = "";
             this.txtOriginal.FillColor = System.Drawing.Color.White;
             this.txtOriginal.HideSelection = true;
@@ -233,10 +239,10 @@
             this.txtOriginal.IconRight = null;
             this.txtOriginal.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtOriginal.Lines = new string[0];
-            this.txtOriginal.Location = new System.Drawing.Point(502, 242);
-            this.txtOriginal.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.txtOriginal.Location = new System.Drawing.Point(715, 200);
+            this.txtOriginal.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtOriginal.MaxLength = 32767;
-            this.txtOriginal.MinimumSize = new System.Drawing.Size(3, 3);
+            this.txtOriginal.MinimumSize = new System.Drawing.Size(2, 2);
             this.txtOriginal.Modified = false;
             this.txtOriginal.Multiline = false;
             this.txtOriginal.Name = "txtOriginal";
@@ -260,7 +266,7 @@
             stateProperties8.ForeColor = System.Drawing.Color.Empty;
             stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtOriginal.OnIdleState = stateProperties8;
-            this.txtOriginal.Padding = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.txtOriginal.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtOriginal.PasswordChar = '\0';
             this.txtOriginal.PlaceholderForeColor = System.Drawing.Color.DarkGray;
             this.txtOriginal.PlaceholderText = "Original";
@@ -270,7 +276,7 @@
             this.txtOriginal.SelectionLength = 0;
             this.txtOriginal.SelectionStart = 0;
             this.txtOriginal.ShortcutsEnabled = true;
-            this.txtOriginal.Size = new System.Drawing.Size(504, 74);
+            this.txtOriginal.Size = new System.Drawing.Size(394, 53);
             this.txtOriginal.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtOriginal.TabIndex = 12;
             this.txtOriginal.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -301,7 +307,7 @@
             this.txtPrice.CharacterCase = Bunifu.UI.WinForms.BunifuTextBox.CharacterCases.Normal;
             this.txtPrice.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtPrice.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtPrice.DefaultFont = new System.Drawing.Font("Segoe UI", 11F);
+            this.txtPrice.DefaultFont = new System.Drawing.Font("Segoe UI", 14F);
             this.txtPrice.DefaultText = "";
             this.txtPrice.FillColor = System.Drawing.Color.White;
             this.txtPrice.HideSelection = true;
@@ -311,10 +317,10 @@
             this.txtPrice.IconRight = null;
             this.txtPrice.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtPrice.Lines = new string[0];
-            this.txtPrice.Location = new System.Drawing.Point(24, 242);
-            this.txtPrice.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.txtPrice.Location = new System.Drawing.Point(61, 170);
+            this.txtPrice.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtPrice.MaxLength = 32767;
-            this.txtPrice.MinimumSize = new System.Drawing.Size(3, 3);
+            this.txtPrice.MinimumSize = new System.Drawing.Size(2, 2);
             this.txtPrice.Modified = false;
             this.txtPrice.Multiline = false;
             this.txtPrice.Name = "txtPrice";
@@ -338,7 +344,7 @@
             stateProperties12.ForeColor = System.Drawing.Color.Empty;
             stateProperties12.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtPrice.OnIdleState = stateProperties12;
-            this.txtPrice.Padding = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.txtPrice.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPrice.PasswordChar = '\0';
             this.txtPrice.PlaceholderForeColor = System.Drawing.Color.DarkGray;
             this.txtPrice.PlaceholderText = "Price";
@@ -348,7 +354,7 @@
             this.txtPrice.SelectionLength = 0;
             this.txtPrice.SelectionStart = 0;
             this.txtPrice.ShortcutsEnabled = true;
-            this.txtPrice.Size = new System.Drawing.Size(408, 74);
+            this.txtPrice.Size = new System.Drawing.Size(366, 53);
             this.txtPrice.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtPrice.TabIndex = 11;
             this.txtPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -379,7 +385,7 @@
             this.txtProductName.CharacterCase = Bunifu.UI.WinForms.BunifuTextBox.CharacterCases.Normal;
             this.txtProductName.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtProductName.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtProductName.DefaultFont = new System.Drawing.Font("Segoe UI", 11F);
+            this.txtProductName.DefaultFont = new System.Drawing.Font("Segoe UI", 14F);
             this.txtProductName.DefaultText = "";
             this.txtProductName.FillColor = System.Drawing.Color.White;
             this.txtProductName.HideSelection = true;
@@ -389,10 +395,10 @@
             this.txtProductName.IconRight = null;
             this.txtProductName.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtProductName.Lines = new string[0];
-            this.txtProductName.Location = new System.Drawing.Point(24, 128);
-            this.txtProductName.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.txtProductName.Location = new System.Drawing.Point(58, 85);
+            this.txtProductName.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtProductName.MaxLength = 32767;
-            this.txtProductName.MinimumSize = new System.Drawing.Size(3, 3);
+            this.txtProductName.MinimumSize = new System.Drawing.Size(2, 2);
             this.txtProductName.Modified = false;
             this.txtProductName.Multiline = false;
             this.txtProductName.Name = "txtProductName";
@@ -416,7 +422,7 @@
             stateProperties16.ForeColor = System.Drawing.Color.Empty;
             stateProperties16.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtProductName.OnIdleState = stateProperties16;
-            this.txtProductName.Padding = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.txtProductName.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtProductName.PasswordChar = '\0';
             this.txtProductName.PlaceholderForeColor = System.Drawing.Color.DarkGray;
             this.txtProductName.PlaceholderText = "Product  Name";
@@ -426,7 +432,7 @@
             this.txtProductName.SelectionLength = 0;
             this.txtProductName.SelectionStart = 0;
             this.txtProductName.ShortcutsEnabled = true;
-            this.txtProductName.Size = new System.Drawing.Size(408, 74);
+            this.txtProductName.Size = new System.Drawing.Size(369, 53);
             this.txtProductName.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtProductName.TabIndex = 10;
             this.txtProductName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -457,7 +463,7 @@
             this.txtProductId.CharacterCase = Bunifu.UI.WinForms.BunifuTextBox.CharacterCases.Normal;
             this.txtProductId.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtProductId.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtProductId.DefaultFont = new System.Drawing.Font("Segoe UI", 11F);
+            this.txtProductId.DefaultFont = new System.Drawing.Font("Segoe UI", 14F);
             this.txtProductId.DefaultText = "";
             this.txtProductId.Enabled = false;
             this.txtProductId.FillColor = System.Drawing.Color.White;
@@ -468,10 +474,10 @@
             this.txtProductId.IconRight = null;
             this.txtProductId.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtProductId.Lines = new string[0];
-            this.txtProductId.Location = new System.Drawing.Point(24, 18);
-            this.txtProductId.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.txtProductId.Location = new System.Drawing.Point(58, 12);
+            this.txtProductId.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtProductId.MaxLength = 32767;
-            this.txtProductId.MinimumSize = new System.Drawing.Size(3, 3);
+            this.txtProductId.MinimumSize = new System.Drawing.Size(2, 2);
             this.txtProductId.Modified = false;
             this.txtProductId.Multiline = false;
             this.txtProductId.Name = "txtProductId";
@@ -495,7 +501,7 @@
             stateProperties20.ForeColor = System.Drawing.Color.Empty;
             stateProperties20.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtProductId.OnIdleState = stateProperties20;
-            this.txtProductId.Padding = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.txtProductId.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtProductId.PasswordChar = '\0';
             this.txtProductId.PlaceholderForeColor = System.Drawing.Color.DarkGray;
             this.txtProductId.PlaceholderText = "Product ID (Read-only)";
@@ -505,7 +511,7 @@
             this.txtProductId.SelectionLength = 0;
             this.txtProductId.SelectionStart = 0;
             this.txtProductId.ShortcutsEnabled = true;
-            this.txtProductId.Size = new System.Drawing.Size(408, 74);
+            this.txtProductId.Size = new System.Drawing.Size(369, 53);
             this.txtProductId.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtProductId.TabIndex = 9;
             this.txtProductId.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -545,14 +551,14 @@
             this.btnDelete.DisabledFillColor = System.Drawing.Color.Empty;
             this.btnDelete.DisabledForecolor = System.Drawing.Color.Empty;
             this.btnDelete.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
             this.btnDelete.ForeColor = System.Drawing.Color.Red;
             this.btnDelete.IconLeft = ((System.Drawing.Image)(resources.GetObject("btnDelete.IconLeft")));
             this.btnDelete.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDelete.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.btnDelete.IconLeftPadding = new System.Windows.Forms.Padding(15, 3, 3, 3);
+            this.btnDelete.IconLeftPadding = new System.Windows.Forms.Padding(10, 3, 3, 3);
             this.btnDelete.IconMarginLeft = 11;
-            this.btnDelete.IconPadding = 18;
+            this.btnDelete.IconPadding = 20;
             this.btnDelete.IconRight = null;
             this.btnDelete.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDelete.IconRightCursor = System.Windows.Forms.Cursors.Default;
@@ -565,8 +571,7 @@
             this.btnDelete.IdleIconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnDelete.IdleIconLeftImage")));
             this.btnDelete.IdleIconRightImage = null;
             this.btnDelete.IndicateFocus = false;
-            this.btnDelete.Location = new System.Drawing.Point(1263, 289);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnDelete.Location = new System.Drawing.Point(1324, 248);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnDelete.OnDisabledState.BorderRadius = 15;
@@ -600,12 +605,12 @@
             this.btnDelete.OnPressedState.ForeColor = System.Drawing.Color.Black;
             this.btnDelete.OnPressedState.IconLeftImage = null;
             this.btnDelete.OnPressedState.IconRightImage = null;
-            this.btnDelete.Size = new System.Drawing.Size(176, 92);
+            this.btnDelete.Size = new System.Drawing.Size(110, 70);
             this.btnDelete.TabIndex = 20;
             this.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnDelete.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnDelete.TextMarginLeft = 0;
-            this.btnDelete.TextPadding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnDelete.TextPadding = new System.Windows.Forms.Padding(18, 0, 0, 0);
             this.btnDelete.UseDefaultRadiusAndThickness = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
@@ -638,14 +643,14 @@
             this.btnEdit.DisabledFillColor = System.Drawing.Color.Empty;
             this.btnEdit.DisabledForecolor = System.Drawing.Color.Empty;
             this.btnEdit.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.btnEdit.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnEdit.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
             this.btnEdit.ForeColor = System.Drawing.Color.Orange;
             this.btnEdit.IconLeft = ((System.Drawing.Image)(resources.GetObject("btnEdit.IconLeft")));
             this.btnEdit.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEdit.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.btnEdit.IconLeftPadding = new System.Windows.Forms.Padding(20, 3, 3, 3);
+            this.btnEdit.IconLeftPadding = new System.Windows.Forms.Padding(10, 3, 3, 3);
             this.btnEdit.IconMarginLeft = 11;
-            this.btnEdit.IconPadding = 18;
+            this.btnEdit.IconPadding = 20;
             this.btnEdit.IconRight = null;
             this.btnEdit.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEdit.IconRightCursor = System.Windows.Forms.Cursors.Default;
@@ -658,8 +663,7 @@
             this.btnEdit.IdleIconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnEdit.IdleIconLeftImage")));
             this.btnEdit.IdleIconRightImage = null;
             this.btnEdit.IndicateFocus = false;
-            this.btnEdit.Location = new System.Drawing.Point(1263, 169);
-            this.btnEdit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnEdit.Location = new System.Drawing.Point(1324, 144);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnEdit.OnDisabledState.BorderRadius = 15;
@@ -693,7 +697,7 @@
             this.btnEdit.OnPressedState.ForeColor = System.Drawing.Color.Black;
             this.btnEdit.OnPressedState.IconLeftImage = null;
             this.btnEdit.OnPressedState.IconRightImage = null;
-            this.btnEdit.Size = new System.Drawing.Size(176, 95);
+            this.btnEdit.Size = new System.Drawing.Size(110, 70);
             this.btnEdit.TabIndex = 19;
             this.btnEdit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnEdit.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -731,12 +735,12 @@
             this.btnAdd.DisabledFillColor = System.Drawing.Color.Empty;
             this.btnAdd.DisabledForecolor = System.Drawing.Color.Empty;
             this.btnAdd.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
             this.btnAdd.ForeColor = System.Drawing.Color.Green;
             this.btnAdd.IconLeft = ((System.Drawing.Image)(resources.GetObject("btnAdd.IconLeft")));
             this.btnAdd.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAdd.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.btnAdd.IconLeftPadding = new System.Windows.Forms.Padding(20, 3, 3, 3);
+            this.btnAdd.IconLeftPadding = new System.Windows.Forms.Padding(10, 3, 3, 3);
             this.btnAdd.IconMarginLeft = 11;
             this.btnAdd.IconPadding = 18;
             this.btnAdd.IconRight = null;
@@ -751,8 +755,7 @@
             this.btnAdd.IdleIconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnAdd.IdleIconLeftImage")));
             this.btnAdd.IdleIconRightImage = null;
             this.btnAdd.IndicateFocus = false;
-            this.btnAdd.Location = new System.Drawing.Point(1263, 45);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnAdd.Location = new System.Drawing.Point(1324, 40);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnAdd.OnDisabledState.BorderRadius = 15;
@@ -786,12 +789,12 @@
             this.btnAdd.OnPressedState.ForeColor = System.Drawing.Color.Black;
             this.btnAdd.OnPressedState.IconLeftImage = null;
             this.btnAdd.OnPressedState.IconRightImage = null;
-            this.btnAdd.Size = new System.Drawing.Size(176, 94);
+            this.btnAdd.Size = new System.Drawing.Size(110, 70);
             this.btnAdd.TabIndex = 18;
             this.btnAdd.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnAdd.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnAdd.TextMarginLeft = 0;
-            this.btnAdd.TextPadding = new System.Windows.Forms.Padding(14, 0, 0, 0);
+            this.btnAdd.TextPadding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.btnAdd.UseDefaultRadiusAndThickness = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
@@ -801,15 +804,13 @@
             this.bunifuGroupBox1.BorderRadius = 5;
             this.bunifuGroupBox1.BorderThickness = 2;
             this.bunifuGroupBox1.Controls.Add(this.dtgvProduct);
-            this.bunifuGroupBox1.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.bunifuGroupBox1.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.bunifuGroupBox1.LabelAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.bunifuGroupBox1.LabelIndent = 10;
             this.bunifuGroupBox1.LineStyle = Bunifu.UI.WinForms.BunifuGroupBox.LineStyles.Solid;
-            this.bunifuGroupBox1.Location = new System.Drawing.Point(24, 425);
-            this.bunifuGroupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.bunifuGroupBox1.Location = new System.Drawing.Point(58, 353);
             this.bunifuGroupBox1.Name = "bunifuGroupBox1";
-            this.bunifuGroupBox1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.bunifuGroupBox1.Size = new System.Drawing.Size(1419, 514);
+            this.bunifuGroupBox1.Size = new System.Drawing.Size(1382, 544);
             this.bunifuGroupBox1.TabIndex = 21;
             this.bunifuGroupBox1.TabStop = false;
             this.bunifuGroupBox1.Text = "Product Table";
@@ -870,13 +871,12 @@
             this.dtgvProduct.HeaderBackColor = System.Drawing.Color.Green;
             this.dtgvProduct.HeaderBgColor = System.Drawing.Color.Empty;
             this.dtgvProduct.HeaderForeColor = System.Drawing.Color.White;
-            this.dtgvProduct.Location = new System.Drawing.Point(4, 35);
-            this.dtgvProduct.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dtgvProduct.Location = new System.Drawing.Point(3, 28);
             this.dtgvProduct.Name = "dtgvProduct";
             this.dtgvProduct.ReadOnly = true;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F);
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 14F);
             dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(180)))), ((int)(((byte)(64)))));
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -887,7 +887,7 @@
             this.dtgvProduct.RowTemplate.Height = 40;
             this.dtgvProduct.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgvProduct.ShowEditingIcon = false;
-            this.dtgvProduct.Size = new System.Drawing.Size(1411, 474);
+            this.dtgvProduct.Size = new System.Drawing.Size(1376, 513);
             this.dtgvProduct.TabIndex = 0;
             this.dtgvProduct.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             this.dtgvProduct.DoubleClick += new System.EventHandler(this.dtgvProduct_DoubleClick);
@@ -898,23 +898,163 @@
             this.lbNofiWrite.AutoEllipsis = false;
             this.lbNofiWrite.Cursor = System.Windows.Forms.Cursors.Default;
             this.lbNofiWrite.CursorType = System.Windows.Forms.Cursors.Default;
-            this.lbNofiWrite.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.lbNofiWrite.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
             this.lbNofiWrite.ForeColor = System.Drawing.Color.Green;
-            this.lbNofiWrite.Location = new System.Drawing.Point(28, 209);
-            this.lbNofiWrite.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.lbNofiWrite.Location = new System.Drawing.Point(58, 144);
             this.lbNofiWrite.Name = "lbNofiWrite";
             this.lbNofiWrite.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbNofiWrite.Size = new System.Drawing.Size(282, 25);
+            this.lbNofiWrite.Size = new System.Drawing.Size(242, 20);
             this.lbNofiWrite.TabIndex = 22;
             this.lbNofiWrite.Text = "*Write product name you need add";
             this.lbNofiWrite.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lbNofiWrite.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
+            // btnDone
+            // 
+            this.btnDone.AllowAnimations = true;
+            this.btnDone.AllowMouseEffects = true;
+            this.btnDone.AllowToggling = false;
+            this.btnDone.AnimationSpeed = 200;
+            this.btnDone.AutoGenerateColors = false;
+            this.btnDone.AutoRoundBorders = false;
+            this.btnDone.AutoSizeLeftIcon = true;
+            this.btnDone.AutoSizeRightIcon = true;
+            this.btnDone.BackColor = System.Drawing.Color.Transparent;
+            this.btnDone.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
+            this.btnDone.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDone.BackgroundImage")));
+            this.btnDone.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnDone.ButtonText = "Done";
+            this.btnDone.ButtonTextMarginLeft = 0;
+            this.btnDone.ColorContrastOnClick = 45;
+            this.btnDone.ColorContrastOnHover = 45;
+            this.btnDone.Cursor = System.Windows.Forms.Cursors.Hand;
+            borderEdges4.BottomLeft = true;
+            borderEdges4.BottomRight = true;
+            borderEdges4.TopLeft = true;
+            borderEdges4.TopRight = true;
+            this.btnDone.CustomizableEdges = borderEdges4;
+            this.btnDone.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnDone.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnDone.DisabledFillColor = System.Drawing.Color.Empty;
+            this.btnDone.DisabledForecolor = System.Drawing.Color.Empty;
+            this.btnDone.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
+            this.btnDone.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
+            this.btnDone.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.btnDone.IconLeft = null;
+            this.btnDone.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDone.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.btnDone.IconLeftPadding = new System.Windows.Forms.Padding(20, 3, 3, 3);
+            this.btnDone.IconMarginLeft = 11;
+            this.btnDone.IconPadding = 18;
+            this.btnDone.IconRight = null;
+            this.btnDone.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnDone.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.btnDone.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.btnDone.IconSize = 25;
+            this.btnDone.IdleBorderColor = System.Drawing.Color.Empty;
+            this.btnDone.IdleBorderRadius = 0;
+            this.btnDone.IdleBorderThickness = 0;
+            this.btnDone.IdleFillColor = System.Drawing.Color.Empty;
+            this.btnDone.IdleIconLeftImage = null;
+            this.btnDone.IdleIconRightImage = null;
+            this.btnDone.IndicateFocus = false;
+            this.btnDone.Location = new System.Drawing.Point(1324, 144);
+            this.btnDone.Name = "btnDone";
+            this.btnDone.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnDone.OnDisabledState.BorderRadius = 15;
+            this.btnDone.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnDone.OnDisabledState.BorderThickness = 1;
+            this.btnDone.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnDone.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnDone.OnDisabledState.IconLeftImage = null;
+            this.btnDone.OnDisabledState.IconRightImage = null;
+            this.btnDone.onHoverState.BorderColor = System.Drawing.Color.LightYellow;
+            this.btnDone.onHoverState.BorderRadius = 15;
+            this.btnDone.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnDone.onHoverState.BorderThickness = 1;
+            this.btnDone.onHoverState.FillColor = System.Drawing.Color.LightSeaGreen;
+            this.btnDone.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.btnDone.onHoverState.IconLeftImage = null;
+            this.btnDone.onHoverState.IconRightImage = null;
+            this.btnDone.OnIdleState.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btnDone.OnIdleState.BorderRadius = 15;
+            this.btnDone.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnDone.OnIdleState.BorderThickness = 1;
+            this.btnDone.OnIdleState.FillColor = System.Drawing.SystemColors.Control;
+            this.btnDone.OnIdleState.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.btnDone.OnIdleState.IconLeftImage = null;
+            this.btnDone.OnIdleState.IconRightImage = null;
+            this.btnDone.OnPressedState.BorderColor = System.Drawing.Color.LightSeaGreen;
+            this.btnDone.OnPressedState.BorderRadius = 15;
+            this.btnDone.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnDone.OnPressedState.BorderThickness = 1;
+            this.btnDone.OnPressedState.FillColor = System.Drawing.Color.LightSeaGreen;
+            this.btnDone.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.btnDone.OnPressedState.IconLeftImage = null;
+            this.btnDone.OnPressedState.IconRightImage = null;
+            this.btnDone.Size = new System.Drawing.Size(110, 70);
+            this.btnDone.TabIndex = 23;
+            this.btnDone.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnDone.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnDone.TextMarginLeft = 0;
+            this.btnDone.TextPadding = new System.Windows.Forms.Padding(0);
+            this.btnDone.UseDefaultRadiusAndThickness = true;
+            this.btnDone.Visible = false;
+            this.btnDone.Click += new System.EventHandler(this.btn_Done_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(53, 295);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(100, 25);
+            this.label3.TabIndex = 24;
+            this.label3.Text = "Small Unit";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(263, 295);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(80, 25);
+            this.label4.TabIndex = 25;
+            this.label4.Text = "Big Unit";
+            // 
+            // lbUnitSmall
+            // 
+            this.lbUnitSmall.AutoSize = true;
+            this.lbUnitSmall.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbUnitSmall.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.lbUnitSmall.Location = new System.Drawing.Point(159, 295);
+            this.lbUnitSmall.Name = "lbUnitSmall";
+            this.lbUnitSmall.Size = new System.Drawing.Size(94, 25);
+            this.lbUnitSmall.TabIndex = 26;
+            this.lbUnitSmall.Text = "Undefine";
+            // 
+            // lbUnitBig
+            // 
+            this.lbUnitBig.AutoSize = true;
+            this.lbUnitBig.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbUnitBig.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.lbUnitBig.Location = new System.Drawing.Point(349, 295);
+            this.lbUnitBig.Name = "lbUnitBig";
+            this.lbUnitBig.Size = new System.Drawing.Size(94, 25);
+            this.lbUnitBig.TabIndex = 27;
+            this.lbUnitBig.Text = "Undefine";
+            // 
             // ProductView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1461, 957);
+            this.ClientSize = new System.Drawing.Size(1495, 909);
+            this.Controls.Add(this.lbUnitBig);
+            this.Controls.Add(this.lbUnitSmall);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.lbNofiWrite);
             this.Controls.Add(this.bunifuGroupBox1);
             this.Controls.Add(this.btnDelete);
@@ -929,7 +1069,7 @@
             this.Controls.Add(this.txtPrice);
             this.Controls.Add(this.txtProductName);
             this.Controls.Add(this.txtProductId);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Controls.Add(this.btnDone);
             this.Name = "ProductView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "ProductView";
@@ -959,5 +1099,10 @@
         private Bunifu.UI.WinForms.BunifuGroupBox bunifuGroupBox1;
         private Bunifu.UI.WinForms.BunifuDataGridView dtgvProduct;
         private Bunifu.UI.WinForms.BunifuLabel lbNofiWrite;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnDone;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lbUnitSmall;
+        private System.Windows.Forms.Label lbUnitBig;
     }
 }

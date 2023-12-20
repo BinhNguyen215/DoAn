@@ -354,7 +354,7 @@
             this.btnSignin.DisabledForecolor = System.Drawing.Color.Empty;
             this.btnSignin.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
             this.btnSignin.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSignin.ForeColor = System.Drawing.Color.White;
+            this.btnSignin.ForeColor = System.Drawing.SystemColors.Window;
             this.btnSignin.IconLeft = null;
             this.btnSignin.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSignin.IconLeftCursor = System.Windows.Forms.Cursors.Hand;
@@ -373,7 +373,7 @@
             this.btnSignin.IdleIconLeftImage = null;
             this.btnSignin.IdleIconRightImage = null;
             this.btnSignin.IndicateFocus = false;
-            this.btnSignin.Location = new System.Drawing.Point(726, 348);
+            this.btnSignin.Location = new System.Drawing.Point(549, 348);
             this.btnSignin.Name = "btnSignin";
             this.btnSignin.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnSignin.OnDisabledState.BorderRadius = 15;
@@ -396,7 +396,7 @@
             this.btnSignin.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.btnSignin.OnIdleState.BorderThickness = 1;
             this.btnSignin.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(198)))), ((int)(((byte)(53)))));
-            this.btnSignin.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.btnSignin.OnIdleState.ForeColor = System.Drawing.SystemColors.Window;
             this.btnSignin.OnIdleState.IconLeftImage = null;
             this.btnSignin.OnIdleState.IconRightImage = null;
             this.btnSignin.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(198)))), ((int)(((byte)(53)))));
@@ -407,7 +407,7 @@
             this.btnSignin.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnSignin.OnPressedState.IconLeftImage = null;
             this.btnSignin.OnPressedState.IconRightImage = null;
-            this.btnSignin.Size = new System.Drawing.Size(111, 42);
+            this.btnSignin.Size = new System.Drawing.Size(288, 42);
             this.btnSignin.TabIndex = 5;
             this.btnSignin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnSignin.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
