@@ -23,7 +23,7 @@ namespace _DoAn
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new PaySlipForm());
+            Application.Run(new LoginView());
         }
     }
 }
