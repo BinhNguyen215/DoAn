@@ -11,5 +11,10 @@ namespace _DoAn.Views
        string username { get; set; }
        string password { get; set; }
        string message { get; set; }
+       string usernameFP { get; set; }
+       string OTP { get; set; }
+       
+       string newPassword { get; set; }
+       string newPasswordAgain { get; set; }
     }
 }
