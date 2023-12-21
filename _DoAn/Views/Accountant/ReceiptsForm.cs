@@ -70,14 +70,34 @@ namespace _DoAn.Views.Accountant
             receiptsPresenter.LoadReceipts();
 
         }
-
-        private void btnAddReceipts_Click(object sender, EventArgs e)
+        private void btnAdd_Click(object sender, EventArgs e)
         {
+
             AddReceiptsForm addReceiptsForm = new AddReceiptsForm(true, id);
             addReceiptsForm.Show();
         }
 
-        private void dgvReceipts_CellContentClick(object sender, DataGridViewCellEventArgs e)
+
+        private void btnEdit_Click_1(object sender, EventArgs e)
+        {
+            if (btnEdit.Enabled.ToString() == "True")
+            {
+                AddReceiptsForm addReceiptsForm = new AddReceiptsForm(false, id, dgvReceipts.CurrentRow.Cells[0].Value.ToString(), dgvReceipts.CurrentRow.Cells[2].Value.ToString(),
+                    dgvReceipts.CurrentRow.Cells[3].Value.ToString(), dgvReceipts.CurrentRow.Cells[5].Value.ToString(),
+                    dgvReceipts.CurrentRow.Cells[4].Value.ToString());
+                addReceiptsForm.Show();
+            }
+        }
+
+        private void cbStatus_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            label1.Font = new Font(label1.Font, FontStyle.Bold);
+            label2.Font = new Font(label2.Font, FontStyle.Regular);
+            ReceiptsPresenter receiptsPresenter = new ReceiptsPresenter(this);
+            receiptsPresenter.FilterByStatus();
+        }
+
+        private void dgvReceipts_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
             if (dgvReceipts.CurrentRow.Cells[4].Value.ToString() == "Incomplete")
             {
@@ -89,25 +109,7 @@ namespace _DoAn.Views.Accountant
             }
         }
 
-        private void btnEdit_Click(object sender, EventArgs e)
-        {
-            if (btnEdit.Enabled.ToString() == "True")
-            {
-                AddReceiptsForm addReceiptsForm = new AddReceiptsForm(false, id, dgvReceipts.CurrentRow.Cells[0].Value.ToString(), dgvReceipts.CurrentRow.Cells[2].Value.ToString(),
-                    dgvReceipts.CurrentRow.Cells[3].Value.ToString(), dgvReceipts.CurrentRow.Cells[5].Value.ToString(),
-                    dgvReceipts.CurrentRow.Cells[4].Value.ToString());
-                addReceiptsForm.Show();
-            }
-
-        }
-
-        private void cbStatus_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            label1.Font = new Font(label1.Font, FontStyle.Bold);
-            label2.Font = new Font(label2.Font, FontStyle.Regular);
-            ReceiptsPresenter receiptsPresenter = new ReceiptsPresenter(this);
-            receiptsPresenter.FilterByStatus();
-        }
+       
     }
 }
 

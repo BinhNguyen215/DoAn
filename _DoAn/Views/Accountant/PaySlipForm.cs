@@ -67,13 +67,12 @@ namespace _DoAn.Views.Accountant
             PaySlipPresenter paySlipPresenter = new PaySlipPresenter(this);
             paySlipPresenter.LoadPaySlip();
         }
-
-        private void btnAddPaySlip_Click(object sender, EventArgs e)
+        private void btnAdd_Click(object sender, EventArgs e)
         {
             AddPaySlip addPaySlip = new AddPaySlip(true, id);
             addPaySlip.Show();
         }
-
+     
         private void dgvPaySlip_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (dgvPaySlip.CurrentRow.Cells[4].Value.ToString() == "Incomplete")
@@ -85,8 +84,7 @@ namespace _DoAn.Views.Accountant
                 btnEdit.Enabled = false;
             }
         }
-
-        private void btnEdit_Click(object sender, EventArgs e)
+        private void btnEdit_Click_1(object sender, EventArgs e)
         {
             if (btnEdit.Enabled.ToString() == "True")
             {
@@ -96,7 +94,6 @@ namespace _DoAn.Views.Accountant
                 addPaySlip.Show();
             }
         }
-
         private void cbStatus_SelectedIndexChanged(object sender, EventArgs e)
         {
             label1.Font = new Font(label1.Font, FontStyle.Bold);
@@ -104,5 +101,7 @@ namespace _DoAn.Views.Accountant
             PaySlipPresenter paySlipPresenter = new PaySlipPresenter(this);
             paySlipPresenter.FilterByStatus();
         }
+
+      
     }
 }
