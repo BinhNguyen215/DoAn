@@ -19,11 +19,17 @@ namespace _DoAn.Views
         public LoginView()
         {
             InitializeComponent();
+            panelChangePassword.Hide();
+            panelForgotpassword.Hide();
         }
 
         public string username { get => tbxUsername.Text; set => tbxUsername.Text = value; }
         public string password { get => tbxPassword.Text; set => tbxPassword.Text = value; }
         public string message { get => _message; set => _message = value; }
+        public string OTP { get => tbxOTP.Text; set => tbxOTP.Text = value; }
+        public string newPassword { get => tbxNewPassword.Text; set => tbxNewPassword.Text = value; }
+        public string newPasswordAgain { get => tbxNewPassword2.Text; set => tbxNewPassword2.Text = value; }
+        public string usernameFP { get => tbxUsernameFP.Text; set => tbxUsernameFP.Text = value; }
 
         private void btnSignin_Click(object sender, EventArgs e)
         {
@@ -47,5 +53,29 @@ namespace _DoAn.Views
 
         }
 
+        
+
+        private void tbnChangePassword_Click(object sender, EventArgs e)
+        {
+            panelChangePassword.Show();
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            panelForgotpassword.Show();
+        }
+
+        private void lbBackToLogin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            panelLogin.Show();
+            panelChangePassword.Hide();
+            panelForgotpassword.Hide();
+        }
+
+        private void lbSend_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            lbSend.Hide();
+            lbResend.Show();
+        }
     }
 }
