@@ -210,7 +210,7 @@
             this.txtFind.IconRight = null;
             this.txtFind.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtFind.Lines = new string[0];
-            this.txtFind.Location = new System.Drawing.Point(25, 11);
+            this.txtFind.Location = new System.Drawing.Point(39, 11);
             this.txtFind.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtFind.MaxLength = 32767;
             this.txtFind.MinimumSize = new System.Drawing.Size(1, 1);
@@ -247,7 +247,7 @@
             this.txtFind.SelectionLength = 0;
             this.txtFind.SelectionStart = 0;
             this.txtFind.ShortcutsEnabled = true;
-            this.txtFind.Size = new System.Drawing.Size(388, 44);
+            this.txtFind.Size = new System.Drawing.Size(374, 44);
             this.txtFind.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtFind.TabIndex = 1;
             this.txtFind.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -324,7 +324,7 @@
             this.dgvListProduct.RowHeadersWidth = 62;
             this.dgvListProduct.RowTemplate.Height = 40;
             this.dgvListProduct.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvListProduct.Size = new System.Drawing.Size(726, 594);
+            this.dgvListProduct.Size = new System.Drawing.Size(712, 599);
             this.dgvListProduct.TabIndex = 2;
             this.dgvListProduct.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.LimeGreen;
             this.dgvListProduct.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListProduct_CellContentClick);
@@ -340,11 +340,11 @@
             this.bunifuGroupBox1.LabelAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.bunifuGroupBox1.LabelIndent = 10;
             this.bunifuGroupBox1.LineStyle = Bunifu.UI.WinForms.BunifuGroupBox.LineStyles.Solid;
-            this.bunifuGroupBox1.Location = new System.Drawing.Point(25, 65);
+            this.bunifuGroupBox1.Location = new System.Drawing.Point(39, 60);
             this.bunifuGroupBox1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.bunifuGroupBox1.Name = "bunifuGroupBox1";
             this.bunifuGroupBox1.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.bunifuGroupBox1.Size = new System.Drawing.Size(730, 624);
+            this.bunifuGroupBox1.Size = new System.Drawing.Size(716, 629);
             this.bunifuGroupBox1.TabIndex = 43;
             this.bunifuGroupBox1.TabStop = false;
             this.bunifuGroupBox1.Text = "Product Table";
@@ -1038,24 +1038,24 @@
             this.bunifuGroupBox5.Controls.Add(this.label3);
             this.bunifuGroupBox5.Controls.Add(this.btnDelete);
             this.bunifuGroupBox5.Controls.Add(this.btnAdd);
-            this.bunifuGroupBox5.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.bunifuGroupBox5.Font = new System.Drawing.Font("Segoe UI", 13F);
             this.bunifuGroupBox5.LabelAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.bunifuGroupBox5.LabelIndent = 10;
             this.bunifuGroupBox5.LineStyle = Bunifu.UI.WinForms.BunifuGroupBox.LineStyles.Solid;
-            this.bunifuGroupBox5.Location = new System.Drawing.Point(28, 700);
+            this.bunifuGroupBox5.Location = new System.Drawing.Point(42, 700);
             this.bunifuGroupBox5.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.bunifuGroupBox5.Name = "bunifuGroupBox5";
             this.bunifuGroupBox5.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.bunifuGroupBox5.Size = new System.Drawing.Size(730, 177);
+            this.bunifuGroupBox5.Size = new System.Drawing.Size(716, 177);
             this.bunifuGroupBox5.TabIndex = 55;
             this.bunifuGroupBox5.TabStop = false;
-            this.bunifuGroupBox5.Text = "Choose item";
+            this.bunifuGroupBox5.Text = "Properties";
             // 
             // lbLv1
             // 
             this.lbLv1.AutoSize = true;
             this.lbLv1.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold);
-            this.lbLv1.Location = new System.Drawing.Point(390, 122);
+            this.lbLv1.Location = new System.Drawing.Point(389, 122);
             this.lbLv1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbLv1.Name = "lbLv1";
             this.lbLv1.Size = new System.Drawing.Size(90, 25);
@@ -1066,7 +1066,7 @@
             // 
             this.lbLv2.AutoSize = true;
             this.lbLv2.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold);
-            this.lbLv2.Location = new System.Drawing.Point(241, 123);
+            this.lbLv2.Location = new System.Drawing.Point(240, 123);
             this.lbLv2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbLv2.Name = "lbLv2";
             this.lbLv2.Size = new System.Drawing.Size(90, 25);
@@ -1091,7 +1091,7 @@
             this.checkBoxLv1.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.checkBoxLv1.Cursor = System.Windows.Forms.Cursors.Default;
             this.checkBoxLv1.CustomCheckmarkImage = null;
-            this.checkBoxLv1.Location = new System.Drawing.Point(364, 123);
+            this.checkBoxLv1.Location = new System.Drawing.Point(363, 123);
             this.checkBoxLv1.MinimumSize = new System.Drawing.Size(17, 17);
             this.checkBoxLv1.Name = "checkBoxLv1";
             this.checkBoxLv1.OnCheck.BorderColor = System.Drawing.Color.DodgerBlue;
@@ -1145,7 +1145,7 @@
             this.checkBoxlv2.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.checkBoxlv2.Cursor = System.Windows.Forms.Cursors.Default;
             this.checkBoxlv2.CustomCheckmarkImage = null;
-            this.checkBoxlv2.Location = new System.Drawing.Point(215, 123);
+            this.checkBoxlv2.Location = new System.Drawing.Point(214, 123);
             this.checkBoxlv2.MinimumSize = new System.Drawing.Size(17, 17);
             this.checkBoxlv2.Name = "checkBoxlv2";
             this.checkBoxlv2.OnCheck.BorderColor = System.Drawing.Color.DodgerBlue;
@@ -1212,7 +1212,7 @@
             this.txtQuantities.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtQuantities.Lines = new string[] {
         "0"};
-            this.txtQuantities.Location = new System.Drawing.Point(207, 51);
+            this.txtQuantities.Location = new System.Drawing.Point(206, 51);
             this.txtQuantities.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.txtQuantities.MaxLength = 32767;
             this.txtQuantities.MinimumSize = new System.Drawing.Size(1, 1);
@@ -1265,7 +1265,7 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(44, 55);
+            this.label4.Location = new System.Drawing.Point(43, 55);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(112, 25);
@@ -1277,7 +1277,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(32, 118);
+            this.label3.Location = new System.Drawing.Point(31, 118);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(128, 25);

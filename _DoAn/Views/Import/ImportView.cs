@@ -181,43 +181,12 @@ namespace _DoAn.Views.Import
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            ImportPresenter importPresenter = new ImportPresenter(this);
-            Command add = new AddCommand(importPresenter);
-            Command delete = new DeleteCommand(importPresenter);
-            Command cancel = new CancelCommand(importPresenter);
-            Command edit = new EditCommand(importPresenter, 0);
-            Invorker invorker = new Invorker(add, delete, cancel, edit);
-            if (invorker.DeleteData())
-            {
-                btnAdd.Enabled = false;
-                btnEdit.Enabled = false;
-                btnDelete.Enabled = false;
-                if (!importPresenter.CheckDB())
-                {
-                    btnCreate.Enabled = false;
-                    btnCancel.Enabled = false;
-                }
-            }
+
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            ImportPresenter importPresenter = new ImportPresenter(this);
-            Command edit = new EditCommand(importPresenter, dtgvData.CurrentRow.Index);
-            Command add = new AddCommand(importPresenter);
-            Command delete = new DeleteCommand(importPresenter);
-            Command cancel = new CancelCommand(importPresenter);
-            Invorker invorker = new Invorker(add, delete, cancel, edit);
-            if (invorker.EditData())
-            {
-                btnEdit.Enabled = false;
-                btnAdd.Enabled = false;
-                btnDelete.Enabled = false;
-            }
-            else
-            {
-                MessageBox.Show(_message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -314,6 +283,9 @@ namespace _DoAn.Views.Import
 
         }
 
-        
+        private void txtTotal_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

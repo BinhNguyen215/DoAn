@@ -1,4 +1,5 @@
 ﻿using _DoAn.Views;
+using _DoAn.Views.Accountant;
 using _DoAn.Views.Employee;
 using _DoAn.Views.Import;
 using _DoAn.Views.Product;
@@ -22,7 +23,7 @@ namespace _DoAn
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginView());
+            Application.Run(new PaySlipForm());
         }
     }
 }

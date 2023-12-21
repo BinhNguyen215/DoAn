@@ -57,7 +57,7 @@ namespace _DoAn.Models
         
         public bool UpdateProduct(string quantity, string id)
         {
-            SqlCommand cmd = new SqlCommand("Update p set p.lv1Quantity = p.lv1Quantity - @quan, p.lv2Quantity = p.lv2Quantity - @quan * u.Value From Unit u, Product p Where  u.Unit_id = p.Unit_id");
+            SqlCommand cmd = new SqlCommand("Update Product  set lv1Quantity = lv1Quantity - @quan");
             cmd.Parameters.Add("@quan", SqlDbType.Int);
             cmd.Parameters["@quan"].Value = Convert.ToInt32(quantity);
             cmd.Parameters.Add("@id", SqlDbType.Int);

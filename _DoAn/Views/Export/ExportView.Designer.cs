@@ -62,8 +62,6 @@
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges5 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties25 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties26 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties27 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
@@ -72,6 +70,8 @@
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties30 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties31 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties32 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges5 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.bunifuGroupBox1 = new Bunifu.UI.WinForms.BunifuGroupBox();
             this.dtgvData = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -82,7 +82,7 @@
             this.bunifuGroupBox2 = new Bunifu.UI.WinForms.BunifuGroupBox();
             this.dtgvProduct = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.bunifuTextBox2 = new Bunifu.UI.WinForms.BunifuTextBox();
-            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.tbxTotalPrice = new Bunifu.UI.WinForms.BunifuLabel();
             this.lbTotal = new Bunifu.UI.WinForms.BunifuLabel();
             this.tbxProductID = new Bunifu.UI.WinForms.BunifuTextBox();
             this.tbxProductName = new Bunifu.UI.WinForms.BunifuTextBox();
@@ -91,15 +91,24 @@
             this.tbxReasonExport = new Bunifu.UI.WinForms.BunifuTextBox();
             this.btnCreateForm = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnDelete = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.btnEdit = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnAdd = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.btnCancel = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bunifuTextBox7 = new Bunifu.UI.WinForms.BunifuTextBox();
             this.tbxSearch = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.bunifuGroupBox4 = new Bunifu.UI.WinForms.BunifuGroupBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.bunifuGroupBox3 = new Bunifu.UI.WinForms.BunifuGroupBox();
+            this.btnEdit = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.btnCancel = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bunifuGroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvData)).BeginInit();
             this.bunifuGroupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvProduct)).BeginInit();
+            this.bunifuGroupBox4.SuspendLayout();
+            this.bunifuGroupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // bunifuGroupBox1
@@ -136,7 +145,7 @@
             this.dtgvData.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.ForestGreen;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 14F);
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
@@ -197,30 +206,35 @@
             // id
             // 
             this.id.HeaderText = "ID";
+            this.id.MinimumWidth = 8;
             this.id.Name = "id";
             this.id.ReadOnly = true;
             // 
             // name
             // 
             this.name.HeaderText = "Name";
+            this.name.MinimumWidth = 8;
             this.name.Name = "name";
             this.name.ReadOnly = true;
             // 
             // Price
             // 
             this.Price.HeaderText = "Price";
+            this.Price.MinimumWidth = 8;
             this.Price.Name = "Price";
             this.Price.ReadOnly = true;
             // 
             // Quantiites
             // 
             this.Quantiites.HeaderText = "Quantities";
+            this.Quantiites.MinimumWidth = 8;
             this.Quantiites.Name = "Quantiites";
             this.Quantiites.ReadOnly = true;
             // 
             // Total
             // 
             this.Total.HeaderText = "Total";
+            this.Total.MinimumWidth = 8;
             this.Total.Name = "Total";
             this.Total.ReadOnly = true;
             // 
@@ -301,6 +315,7 @@
             this.dtgvProduct.Name = "dtgvProduct";
             this.dtgvProduct.ReadOnly = true;
             this.dtgvProduct.RowHeadersVisible = false;
+            this.dtgvProduct.RowHeadersWidth = 62;
             this.dtgvProduct.RowTemplate.Height = 40;
             this.dtgvProduct.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgvProduct.Size = new System.Drawing.Size(945, 528);
@@ -363,7 +378,7 @@
             stateProperties4.ForeColor = System.Drawing.Color.Empty;
             stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.bunifuTextBox2.OnIdleState = stateProperties4;
-            this.bunifuTextBox2.Padding = new System.Windows.Forms.Padding(3);
+            this.bunifuTextBox2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.bunifuTextBox2.PasswordChar = '\0';
             this.bunifuTextBox2.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.bunifuTextBox2.PlaceholderText = "Enter text";
@@ -384,21 +399,21 @@
             this.bunifuTextBox2.UseSystemPasswordChar = false;
             this.bunifuTextBox2.WordWrap = true;
             // 
-            // bunifuLabel1
+            // tbxTotalPrice
             // 
-            this.bunifuLabel1.AllowParentOverrides = false;
-            this.bunifuLabel1.AutoEllipsis = false;
-            this.bunifuLabel1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
-            this.bunifuLabel1.Location = new System.Drawing.Point(1011, 764);
-            this.bunifuLabel1.Name = "bunifuLabel1";
-            this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(60, 28);
-            this.bunifuLabel1.TabIndex = 9;
-            this.bunifuLabel1.Text = "Total : ";
-            this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.tbxTotalPrice.AllowParentOverrides = false;
+            this.tbxTotalPrice.AutoEllipsis = false;
+            this.tbxTotalPrice.Cursor = System.Windows.Forms.Cursors.Default;
+            this.tbxTotalPrice.CursorType = System.Windows.Forms.Cursors.Default;
+            this.tbxTotalPrice.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
+            this.tbxTotalPrice.Location = new System.Drawing.Point(63, 219);
+            this.tbxTotalPrice.Name = "tbxTotalPrice";
+            this.tbxTotalPrice.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.tbxTotalPrice.Size = new System.Drawing.Size(175, 28);
+            this.tbxTotalPrice.TabIndex = 9;
+            this.tbxTotalPrice.Text = "Total  export price:";
+            this.tbxTotalPrice.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.tbxTotalPrice.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // lbTotal
             // 
@@ -406,7 +421,7 @@
             this.lbTotal.AutoEllipsis = false;
             this.lbTotal.CursorType = null;
             this.lbTotal.Font = new System.Drawing.Font("Segoe UI", 15F);
-            this.lbTotal.Location = new System.Drawing.Point(1094, 764);
+            this.lbTotal.Location = new System.Drawing.Point(250, 219);
             this.lbTotal.Name = "lbTotal";
             this.lbTotal.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lbTotal.Size = new System.Drawing.Size(57, 28);
@@ -445,7 +460,7 @@
             this.tbxProductID.IconRight = null;
             this.tbxProductID.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.tbxProductID.Lines = new string[0];
-            this.tbxProductID.Location = new System.Drawing.Point(1006, 26);
+            this.tbxProductID.Location = new System.Drawing.Point(17, 48);
             this.tbxProductID.MaxLength = 32767;
             this.tbxProductID.MinimumSize = new System.Drawing.Size(1, 1);
             this.tbxProductID.Modified = false;
@@ -471,7 +486,7 @@
             stateProperties8.ForeColor = System.Drawing.Color.Empty;
             stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.tbxProductID.OnIdleState = stateProperties8;
-            this.tbxProductID.Padding = new System.Windows.Forms.Padding(3);
+            this.tbxProductID.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.tbxProductID.PasswordChar = '\0';
             this.tbxProductID.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.tbxProductID.PlaceholderText = "Product ID";
@@ -481,7 +496,7 @@
             this.tbxProductID.SelectionLength = 0;
             this.tbxProductID.SelectionStart = 0;
             this.tbxProductID.ShortcutsEnabled = true;
-            this.tbxProductID.Size = new System.Drawing.Size(442, 52);
+            this.tbxProductID.Size = new System.Drawing.Size(255, 48);
             this.tbxProductID.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.tbxProductID.TabIndex = 11;
             this.tbxProductID.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -521,7 +536,7 @@
             this.tbxProductName.IconRight = null;
             this.tbxProductName.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.tbxProductName.Lines = new string[0];
-            this.tbxProductName.Location = new System.Drawing.Point(1006, 107);
+            this.tbxProductName.Location = new System.Drawing.Point(17, 124);
             this.tbxProductName.MaxLength = 32767;
             this.tbxProductName.MinimumSize = new System.Drawing.Size(1, 1);
             this.tbxProductName.Modified = false;
@@ -547,7 +562,7 @@
             stateProperties12.ForeColor = System.Drawing.Color.Empty;
             stateProperties12.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.tbxProductName.OnIdleState = stateProperties12;
-            this.tbxProductName.Padding = new System.Windows.Forms.Padding(3);
+            this.tbxProductName.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.tbxProductName.PasswordChar = '\0';
             this.tbxProductName.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.tbxProductName.PlaceholderText = "Product Name";
@@ -557,7 +572,7 @@
             this.tbxProductName.SelectionLength = 0;
             this.tbxProductName.SelectionStart = 0;
             this.tbxProductName.ShortcutsEnabled = true;
-            this.tbxProductName.Size = new System.Drawing.Size(442, 52);
+            this.tbxProductName.Size = new System.Drawing.Size(425, 48);
             this.tbxProductName.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.tbxProductName.TabIndex = 12;
             this.tbxProductName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -597,7 +612,7 @@
             this.tbxUnitPrice.IconRight = null;
             this.tbxUnitPrice.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.tbxUnitPrice.Lines = new string[0];
-            this.tbxUnitPrice.Location = new System.Drawing.Point(1006, 189);
+            this.tbxUnitPrice.Location = new System.Drawing.Point(17, 202);
             this.tbxUnitPrice.MaxLength = 32767;
             this.tbxUnitPrice.MinimumSize = new System.Drawing.Size(1, 1);
             this.tbxUnitPrice.Modified = false;
@@ -623,7 +638,7 @@
             stateProperties16.ForeColor = System.Drawing.Color.Empty;
             stateProperties16.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.tbxUnitPrice.OnIdleState = stateProperties16;
-            this.tbxUnitPrice.Padding = new System.Windows.Forms.Padding(3);
+            this.tbxUnitPrice.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.tbxUnitPrice.PasswordChar = '\0';
             this.tbxUnitPrice.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.tbxUnitPrice.PlaceholderText = "Unit Price";
@@ -633,7 +648,7 @@
             this.tbxUnitPrice.SelectionLength = 0;
             this.tbxUnitPrice.SelectionStart = 0;
             this.tbxUnitPrice.ShortcutsEnabled = true;
-            this.tbxUnitPrice.Size = new System.Drawing.Size(442, 52);
+            this.tbxUnitPrice.Size = new System.Drawing.Size(425, 48);
             this.tbxUnitPrice.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.tbxUnitPrice.TabIndex = 13;
             this.tbxUnitPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -673,7 +688,7 @@
             this.tbxQuantity.IconRight = null;
             this.tbxQuantity.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.tbxQuantity.Lines = new string[0];
-            this.tbxQuantity.Location = new System.Drawing.Point(1006, 274);
+            this.tbxQuantity.Location = new System.Drawing.Point(17, 289);
             this.tbxQuantity.MaxLength = 32767;
             this.tbxQuantity.MinimumSize = new System.Drawing.Size(1, 1);
             this.tbxQuantity.Modified = false;
@@ -699,7 +714,7 @@
             stateProperties20.ForeColor = System.Drawing.Color.Empty;
             stateProperties20.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.tbxQuantity.OnIdleState = stateProperties20;
-            this.tbxQuantity.Padding = new System.Windows.Forms.Padding(3);
+            this.tbxQuantity.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.tbxQuantity.PasswordChar = '\0';
             this.tbxQuantity.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.tbxQuantity.PlaceholderText = "Quantity";
@@ -709,7 +724,7 @@
             this.tbxQuantity.SelectionLength = 0;
             this.tbxQuantity.SelectionStart = 0;
             this.tbxQuantity.ShortcutsEnabled = true;
-            this.tbxQuantity.Size = new System.Drawing.Size(145, 52);
+            this.tbxQuantity.Size = new System.Drawing.Size(145, 48);
             this.tbxQuantity.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.tbxQuantity.TabIndex = 14;
             this.tbxQuantity.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -750,7 +765,7 @@
             this.tbxReasonExport.IconRight = null;
             this.tbxReasonExport.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.tbxReasonExport.Lines = new string[0];
-            this.tbxReasonExport.Location = new System.Drawing.Point(1011, 565);
+            this.tbxReasonExport.Location = new System.Drawing.Point(17, 343);
             this.tbxReasonExport.MaxLength = 32767;
             this.tbxReasonExport.MinimumSize = new System.Drawing.Size(1, 1);
             this.tbxReasonExport.Modified = false;
@@ -776,7 +791,7 @@
             stateProperties24.ForeColor = System.Drawing.Color.Empty;
             stateProperties24.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.tbxReasonExport.OnIdleState = stateProperties24;
-            this.tbxReasonExport.Padding = new System.Windows.Forms.Padding(3);
+            this.tbxReasonExport.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.tbxReasonExport.PasswordChar = '\0';
             this.tbxReasonExport.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.tbxReasonExport.PlaceholderText = "Export Reason";
@@ -786,7 +801,7 @@
             this.tbxReasonExport.SelectionLength = 0;
             this.tbxReasonExport.SelectionStart = 0;
             this.tbxReasonExport.ShortcutsEnabled = true;
-            this.tbxReasonExport.Size = new System.Drawing.Size(449, 181);
+            this.tbxReasonExport.Size = new System.Drawing.Size(425, 143);
             this.tbxReasonExport.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.tbxReasonExport.TabIndex = 16;
             this.tbxReasonExport.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -846,7 +861,7 @@
             this.btnCreateForm.IdleIconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnCreateForm.IdleIconLeftImage")));
             this.btnCreateForm.IdleIconRightImage = null;
             this.btnCreateForm.IndicateFocus = false;
-            this.btnCreateForm.Location = new System.Drawing.Point(1093, 805);
+            this.btnCreateForm.Location = new System.Drawing.Point(90, 264);
             this.btnCreateForm.Name = "btnCreateForm";
             this.btnCreateForm.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnCreateForm.OnDisabledState.BorderRadius = 15;
@@ -938,7 +953,7 @@
             this.btnDelete.IdleIconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnDelete.IdleIconLeftImage")));
             this.btnDelete.IdleIconRightImage = null;
             this.btnDelete.IndicateFocus = false;
-            this.btnDelete.Location = new System.Drawing.Point(1011, 460);
+            this.btnDelete.Location = new System.Drawing.Point(63, 131);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnDelete.OnDisabledState.BorderRadius = 15;
@@ -972,7 +987,7 @@
             this.btnDelete.OnPressedState.ForeColor = System.Drawing.Color.Black;
             this.btnDelete.OnPressedState.IconLeftImage = null;
             this.btnDelete.OnPressedState.IconRightImage = null;
-            this.btnDelete.Size = new System.Drawing.Size(173, 80);
+            this.btnDelete.Size = new System.Drawing.Size(154, 74);
             this.btnDelete.TabIndex = 23;
             this.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnDelete.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -980,98 +995,6 @@
             this.btnDelete.TextPadding = new System.Windows.Forms.Padding(25, 0, 0, 0);
             this.btnDelete.UseDefaultRadiusAndThickness = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click_1);
-            // 
-            // btnEdit
-            // 
-            this.btnEdit.AllowAnimations = true;
-            this.btnEdit.AllowMouseEffects = true;
-            this.btnEdit.AllowToggling = false;
-            this.btnEdit.AnimationSpeed = 200;
-            this.btnEdit.AutoGenerateColors = false;
-            this.btnEdit.AutoRoundBorders = false;
-            this.btnEdit.AutoSizeLeftIcon = true;
-            this.btnEdit.AutoSizeRightIcon = true;
-            this.btnEdit.BackColor = System.Drawing.Color.Transparent;
-            this.btnEdit.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
-            this.btnEdit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEdit.BackgroundImage")));
-            this.btnEdit.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnEdit.ButtonText = "Edit";
-            this.btnEdit.ButtonTextMarginLeft = 0;
-            this.btnEdit.ColorContrastOnClick = 45;
-            this.btnEdit.ColorContrastOnHover = 45;
-            this.btnEdit.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges3.BottomLeft = true;
-            borderEdges3.BottomRight = true;
-            borderEdges3.TopLeft = true;
-            borderEdges3.TopRight = true;
-            this.btnEdit.CustomizableEdges = borderEdges3;
-            this.btnEdit.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnEdit.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btnEdit.DisabledFillColor = System.Drawing.Color.Empty;
-            this.btnEdit.DisabledForecolor = System.Drawing.Color.Empty;
-            this.btnEdit.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.btnEdit.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            this.btnEdit.ForeColor = System.Drawing.Color.Orange;
-            this.btnEdit.IconLeft = ((System.Drawing.Image)(resources.GetObject("btnEdit.IconLeft")));
-            this.btnEdit.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEdit.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.btnEdit.IconLeftPadding = new System.Windows.Forms.Padding(25, 3, 3, 3);
-            this.btnEdit.IconMarginLeft = 11;
-            this.btnEdit.IconPadding = 20;
-            this.btnEdit.IconRight = null;
-            this.btnEdit.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEdit.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.btnEdit.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
-            this.btnEdit.IconSize = 25;
-            this.btnEdit.IdleBorderColor = System.Drawing.Color.Empty;
-            this.btnEdit.IdleBorderRadius = 0;
-            this.btnEdit.IdleBorderThickness = 0;
-            this.btnEdit.IdleFillColor = System.Drawing.Color.Empty;
-            this.btnEdit.IdleIconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnEdit.IdleIconLeftImage")));
-            this.btnEdit.IdleIconRightImage = null;
-            this.btnEdit.IndicateFocus = false;
-            this.btnEdit.Location = new System.Drawing.Point(1284, 362);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btnEdit.OnDisabledState.BorderRadius = 15;
-            this.btnEdit.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnEdit.OnDisabledState.BorderThickness = 1;
-            this.btnEdit.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btnEdit.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.btnEdit.OnDisabledState.IconLeftImage = null;
-            this.btnEdit.OnDisabledState.IconRightImage = null;
-            this.btnEdit.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(183)))), ((int)(((byte)(59)))));
-            this.btnEdit.onHoverState.BorderRadius = 15;
-            this.btnEdit.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnEdit.onHoverState.BorderThickness = 1;
-            this.btnEdit.onHoverState.FillColor = System.Drawing.SystemColors.Control;
-            this.btnEdit.onHoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(183)))), ((int)(((byte)(59)))));
-            this.btnEdit.onHoverState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnEdit.onHoverState.IconLeftImage")));
-            this.btnEdit.onHoverState.IconRightImage = null;
-            this.btnEdit.OnIdleState.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.btnEdit.OnIdleState.BorderRadius = 15;
-            this.btnEdit.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnEdit.OnIdleState.BorderThickness = 1;
-            this.btnEdit.OnIdleState.FillColor = System.Drawing.SystemColors.Control;
-            this.btnEdit.OnIdleState.ForeColor = System.Drawing.Color.Orange;
-            this.btnEdit.OnIdleState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnEdit.OnIdleState.IconLeftImage")));
-            this.btnEdit.OnIdleState.IconRightImage = null;
-            this.btnEdit.OnPressedState.BorderColor = System.Drawing.SystemColors.ControlDark;
-            this.btnEdit.OnPressedState.BorderRadius = 15;
-            this.btnEdit.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnEdit.OnPressedState.BorderThickness = 1;
-            this.btnEdit.OnPressedState.FillColor = System.Drawing.SystemColors.Control;
-            this.btnEdit.OnPressedState.ForeColor = System.Drawing.Color.Black;
-            this.btnEdit.OnPressedState.IconLeftImage = null;
-            this.btnEdit.OnPressedState.IconRightImage = null;
-            this.btnEdit.Size = new System.Drawing.Size(164, 80);
-            this.btnEdit.TabIndex = 22;
-            this.btnEdit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnEdit.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnEdit.TextMarginLeft = 0;
-            this.btnEdit.TextPadding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnEdit.UseDefaultRadiusAndThickness = true;
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click_1);
             // 
             // btnAdd
             // 
@@ -1092,11 +1015,11 @@
             this.btnAdd.ColorContrastOnClick = 45;
             this.btnAdd.ColorContrastOnHover = 45;
             this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges4.BottomLeft = true;
-            borderEdges4.BottomRight = true;
-            borderEdges4.TopLeft = true;
-            borderEdges4.TopRight = true;
-            this.btnAdd.CustomizableEdges = borderEdges4;
+            borderEdges3.BottomLeft = true;
+            borderEdges3.BottomRight = true;
+            borderEdges3.TopLeft = true;
+            borderEdges3.TopRight = true;
+            this.btnAdd.CustomizableEdges = borderEdges3;
             this.btnAdd.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnAdd.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnAdd.DisabledFillColor = System.Drawing.Color.Empty;
@@ -1122,7 +1045,7 @@
             this.btnAdd.IdleIconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnAdd.IdleIconLeftImage")));
             this.btnAdd.IdleIconRightImage = null;
             this.btnAdd.IndicateFocus = false;
-            this.btnAdd.Location = new System.Drawing.Point(1011, 362);
+            this.btnAdd.Location = new System.Drawing.Point(63, 36);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnAdd.OnDisabledState.BorderRadius = 15;
@@ -1156,7 +1079,7 @@
             this.btnAdd.OnPressedState.ForeColor = System.Drawing.Color.Black;
             this.btnAdd.OnPressedState.IconLeftImage = null;
             this.btnAdd.OnPressedState.IconRightImage = null;
-            this.btnAdd.Size = new System.Drawing.Size(173, 80);
+            this.btnAdd.Size = new System.Drawing.Size(154, 74);
             this.btnAdd.TabIndex = 21;
             this.btnAdd.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnAdd.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1164,98 +1087,6 @@
             this.btnAdd.TextPadding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.btnAdd.UseDefaultRadiusAndThickness = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click_1);
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.AllowAnimations = true;
-            this.btnCancel.AllowMouseEffects = true;
-            this.btnCancel.AllowToggling = false;
-            this.btnCancel.AnimationSpeed = 200;
-            this.btnCancel.AutoGenerateColors = false;
-            this.btnCancel.AutoRoundBorders = false;
-            this.btnCancel.AutoSizeLeftIcon = true;
-            this.btnCancel.AutoSizeRightIcon = true;
-            this.btnCancel.BackColor = System.Drawing.Color.Transparent;
-            this.btnCancel.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
-            this.btnCancel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCancel.BackgroundImage")));
-            this.btnCancel.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnCancel.ButtonText = "Cancel";
-            this.btnCancel.ButtonTextMarginLeft = 0;
-            this.btnCancel.ColorContrastOnClick = 45;
-            this.btnCancel.ColorContrastOnHover = 45;
-            this.btnCancel.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges5.BottomLeft = true;
-            borderEdges5.BottomRight = true;
-            borderEdges5.TopLeft = true;
-            borderEdges5.TopRight = true;
-            this.btnCancel.CustomizableEdges = borderEdges5;
-            this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnCancel.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btnCancel.DisabledFillColor = System.Drawing.Color.Empty;
-            this.btnCancel.DisabledForecolor = System.Drawing.Color.Empty;
-            this.btnCancel.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            this.btnCancel.ForeColor = System.Drawing.Color.OrangeRed;
-            this.btnCancel.IconLeft = ((System.Drawing.Image)(resources.GetObject("btnCancel.IconLeft")));
-            this.btnCancel.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancel.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.btnCancel.IconLeftPadding = new System.Windows.Forms.Padding(25, 3, 3, 3);
-            this.btnCancel.IconMarginLeft = 11;
-            this.btnCancel.IconPadding = 20;
-            this.btnCancel.IconRight = null;
-            this.btnCancel.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCancel.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.btnCancel.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
-            this.btnCancel.IconSize = 25;
-            this.btnCancel.IdleBorderColor = System.Drawing.Color.Empty;
-            this.btnCancel.IdleBorderRadius = 0;
-            this.btnCancel.IdleBorderThickness = 0;
-            this.btnCancel.IdleFillColor = System.Drawing.Color.Empty;
-            this.btnCancel.IdleIconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnCancel.IdleIconLeftImage")));
-            this.btnCancel.IdleIconRightImage = null;
-            this.btnCancel.IndicateFocus = false;
-            this.btnCancel.Location = new System.Drawing.Point(1284, 460);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btnCancel.OnDisabledState.BorderRadius = 15;
-            this.btnCancel.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnCancel.OnDisabledState.BorderThickness = 1;
-            this.btnCancel.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btnCancel.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.btnCancel.OnDisabledState.IconLeftImage = null;
-            this.btnCancel.OnDisabledState.IconRightImage = null;
-            this.btnCancel.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(122)))), ((int)(((byte)(73)))));
-            this.btnCancel.onHoverState.BorderRadius = 15;
-            this.btnCancel.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnCancel.onHoverState.BorderThickness = 1;
-            this.btnCancel.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(122)))), ((int)(((byte)(73)))));
-            this.btnCancel.onHoverState.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnCancel.onHoverState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnCancel.onHoverState.IconLeftImage")));
-            this.btnCancel.onHoverState.IconRightImage = null;
-            this.btnCancel.OnIdleState.BorderColor = System.Drawing.Color.OrangeRed;
-            this.btnCancel.OnIdleState.BorderRadius = 15;
-            this.btnCancel.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnCancel.OnIdleState.BorderThickness = 1;
-            this.btnCancel.OnIdleState.FillColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnCancel.OnIdleState.ForeColor = System.Drawing.Color.OrangeRed;
-            this.btnCancel.OnIdleState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnCancel.OnIdleState.IconLeftImage")));
-            this.btnCancel.OnIdleState.IconRightImage = null;
-            this.btnCancel.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.btnCancel.OnPressedState.BorderRadius = 15;
-            this.btnCancel.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnCancel.OnPressedState.BorderThickness = 1;
-            this.btnCancel.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.btnCancel.OnPressedState.ForeColor = System.Drawing.Color.White;
-            this.btnCancel.OnPressedState.IconLeftImage = null;
-            this.btnCancel.OnPressedState.IconRightImage = null;
-            this.btnCancel.Size = new System.Drawing.Size(164, 80);
-            this.btnCancel.TabIndex = 19;
-            this.btnCancel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnCancel.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnCancel.TextMarginLeft = 0;
-            this.btnCancel.TextPadding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btnCancel.UseDefaultRadiusAndThickness = true;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // bunifuTextBox7
             // 
@@ -1287,7 +1118,7 @@
             this.bunifuTextBox7.IconRight = null;
             this.bunifuTextBox7.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bunifuTextBox7.Lines = new string[0];
-            this.bunifuTextBox7.Location = new System.Drawing.Point(1166, 274);
+            this.bunifuTextBox7.Location = new System.Drawing.Point(192, 289);
             this.bunifuTextBox7.MaxLength = 32767;
             this.bunifuTextBox7.MinimumSize = new System.Drawing.Size(1, 1);
             this.bunifuTextBox7.Modified = false;
@@ -1313,7 +1144,7 @@
             stateProperties28.ForeColor = System.Drawing.Color.Empty;
             stateProperties28.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.bunifuTextBox7.OnIdleState = stateProperties28;
-            this.bunifuTextBox7.Padding = new System.Windows.Forms.Padding(3);
+            this.bunifuTextBox7.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.bunifuTextBox7.PasswordChar = '\0';
             this.bunifuTextBox7.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.bunifuTextBox7.PlaceholderText = "Total Price";
@@ -1323,7 +1154,7 @@
             this.bunifuTextBox7.SelectionLength = 0;
             this.bunifuTextBox7.SelectionStart = 0;
             this.bunifuTextBox7.ShortcutsEnabled = true;
-            this.bunifuTextBox7.Size = new System.Drawing.Size(282, 52);
+            this.bunifuTextBox7.Size = new System.Drawing.Size(250, 48);
             this.bunifuTextBox7.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.bunifuTextBox7.TabIndex = 15;
             this.bunifuTextBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -1389,7 +1220,7 @@
             stateProperties32.ForeColor = System.Drawing.Color.Empty;
             stateProperties32.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.tbxSearch.OnIdleState = stateProperties32;
-            this.tbxSearch.Padding = new System.Windows.Forms.Padding(3);
+            this.tbxSearch.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.tbxSearch.PasswordChar = '\0';
             this.tbxSearch.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.tbxSearch.PlaceholderText = "Search product by ID, name";
@@ -1411,24 +1242,302 @@
             this.tbxSearch.WordWrap = true;
             this.tbxSearch.TextChanged += new System.EventHandler(this.tbxSearch_TextChanged);
             // 
+            // bunifuGroupBox4
+            // 
+            this.bunifuGroupBox4.BorderColor = System.Drawing.Color.Black;
+            this.bunifuGroupBox4.BorderRadius = 4;
+            this.bunifuGroupBox4.BorderThickness = 2;
+            this.bunifuGroupBox4.Controls.Add(this.label6);
+            this.bunifuGroupBox4.Controls.Add(this.label2);
+            this.bunifuGroupBox4.Controls.Add(this.tbxReasonExport);
+            this.bunifuGroupBox4.Controls.Add(this.label5);
+            this.bunifuGroupBox4.Controls.Add(this.label3);
+            this.bunifuGroupBox4.Controls.Add(this.label4);
+            this.bunifuGroupBox4.Controls.Add(this.bunifuTextBox7);
+            this.bunifuGroupBox4.Controls.Add(this.tbxUnitPrice);
+            this.bunifuGroupBox4.Controls.Add(this.tbxQuantity);
+            this.bunifuGroupBox4.Controls.Add(this.tbxProductName);
+            this.bunifuGroupBox4.Controls.Add(this.tbxProductID);
+            this.bunifuGroupBox4.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.bunifuGroupBox4.LabelAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.bunifuGroupBox4.LabelIndent = 10;
+            this.bunifuGroupBox4.LineStyle = Bunifu.UI.WinForms.BunifuGroupBox.LineStyles.Solid;
+            this.bunifuGroupBox4.Location = new System.Drawing.Point(1011, 12);
+            this.bunifuGroupBox4.Name = "bunifuGroupBox4";
+            this.bunifuGroupBox4.Size = new System.Drawing.Size(454, 506);
+            this.bunifuGroupBox4.TabIndex = 67;
+            this.bunifuGroupBox4.TabStop = false;
+            this.bunifuGroupBox4.Text = "Information Product";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 13F, System.Drawing.FontStyle.Bold);
+            this.label6.ForeColor = System.Drawing.Color.Black;
+            this.label6.Location = new System.Drawing.Point(187, 261);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(137, 25);
+            this.label6.TabIndex = 33;
+            this.label6.Text = "Summary Price";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 13F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(12, 20);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(30, 25);
+            this.label2.TabIndex = 30;
+            this.label2.Text = "ID";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 13F, System.Drawing.FontStyle.Bold);
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(12, 261);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(85, 25);
+            this.label5.TabIndex = 32;
+            this.label5.Text = "Quantity";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 13F, System.Drawing.FontStyle.Bold);
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(12, 96);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(61, 25);
+            this.label3.TabIndex = 29;
+            this.label3.Text = "Name";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 13F, System.Drawing.FontStyle.Bold);
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(12, 174);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(53, 25);
+            this.label4.TabIndex = 31;
+            this.label4.Text = "Price";
+            // 
+            // bunifuGroupBox3
+            // 
+            this.bunifuGroupBox3.BorderColor = System.Drawing.Color.Black;
+            this.bunifuGroupBox3.BorderRadius = 4;
+            this.bunifuGroupBox3.BorderThickness = 2;
+            this.bunifuGroupBox3.Controls.Add(this.btnDelete);
+            this.bunifuGroupBox3.Controls.Add(this.btnEdit);
+            this.bunifuGroupBox3.Controls.Add(this.btnCreateForm);
+            this.bunifuGroupBox3.Controls.Add(this.lbTotal);
+            this.bunifuGroupBox3.Controls.Add(this.tbxTotalPrice);
+            this.bunifuGroupBox3.Controls.Add(this.btnCancel);
+            this.bunifuGroupBox3.Controls.Add(this.btnAdd);
+            this.bunifuGroupBox3.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.bunifuGroupBox3.LabelAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.bunifuGroupBox3.LabelIndent = 10;
+            this.bunifuGroupBox3.LineStyle = Bunifu.UI.WinForms.BunifuGroupBox.LineStyles.Solid;
+            this.bunifuGroupBox3.Location = new System.Drawing.Point(1011, 524);
+            this.bunifuGroupBox3.Name = "bunifuGroupBox3";
+            this.bunifuGroupBox3.Size = new System.Drawing.Size(454, 355);
+            this.bunifuGroupBox3.TabIndex = 68;
+            this.bunifuGroupBox3.TabStop = false;
+            this.bunifuGroupBox3.Text = "Tools";
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.AllowAnimations = true;
+            this.btnEdit.AllowMouseEffects = true;
+            this.btnEdit.AllowToggling = false;
+            this.btnEdit.AnimationSpeed = 200;
+            this.btnEdit.AutoGenerateColors = false;
+            this.btnEdit.AutoRoundBorders = false;
+            this.btnEdit.AutoSizeLeftIcon = true;
+            this.btnEdit.AutoSizeRightIcon = true;
+            this.btnEdit.BackColor = System.Drawing.Color.Transparent;
+            this.btnEdit.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
+            this.btnEdit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEdit.BackgroundImage")));
+            this.btnEdit.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnEdit.ButtonText = "Edit";
+            this.btnEdit.ButtonTextMarginLeft = 0;
+            this.btnEdit.ColorContrastOnClick = 45;
+            this.btnEdit.ColorContrastOnHover = 45;
+            this.btnEdit.Cursor = System.Windows.Forms.Cursors.Hand;
+            borderEdges4.BottomLeft = true;
+            borderEdges4.BottomRight = true;
+            borderEdges4.TopLeft = true;
+            borderEdges4.TopRight = true;
+            this.btnEdit.CustomizableEdges = borderEdges4;
+            this.btnEdit.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnEdit.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnEdit.DisabledFillColor = System.Drawing.Color.Empty;
+            this.btnEdit.DisabledForecolor = System.Drawing.Color.Empty;
+            this.btnEdit.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
+            this.btnEdit.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.btnEdit.ForeColor = System.Drawing.Color.Orange;
+            this.btnEdit.IconLeft = ((System.Drawing.Image)(resources.GetObject("btnEdit.IconLeft")));
+            this.btnEdit.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEdit.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.btnEdit.IconLeftPadding = new System.Windows.Forms.Padding(25, 3, 3, 3);
+            this.btnEdit.IconMarginLeft = 11;
+            this.btnEdit.IconPadding = 20;
+            this.btnEdit.IconRight = null;
+            this.btnEdit.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEdit.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.btnEdit.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.btnEdit.IconSize = 25;
+            this.btnEdit.IdleBorderColor = System.Drawing.Color.Empty;
+            this.btnEdit.IdleBorderRadius = 0;
+            this.btnEdit.IdleBorderThickness = 0;
+            this.btnEdit.IdleFillColor = System.Drawing.Color.Empty;
+            this.btnEdit.IdleIconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnEdit.IdleIconLeftImage")));
+            this.btnEdit.IdleIconRightImage = null;
+            this.btnEdit.IndicateFocus = false;
+            this.btnEdit.Location = new System.Drawing.Point(250, 36);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnEdit.OnDisabledState.BorderRadius = 15;
+            this.btnEdit.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnEdit.OnDisabledState.BorderThickness = 1;
+            this.btnEdit.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnEdit.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnEdit.OnDisabledState.IconLeftImage = null;
+            this.btnEdit.OnDisabledState.IconRightImage = null;
+            this.btnEdit.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(183)))), ((int)(((byte)(59)))));
+            this.btnEdit.onHoverState.BorderRadius = 15;
+            this.btnEdit.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnEdit.onHoverState.BorderThickness = 1;
+            this.btnEdit.onHoverState.FillColor = System.Drawing.SystemColors.Control;
+            this.btnEdit.onHoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(183)))), ((int)(((byte)(59)))));
+            this.btnEdit.onHoverState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnEdit.onHoverState.IconLeftImage")));
+            this.btnEdit.onHoverState.IconRightImage = null;
+            this.btnEdit.OnIdleState.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btnEdit.OnIdleState.BorderRadius = 15;
+            this.btnEdit.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnEdit.OnIdleState.BorderThickness = 1;
+            this.btnEdit.OnIdleState.FillColor = System.Drawing.SystemColors.Control;
+            this.btnEdit.OnIdleState.ForeColor = System.Drawing.Color.Orange;
+            this.btnEdit.OnIdleState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnEdit.OnIdleState.IconLeftImage")));
+            this.btnEdit.OnIdleState.IconRightImage = null;
+            this.btnEdit.OnPressedState.BorderColor = System.Drawing.SystemColors.ControlDark;
+            this.btnEdit.OnPressedState.BorderRadius = 15;
+            this.btnEdit.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnEdit.OnPressedState.BorderThickness = 1;
+            this.btnEdit.OnPressedState.FillColor = System.Drawing.SystemColors.Control;
+            this.btnEdit.OnPressedState.ForeColor = System.Drawing.Color.Black;
+            this.btnEdit.OnPressedState.IconLeftImage = null;
+            this.btnEdit.OnPressedState.IconRightImage = null;
+            this.btnEdit.Size = new System.Drawing.Size(154, 74);
+            this.btnEdit.TabIndex = 22;
+            this.btnEdit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnEdit.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnEdit.TextMarginLeft = 0;
+            this.btnEdit.TextPadding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnEdit.UseDefaultRadiusAndThickness = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click_1);
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.AllowAnimations = true;
+            this.btnCancel.AllowMouseEffects = true;
+            this.btnCancel.AllowToggling = false;
+            this.btnCancel.AnimationSpeed = 200;
+            this.btnCancel.AutoGenerateColors = false;
+            this.btnCancel.AutoRoundBorders = false;
+            this.btnCancel.AutoSizeLeftIcon = true;
+            this.btnCancel.AutoSizeRightIcon = true;
+            this.btnCancel.BackColor = System.Drawing.Color.Transparent;
+            this.btnCancel.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
+            this.btnCancel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCancel.BackgroundImage")));
+            this.btnCancel.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnCancel.ButtonText = "Cancel";
+            this.btnCancel.ButtonTextMarginLeft = 0;
+            this.btnCancel.ColorContrastOnClick = 45;
+            this.btnCancel.ColorContrastOnHover = 45;
+            this.btnCancel.Cursor = System.Windows.Forms.Cursors.Default;
+            borderEdges5.BottomLeft = true;
+            borderEdges5.BottomRight = true;
+            borderEdges5.TopLeft = true;
+            borderEdges5.TopRight = true;
+            this.btnCancel.CustomizableEdges = borderEdges5;
+            this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnCancel.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnCancel.DisabledFillColor = System.Drawing.Color.Empty;
+            this.btnCancel.DisabledForecolor = System.Drawing.Color.Empty;
+            this.btnCancel.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
+            this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.btnCancel.ForeColor = System.Drawing.Color.OrangeRed;
+            this.btnCancel.IconLeft = ((System.Drawing.Image)(resources.GetObject("btnCancel.IconLeft")));
+            this.btnCancel.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCancel.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.btnCancel.IconLeftPadding = new System.Windows.Forms.Padding(25, 3, 3, 3);
+            this.btnCancel.IconMarginLeft = 11;
+            this.btnCancel.IconPadding = 20;
+            this.btnCancel.IconRight = null;
+            this.btnCancel.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCancel.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.btnCancel.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.btnCancel.IconSize = 25;
+            this.btnCancel.IdleBorderColor = System.Drawing.Color.Empty;
+            this.btnCancel.IdleBorderRadius = 0;
+            this.btnCancel.IdleBorderThickness = 0;
+            this.btnCancel.IdleFillColor = System.Drawing.Color.Empty;
+            this.btnCancel.IdleIconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnCancel.IdleIconLeftImage")));
+            this.btnCancel.IdleIconRightImage = null;
+            this.btnCancel.IndicateFocus = false;
+            this.btnCancel.Location = new System.Drawing.Point(250, 131);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnCancel.OnDisabledState.BorderRadius = 15;
+            this.btnCancel.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnCancel.OnDisabledState.BorderThickness = 1;
+            this.btnCancel.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnCancel.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnCancel.OnDisabledState.IconLeftImage = null;
+            this.btnCancel.OnDisabledState.IconRightImage = null;
+            this.btnCancel.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(122)))), ((int)(((byte)(73)))));
+            this.btnCancel.onHoverState.BorderRadius = 15;
+            this.btnCancel.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnCancel.onHoverState.BorderThickness = 1;
+            this.btnCancel.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(122)))), ((int)(((byte)(73)))));
+            this.btnCancel.onHoverState.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnCancel.onHoverState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnCancel.onHoverState.IconLeftImage")));
+            this.btnCancel.onHoverState.IconRightImage = null;
+            this.btnCancel.OnIdleState.BorderColor = System.Drawing.Color.OrangeRed;
+            this.btnCancel.OnIdleState.BorderRadius = 15;
+            this.btnCancel.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnCancel.OnIdleState.BorderThickness = 1;
+            this.btnCancel.OnIdleState.FillColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnCancel.OnIdleState.ForeColor = System.Drawing.Color.OrangeRed;
+            this.btnCancel.OnIdleState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnCancel.OnIdleState.IconLeftImage")));
+            this.btnCancel.OnIdleState.IconRightImage = null;
+            this.btnCancel.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.btnCancel.OnPressedState.BorderRadius = 15;
+            this.btnCancel.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnCancel.OnPressedState.BorderThickness = 1;
+            this.btnCancel.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.btnCancel.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.btnCancel.OnPressedState.IconLeftImage = null;
+            this.btnCancel.OnPressedState.IconRightImage = null;
+            this.btnCancel.Size = new System.Drawing.Size(154, 74);
+            this.btnCancel.TabIndex = 19;
+            this.btnCancel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnCancel.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnCancel.TextMarginLeft = 0;
+            this.btnCancel.TextPadding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btnCancel.UseDefaultRadiusAndThickness = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
             // ExportView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1495, 909);
-            this.Controls.Add(this.btnDelete);
-            this.Controls.Add(this.btnEdit);
-            this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.btnCreateForm);
-            this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.tbxReasonExport);
-            this.Controls.Add(this.bunifuTextBox7);
-            this.Controls.Add(this.tbxQuantity);
-            this.Controls.Add(this.tbxUnitPrice);
-            this.Controls.Add(this.tbxProductName);
-            this.Controls.Add(this.tbxProductID);
-            this.Controls.Add(this.lbTotal);
-            this.Controls.Add(this.bunifuLabel1);
+            this.Controls.Add(this.bunifuGroupBox3);
+            this.Controls.Add(this.bunifuGroupBox4);
             this.Controls.Add(this.bunifuTextBox2);
             this.Controls.Add(this.tbxSearch);
             this.Controls.Add(this.bunifuGroupBox2);
@@ -1440,8 +1549,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtgvData)).EndInit();
             this.bunifuGroupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgvProduct)).EndInit();
+            this.bunifuGroupBox4.ResumeLayout(false);
+            this.bunifuGroupBox4.PerformLayout();
+            this.bunifuGroupBox3.ResumeLayout(false);
+            this.bunifuGroupBox3.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -1450,7 +1562,7 @@
         private Bunifu.UI.WinForms.BunifuGroupBox bunifuGroupBox1;
         private Bunifu.UI.WinForms.BunifuGroupBox bunifuGroupBox2;
         private Bunifu.UI.WinForms.BunifuTextBox bunifuTextBox2;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
+        private Bunifu.UI.WinForms.BunifuLabel tbxTotalPrice;
         private Bunifu.UI.WinForms.BunifuLabel lbTotal;
         private Bunifu.UI.WinForms.BunifuTextBox tbxProductID;
         private Bunifu.UI.WinForms.BunifuTextBox tbxProductName;
@@ -1466,10 +1578,17 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Total;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnCreateForm;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnDelete;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnEdit;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnAdd;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnCancel;
         private Bunifu.UI.WinForms.BunifuTextBox bunifuTextBox7;
         private Bunifu.UI.WinForms.BunifuTextBox tbxSearch;
+        private Bunifu.UI.WinForms.BunifuGroupBox bunifuGroupBox4;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private Bunifu.UI.WinForms.BunifuGroupBox bunifuGroupBox3;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnEdit;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnCancel;
     }
 }
