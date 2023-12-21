@@ -493,7 +493,7 @@
             this.btnAdd.onHoverState.BorderThickness = 1;
             this.btnAdd.onHoverState.FillColor = System.Drawing.SystemColors.Control;
             this.btnAdd.onHoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(168)))), ((int)(((byte)(80)))));
-            this.btnAdd.onHoverState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("bunifuButton1.onHoverState.IconLeftImage")));
+            this.btnAdd.onHoverState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnAdd.onHoverState.IconLeftImage")));
             this.btnAdd.onHoverState.IconRightImage = null;
             this.btnAdd.OnIdleState.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
             this.btnAdd.OnIdleState.BorderRadius = 15;
@@ -501,7 +501,7 @@
             this.btnAdd.OnIdleState.BorderThickness = 1;
             this.btnAdd.OnIdleState.FillColor = System.Drawing.SystemColors.Control;
             this.btnAdd.OnIdleState.ForeColor = System.Drawing.Color.Green;
-            this.btnAdd.OnIdleState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("bunifuButton1.OnIdleState.IconLeftImage")));
+            this.btnAdd.OnIdleState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnAdd.OnIdleState.IconLeftImage")));
             this.btnAdd.OnIdleState.IconRightImage = null;
             this.btnAdd.OnPressedState.BorderColor = System.Drawing.SystemColors.ControlDark;
             this.btnAdd.OnPressedState.BorderRadius = 15;
@@ -829,7 +829,7 @@
             this.btnCreateBill.onHoverState.BorderThickness = 1;
             this.btnCreateBill.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
             this.btnCreateBill.onHoverState.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnCreateBill.onHoverState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnCreateForm.onHoverState.IconLeftImage")));
+            this.btnCreateBill.onHoverState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnCreateBill.onHoverState.IconLeftImage")));
             this.btnCreateBill.onHoverState.IconRightImage = null;
             this.btnCreateBill.OnIdleState.BorderColor = System.Drawing.Color.DarkCyan;
             this.btnCreateBill.OnIdleState.BorderRadius = 15;
@@ -837,7 +837,7 @@
             this.btnCreateBill.OnIdleState.BorderThickness = 1;
             this.btnCreateBill.OnIdleState.FillColor = System.Drawing.SystemColors.ButtonFace;
             this.btnCreateBill.OnIdleState.ForeColor = System.Drawing.Color.DarkCyan;
-            this.btnCreateBill.OnIdleState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnCreateForm.OnIdleState.IconLeftImage")));
+            this.btnCreateBill.OnIdleState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnCreateBill.OnIdleState.IconLeftImage")));
             this.btnCreateBill.OnIdleState.IconRightImage = null;
             this.btnCreateBill.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
             this.btnCreateBill.OnPressedState.BorderRadius = 15;
@@ -921,7 +921,7 @@
             this.btnCancel.onHoverState.BorderThickness = 1;
             this.btnCancel.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(122)))), ((int)(((byte)(73)))));
             this.btnCancel.onHoverState.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnCancel.onHoverState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("bunifuButton2.onHoverState.IconLeftImage")));
+            this.btnCancel.onHoverState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnCancel.onHoverState.IconLeftImage")));
             this.btnCancel.onHoverState.IconRightImage = null;
             this.btnCancel.OnIdleState.BorderColor = System.Drawing.Color.OrangeRed;
             this.btnCancel.OnIdleState.BorderRadius = 15;
@@ -929,7 +929,7 @@
             this.btnCancel.OnIdleState.BorderThickness = 1;
             this.btnCancel.OnIdleState.FillColor = System.Drawing.SystemColors.ButtonFace;
             this.btnCancel.OnIdleState.ForeColor = System.Drawing.Color.OrangeRed;
-            this.btnCancel.OnIdleState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("bunifuButton2.OnIdleState.IconLeftImage")));
+            this.btnCancel.OnIdleState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnCancel.OnIdleState.IconLeftImage")));
             this.btnCancel.OnIdleState.IconRightImage = null;
             this.btnCancel.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
             this.btnCancel.OnPressedState.BorderRadius = 15;
