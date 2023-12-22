@@ -16,12 +16,18 @@ namespace _DoAn.Views
     public partial class LoginView : Form, ILoginView
     {
         private string _message;
+        private LoginPresenter loginPresenter;
+
         public LoginView()
         {
             InitializeComponent();
-            panelChangePassword.Hide();
+            loginPresenter = new LoginPresenter(this);
+            panelChangePassword.Show();
+            panelLogin.Hide();
             panelForgotpassword.Hide();
+            lbResend.Hide();
         }
+
 
         public string username { get => tbxUsername.Text; set => tbxUsername.Text = value; }
         public string password { get => tbxPassword.Text; set => tbxPassword.Text = value; }
@@ -33,7 +39,6 @@ namespace _DoAn.Views
 
         private void btnSignin_Click(object sender, EventArgs e)
         {
-            LoginPresenter loginPresenter = new LoginPresenter(this);
             if (loginPresenter.Login())
             {
                 string id = loginPresenter.GetId();
@@ -53,16 +58,23 @@ namespace _DoAn.Views
 
         }
 
-        
+
 
         private void tbnChangePassword_Click(object sender, EventArgs e)
-        {
-            panelChangePassword.Show();
+        { 
+            if(loginPresenter.VerifyOTP())
+            {
+                panelChangePassword.Show();
+                panelLogin.Hide();
+                panelForgotpassword.Hide();
+            }
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             panelForgotpassword.Show();
+            panelChangePassword.Hide();
+            panelLogin.Hide();
         }
 
         private void lbBackToLogin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -70,12 +82,40 @@ namespace _DoAn.Views
             panelLogin.Show();
             panelChangePassword.Hide();
             panelForgotpassword.Hide();
+            lbResend.Hide();
+            lbSend.Show();
         }
 
         private void lbSend_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             lbSend.Hide();
             lbResend.Show();
+
+            string email = loginPresenter.GetEmail();
+            loginPresenter.SendEmailOTP(email);
         }
+
+        private void tbnConfirm_Click(object sender, EventArgs e)
+        {
+            if(loginPresenter.VerifyNewPassword())
+            {
+                if (loginPresenter.UpdatePassword())
+                {
+                    MessageBox.Show("Password is now changed!");
+                } else
+                {
+                    MessageBox.Show("Error!");
+                }
+                
+            } else
+            {
+                MessageBox.Show("Wrong password re-entered, please check again!");
+
+            }
+        }
+
+      
+
+
     }
 }
