@@ -22,8 +22,7 @@ namespace _DoAn.Views
         {
             InitializeComponent();
             loginPresenter = new LoginPresenter(this);
-            panelChangePassword.Show();
-            panelLogin.Hide();
+            panelChangePassword.Hide();
             panelForgotpassword.Hide();
             lbResend.Hide();
         }
