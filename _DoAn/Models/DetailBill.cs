@@ -15,7 +15,7 @@ namespace _DoAn.Models
         public float PresentPrice;
         public int Quantity;
 
-        public bool AddDetailData(string bill_id, string product_id, string price, string quantity, string unit)
+        public bool AddDetailData(string bill_id, string product_id, string price, string quantity, string unit)//**
         {
             SqlCommand cmd = new SqlCommand("INSERT INTO DetailBill (Bill_id, Product_id, Quantities, Unit_Name, Price) VALUES (@bill_id, @product_id,  @quan,@uni, @price)");
             cmd.Parameters.Add("@product_id", SqlDbType.Int);

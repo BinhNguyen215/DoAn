@@ -31,16 +31,16 @@ namespace _DoAn.Models
             }
             return data;
         }
-        public DataTable GetProductData()
+        public DataTable GetProductData()//**
         {
             ConnectDB connect = new ConnectDB();
             string sqlQuery = "select Product_id as ID, ProductName as Name, Price, Description, Origin, Unit.Unit_Namelv1 as Unit, TypeName as Type from Product , ProductType ,Unit where Product.ProductType = ProductType.ProductType_id and Unit.Unit_id=Product.Unit_id;";
             return connect.GetData(sqlQuery);
         }
-        public DataTable SearchData(string search)
+        public DataTable SearchData(string search)//**
         {
             ConnectDB connect = new ConnectDB();
-            string sqlQuery = "select Product_id as ID, ProductName as Name, Price, Description, Origin, Unit.Unit_Namelv1, TypeName as Type from Product , ProductType, Unit where Product.ProductType = ProductType.ProductType_id and Unit.Unit_id = Product.Unit_id and(Product_id like '" + search + "%' or ProductName like '% "+ search + "%')";
+            string sqlQuery = "select Product_id as ID, ProductName as Name, Price, Description, Origin, Unit.Unit_Namelv1, TypeName as Type from Product , ProductType, Unit where Product.ProductType = ProductType.ProductType_id and Unit.Unit_id = Product.Unit_id and(Product_id like '" + search + "%' or ProductName like '% " + search + "%')";
             return connect.GetData(sqlQuery);
         }
         public string GetTypeString(string name)
@@ -69,7 +69,7 @@ namespace _DoAn.Models
             ConnectDB connect = new ConnectDB();
             return connect.GetId(cmd).ToString();
         }
-        public bool UpdateProduct(string quantity, string id)
+        public bool UpdateProduct(string quantity, string id)//**
         {
             SqlCommand cmd = new SqlCommand("Update Product setlv1Quantity =lv1Quantity + @quan Where Product_id = @id ");
             cmd.Parameters.Add("@quan", SqlDbType.Int);

@@ -22,7 +22,8 @@ namespace _DoAn.Models
         public int Quantities;
         public string Unit_Name;
 
-        public DataTable GetProductData()//*
+
+        public DataTable GetProductData()//**
         {
             ConnectDB connect = new ConnectDB();
             string sqlQuery = "select Product_id as ID, ProductName as Name, Price as 'Price-UnitBig',  uni.Unit_Namelv2 as 'Unit(Small)', uni.Unit_Namelv1 as 'Unit(Big)', uni.Value as 'Coef' from Product, Unit uni ";
@@ -37,19 +38,19 @@ namespace _DoAn.Models
             return connect.GetData(sqlQuery);
         }
 
-        public DataTable GetDetailBill(string bill_id)//*
+        public DataTable GetDetailBill(string bill_id)//**
         {
             ConnectDB connect = new ConnectDB();
-            string sqlQuery = "select Bill_id as BillID, pro.ProductName as 'Product Name', Quantities, Unit_Name as Unit, Price from DetailBill dtl, Product pro  where Bill_id =" + bill_id +" and pro.Product_id = dtl.Product_id";
+            string sqlQuery = "select Bill_id as BillID, pro.ProductName as 'Product Name', Quantities, Unit_Name as Unit, pro.Price from DetailBill dtl, Product pro  where Bill_id =" + bill_id + " and pro.Product_id = dtl.Product_id";
 
             return connect.GetData(sqlQuery);
         }
-        public DataTable SearchData(string search)
+        public DataTable SearchData(string search)//**
         {
             ConnectDB connect = new ConnectDB();
             string sqlQuery = "select pro.Product_id as ID, pro.ProductName as Name, pro.Price as 'Price-UnitBig',  uni.Unit_Namelv2 as 'Unit(Small)', uni.Unit_Namelv1 as 'Unit(Big)', uni.Value as 'Coef' from Product pro, Unit uni"
-                +" where (pro.Product_id like '" + search + "%' or pro.ProductName like N'" + search + "%')"
-                +" and uni.Unit_id = pro.Unit_id";
+                + " where (pro.Product_id like '" + search + "%' or pro.ProductName like N'" + search + "%')"
+                + " and uni.Unit_id = pro.Unit_id";
             return connect.GetData(sqlQuery);
         }
         public DataTable SearchBill(string search)
@@ -82,7 +83,7 @@ namespace _DoAn.Models
 
         
 
-        public bool UpdateProduct(string quantity, string id, string uni) //*
+        public bool UpdateProduct(string quantity, string id, string uni)
         {
             string query;
             if (uni == "Pill")

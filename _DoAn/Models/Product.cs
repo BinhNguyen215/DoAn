@@ -16,7 +16,7 @@ namespace _DoAn.Models
         public int Product_id;
         public string ProductName;
         public float Price;
-        public int Unit_id;
+        public int  Unit_id;
         public string Description;
         public string Original;
         public int ProductType;
@@ -31,7 +31,7 @@ namespace _DoAn.Models
             }
             return data;
         }
-        public DataTable GetProductData()
+        public DataTable GetProductData()//**
         {
             ConnectDB connect = new ConnectDB();
             string sqlQuery = "select p.Product_id as ID, p.ProductName as Name, p.Price, p.Description, p.Origin, uni.Unit_Namelv2 as 'Unit(Small)', uni.Unit_Namelv1 as 'Unit(Big)', pty.TypeName as Type from Product p, ProductType pty,Unit uni where p.ProductType = pty.ProductType_id and uni.Unit_id=p.Unit_id;";
@@ -43,23 +43,23 @@ namespace _DoAn.Models
             string sqlQuery = "select ProductType_id from ProductType where TypeName = '" + name + "'";
             return connect.GetData(sqlQuery).Rows[0]["ProductType_id"].ToString();
         }
-        public int GetUnitId(string unit1,string unit2) //*
+        public int GetUnitId(string unit1, string unit2) //**
         {
             ConnectDB connect = new ConnectDB();
             string sqlQuery = "select Unit_id from Unit where Unit_Namelv1 = '" + unit2 + "' and Unit_Namelv2 = '" + unit1 + "'";
             return Convert.ToInt32(connect.GetData(sqlQuery).Rows[0]["Unit_id"]);
         }
-        static string[] CutString(string str) //*
+        static string[] CutString(string str) //**
         {
             return str.Split('/');
         }
-       
-        public bool AddProduct(string name, string price, string des, string ori, string unit, string type)
+
+        public bool AddProduct(string name, string price, string des, string ori, string unit, string type)//**
         {
             string typeid = GetTypeString(type);
             string[] units = CutString(unit); //*
-            int uni= GetUnitId(units[0], units[1]);//*
- 
+            int uni = GetUnitId(units[0], units[1]);//*
+
             //*
             SqlCommand cmd = new SqlCommand("INSERT INTO Product (ProductName, Price,Description,Origin,ProductType,Unit_id) VALUES (@name, @price, @des, @ori, @ptid, @uni)");
             cmd.Parameters.AddWithValue("@name", name);
@@ -74,7 +74,7 @@ namespace _DoAn.Models
             cmd.Parameters["@ptid"].Value = Convert.ToInt32(typeid);
 
             ConnectDB connect = new ConnectDB();
-            
+
             if (connect.HandleData(cmd))
             {
                 return true;
@@ -102,7 +102,7 @@ namespace _DoAn.Models
             else { return false; }
         }
 
-        public bool UpdateProduct(string id, string name, string price, string des, string ori, string unit, string type)
+        public bool UpdateProduct(string id, string name, string price, string des, string ori, string unit, string type)//**
         {
             string typeid = GetTypeString(type);
             string[] units = CutString(unit); //*
