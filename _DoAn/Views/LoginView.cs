@@ -57,20 +57,6 @@ namespace _DoAn.Views
 
         }
 
-        
-
-        private void tbnChangePassword_Click(object sender, EventArgs e)
-        {
-            panelChangePassword.Show();
-        }
-
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            panelForgotpassword.Show();
-        }
-
-        }
-
 
 
         private void tbnChangePassword_Click(object sender, EventArgs e)
@@ -127,18 +113,6 @@ namespace _DoAn.Views
             }
         }
 
-        private void lbBackToLogin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            panelLogin.Show();
-            panelChangePassword.Hide();
-            panelForgotpassword.Hide();
-        }
-
-        private void lbSend_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            lbSend.Hide();
-            lbResend.Show();
-        }
       
 
 
