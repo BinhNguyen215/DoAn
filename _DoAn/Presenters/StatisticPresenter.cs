@@ -15,7 +15,6 @@ namespace _DoAn.Presenters
     {
         IStatistics statisticview;
         Statistics statistics = new Statistics();
-
         public StatisticPresenter(IStatistics i)
         {
             this.statisticview = i;
@@ -27,6 +26,7 @@ namespace _DoAn.Presenters
                 statisticview.SumProduct = "0";
             return true;
         }
+       
         public bool GetProductToday(string day, string month, string year)
         {
             statisticview.ProductToday = statistics.GetNumberOfProductToday(day, month, year);
@@ -92,6 +92,18 @@ namespace _DoAn.Presenters
             statisticview.gvBestSeller.DataSource = dt;
             return true;
         }
+        public void GetSaleStatus()
+        {
+            DataTable dt = new DataTable();
+            dt = statistics.GetEmployee();
+            statisticview.gvEmployee.DataSource = dt;
+        }
+        public void GetTopResult()
+        {
+            DataTable dt = new DataTable();
+            dt=statistics.GetTopData();
+            statisticview.gvEmployee.DataSource = dt;
+        }        
         public bool GetLineChart(string month, string year)
         {
             statisticview.data = statistics.GetChartData(month, year);
@@ -156,5 +168,7 @@ namespace _DoAn.Presenters
             graphic.DrawString("Import: ".PadRight(40) + total, font, new SolidBrush(Color.Black), startX, startY + offset);
             return true;
         }
+
+        
     }
 }

@@ -118,20 +118,18 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="bunifuDatePicker1.Icon" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="bunifuPanel1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAF/SURBVFhH7ZZdTsMwEISDuEEbIXGBPvLIMwfgMNyAnADR
-        5hYcCIlUPUvIWDtms7ZTJ06QkPiklbLjWe+2dn8qS9M0PULS2ZTW/w/w+wO8310edFHsOTdS9eiBPApN
-        iNPu6zH2nBtT9dIuRJsQKFzSnJGql3Yh1rhVSLuQmHmLkHYhMfMWIe1CrhoK+XsDMC/VSUr3WAPzUp2k
-        dI81MC/Vs7GFerMSPZvFhQna+nI47s/DluPBoGFNbD/QIOli+qq/Odbdi24aC3jglbJwAG3O0QE2tOtt
-        3T2/1Z/3CDzbdT8EBZcMaFOODvQrb/fnJ5EDsEYfapxIwSUDzHN1nCs13dz6iB7C3QlrZJ6r6wsnkiOm
-        Ea6d6u510pgD63HOIjmm9tV3whs/qv5W1mfBelw2kRzUJR0Br1/nw9yQva4OYANrowH0n9I54boMME8d
-        gQ2sjY6glNQlnIJ+dwlLSX0MUwQfwzUo+iJag6Kv4rXAhvqdSAU8qzfX4Fzzf46r6huINmMzAcfiYwAA
-        AABJRU5ErkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAA2MAAABECAYAAAAMcO0aAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHDSURBVHhe7dmxCcNQFARB9V+P+rNxIINRat0mMyDQ+x0s
+        dwAAABA6z/N1fW632+12u91ut9vtfu7+uj0AAADwPDEGAACw8dNfYgwAAGBDfwEAAAQsYwAAADUxBgAA
+        sGEZAwAACOgvAACAgGUMAACgJsYAAAA2LGMAAAAB/QUAABCwjAEAANTEGAAAwIZlDAAAIKC/AAAAApYx
+        AACAmhgDAADYsIwBAAAE9BcAAEDAMgYAAFATYwAAABuWMQAAgID+AgAACFjGAAAAamIMAABgwzIGAAAQ
+        0F8AAAAByxgAAEBNjAEAAGxYxgAAAAL6CwAAIGAZAwAAqIkxAACADcsYAABAQH8BAAAELGMAAAA1MQYA
+        ALBhGQMAAAjoLwAAgIBlDAAAoCbGAAAANixjAAAAAf0FAAAQsIwBAADUxBgAAMCGZQwAACCgvwAAAAKW
+        MQAAgJoYAwAA2LCMAQAABPQXAABAwDIGAABQE2MAAAAbljEAAICA/gIAAAhYxgAAAGpiDAAAYMMyBgAA
+        ENBfAAAAAcsYAABATYwBAABsWMYAAAAC+gsAACBwi7HPw/V4/bvdbrfb7Xa73W63+783AAAAmeN4Aw4n
+        4KbbijSyAAAAAElFTkSuQmCC
 </value>
-  </data>
-  <data name="lbViewAllBill.BaseStylesheet" xml:space="preserve">
-    <value>#bunifu-label { padding: 0px; font-family: 'Segoe UI'; font-size: 15pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(0, 0, 0); text-align: left; }</value>
   </data>
 </root>

@@ -233,7 +233,8 @@ namespace _DoAn.Views.Product
         }
         private void dtgvProduct_DoubleClick(object sender, EventArgs e)
         {
-            index = 0;
+            index = 0; // dùng để phân biệt xem sự kiện click của nút nào gọi btnDone
+            setEnableF();
             if (dtgvProduct.CurrentRow.Cells[0].Value.ToString() != "")
             {
                 btnVisible(true, true, true);

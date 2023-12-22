@@ -30,7 +30,7 @@ namespace _DoAn.Models
         public DataTable SearchData(string search)
         {
             ConnectDB connect = new ConnectDB();
-            string sqlQuery = "select Product_id as ID, ProductName as Name, Price, Description, Origin, Unit.Unit_Namelv1, TypeName as Type from Product , ProductType, Unit where Product.ProductType = ProductType.ProductType_id and Unit.Unit_id = Product.Unit_id and(Product_id like '" + search + "%' or ProductName like N'" + search + "%')";
+            string sqlQuery = "select Product_id as ID, ProductName as Name, Price, Description, Origin, Unit.Unit_Namelv1, TypeName as Type from Product , ProductType, Unit where Product.ProductType = ProductType.ProductType_id and Unit.Unit_id = Product.Unit_id and(Product_id like '" + search + "%' or ProductName like N'% " + search + "%' )";
             return connect.GetData(sqlQuery);
         }
 

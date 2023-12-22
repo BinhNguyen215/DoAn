@@ -368,6 +368,7 @@
     <Compile Include="Presenters\cImport\DeleteCommand.cs" />
     <Compile Include="Presenters\cImport\EditCommand.cs" />
     <Compile Include="Presenters\cImport\Invorker.cs" />
+    <Compile Include="Presenters\DetailStatisticPresenter.cs" />
     <Compile Include="Presenters\EmployeePresenter.cs" />
     <Compile Include="Presenters\ExportPresenter.cs" />
     <Compile Include="Presenters\ImportPresenter.cs" />
@@ -464,7 +465,14 @@
     <Compile Include="Views\Sale\SaleView.Designer.cs">
       <DependentUpon>SaleView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Statistic\IDetailBill.cs" />
     <Compile Include="Views\Statistic\IStatistics.cs" />
+    <Compile Include="Views\Statistic\StatisticDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Statistic\StatisticDetail.Designer.cs">
+      <DependentUpon>StatisticDetail.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Statistic\StatisticsView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -527,6 +535,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Sale\SaleView.resx">
       <DependentUpon>SaleView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Statistic\StatisticDetail.resx">
+      <DependentUpon>StatisticDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Statistic\StatisticsView.resx">
       <DependentUpon>StatisticsView.cs</DependentUpon>

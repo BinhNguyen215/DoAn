@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.SqlServer.Server;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -9,6 +10,7 @@ namespace _DoAn.Models
 {
     public class Statistics
     {
+     
         public DataTable GetTop10ProductData()
         {
             ConnectDB connect = new ConnectDB();
@@ -18,6 +20,29 @@ namespace _DoAn.Models
                 + "Order By Sum(Quantities) DESC";
             return connect.GetData(sqlQuery);
         }
+        public DataTable GetEmployee()
+        {
+            ConnectDB connect = new ConnectDB();
+            string sqlQuery = "Select distinct bi.DateBill 'Date',bi.Bill_id as 'Bill ID', emp.EmployName as 'Employee Name', bi.BillValue"
+                + " FROM  Bill bi, Employee emp, DetailBill dtl"
+                + " WHERE bi.Employee_id = emp.Employee_id ";
+            return connect.GetData(sqlQuery);
+        }
+        public DataTable GetDetailBill(string bill) { 
+            ConnectDB connect=new ConnectDB();
+            string sqlQuery = "SELECT distinct bi.Bill_id,dtl.Price, pro.ProductName, dtl.Unit_Name, dtl.Quantities, spl.SuplierName "
+                +"FROM Bill bi, DetailBill dtl, Product pro, Supplier spl, ImportForm im "
+                +"WHERE bi.Bill_id = dtl.Bill_id and dtl.Product_id = pro.Product_id and spl.Supplier_id = im.Suplier_id "
+                +"And bi.Bill_id = '"+bill+"'";
+            return connect.GetData(sqlQuery);
+        }
+       /* public DataTable GetDetailBill()
+        {
+            ConnectDB connect = new ConnectDB();
+            string sqlQuery = " " +
+                " ";
+            return connect.GetData(sqlQuery);
+        }*/
         public string GetImportMonth(string month, string year)
         {
             //string sMonth = DateTime.Now.ToString("MM");
@@ -73,6 +98,29 @@ namespace _DoAn.Models
             ConnectDB connect = new ConnectDB();
             string sqlQuery = "Select CAST (DateBill AS DATE) AS Ngay, sum(BillValue) as Tong from Bill where MONTH(DateBill) = '" + month + "' and Year(DateBill) = '" + year + "' group by CAST (DateBill AS DATE) order by CAST (DateBill AS DATE)";
             return connect.GetData(sqlQuery);
+        }
+        //*
+        public string GetName(string bill)
+        {
+            ConnectDB connect = new ConnectDB();
+            string sqlQuerry = "Select emp.EmployName From Employee emp, Bill bi Where bi.Employee_id = emp.Employee_id and bi.Bill_id = '" + bill + "'";
+            return connect.GetData(sqlQuerry).Rows[0][0].ToString();
+        }
+        public string GetDate (string bill)
+        {
+            ConnectDB connect = new ConnectDB();
+            string sqlQuerry = "SELECT DateBill FROM Bill WHERE Bill_id='"+bill+"'";
+            return connect.GetData(sqlQuerry).Rows[0][0].ToString();
+        }
+        public DataTable GetTopData()
+        {
+            ConnectDB connect = new ConnectDB();
+            string sqlQuery = "Select top 5 with ties em.EmployName 'Employee Name', Sum(BillValue) 'Doanh thu' "
+                + " FROM Bill bi, Employee em"
+                + " WHERE bi.Employee_id = em.Employee_id"
+                   + " Group by em.EmployName"
+                   + " Order by  Sum(BillValue) Desc";
+                return connect.GetData(sqlQuery);
         }
     }
 }

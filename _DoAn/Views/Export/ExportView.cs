@@ -26,7 +26,7 @@ namespace _DoAn.Views.Export
         public string TotalPriceProduct { get => lbTotal.Text; set => lbTotal.Text = value; }
         public string ExportPrice { get => tbxUnitPrice.Text; set => tbxUnitPrice.Text = value; }
         public string Quantity { get => tbxQuantity.Text; set => tbxQuantity.Text = value; }
-        string IExport.Total { get => tbxTotalPrice.Text; set => tbxTotalPrice.Text = value; }
+        string IExport.Total { get => tbxTotalProduct.Text; set => tbxTotalProduct.Text = value; }
         public string message { get => _message; set => _message = value; }
         public string Search { get => tbxSearch.Text; set => tbxSearch.Text = value; }
         public string ExportReason { get => tbxReasonExport.Text; set => tbxReasonExport.Text = value; }

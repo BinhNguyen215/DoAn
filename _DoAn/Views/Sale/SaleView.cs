@@ -276,32 +276,32 @@ namespace _DoAn.Views.Sale
 
         private void lbViewAllBill_Click(object sender, EventArgs e)
         {
-            if (lbViewAllBill.Text == "View all bills")
-            {
-                SalePresenter salePresenter = new SalePresenter(this);
-                salePresenter.GetBill();
-                lbViewAllBill.Text = "Selling";
-                bunifuGroupBox1.Text = "All bills";
-                txtFind.PlaceholderText = "Search bill by ID, name or phone";
-                bunifuGroupBox2.Hide();
-                bunifuGroupBox3.Hide();
-                bunifuGroupBox4.Show();
-                btnAdd.Hide();
-                btnDelete.Hide();
-            }
-            else
-            {
-                SalePresenter salePresenter = new SalePresenter(this);
-                salePresenter.GetProduct();
-                lbViewAllBill.Text = "View all bills";
-                bunifuGroupBox1.Text = "Product table";
-                txtFind.PlaceholderText = "Search product by ID, name";
-                bunifuGroupBox2.Show();
-                bunifuGroupBox3.Show();
-                bunifuGroupBox4.Hide();
-                btnAdd.Show();
-                btnDelete.Show();
-            }
+                if (lbViewAllBill.Text == "View all bills")
+                {
+                    SalePresenter salePresenter = new SalePresenter(this);
+                    salePresenter.GetBill();
+                    lbViewAllBill.Text = "Selling";
+                    bunifuGroupBox1.Text = "All bills";
+                    txtFind.PlaceholderText = "Search bill by ID, name or phone";
+                    bunifuGroupBox2.Hide();
+                    bunifuGroupBox3.Hide();
+                    bunifuGroupBox4.Show();
+                    btnAdd.Hide();
+                    btnDelete.Hide();
+                }
+                else
+                {
+                    SalePresenter salePresenter = new SalePresenter(this);
+                    salePresenter.GetProduct();
+                    lbViewAllBill.Text = "View all bills";
+                    bunifuGroupBox1.Text = "Product table";
+                    txtFind.PlaceholderText = "Search product by ID, name";
+                    bunifuGroupBox2.Show();
+                    bunifuGroupBox3.Show();
+                    bunifuGroupBox4.Hide();
+                    btnAdd.Show();
+                    btnDelete.Show();
+                }
         }
 
         private void dgvListProduct_DoubleClick(object sender, EventArgs e)

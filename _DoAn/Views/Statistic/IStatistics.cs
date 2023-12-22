@@ -17,8 +17,12 @@ namespace _DoAn.Views.Statistic
         string ProductToday { get; set; }
         string BillMonth { get; set; }
         string BillToday { get; set; }
-        string EmployeeName { get; }
+        string EmployeeName { get; set; }
+      
+
         BunifuDataGridView gvBestSeller { get; set; }
+
+        BunifuDataGridView gvEmployee { get; set; }
         DataTable data { set; }
     }
 }

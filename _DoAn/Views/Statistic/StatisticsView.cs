@@ -57,7 +57,11 @@ namespace _DoAn.Views.Statistic
             set { dtgvBestSeller = value; }
         }
 
-
+        BunifuDataGridView IStatistics.gvEmployee
+        {
+            get { return dtgvEmployee; }
+            set { dtgvEmployee = value; }
+        }
         private DataTable _data;
         public DataTable data { set { _data = value; } }
 
@@ -67,8 +71,8 @@ namespace _DoAn.Views.Statistic
             set { lbProduct.Text = value; }
         }
         private string _name;
-        string IStatistics.EmployeeName { get { return _name; } }
-
+        string IStatistics.EmployeeName { get; set; }
+      
 
         public StatisticsView(string name) : this()
         {
@@ -126,13 +130,41 @@ namespace _DoAn.Views.Statistic
             statisticPresenter.GetBillToday(sDay, sMonth, sYear);
             statisticPresenter.GetRevenueMonth(sMonth, sYear);
             statisticPresenter.GetRevenueToday(sDay, sMonth, sYear);
+            lbViewAllBill_Click(sender, e);
             statisticPresenter.GetTopProduct();
+            statisticPresenter.GetSaleStatus();
             statisticPresenter.GetLineChart(sMonth, sYear);
             statisticPresenter.GetProductMonth(sMonth, sYear);
             statisticPresenter.GetProductToday(sDay, sMonth, sYear);
             ChartMoneydaybydate();
         }
 
-        
+        private void dtgvEmployee_DoubleClick(object sender, EventArgs e)
+        {
+            if (dtgvEmployee.CurrentRow.Cells[0].Value.ToString() != "")
+            {
+               
+                StatisticDetail statisticDetail = new StatisticDetail(dtgvEmployee.CurrentRow.Cells[1].Value.ToString());
+                statisticDetail.ShowDialog();
+            }
+        }
+
+        private void lbViewAllBill_Click(object sender, EventArgs e)
+        {
+            if (lbViewAllBill.Text == "View all statuses")
+            {
+                StatisticPresenter statisticPresenter = new StatisticPresenter(this);
+                statisticPresenter.GetTopResult();
+                lbViewAllBill.Text = "View sale results"; 
+                lbstt.Text = "Sale statuses";
+            }
+            else
+            {
+                StatisticPresenter statisticPresenter = new StatisticPresenter(this);
+                statisticPresenter.GetSaleStatus();
+                lbViewAllBill.Text = "View sale results";
+                lbstt.Text = "Sale Results";
+            }
+        }
     }
 }

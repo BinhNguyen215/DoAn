@@ -57,14 +57,15 @@
             this.label4 = new System.Windows.Forms.Label();
             this.dtgvBestSeller = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.dtgvWork = new Bunifu.UI.WinForms.BunifuDataGridView();
-            this.label6 = new System.Windows.Forms.Label();
+            this.dtgvEmployee = new Bunifu.UI.WinForms.BunifuDataGridView();
+            this.lbstt = new System.Windows.Forms.Label();
+            this.lbViewAllBill = new Bunifu.UI.WinForms.BunifuLabel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvBestSeller)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvWork)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvEmployee)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuDatePicker1
@@ -269,7 +270,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(1193, 37);
+            this.label4.Location = new System.Drawing.Point(1172, 37);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(218, 25);
@@ -284,7 +285,6 @@
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             this.dtgvBestSeller.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgvBestSeller.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dtgvBestSeller.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dtgvBestSeller.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dtgvBestSeller.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dtgvBestSeller.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -328,7 +328,7 @@
             this.dtgvBestSeller.HeaderBackColor = System.Drawing.Color.ForestGreen;
             this.dtgvBestSeller.HeaderBgColor = System.Drawing.Color.Empty;
             this.dtgvBestSeller.HeaderForeColor = System.Drawing.Color.White;
-            this.dtgvBestSeller.Location = new System.Drawing.Point(1145, 75);
+            this.dtgvBestSeller.Location = new System.Drawing.Point(1085, 75);
             this.dtgvBestSeller.Margin = new System.Windows.Forms.Padding(2);
             this.dtgvBestSeller.Name = "dtgvBestSeller";
             this.dtgvBestSeller.ReadOnly = true;
@@ -336,7 +336,7 @@
             this.dtgvBestSeller.RowHeadersWidth = 62;
             this.dtgvBestSeller.RowTemplate.Height = 40;
             this.dtgvBestSeller.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgvBestSeller.Size = new System.Drawing.Size(320, 361);
+            this.dtgvBestSeller.Size = new System.Drawing.Size(380, 309);
             this.dtgvBestSeller.TabIndex = 1;
             this.dtgvBestSeller.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.LimeGreen;
             // 
@@ -354,22 +354,24 @@
             series1.Legend = "Legend1";
             series1.Name = "Revenue";
             this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(794, 617);
+            this.chart1.Size = new System.Drawing.Size(794, 666);
             this.chart1.TabIndex = 1;
             this.chart1.Text = "chart1";
             // 
-            // dtgvWork
+            // dtgvEmployee
             // 
-            this.dtgvWork.AllowCustomTheming = true;
-            this.dtgvWork.AllowUserToAddRows = false;
+            this.dtgvEmployee.AllowCustomTheming = true;
+            this.dtgvEmployee.AllowUserToAddRows = false;
+            this.dtgvEmployee.AllowUserToDeleteRows = false;
+            this.dtgvEmployee.AllowUserToResizeColumns = false;
+            this.dtgvEmployee.AllowUserToResizeRows = false;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            this.dtgvWork.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.dtgvWork.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dtgvWork.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.dtgvWork.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dtgvWork.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dtgvWork.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dtgvEmployee.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dtgvEmployee.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtgvEmployee.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dtgvEmployee.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dtgvEmployee.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.ForestGreen;
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
@@ -377,26 +379,26 @@
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgvWork.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.dtgvWork.ColumnHeadersHeight = 40;
-            this.dtgvWork.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
-            this.dtgvWork.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.dtgvWork.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
-            this.dtgvWork.CurrentTheme.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.dtgvWork.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            this.dtgvWork.CurrentTheme.BackColor = System.Drawing.Color.White;
-            this.dtgvWork.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(220)))), ((int)(((byte)(188)))));
-            this.dtgvWork.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.ForestGreen;
-            this.dtgvWork.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            this.dtgvWork.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dtgvWork.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
-            this.dtgvWork.CurrentTheme.HeaderStyle.SelectionForeColor = System.Drawing.Color.White;
-            this.dtgvWork.CurrentTheme.Name = null;
-            this.dtgvWork.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.dtgvWork.CurrentTheme.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.dtgvWork.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
-            this.dtgvWork.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.dtgvWork.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.dtgvEmployee.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.dtgvEmployee.ColumnHeadersHeight = 40;
+            this.dtgvEmployee.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            this.dtgvEmployee.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.dtgvEmployee.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.dtgvEmployee.CurrentTheme.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.dtgvEmployee.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.dtgvEmployee.CurrentTheme.BackColor = System.Drawing.Color.White;
+            this.dtgvEmployee.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(220)))), ((int)(((byte)(188)))));
+            this.dtgvEmployee.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.ForestGreen;
+            this.dtgvEmployee.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            this.dtgvEmployee.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dtgvEmployee.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            this.dtgvEmployee.CurrentTheme.HeaderStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.dtgvEmployee.CurrentTheme.Name = null;
+            this.dtgvEmployee.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dtgvEmployee.CurrentTheme.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.dtgvEmployee.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.dtgvEmployee.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.dtgvEmployee.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
@@ -404,42 +406,64 @@
             dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgvWork.DefaultCellStyle = dataGridViewCellStyle6;
-            this.dtgvWork.EnableHeadersVisualStyles = false;
-            this.dtgvWork.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(220)))), ((int)(((byte)(188)))));
-            this.dtgvWork.HeaderBackColor = System.Drawing.Color.ForestGreen;
-            this.dtgvWork.HeaderBgColor = System.Drawing.Color.Empty;
-            this.dtgvWork.HeaderForeColor = System.Drawing.Color.White;
-            this.dtgvWork.Location = new System.Drawing.Point(776, 492);
-            this.dtgvWork.Margin = new System.Windows.Forms.Padding(2);
-            this.dtgvWork.Name = "dtgvWork";
-            this.dtgvWork.ReadOnly = true;
-            this.dtgvWork.RowHeadersVisible = false;
-            this.dtgvWork.RowHeadersWidth = 62;
-            this.dtgvWork.RowTemplate.Height = 40;
-            this.dtgvWork.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgvWork.Size = new System.Drawing.Size(689, 377);
-            this.dtgvWork.TabIndex = 37;
-            this.dtgvWork.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.LimeGreen;
+            this.dtgvEmployee.DefaultCellStyle = dataGridViewCellStyle6;
+            this.dtgvEmployee.EnableHeadersVisualStyles = false;
+            this.dtgvEmployee.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(220)))), ((int)(((byte)(188)))));
+            this.dtgvEmployee.HeaderBackColor = System.Drawing.Color.ForestGreen;
+            this.dtgvEmployee.HeaderBgColor = System.Drawing.Color.Empty;
+            this.dtgvEmployee.HeaderForeColor = System.Drawing.Color.White;
+            this.dtgvEmployee.Location = new System.Drawing.Point(777, 435);
+            this.dtgvEmployee.Margin = new System.Windows.Forms.Padding(2);
+            this.dtgvEmployee.Name = "dtgvEmployee";
+            this.dtgvEmployee.ReadOnly = true;
+            this.dtgvEmployee.RowHeadersVisible = false;
+            this.dtgvEmployee.RowHeadersWidth = 62;
+            this.dtgvEmployee.RowTemplate.Height = 40;
+            this.dtgvEmployee.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dtgvEmployee.Size = new System.Drawing.Size(688, 431);
+            this.dtgvEmployee.TabIndex = 37;
+            this.dtgvEmployee.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.LimeGreen;
+            this.dtgvEmployee.DoubleClick += new System.EventHandler(this.dtgvEmployee_DoubleClick);
             // 
-            // label6
+            // lbstt
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.label6.Location = new System.Drawing.Point(1031, 452);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(155, 25);
-            this.label6.TabIndex = 38;
-            this.label6.Text = "Work Progress";
+            this.lbstt.AutoSize = true;
+            this.lbstt.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold);
+            this.lbstt.Location = new System.Drawing.Point(1079, 402);
+            this.lbstt.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbstt.Name = "lbstt";
+            this.lbstt.Size = new System.Drawing.Size(285, 31);
+            this.lbstt.TabIndex = 38;
+            this.lbstt.Text = "Follow sale activities";
+            // 
+            // lbViewAllBill
+            // 
+            this.lbViewAllBill.AllowParentOverrides = false;
+            this.lbViewAllBill.AutoEllipsis = false;
+            this.lbViewAllBill.BackColor = System.Drawing.Color.LightGreen;
+            this.lbViewAllBill.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lbViewAllBill.Cursor = System.Windows.Forms.Cursors.Default;
+            this.lbViewAllBill.CursorType = System.Windows.Forms.Cursors.Default;
+            this.lbViewAllBill.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
+            this.lbViewAllBill.Location = new System.Drawing.Point(777, 376);
+            this.lbViewAllBill.Margin = new System.Windows.Forms.Padding(2);
+            this.lbViewAllBill.Name = "lbViewAllBill";
+            this.lbViewAllBill.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbViewAllBill.Size = new System.Drawing.Size(185, 32);
+            this.lbViewAllBill.TabIndex = 47;
+            this.lbViewAllBill.Text = "View sales statuses";
+            this.lbViewAllBill.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lbViewAllBill.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.lbViewAllBill.Click += new System.EventHandler(this.lbViewAllBill_Click);
             // 
             // StatisticsView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1495, 909);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.dtgvWork);
+            this.Controls.Add(this.lbViewAllBill);
+            this.Controls.Add(this.lbstt);
+            this.Controls.Add(this.dtgvEmployee);
             this.Controls.Add(this.chart1);
             this.Controls.Add(this.dtgvBestSeller);
             this.Controls.Add(this.label4);
@@ -458,7 +482,7 @@
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvBestSeller)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvWork)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvEmployee)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -484,7 +508,8 @@
         private System.Windows.Forms.Label label4;
         private Bunifu.UI.WinForms.BunifuDataGridView dtgvBestSeller;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
-        private Bunifu.UI.WinForms.BunifuDataGridView dtgvWork;
-        private System.Windows.Forms.Label label6;
+        private Bunifu.UI.WinForms.BunifuDataGridView dtgvEmployee;
+        private System.Windows.Forms.Label lbstt;
+        private Bunifu.UI.WinForms.BunifuLabel lbViewAllBill;
     }
 }

@@ -19,7 +19,7 @@ namespace _DoAn
         public DataTable GetData(string sqlquery)
         {
             SqlDataAdapter sqldata = new SqlDataAdapter(sqlquery, this.connect);
-            DataTable dataTable = new DataTable();
+            DataTable dataTable = new DataTable();  
             sqldata.Fill(dataTable);
             return dataTable;
         }
@@ -27,19 +27,12 @@ namespace _DoAn
         {
             cmd.Connection = this.connect;
             connect.Open();
-            try
-            {
                 if (cmd.ExecuteNonQuery() > 0)
                 {
                     connect.Close();
                     return true;
                 }
                 connect.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Loi roi ba: " + ex.Message);
-            }
             return false;
         }
         public int GetId(SqlCommand cmd)
