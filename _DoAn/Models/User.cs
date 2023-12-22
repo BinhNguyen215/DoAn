@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace _DoAn.Models
 {
@@ -49,6 +50,14 @@ namespace _DoAn.Models
             string sqlQuery = "Select Position from Employee where Username = '" + username + "' and Password = '" + password + "'";
             return connect.GetData(sqlQuery).Rows[0]["Position"].ToString();
         }
+        // Forgot password
+        public string GetEmail(string username)
+        {
+            ConnectDB connect = new ConnectDB();
+            string sqlQuery = "Select Email from Employee where Username = '" + username + "' ";
+            return connect.GetData(sqlQuery).Rows[0]["Email"].ToString();
+        }
+        
         public DataTable LoadListEmployee()
         {
             ConnectDB connect = new ConnectDB();
@@ -160,6 +169,20 @@ namespace _DoAn.Models
             ConnectDB connect = new ConnectDB();
             string sqlQuery = "select Employee_id as ID, EmployName, Citizen_id, Address, PhoneNumber, Email, Position, Username, Password from Employee where (Employee_id like '" + search + "%' or EmployName like N'% " + search + "%')";
             return connect.GetData(sqlQuery);
+        }
+
+        public bool UpdatePassword(string username,string newPassword)
+        {
+            SqlCommand cmd = new SqlCommand("UPDATE Employee SET Password = @newpassword WHERE Username = @username");
+            cmd.Parameters.AddWithValue("@newpassword", newPassword);
+            cmd.Parameters.AddWithValue("@username", username);
+            ConnectDB connect = new ConnectDB();
+            if (connect.HandleData(cmd))
+            {
+                return true;
+            }
+            else
+                return false;
         }
     }
 }
