@@ -20,16 +20,24 @@ namespace _DoAn.Models
         public string Email { get; set; }
         public string PhoneNumber { get; set; }
         public string Position { get; set; }
-        public bool CheckValidate(string username, string password)
+        public int CheckValidate(string username, string password)
         {
             ConnectDB connect = new ConnectDB();
-            string sqlQuery = "Select * from Employee where Username = '" + username + "' and Password = '" + password + "'";
+            string sqlQuery = "Select * from Employee where Username = '" + username + "' and DefaultPassword = '" + password + "'";
             if (connect.GetData(sqlQuery).Rows.Count == 1)
             {
-                return true;
+                return 1; // default
             }
             else
-                return false;
+            {
+                string sqlQuery1 = "Select * from Employee where Username = '" + username + "' and Password = '" + password + "'";
+                if (connect.GetData(sqlQuery1).Rows.Count == 1)
+                {
+                    return 2; // primary password
+                }
+                else return 0; // sai mật khẩu
+            }    
+                
 
         }
         public string UserID(string username, string password)
@@ -61,7 +69,7 @@ namespace _DoAn.Models
         public DataTable LoadListEmployee()
         {
             ConnectDB connect = new ConnectDB();
-            string sqlQuery = "Select Employee_id as ID, EmployName as Name, Citizen_id, Address, PhoneNumber as Phone, Email, Position, Username, Password from Employee";
+            string sqlQuery = "Select Employee_id as ID, EmployName as Name, Citizen_id, Address, PhoneNumber as Phone, Email, Position, Username from Employee";
             return connect.GetData(sqlQuery);
 
         }

@@ -29,13 +29,13 @@ namespace _DoAn.Views.Employee
 
         public NewEmployeeView(bool isNew, string employee_id, string name,
             string phone, string address, string citizenID,
-            string email, string position, string username, string password) : this()
+            string email, string position, string username) : this()
         {
             this._isNew = isNew;
             this.employeeID = employee_id;
 
             NewEmployeePresenter newEmployeePresenter = new NewEmployeePresenter(this);
-            newEmployeePresenter.RetriveData(name, phone, citizenID, position, email, address, username, password);
+            newEmployeePresenter.RetriveData(name, phone, citizenID, position, email, address, username);
         }
         public string Nametext
         {

@@ -38,7 +38,8 @@ namespace _DoAn.Views
 
         private void btnSignin_Click(object sender, EventArgs e)
         {
-            if (loginPresenter.Login())
+            int valid = loginPresenter.Login();
+            if (valid==2)
             {
                 string id = loginPresenter.GetId();
                 string name = loginPresenter.GetName();
@@ -50,6 +51,13 @@ namespace _DoAn.Views
                 this.Show();
                 tbxPassword.Clear();
             }
+            else 
+            if(valid==1)
+            {
+               panelChangePassword.Show();
+               panelForgotpassword.Hide();
+               panelLogin.Hide();
+            }    
             else
             {
                 MessageBox.Show(_message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);

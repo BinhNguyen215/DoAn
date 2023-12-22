@@ -23,21 +23,19 @@ namespace _DoAn.Presenters
             storedOTP = generateOTP();
         }
 
-        public bool Login()
+        public int Login()
         {
             User user = new User();
-
-            if (user.CheckValidate(loginView.username, loginView.password))
+            int valid = user.CheckValidate(loginView.username, loginView.password);
+            if (valid == 2)
             {
                 loginView.message = string.Format("Login successfully!");
-                return true;
-            }
-
-            else
+            }else
+            if (valid == 0)
             {
                 loginView.message = string.Format("Fail to login! Check your Username and Password again");
-                return false;
             }
+            return valid;
         }
         public string GetId()
         {

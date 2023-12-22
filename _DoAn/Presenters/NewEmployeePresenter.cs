@@ -107,7 +107,7 @@ namespace _DoAn.Presenters
                 return true;
         }
         public bool RetriveData(string name, string phone, string citizenID, string position,
-          string email, string address, string username, string password)
+          string email, string address, string username)
         {
             ClearInformation();
             newEmployeeview.Nametext = name;
@@ -117,9 +117,6 @@ namespace _DoAn.Presenters
             newEmployeeview.Emailtext = email;
             newEmployeeview.Addresstext = address;
             newEmployeeview.Username = username;
-            newEmployeeview.Password = password;
-
-
             return true;
         }
 

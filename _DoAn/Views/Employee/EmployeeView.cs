@@ -85,16 +85,16 @@ namespace _DoAn.Views.Employee
             {
                 btnEdit.Enabled = false;
                 btnDelete.Enabled = false;
-                 NewEmployeeView newEmployee = new NewEmployeeView(false,
-                    dgvEmployee.CurrentRow.Cells[0].Value.ToString(),
-                    dgvEmployee.CurrentRow.Cells[1].Value.ToString(),
-                    dgvEmployee.CurrentRow.Cells[2].Value.ToString(),
-                    dgvEmployee.CurrentRow.Cells[3].Value.ToString(),
-                    dgvEmployee.CurrentRow.Cells[4].Value.ToString(),
-                    dgvEmployee.CurrentRow.Cells[5].Value.ToString(),
-                    dgvEmployee.CurrentRow.Cells[6].Value.ToString(),
-                     dgvEmployee.CurrentRow.Cells[7].Value.ToString(),
-                    dgvEmployee.CurrentRow.Cells[8].Value.ToString());
+                NewEmployeeView newEmployee = new NewEmployeeView(false,
+                   dgvEmployee.CurrentRow.Cells[0].Value.ToString(),
+                   dgvEmployee.CurrentRow.Cells[1].Value.ToString(),
+                   dgvEmployee.CurrentRow.Cells[2].Value.ToString(),
+                   dgvEmployee.CurrentRow.Cells[3].Value.ToString(),
+                   dgvEmployee.CurrentRow.Cells[4].Value.ToString(),
+                   dgvEmployee.CurrentRow.Cells[5].Value.ToString(),
+                   dgvEmployee.CurrentRow.Cells[6].Value.ToString(),
+                   dgvEmployee.CurrentRow.Cells[7].Value.ToString());
+                    
 
                 newEmployee.Show(); 
             }
