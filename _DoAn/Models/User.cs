@@ -63,7 +63,7 @@ namespace _DoAn.Models
         {
             ConnectDB connect = new ConnectDB();
             string sqlQuery = "Select Email from Employee where Username = '" + username + "' ";
-            return connect.GetData(sqlQuery).Rows[0]["Email"].ToString();
+            return (connect.GetData(sqlQuery)!= null && connect.GetData(sqlQuery).Rows.Count >0 ) ?  connect.GetData(sqlQuery).Rows[0]["Email"].ToString() : string.Format("No email found for this username");
         }
         
         public DataTable LoadListEmployee()

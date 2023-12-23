@@ -63,7 +63,6 @@ namespace _DoAn.Presenters
         {
             try
             { 
-
                 var fromAddress = new MailAddress("kiseryouta2003@gmail.com");
                 var toAddress = new MailAddress(email);
 
@@ -108,18 +107,45 @@ namespace _DoAn.Presenters
 
         public bool VerifyOTP()
         {
-            return storedOTP.Equals(loginView.OTP);
+            bool valid = storedOTP.Equals(loginView.OTP);
+            if (!valid)
+            {
+                loginView.message = string.Format("Wrong OTP code or OTP code has expired!\nPlease check again!");
+                return false;
+            }
+            return true;
+ 
         }
 
         public bool VerifyNewPassword()
         {
-            return loginView.newPassword.Equals(loginView.newPasswordAgain);
+            bool valid = loginView.newPassword.Equals(loginView.newPasswordAgain);
+            
+            return valid;
         }
 
         public bool UpdatePassword()
         {
             User user = new User();
             return user.UpdatePassword(loginView.usernameFP,loginView.newPasswordAgain);
+        }
+
+        public void CheckInfoFill()
+        {
+            
+            if (loginView.usernameFP.Length > 0 && loginView.OTP.Length == 0)
+            {
+                loginView.message = string.Format("You must fill the OTP code!");
+            }
+            else if (loginView.usernameFP.Length == 0 && loginView.OTP.Length > 0)
+            {
+                loginView.message = string.Format("You must fill the username!");
+            }
+            else if (loginView.usernameFP.Length == 0 && loginView.OTP.Length == 0)
+            {
+                loginView.message = string.Format("You must fill both username and OTP code!");
+            }
+
         }
     }
 }

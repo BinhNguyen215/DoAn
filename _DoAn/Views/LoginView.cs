@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Runtime.Remoting.Services;
 using System.ServiceModel.Channels;
 using System.Text;
@@ -25,6 +26,7 @@ namespace _DoAn.Views
             panelChangePassword.Hide();
             panelForgotpassword.Hide();
             lbResend.Hide();
+
         }
 
 
@@ -39,7 +41,7 @@ namespace _DoAn.Views
         private void btnSignin_Click(object sender, EventArgs e)
         {
             int valid = loginPresenter.Login();
-            if (valid==2)
+            if (valid == 2)
             {
                 string id = loginPresenter.GetId();
                 string name = loginPresenter.GetName();
@@ -51,13 +53,13 @@ namespace _DoAn.Views
                 this.Show();
                 tbxPassword.Clear();
             }
-            else 
-            if(valid==1)
+            else
+            if (valid == 1)
             {
-               panelChangePassword.Show();
-               panelForgotpassword.Hide();
-               panelLogin.Hide();
-            }    
+                panelChangePassword.Show();
+                panelForgotpassword.Hide();
+                panelLogin.Hide();
+            }
             else
             {
                 MessageBox.Show(_message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -68,12 +70,17 @@ namespace _DoAn.Views
 
 
         private void tbnChangePassword_Click(object sender, EventArgs e)
-        { 
-            if(loginPresenter.VerifyOTP())
+        {
+            loginPresenter.CheckInfoFill();
+            if (loginPresenter.VerifyOTP())
             {
                 panelChangePassword.Show();
                 panelLogin.Hide();
                 panelForgotpassword.Hide();
+            }
+            else
+            {
+                MessageBox.Show(_message);
             }
         }
 
@@ -99,28 +106,61 @@ namespace _DoAn.Views
             lbResend.Show();
 
             string email = loginPresenter.GetEmail();
-            loginPresenter.SendEmailOTP(email);
+            if (tbxUsernameFP.Text.Length == 0)
+            {
+                MessageBox.Show("Please entered your username!");
+            }
+            else if ((email.Equals("No email found for this username")))
+            {
+                MessageBox.Show("No email found for this username");
+            }
+            else loginPresenter.SendEmailOTP(email);
         }
 
         private void tbnConfirm_Click(object sender, EventArgs e)
         {
-            if(loginPresenter.VerifyNewPassword())
+            if (loginPresenter.VerifyNewPassword())
             {
                 if (loginPresenter.UpdatePassword())
                 {
                     MessageBox.Show("Password is now changed!");
-                } else
+                }
+                else
                 {
                     MessageBox.Show("Error!");
                 }
-                
-            } else
+
+            }
+            else
             {
                 MessageBox.Show("Wrong password re-entered, please check again!");
-
             }
         }
 
-        
+        private void tbxPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                btnSignin_Click(sender, e);
+            }
+        }
+
+        private void tbxOTP_KeyDown(object sender, KeyEventArgs e)
+        {
+            if( e.KeyCode == Keys.Enter)
+            {
+                tbnChangePassword_Click(sender, e);
+            }
+        }
+
+        private void tbxNewPassword2_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                tbnConfirm_Click(sender, e);
+            }
+        }
+
+       
     }
 }
