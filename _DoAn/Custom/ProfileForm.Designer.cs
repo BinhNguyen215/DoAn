@@ -341,6 +341,7 @@
             this.Name = "ProfileForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ProfileForm";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ProfileForm_FormClosed);
             this.Load += new System.EventHandler(this.ProfileForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -11,6 +11,7 @@ using System.ServiceModel.Channels;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace _DoAn.Views
 {
@@ -161,6 +162,42 @@ namespace _DoAn.Views
             }
         }
 
-       
+        private void tbxUsername_TextChange(object sender, EventArgs e)
+        {
+            string allowedChars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"; 
+
+            string currentText = tbxUsername.Text;
+            string newText = ""; 
+
+            foreach (char c in currentText)
+            {
+                if (allowedChars.Contains(c)) 
+                {
+                    newText += c;
+                }
+            }
+
+            tbxUsername.Text = newText; 
+            tbxUsername.SelectionStart = tbxUsername.Text.Length; 
+        }
+
+        private void tbxPassword_TextChange(object sender, EventArgs e)
+        {
+            string allowedChars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"; 
+
+            string currentText = tbxPassword.Text;
+            string newText = ""; 
+
+            foreach (char c in currentText)
+            {
+                if (allowedChars.Contains(c)) 
+                {
+                    newText += c;
+                }
+            }
+
+            tbxPassword.Text = newText; 
+            tbxPassword.SelectionStart = tbxPassword.Text.Length; 
+        }
     }
 }

@@ -85,8 +85,8 @@ namespace _DoAn.Views.Sale
                 txtQuantities.Text = value;
             }
         }
-       
-       
+
+
         public string BillValue
         {
             get { return lbTotal.Text; }
@@ -98,7 +98,7 @@ namespace _DoAn.Views.Sale
             get { return dgvDetailBill; }
             set { dgvDetailBill = value; }
         }
-      
+
 
         private void dgvListProduct_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -114,7 +114,7 @@ namespace _DoAn.Views.Sale
             lbLv1.Text = dgvListProduct.CurrentRow.Cells[4].Value.ToString();
         }
 
-       
+
         private void btnCreateBill_Click(object sender, EventArgs e)
         {
             if (dgvCart.Rows.Count > 0)
@@ -276,32 +276,36 @@ namespace _DoAn.Views.Sale
 
         private void lbViewAllBill_Click(object sender, EventArgs e)
         {
-                if (lbViewAllBill.Text == "View all bills")
-                {
-                    SalePresenter salePresenter = new SalePresenter(this);
-                    salePresenter.GetBill();
-                    lbViewAllBill.Text = "Selling";
-                    bunifuGroupBox1.Text = "All bills";
-                    txtFind.PlaceholderText = "Search bill by ID, name or phone";
-                    bunifuGroupBox2.Hide();
-                    bunifuGroupBox3.Hide();
-                    bunifuGroupBox4.Show();
-                    btnAdd.Hide();
-                    btnDelete.Hide();
-                }
-                else
-                {
-                    SalePresenter salePresenter = new SalePresenter(this);
-                    salePresenter.GetProduct();
-                    lbViewAllBill.Text = "View all bills";
-                    bunifuGroupBox1.Text = "Product table";
-                    txtFind.PlaceholderText = "Search product by ID, name";
-                    bunifuGroupBox2.Show();
-                    bunifuGroupBox3.Show();
-                    bunifuGroupBox4.Hide();
-                    btnAdd.Show();
-                    btnDelete.Show();
-                }
+            if (lbViewAllBill.Text == "View all bills")
+            {
+                SalePresenter salePresenter = new SalePresenter(this);
+                salePresenter.GetBill();
+                lbViewAllBill.Text = "Selling";
+                gpProduct.Text = "All bills";
+                txtFind.PlaceholderText = "Search bill by ID, name or phone";
+                gbCart.Hide();
+                gpInvoce.Hide();
+                gpProperties.Hide();
+                bunifuGroupBox4.Show();
+                btnAdd.Hide();
+                btnDelete.Hide();
+                gpProduct.Size = new System.Drawing.Size(712, 812);
+            }
+            else
+            {
+                SalePresenter salePresenter = new SalePresenter(this);
+                salePresenter.GetProduct();
+                lbViewAllBill.Text = "View all bills";
+                gpProduct.Text = "Product table";
+                txtFind.PlaceholderText = "Search product by ID, name";
+                gbCart.Show();
+                gpInvoce.Show();
+                gpProperties.Show();
+                bunifuGroupBox4.Hide();
+                gpProduct.Size = new System.Drawing.Size(712, 629);
+                btnAdd.Show();
+                btnDelete.Show();
+            }
         }
 
         private void dgvListProduct_DoubleClick(object sender, EventArgs e)
@@ -311,9 +315,9 @@ namespace _DoAn.Views.Sale
                 SalePresenter salePresenter = new SalePresenter(this);
                 if (salePresenter.LoadDetailBill(dgvListProduct.CurrentRow.Cells[0].Value.ToString()))
                 {
-                     salePresenter.CalculateTotalPrice();
-                     salePresenter.ClearInformation();
-                     btnAdd.Enabled = false;
+                    salePresenter.CalculateTotalPrice();
+                    salePresenter.ClearInformation();
+                    btnAdd.Enabled = false;
                 }
             }
         }
@@ -329,13 +333,13 @@ namespace _DoAn.Views.Sale
             bunifuGroupBox4.Hide();
         }
 
- 
-        
-      
+
+
+
         private string Unit;
         private void checkBoxlv2_CheckedChanged(object sender, BunifuCheckBox.CheckedChangedEventArgs e)
         {
-            if(checkBoxlv2.Checked)
+            if (checkBoxlv2.Checked)
             {
                 checkBoxLv1.Checked = false;
                 Unit = lbLv2.Text;
@@ -343,13 +347,13 @@ namespace _DoAn.Views.Sale
 
                 if (salePresenter.RetriveProduct(dgvListProduct.CurrentRow.Index, dgvListProduct.CurrentRow.Cells[0].Value.ToString()
                   , dgvListProduct.CurrentRow.Cells[1].Value.ToString()
-                  ,(int.Parse(dgvListProduct.CurrentRow.Cells[2].Value.ToString()) / int.Parse(dgvListProduct.CurrentRow.Cells[5].Value.ToString())).ToString()
+                  , (int.Parse(dgvListProduct.CurrentRow.Cells[2].Value.ToString()) / int.Parse(dgvListProduct.CurrentRow.Cells[5].Value.ToString())).ToString()
                   , Unit, Quantities))
                 {
                     btnAdd.Enabled = true;
                 }
             }
-           
+
         }
 
         private void checkBoxLv1_CheckedChanged(object sender, BunifuCheckBox.CheckedChangedEventArgs e)

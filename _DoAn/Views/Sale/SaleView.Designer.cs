@@ -65,10 +65,10 @@
             this.bunifuTextBox1 = new Bunifu.UI.WinForms.BunifuTextBox();
             this.txtFind = new Bunifu.UI.WinForms.BunifuTextBox();
             this.dgvListProduct = new Bunifu.UI.WinForms.BunifuDataGridView();
-            this.bunifuGroupBox1 = new Bunifu.UI.WinForms.BunifuGroupBox();
+            this.gpProduct = new Bunifu.UI.WinForms.BunifuGroupBox();
             this.bunifuGroupBox4 = new Bunifu.UI.WinForms.BunifuGroupBox();
             this.dgvDetailBill = new Bunifu.UI.WinForms.BunifuDataGridView();
-            this.bunifuGroupBox2 = new Bunifu.UI.WinForms.BunifuGroupBox();
+            this.gbCart = new Bunifu.UI.WinForms.BunifuGroupBox();
             this.dgvCart = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.clmID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -76,7 +76,7 @@
             this.clmQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmUnit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lbViewAllBill = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuGroupBox3 = new Bunifu.UI.WinForms.BunifuGroupBox();
+            this.gpInvoce = new Bunifu.UI.WinForms.BunifuGroupBox();
             this.btnCreateBill = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnCancel = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.lbTotal = new System.Windows.Forms.Label();
@@ -84,7 +84,7 @@
             this.txtPhone = new Bunifu.UI.WinForms.BunifuTextBox();
             this.txtName = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuFormDock1 = new Bunifu.UI.WinForms.BunifuFormDock();
-            this.bunifuGroupBox5 = new Bunifu.UI.WinForms.BunifuGroupBox();
+            this.gpProperties = new Bunifu.UI.WinForms.BunifuGroupBox();
             this.lbLv1 = new System.Windows.Forms.Label();
             this.lbLv2 = new System.Windows.Forms.Label();
             this.checkBoxLv1 = new Bunifu.UI.WinForms.BunifuCheckBox();
@@ -95,13 +95,13 @@
             this.btnDelete = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnAdd = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListProduct)).BeginInit();
-            this.bunifuGroupBox1.SuspendLayout();
+            this.gpProduct.SuspendLayout();
             this.bunifuGroupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetailBill)).BeginInit();
-            this.bunifuGroupBox2.SuspendLayout();
+            this.gbCart.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCart)).BeginInit();
-            this.bunifuGroupBox3.SuspendLayout();
-            this.bunifuGroupBox5.SuspendLayout();
+            this.gpInvoce.SuspendLayout();
+            this.gpProperties.SuspendLayout();
             this.SuspendLayout();
             // 
             // bunifuTextBox1
@@ -330,208 +330,24 @@
             this.dgvListProduct.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListProduct_CellContentClick);
             this.dgvListProduct.DoubleClick += new System.EventHandler(this.dgvListProduct_DoubleClick);
             // 
-            // bunifuGroupBox1
+            // gpProduct
             // 
-            this.bunifuGroupBox1.BorderColor = System.Drawing.Color.Black;
-            this.bunifuGroupBox1.BorderRadius = 4;
-            this.bunifuGroupBox1.BorderThickness = 2;
-            this.bunifuGroupBox1.Controls.Add(this.dgvListProduct);
-            this.bunifuGroupBox1.Font = new System.Drawing.Font("Segoe UI", 13F);
-            this.bunifuGroupBox1.LabelAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.bunifuGroupBox1.LabelIndent = 10;
-            this.bunifuGroupBox1.LineStyle = Bunifu.UI.WinForms.BunifuGroupBox.LineStyles.Solid;
-            this.bunifuGroupBox1.Location = new System.Drawing.Point(39, 60);
-            this.bunifuGroupBox1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.bunifuGroupBox1.Name = "bunifuGroupBox1";
-            this.bunifuGroupBox1.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.bunifuGroupBox1.Size = new System.Drawing.Size(716, 629);
-            this.bunifuGroupBox1.TabIndex = 43;
-            this.bunifuGroupBox1.TabStop = false;
-            this.bunifuGroupBox1.Text = "Product Table";
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.AllowAnimations = true;
-            this.btnDelete.AllowMouseEffects = true;
-            this.btnDelete.AllowToggling = false;
-            this.btnDelete.AnimationSpeed = 200;
-            this.btnDelete.AutoGenerateColors = false;
-            this.btnDelete.AutoRoundBorders = false;
-            this.btnDelete.AutoSizeLeftIcon = true;
-            this.btnDelete.AutoSizeRightIcon = true;
-            this.btnDelete.BackColor = System.Drawing.Color.Transparent;
-            this.btnDelete.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
-            this.btnDelete.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDelete.BackgroundImage")));
-            this.btnDelete.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnDelete.ButtonText = "Delete";
-            this.btnDelete.ButtonTextMarginLeft = 0;
-            this.btnDelete.ColorContrastOnClick = 45;
-            this.btnDelete.ColorContrastOnHover = 45;
-            this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.btnDelete.CustomizableEdges = borderEdges1;
-            this.btnDelete.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnDelete.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btnDelete.DisabledFillColor = System.Drawing.Color.Empty;
-            this.btnDelete.DisabledForecolor = System.Drawing.Color.Empty;
-            this.btnDelete.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.btnDelete.ForeColor = System.Drawing.Color.Red;
-            this.btnDelete.IconLeft = ((System.Drawing.Image)(resources.GetObject("btnDelete.IconLeft")));
-            this.btnDelete.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDelete.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.btnDelete.IconLeftPadding = new System.Windows.Forms.Padding(15, 3, 3, 3);
-            this.btnDelete.IconMarginLeft = 11;
-            this.btnDelete.IconPadding = 12;
-            this.btnDelete.IconRight = null;
-            this.btnDelete.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnDelete.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.btnDelete.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
-            this.btnDelete.IconSize = 25;
-            this.btnDelete.IdleBorderColor = System.Drawing.Color.Empty;
-            this.btnDelete.IdleBorderRadius = 0;
-            this.btnDelete.IdleBorderThickness = 0;
-            this.btnDelete.IdleFillColor = System.Drawing.Color.Empty;
-            this.btnDelete.IdleIconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnDelete.IdleIconLeftImage")));
-            this.btnDelete.IdleIconRightImage = null;
-            this.btnDelete.IndicateFocus = false;
-            this.btnDelete.Location = new System.Drawing.Point(281, 494);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btnDelete.OnDisabledState.BorderRadius = 15;
-            this.btnDelete.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnDelete.OnDisabledState.BorderThickness = 1;
-            this.btnDelete.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btnDelete.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.btnDelete.OnDisabledState.IconLeftImage = null;
-            this.btnDelete.OnDisabledState.IconRightImage = null;
-            this.btnDelete.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(76)))), ((int)(((byte)(76)))));
-            this.btnDelete.onHoverState.BorderRadius = 15;
-            this.btnDelete.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnDelete.onHoverState.BorderThickness = 1;
-            this.btnDelete.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(76)))), ((int)(((byte)(76)))));
-            this.btnDelete.onHoverState.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnDelete.onHoverState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnDelete.onHoverState.IconLeftImage")));
-            this.btnDelete.onHoverState.IconRightImage = null;
-            this.btnDelete.OnIdleState.BorderColor = System.Drawing.Color.Red;
-            this.btnDelete.OnIdleState.BorderRadius = 15;
-            this.btnDelete.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnDelete.OnIdleState.BorderThickness = 1;
-            this.btnDelete.OnIdleState.FillColor = System.Drawing.SystemColors.Control;
-            this.btnDelete.OnIdleState.ForeColor = System.Drawing.Color.Red;
-            this.btnDelete.OnIdleState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnDelete.OnIdleState.IconLeftImage")));
-            this.btnDelete.OnIdleState.IconRightImage = null;
-            this.btnDelete.OnPressedState.BorderColor = System.Drawing.SystemColors.ControlDark;
-            this.btnDelete.OnPressedState.BorderRadius = 15;
-            this.btnDelete.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnDelete.OnPressedState.BorderThickness = 1;
-            this.btnDelete.OnPressedState.FillColor = System.Drawing.SystemColors.Control;
-            this.btnDelete.OnPressedState.ForeColor = System.Drawing.Color.Black;
-            this.btnDelete.OnPressedState.IconLeftImage = null;
-            this.btnDelete.OnPressedState.IconRightImage = null;
-            this.btnDelete.Size = new System.Drawing.Size(108, 48);
-            this.btnDelete.TabIndex = 27;
-            this.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnDelete.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnDelete.TextMarginLeft = 0;
-            this.btnDelete.TextPadding = new System.Windows.Forms.Padding(16, 0, 0, 0);
-            this.btnDelete.UseDefaultRadiusAndThickness = true;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click_1);
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.AllowAnimations = true;
-            this.btnAdd.AllowMouseEffects = true;
-            this.btnAdd.AllowToggling = false;
-            this.btnAdd.AnimationSpeed = 200;
-            this.btnAdd.AutoGenerateColors = false;
-            this.btnAdd.AutoRoundBorders = false;
-            this.btnAdd.AutoSizeLeftIcon = true;
-            this.btnAdd.AutoSizeRightIcon = true;
-            this.btnAdd.BackColor = System.Drawing.Color.Transparent;
-            this.btnAdd.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
-            this.btnAdd.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAdd.BackgroundImage")));
-            this.btnAdd.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnAdd.ButtonText = "Add";
-            this.btnAdd.ButtonTextMarginLeft = 0;
-            this.btnAdd.ColorContrastOnClick = 45;
-            this.btnAdd.ColorContrastOnHover = 45;
-            this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges2.BottomLeft = true;
-            borderEdges2.BottomRight = true;
-            borderEdges2.TopLeft = true;
-            borderEdges2.TopRight = true;
-            this.btnAdd.CustomizableEdges = borderEdges2;
-            this.btnAdd.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnAdd.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btnAdd.DisabledFillColor = System.Drawing.Color.Empty;
-            this.btnAdd.DisabledForecolor = System.Drawing.Color.Empty;
-            this.btnAdd.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.btnAdd.ForeColor = System.Drawing.Color.Green;
-            this.btnAdd.IconLeft = ((System.Drawing.Image)(resources.GetObject("btnAdd.IconLeft")));
-            this.btnAdd.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdd.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.btnAdd.IconLeftPadding = new System.Windows.Forms.Padding(15, 3, 3, 3);
-            this.btnAdd.IconMarginLeft = 11;
-            this.btnAdd.IconPadding = 12;
-            this.btnAdd.IconRight = null;
-            this.btnAdd.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAdd.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.btnAdd.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
-            this.btnAdd.IconSize = 25;
-            this.btnAdd.IdleBorderColor = System.Drawing.Color.Empty;
-            this.btnAdd.IdleBorderRadius = 0;
-            this.btnAdd.IdleBorderThickness = 0;
-            this.btnAdd.IdleFillColor = System.Drawing.Color.Empty;
-            this.btnAdd.IdleIconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnAdd.IdleIconLeftImage")));
-            this.btnAdd.IdleIconRightImage = null;
-            this.btnAdd.IndicateFocus = false;
-            this.btnAdd.Location = new System.Drawing.Point(149, 494);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btnAdd.OnDisabledState.BorderRadius = 15;
-            this.btnAdd.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnAdd.OnDisabledState.BorderThickness = 1;
-            this.btnAdd.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btnAdd.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.btnAdd.OnDisabledState.IconLeftImage = null;
-            this.btnAdd.OnDisabledState.IconRightImage = null;
-            this.btnAdd.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(168)))), ((int)(((byte)(80)))));
-            this.btnAdd.onHoverState.BorderRadius = 15;
-            this.btnAdd.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnAdd.onHoverState.BorderThickness = 1;
-            this.btnAdd.onHoverState.FillColor = System.Drawing.SystemColors.Control;
-            this.btnAdd.onHoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(168)))), ((int)(((byte)(80)))));
-            this.btnAdd.onHoverState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnAdd.onHoverState.IconLeftImage")));
-            this.btnAdd.onHoverState.IconRightImage = null;
-            this.btnAdd.OnIdleState.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.btnAdd.OnIdleState.BorderRadius = 15;
-            this.btnAdd.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnAdd.OnIdleState.BorderThickness = 1;
-            this.btnAdd.OnIdleState.FillColor = System.Drawing.SystemColors.Control;
-            this.btnAdd.OnIdleState.ForeColor = System.Drawing.Color.Green;
-            this.btnAdd.OnIdleState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnAdd.OnIdleState.IconLeftImage")));
-            this.btnAdd.OnIdleState.IconRightImage = null;
-            this.btnAdd.OnPressedState.BorderColor = System.Drawing.SystemColors.ControlDark;
-            this.btnAdd.OnPressedState.BorderRadius = 15;
-            this.btnAdd.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnAdd.OnPressedState.BorderThickness = 1;
-            this.btnAdd.OnPressedState.FillColor = System.Drawing.SystemColors.Control;
-            this.btnAdd.OnPressedState.ForeColor = System.Drawing.Color.Black;
-            this.btnAdd.OnPressedState.IconLeftImage = null;
-            this.btnAdd.OnPressedState.IconRightImage = null;
-            this.btnAdd.Size = new System.Drawing.Size(108, 48);
-            this.btnAdd.TabIndex = 26;
-            this.btnAdd.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnAdd.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnAdd.TextMarginLeft = 0;
-            this.btnAdd.TextPadding = new System.Windows.Forms.Padding(16, 0, 0, 0);
-            this.btnAdd.UseDefaultRadiusAndThickness = true;
-            //this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click_1);
+            this.gpProduct.BorderColor = System.Drawing.Color.Black;
+            this.gpProduct.BorderRadius = 4;
+            this.gpProduct.BorderThickness = 2;
+            this.gpProduct.Controls.Add(this.dgvListProduct);
+            this.gpProduct.Font = new System.Drawing.Font("Segoe UI", 13F);
+            this.gpProduct.LabelAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.gpProduct.LabelIndent = 10;
+            this.gpProduct.LineStyle = Bunifu.UI.WinForms.BunifuGroupBox.LineStyles.Solid;
+            this.gpProduct.Location = new System.Drawing.Point(39, 60);
+            this.gpProduct.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.gpProduct.Name = "gpProduct";
+            this.gpProduct.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.gpProduct.Size = new System.Drawing.Size(716, 629);
+            this.gpProduct.TabIndex = 43;
+            this.gpProduct.TabStop = false;
+            this.gpProduct.Text = "Product Table";
             // 
             // bunifuGroupBox4
             // 
@@ -620,24 +436,24 @@
             this.dgvDetailBill.TabIndex = 0;
             this.dgvDetailBill.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             // 
-            // bunifuGroupBox2
+            // gbCart
             // 
-            this.bunifuGroupBox2.BorderColor = System.Drawing.Color.Black;
-            this.bunifuGroupBox2.BorderRadius = 4;
-            this.bunifuGroupBox2.BorderThickness = 2;
-            this.bunifuGroupBox2.Controls.Add(this.dgvCart);
-            this.bunifuGroupBox2.Font = new System.Drawing.Font("Segoe UI", 13F);
-            this.bunifuGroupBox2.LabelAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.bunifuGroupBox2.LabelIndent = 10;
-            this.bunifuGroupBox2.LineStyle = Bunifu.UI.WinForms.BunifuGroupBox.LineStyles.Solid;
-            this.bunifuGroupBox2.Location = new System.Drawing.Point(805, 60);
-            this.bunifuGroupBox2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.bunifuGroupBox2.Name = "bunifuGroupBox2";
-            this.bunifuGroupBox2.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.bunifuGroupBox2.Size = new System.Drawing.Size(620, 520);
-            this.bunifuGroupBox2.TabIndex = 44;
-            this.bunifuGroupBox2.TabStop = false;
-            this.bunifuGroupBox2.Text = "Cart";
+            this.gbCart.BorderColor = System.Drawing.Color.Black;
+            this.gbCart.BorderRadius = 4;
+            this.gbCart.BorderThickness = 2;
+            this.gbCart.Controls.Add(this.dgvCart);
+            this.gbCart.Font = new System.Drawing.Font("Segoe UI", 13F);
+            this.gbCart.LabelAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.gbCart.LabelIndent = 10;
+            this.gbCart.LineStyle = Bunifu.UI.WinForms.BunifuGroupBox.LineStyles.Solid;
+            this.gbCart.Location = new System.Drawing.Point(805, 60);
+            this.gbCart.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.gbCart.Name = "gbCart";
+            this.gbCart.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.gbCart.Size = new System.Drawing.Size(620, 520);
+            this.gbCart.TabIndex = 44;
+            this.gbCart.TabStop = false;
+            this.gbCart.Text = "Cart";
             // 
             // dgvCart
             // 
@@ -775,32 +591,32 @@
             this.lbViewAllBill.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             this.lbViewAllBill.Click += new System.EventHandler(this.lbViewAllBill_Click);
             // 
-            // bunifuGroupBox3
+            // gpInvoce
             // 
-            this.bunifuGroupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.gpInvoce.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.bunifuGroupBox3.BorderColor = System.Drawing.Color.Black;
-            this.bunifuGroupBox3.BorderRadius = 4;
-            this.bunifuGroupBox3.BorderThickness = 2;
-            this.bunifuGroupBox3.Controls.Add(this.btnCreateBill);
-            this.bunifuGroupBox3.Controls.Add(this.btnCancel);
-            this.bunifuGroupBox3.Controls.Add(this.lbTotal);
-            this.bunifuGroupBox3.Controls.Add(this.label1);
-            this.bunifuGroupBox3.Controls.Add(this.txtPhone);
-            this.bunifuGroupBox3.Controls.Add(this.txtName);
-            this.bunifuGroupBox3.Font = new System.Drawing.Font("Segoe UI", 13F);
-            this.bunifuGroupBox3.LabelAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.bunifuGroupBox3.LabelIndent = 10;
-            this.bunifuGroupBox3.LineStyle = Bunifu.UI.WinForms.BunifuGroupBox.LineStyles.Solid;
-            this.bunifuGroupBox3.Location = new System.Drawing.Point(807, 592);
-            this.bunifuGroupBox3.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.bunifuGroupBox3.Name = "bunifuGroupBox3";
-            this.bunifuGroupBox3.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.bunifuGroupBox3.Size = new System.Drawing.Size(624, 286);
-            this.bunifuGroupBox3.TabIndex = 54;
-            this.bunifuGroupBox3.TabStop = false;
-            this.bunifuGroupBox3.Text = "Invoice";
+            this.gpInvoce.BorderColor = System.Drawing.Color.Black;
+            this.gpInvoce.BorderRadius = 4;
+            this.gpInvoce.BorderThickness = 2;
+            this.gpInvoce.Controls.Add(this.btnCreateBill);
+            this.gpInvoce.Controls.Add(this.btnCancel);
+            this.gpInvoce.Controls.Add(this.lbTotal);
+            this.gpInvoce.Controls.Add(this.label1);
+            this.gpInvoce.Controls.Add(this.txtPhone);
+            this.gpInvoce.Controls.Add(this.txtName);
+            this.gpInvoce.Font = new System.Drawing.Font("Segoe UI", 13F);
+            this.gpInvoce.LabelAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.gpInvoce.LabelIndent = 10;
+            this.gpInvoce.LineStyle = Bunifu.UI.WinForms.BunifuGroupBox.LineStyles.Solid;
+            this.gpInvoce.Location = new System.Drawing.Point(807, 592);
+            this.gpInvoce.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.gpInvoce.Name = "gpInvoce";
+            this.gpInvoce.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.gpInvoce.Size = new System.Drawing.Size(624, 286);
+            this.gpInvoce.TabIndex = 54;
+            this.gpInvoce.TabStop = false;
+            this.gpInvoce.Text = "Invoice";
             // 
             // btnCreateBill
             // 
@@ -1205,35 +1021,35 @@
             this.bunifuFormDock1.TitleBarOptions.TitleBarControl = null;
             this.bunifuFormDock1.TitleBarOptions.UseBackColorOnDockingIndicators = false;
             // 
-            // bunifuGroupBox5
+            // gpProperties
             // 
-            this.bunifuGroupBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.gpProperties.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.bunifuGroupBox5.BorderColor = System.Drawing.Color.Black;
-            this.bunifuGroupBox5.BorderRadius = 4;
-            this.bunifuGroupBox5.BorderThickness = 2;
-            this.bunifuGroupBox5.Controls.Add(this.lbLv1);
-            this.bunifuGroupBox5.Controls.Add(this.lbLv2);
-            this.bunifuGroupBox5.Controls.Add(this.checkBoxLv1);
-            this.bunifuGroupBox5.Controls.Add(this.checkBoxlv2);
-            this.bunifuGroupBox5.Controls.Add(this.txtQuantities);
-            this.bunifuGroupBox5.Controls.Add(this.label4);
-            this.bunifuGroupBox5.Controls.Add(this.label3);
-            this.bunifuGroupBox5.Controls.Add(this.btnDelete);
-            this.bunifuGroupBox5.Controls.Add(this.btnAdd);
-            this.bunifuGroupBox5.Font = new System.Drawing.Font("Segoe UI", 13F);
-            this.bunifuGroupBox5.LabelAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.bunifuGroupBox5.LabelIndent = 10;
-            this.bunifuGroupBox5.LineStyle = Bunifu.UI.WinForms.BunifuGroupBox.LineStyles.Solid;
-            this.bunifuGroupBox5.Location = new System.Drawing.Point(42, 700);
-            this.bunifuGroupBox5.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.bunifuGroupBox5.Name = "bunifuGroupBox5";
-            this.bunifuGroupBox5.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.bunifuGroupBox5.Size = new System.Drawing.Size(716, 177);
-            this.bunifuGroupBox5.TabIndex = 55;
-            this.bunifuGroupBox5.TabStop = false;
-            this.bunifuGroupBox5.Text = "Properties";
+            this.gpProperties.BorderColor = System.Drawing.Color.Black;
+            this.gpProperties.BorderRadius = 4;
+            this.gpProperties.BorderThickness = 2;
+            this.gpProperties.Controls.Add(this.lbLv1);
+            this.gpProperties.Controls.Add(this.lbLv2);
+            this.gpProperties.Controls.Add(this.checkBoxLv1);
+            this.gpProperties.Controls.Add(this.checkBoxlv2);
+            this.gpProperties.Controls.Add(this.txtQuantities);
+            this.gpProperties.Controls.Add(this.label4);
+            this.gpProperties.Controls.Add(this.label3);
+            this.gpProperties.Controls.Add(this.btnDelete);
+            this.gpProperties.Controls.Add(this.btnAdd);
+            this.gpProperties.Font = new System.Drawing.Font("Segoe UI", 13F);
+            this.gpProperties.LabelAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.gpProperties.LabelIndent = 10;
+            this.gpProperties.LineStyle = Bunifu.UI.WinForms.BunifuGroupBox.LineStyles.Solid;
+            this.gpProperties.Location = new System.Drawing.Point(42, 700);
+            this.gpProperties.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.gpProperties.Name = "gpProperties";
+            this.gpProperties.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.gpProperties.Size = new System.Drawing.Size(716, 177);
+            this.gpProperties.TabIndex = 55;
+            this.gpProperties.TabStop = false;
+            this.gpProperties.Text = "Properties";
             // 
             // lbLv1
             // 
@@ -1558,6 +1374,7 @@
             this.btnDelete.TextMarginLeft = 0;
             this.btnDelete.TextPadding = new System.Windows.Forms.Padding(16, 0, 0, 0);
             this.btnDelete.UseDefaultRadiusAndThickness = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click_1);
             // 
             // btnAdd
             // 
@@ -1656,11 +1473,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1495, 909);
-            this.Controls.Add(this.bunifuGroupBox2);
-            this.Controls.Add(this.bunifuGroupBox3);
-            this.Controls.Add(this.bunifuGroupBox5);
+            this.Controls.Add(this.gbCart);
+            this.Controls.Add(this.gpInvoce);
+            this.Controls.Add(this.gpProperties);
             this.Controls.Add(this.lbViewAllBill);
-            this.Controls.Add(this.bunifuGroupBox1);
+            this.Controls.Add(this.gpProduct);
             this.Controls.Add(this.txtFind);
             this.Controls.Add(this.bunifuTextBox1);
             this.Controls.Add(this.bunifuGroupBox4);
@@ -1669,15 +1486,15 @@
             this.Text = "SaleView";
             this.Load += new System.EventHandler(this.SaleView_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvListProduct)).EndInit();
-            this.bunifuGroupBox1.ResumeLayout(false);
+            this.gpProduct.ResumeLayout(false);
             this.bunifuGroupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetailBill)).EndInit();
-            this.bunifuGroupBox2.ResumeLayout(false);
+            this.gbCart.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCart)).EndInit();
-            this.bunifuGroupBox3.ResumeLayout(false);
-            this.bunifuGroupBox3.PerformLayout();
-            this.bunifuGroupBox5.ResumeLayout(false);
-            this.bunifuGroupBox5.PerformLayout();
+            this.gpInvoce.ResumeLayout(false);
+            this.gpInvoce.PerformLayout();
+            this.gpProperties.ResumeLayout(false);
+            this.gpProperties.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1688,11 +1505,11 @@
         private Bunifu.UI.WinForms.BunifuTextBox bunifuTextBox1;
         private Bunifu.UI.WinForms.BunifuTextBox txtFind;
         private Bunifu.UI.WinForms.BunifuDataGridView dgvListProduct;
-        private Bunifu.UI.WinForms.BunifuGroupBox bunifuGroupBox1;
+        private Bunifu.UI.WinForms.BunifuGroupBox gpProduct;
         private Bunifu.UI.WinForms.BunifuDataGridView dgvDetailBill;
         private Bunifu.UI.WinForms.BunifuGroupBox bunifuGroupBox4;
         private Bunifu.UI.WinForms.BunifuLabel lbViewAllBill;
-        private Bunifu.UI.WinForms.BunifuGroupBox bunifuGroupBox3;
+        private Bunifu.UI.WinForms.BunifuGroupBox gpInvoce;
         private Bunifu.UI.WinForms.BunifuTextBox txtName;
         private Bunifu.UI.WinForms.BunifuTextBox txtPhone;
         private System.Windows.Forms.Label lbTotal;
@@ -1700,14 +1517,14 @@
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnCancel;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnCreateBill;
         private Bunifu.UI.WinForms.BunifuFormDock bunifuFormDock1;
-        private Bunifu.UI.WinForms.BunifuGroupBox bunifuGroupBox2;
+        private Bunifu.UI.WinForms.BunifuGroupBox gbCart;
         private Bunifu.UI.WinForms.BunifuDataGridView dgvCart;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmID;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmName;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmPrice;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmQuantity;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmUnit;
-        private Bunifu.UI.WinForms.BunifuGroupBox bunifuGroupBox5;
+        private Bunifu.UI.WinForms.BunifuGroupBox gpProperties;
         private Bunifu.UI.WinForms.BunifuTextBox txtQuantities;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
