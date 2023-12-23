@@ -14,7 +14,7 @@ namespace _DoAn
         SqlConnection connect;
         public ConnectDB()
         {
-            this.connect = new SqlConnection(@"Data Source=LAPTOP-7UOGDK8A;Initial Catalog=ComesticDB;Integrated Security=True");
+            this.connect = new SqlConnection(@"Data Source=DESKTOP-C801P81\BINHNGUYEN;Initial Catalog=ComesticDB;Integrated Security=True");
         }
         public DataTable GetData(string sqlquery)
         {
@@ -27,7 +27,7 @@ namespace _DoAn
         {
             cmd.Connection = this.connect;
             connect.Open();
-                if (cmd.ExecuteNonQuery() > 0)
+                if(cmd.ExecuteNonQuery() > 0)
                 {
                     connect.Close();
                     return true;

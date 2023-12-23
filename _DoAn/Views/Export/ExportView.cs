@@ -55,6 +55,7 @@ namespace _DoAn.Views.Export
             btnCancel.Enabled = false;
             btnDelete.Enabled = false;
             btnCreateForm.Enabled = false;
+
         }
 
         private void dtgvProduct_DoubleClick(object sender, EventArgs e)
@@ -64,7 +65,9 @@ namespace _DoAn.Views.Export
                 , dtgvProduct.CurrentRow.Cells[1].Value.ToString(), dtgvProduct.CurrentRow.Cells[2].Value.ToString());
             btnAdd.Enabled = true;
             btnEdit.Enabled = false;
-            btnDelete.Enabled = false;
+            btnDelete.Enabled = false; 
+            tbxReasonExport.Enabled = false;
+
         }
 
 
@@ -85,6 +88,7 @@ namespace _DoAn.Views.Export
                 MessageBox.Show(_message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
             }
+            tbxReasonExport.Enabled = true;
         }
 
         private void dtgvData_DoubleClick(object sender, EventArgs e)
@@ -172,13 +176,11 @@ namespace _DoAn.Views.Export
                 else
                 {
                     MessageBox.Show(_message, "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
                 }
             }
             else
             {
                 MessageBox.Show(_message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
             }
         }
 
@@ -195,6 +197,8 @@ namespace _DoAn.Views.Export
             }
             else
                 btnCancel.Enabled = true;
+            tbxReasonExport.Enabled = true;
+
         }
         public void Createform(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
