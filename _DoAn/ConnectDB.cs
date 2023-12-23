@@ -27,7 +27,7 @@ namespace _DoAn
         {
             cmd.Connection = this.connect;
             connect.Open();
-                if (cmd.ExecuteNonQuery() > 0)
+                if(cmd.ExecuteNonQuery() > 0)
                 {
                     connect.Close();
                     return true;
