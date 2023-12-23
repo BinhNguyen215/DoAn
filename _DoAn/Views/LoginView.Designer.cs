@@ -321,7 +321,7 @@
             this.tbxPassword.IconRight = null;
             this.tbxPassword.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.tbxPassword.Lines = new string[0];
-            this.tbxPassword.Location = new System.Drawing.Point(43, 256);
+            this.tbxPassword.Location = new System.Drawing.Point(43, 251);
             this.tbxPassword.MaxLength = 32767;
             this.tbxPassword.MinimumSize = new System.Drawing.Size(2, 2);
             this.tbxPassword.Modified = false;
@@ -527,7 +527,7 @@
             // 
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.Location = new System.Drawing.Point(210, 319);
+            this.linkLabel1.Location = new System.Drawing.Point(222, 327);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(153, 20);
             this.linkLabel1.TabIndex = 8;
@@ -891,7 +891,7 @@
             // 
             this.lbBackToLoginFP.AutoSize = true;
             this.lbBackToLoginFP.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.lbBackToLoginFP.Location = new System.Drawing.Point(20, 408);
+            this.lbBackToLoginFP.Location = new System.Drawing.Point(46, 324);
             this.lbBackToLoginFP.Name = "lbBackToLoginFP";
             this.lbBackToLoginFP.Size = new System.Drawing.Size(126, 22);
             this.lbBackToLoginFP.TabIndex = 11;
@@ -903,7 +903,7 @@
             // 
             this.lbSend.AutoSize = true;
             this.lbSend.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.lbSend.Location = new System.Drawing.Point(47, 233);
+            this.lbSend.Location = new System.Drawing.Point(50, 248);
             this.lbSend.Name = "lbSend";
             this.lbSend.Size = new System.Drawing.Size(95, 22);
             this.lbSend.TabIndex = 7;
@@ -960,7 +960,7 @@
             this.btnChangePassword.IdleIconLeftImage = null;
             this.btnChangePassword.IdleIconRightImage = null;
             this.btnChangePassword.IndicateFocus = false;
-            this.btnChangePassword.Location = new System.Drawing.Point(175, 286);
+            this.btnChangePassword.Location = new System.Drawing.Point(175, 308);
             this.btnChangePassword.Name = "btnChangePassword";
             this.btnChangePassword.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnChangePassword.OnDisabledState.BorderRadius = 15;
@@ -1032,7 +1032,7 @@
             this.tbxOTP.IconRight = null;
             this.tbxOTP.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.tbxOTP.Lines = new string[0];
-            this.tbxOTP.Location = new System.Drawing.Point(174, 215);
+            this.tbxOTP.Location = new System.Drawing.Point(174, 227);
             this.tbxOTP.MaxLength = 32767;
             this.tbxOTP.MinimumSize = new System.Drawing.Size(1, 1);
             this.tbxOTP.Modified = false;
@@ -1192,10 +1192,10 @@
             // lbResend
             // 
             this.lbResend.AutoSize = true;
-            this.lbResend.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.lbResend.Location = new System.Drawing.Point(48, 234);
+            this.lbResend.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lbResend.Location = new System.Drawing.Point(51, 248);
             this.lbResend.Name = "lbResend";
-            this.lbResend.Size = new System.Drawing.Size(94, 18);
+            this.lbResend.Size = new System.Drawing.Size(100, 20);
             this.lbResend.TabIndex = 8;
             this.lbResend.TabStop = true;
             this.lbResend.Text = "Resend OTP";

@@ -33,6 +33,7 @@ namespace _DoAn
         private BunifuIconButton currentButton;
         private bool isDropdownMenuOpening = false;
         public bool isOpenInfo = false;
+        public ProfileForm p;
         public Menu()
         { 
             InitializeComponent();
@@ -43,6 +44,7 @@ namespace _DoAn
             this.ControlBox = false;
             this.DoubleBuffered = true;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+
         }
 
         public Menu(string id, string name, string position) : this()
@@ -50,10 +52,11 @@ namespace _DoAn
             this.id = id;
             this.name = name;
             this.position = position;
+            p = new ProfileForm(name, position, id, this);
         }
 
 
-       
+
         private void OpenChildForm(Form childForm)
         {
             //open only form
@@ -177,7 +180,6 @@ namespace _DoAn
 
         private void btnIn4_Click(object sender, EventArgs e)
         {
-            ProfileForm p = new ProfileForm(name, position, id, this);
             if (!isOpenInfo)
             { 
                 p.Show();
