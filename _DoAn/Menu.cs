@@ -32,6 +32,7 @@ namespace _DoAn
         private Form currentChildForm;
         private BunifuIconButton currentButton;
         private bool isDropdownMenuOpening = false;
+        public bool isOpenInfo = false;
         public Menu()
         { 
             InitializeComponent();
@@ -176,10 +177,18 @@ namespace _DoAn
 
         private void btnIn4_Click(object sender, EventArgs e)
         {
-            ProfileForm p = new ProfileForm(name, position, id);
-            p.Show();
+            ProfileForm p = new ProfileForm(name, position, id, this);
+            if (!isOpenInfo)
+            { 
+                p.Show();
+                isOpenInfo = true;
+            }
+            else
+            {
+                p.Focus();
+            }
         }
-
+       
         private void btnLogo_Click(object sender, EventArgs e)
         {
             flag = 0;

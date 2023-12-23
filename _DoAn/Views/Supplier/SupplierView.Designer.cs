@@ -1,4 +1,6 @@
-﻿namespace _DoAn.Views.Supplier
+﻿using System;
+
+namespace _DoAn.Views.Supplier
 {
     partial class SupplierView
     {
@@ -394,7 +396,7 @@
             this.tbxEmail.TextPlaceholder = "Email";
             this.tbxEmail.UseSystemPasswordChar = false;
             this.tbxEmail.WordWrap = true;
-            this.tbxEmail.TextChanged += new System.EventHandler(this.tbxSupplierName_TextChanged);
+            this.tbxEmail.Leave += new System.EventHandler(this.tbxEmail_Leave);
             // 
             // tbxAddress
             // 
@@ -940,6 +942,8 @@
             this.ResumeLayout(false);
 
         }
+
+        
 
         #endregion
 

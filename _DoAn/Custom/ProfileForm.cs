@@ -12,15 +12,18 @@ namespace _DoAn.Custom
 {
     public partial class ProfileForm : Form
     {
+        Menu menu;
         private string _name;
         private string _position;
         private string _id;
-        public ProfileForm(string name, string position, string id)
+        public ProfileForm(string name, string position, string id, Form parentForm)
         {
             this._name = name;
             this._position = position;
             this._id = id;
+            menu = (Menu)parentForm;
             InitializeComponent();
+            
         }
 
         private void ProfileForm_Load(object sender, EventArgs e)
@@ -31,6 +34,11 @@ namespace _DoAn.Custom
             txtID.Enabled = false;
             txtName.Enabled = false;
             txtPosition.Enabled = false;
+        }
+
+        private void ProfileForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            menu.isOpenInfo = false;
         }
     }
 }

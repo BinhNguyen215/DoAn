@@ -7,8 +7,10 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace _DoAn.Views.Supplier
 {
@@ -128,12 +130,24 @@ namespace _DoAn.Views.Supplier
                 MessageBox.Show("Please enter only numbers.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 tbxPhoneNumber.Text = tbxPhoneNumber.Text.Remove(tbxPhoneNumber.Text.Length - 1);
             }
+            
             if (suplierPresenter.CheckInformation())
                 btnAdd.Enabled = true;
             else
                 btnAdd.Enabled = false;
         }
 
-       
+        private void tbxEmail_Leave(object sender, EventArgs e)
+        {
+            string email = tbxEmail.Text.Trim();
+
+            string emailPattern = @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";
+
+            if (!Regex.IsMatch(email, emailPattern) && !string.IsNullOrEmpty(email))
+            {
+                MessageBox.Show("Email is not valid", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                tbxEmail.Focus();
+            }
+        }
     }
 }
