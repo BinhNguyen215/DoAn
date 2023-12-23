@@ -121,8 +121,6 @@ namespace _DoAn.Views
             }
         }
 
-      
-
-
+        
     }
 }
