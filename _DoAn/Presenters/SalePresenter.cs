@@ -214,7 +214,7 @@ namespace _DoAn.Presenters
             int startY = 10;
             int offset = 40;
 
-            graphic.DrawString("Green Beauty", new Font("Courier New", 18, FontStyle.Bold), new SolidBrush(Color.Black), startX, startY);
+            graphic.DrawString("Green Pharmacy", new Font("Courier New", 18, FontStyle.Bold), new SolidBrush(Color.Black), startX, startY);
 
             graphic.DrawString("Addresss: 136, Linh Trung, Thủ Đức, TP Thủ Đức", font, new SolidBrush(Color.Black), startX, 40);
 
