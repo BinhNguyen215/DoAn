@@ -51,25 +51,6 @@ namespace _DoAn
             this.position = position;
         }
 
-        private void ActiveButton(object senderbtn)
-        {
-            if (senderbtn != null)
-            {
-              
-
-                currentButton = (BunifuIconButton)senderbtn;
-                //currentButton.BackColor = Color.FromArgb(127, 198, 102);
-                currentButton.BackColor = Color.FromArgb(143, 194, 71);
-           
- 
-
-                //leftBorderbtn.BackColor = color;
-                //leftBorderbtn.Location = new Point(0, currentButton.Location.Y);
-                //leftBorderbtn.Visible = true;
-                //leftBorderbtn.BringToFront();
-
-            }
-        }
 
        
         private void OpenChildForm(Form childForm)
@@ -139,7 +120,7 @@ namespace _DoAn
         private void btnHome_Click(object sender, EventArgs e)
         {
             if(flag==1)
-            inlicator.Top = ((Control)sender).Top;
+                inlicator.Top = ((Control)sender).Top;
             OpenChildForm(new StatisticsView(name));
             lbName.Text = "Dashboard";
         }
@@ -202,6 +183,7 @@ namespace _DoAn
         private void btnLogo_Click(object sender, EventArgs e)
         {
             flag = 0;
+            inlicator.Location = new Point(2, 201);
             btnHome_Click(sender, e);
             flag = 1;
         }
