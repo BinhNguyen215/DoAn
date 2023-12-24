@@ -31,8 +31,8 @@ namespace _DoAn.Models
         {
             ConnectDB connect = new ConnectDB();
             string sqlQuery = "SELECT distinct bi.Bill_id,dtl.Price, pro.ProductName, dtl.Unit_Name, dtl.Quantities "
-                + "FROM Bill bi, DetailBill dtl, Product pro"
-                + "WHERE bi.Bill_id = dtl.Bill_id and dtl.Product_id = pro.Product_id"
+                + "FROM Bill bi, DetailBill dtl, Product pro "
+                + "WHERE bi.Bill_id = dtl.Bill_id and dtl.Product_id = pro.Product_id "
                 + "And bi.Bill_id = '" + bill + "'";
             return connect.GetData(sqlQuery);
         }
