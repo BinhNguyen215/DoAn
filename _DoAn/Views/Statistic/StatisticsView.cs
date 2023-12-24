@@ -162,7 +162,7 @@ namespace _DoAn.Views.Statistic
             {
                 StatisticPresenter statisticPresenter = new StatisticPresenter(this);
                 statisticPresenter.GetSaleStatus();
-                lbViewAllBill.Text = "View sale results";
+                lbViewAllBill.Text = "View all statuses";
                 lbstt.Text = "Sale Results";
             }
         }

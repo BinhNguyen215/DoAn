@@ -30,9 +30,9 @@ namespace _DoAn.Models
         public DataTable GetDetailBill(string bill)
         {
             ConnectDB connect = new ConnectDB();
-            string sqlQuery = "SELECT distinct bi.Bill_id,dtl.Price, pro.ProductName, dtl.Unit_Name, dtl.Quantities, spl.SuplierName "
-                + "FROM Bill bi, DetailBill dtl, Product pro, Supplier spl, ImportForm im "
-                + "WHERE bi.Bill_id = dtl.Bill_id and dtl.Product_id = pro.Product_id and spl.Supplier_id = im.Suplier_id "
+            string sqlQuery = "SELECT distinct bi.Bill_id,dtl.Price, pro.ProductName, dtl.Unit_Name, dtl.Quantities "
+                + "FROM Bill bi, DetailBill dtl, Product pro"
+                + "WHERE bi.Bill_id = dtl.Bill_id and dtl.Product_id = pro.Product_id"
                 + "And bi.Bill_id = '" + bill + "'";
             return connect.GetData(sqlQuery);
         }

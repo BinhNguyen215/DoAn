@@ -152,7 +152,6 @@ namespace _DoAn.Presenters
             {
                 DataGridViewRow row = saleview.dgvCart.Rows[item.Index];
                 saleview.dgvCart.Rows.RemoveAt(item.Index);
-
             }
             return true;
         }

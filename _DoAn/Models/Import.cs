@@ -23,11 +23,11 @@ namespace _DoAn.Models
         public List<string> GetSuplier()
         {
             ConnectDB concect = new ConnectDB();
-            string sqlQuery = "Select SuplierName from Supplier";
+            string sqlQuery = "Select SupplierName from Supplier";
             List<string> data = new List<string>();
             foreach (DataRow row in concect.GetData(sqlQuery).Rows)
             {
-                data.Add(row["SuplierName"].ToString());
+                data.Add(row["SupplierName"].ToString());
             }
             return data;
         }

@@ -112,11 +112,11 @@
             this.bunifuPanel1.Controls.Add(this.bunifuLabel2);
             this.bunifuPanel1.Controls.Add(this.tbName);
             this.bunifuPanel1.Controls.Add(this.bunifuLabel1);
-            this.bunifuPanel1.Location = new System.Drawing.Point(13, 71);
-            this.bunifuPanel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.bunifuPanel1.Location = new System.Drawing.Point(20, 109);
+            this.bunifuPanel1.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.bunifuPanel1.Name = "bunifuPanel1";
             this.bunifuPanel1.ShowBorders = true;
-            this.bunifuPanel1.Size = new System.Drawing.Size(684, 369);
+            this.bunifuPanel1.Size = new System.Drawing.Size(1026, 568);
             this.bunifuPanel1.TabIndex = 53;
             // 
             // lbNofiEmail
@@ -126,10 +126,11 @@
             this.lbNofiEmail.CursorType = null;
             this.lbNofiEmail.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.lbNofiEmail.ForeColor = System.Drawing.Color.Red;
-            this.lbNofiEmail.Location = new System.Drawing.Point(18, 264);
+            this.lbNofiEmail.Location = new System.Drawing.Point(27, 406);
+            this.lbNofiEmail.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.lbNofiEmail.Name = "lbNofiEmail";
             this.lbNofiEmail.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbNofiEmail.Size = new System.Drawing.Size(148, 17);
+            this.lbNofiEmail.Size = new System.Drawing.Size(221, 28);
             this.lbNofiEmail.TabIndex = 19;
             this.lbNofiEmail.Text = "* Enter right  email format\r\n";
             this.lbNofiEmail.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -142,10 +143,11 @@
             this.lbNofiPhone.CursorType = null;
             this.lbNofiPhone.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.lbNofiPhone.ForeColor = System.Drawing.Color.Red;
-            this.lbNofiPhone.Location = new System.Drawing.Point(373, 83);
+            this.lbNofiPhone.Location = new System.Drawing.Point(560, 128);
+            this.lbNofiPhone.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.lbNofiPhone.Name = "lbNofiPhone";
             this.lbNofiPhone.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbNofiPhone.Size = new System.Drawing.Size(246, 17);
+            this.lbNofiPhone.Size = new System.Drawing.Size(368, 28);
             this.lbNofiPhone.TabIndex = 18;
             this.lbNofiPhone.Text = "* Enter right  10/11 phone numbers format";
             this.lbNofiPhone.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -159,10 +161,11 @@
             this.lbNofiCitizenId.CursorType = System.Windows.Forms.Cursors.Default;
             this.lbNofiCitizenId.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.lbNofiCitizenId.ForeColor = System.Drawing.Color.Red;
-            this.lbNofiCitizenId.Location = new System.Drawing.Point(19, 174);
+            this.lbNofiCitizenId.Location = new System.Drawing.Point(28, 268);
+            this.lbNofiCitizenId.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.lbNofiCitizenId.Name = "lbNofiCitizenId";
             this.lbNofiCitizenId.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbNofiCitizenId.Size = new System.Drawing.Size(253, 17);
+            this.lbNofiCitizenId.Size = new System.Drawing.Size(379, 28);
             this.lbNofiCitizenId.TabIndex = 17;
             this.lbNofiCitizenId.Text = "* Enter right  9/12 citizen id numbers format\r\n";
             this.lbNofiCitizenId.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -177,10 +180,10 @@
             "SalesMan",
             "InventoryDepartment",
             "AccountingDepartment"});
-            this.cbPosition.Location = new System.Drawing.Point(371, 140);
-            this.cbPosition.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbPosition.Location = new System.Drawing.Point(556, 215);
+            this.cbPosition.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.cbPosition.Name = "cbPosition";
-            this.cbPosition.Size = new System.Drawing.Size(292, 33);
+            this.cbPosition.Size = new System.Drawing.Size(276, 44);
             this.cbPosition.TabIndex = 16;
             this.cbPosition.SelectedIndexChanged += new System.EventHandler(this.cbPosition_SelectedIndexChanged);
             // 
@@ -213,10 +216,10 @@
             this.tbPassword.IconRight = null;
             this.tbPassword.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.tbPassword.Lines = new string[0];
-            this.tbPassword.Location = new System.Drawing.Point(373, 313);
-            this.tbPassword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbPassword.Location = new System.Drawing.Point(560, 482);
+            this.tbPassword.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.tbPassword.MaxLength = 32767;
-            this.tbPassword.MinimumSize = new System.Drawing.Size(2, 2);
+            this.tbPassword.MinimumSize = new System.Drawing.Size(3, 3);
             this.tbPassword.Modified = false;
             this.tbPassword.Multiline = false;
             this.tbPassword.Name = "tbPassword";
@@ -240,17 +243,17 @@
             stateProperties4.ForeColor = System.Drawing.Color.Empty;
             stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.tbPassword.OnIdleState = stateProperties4;
-            this.tbPassword.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tbPassword.PasswordChar = '\0';
+            this.tbPassword.Padding = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.tbPassword.PasswordChar = '*';
             this.tbPassword.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.tbPassword.PlaceholderText = "Enter password";
-            this.tbPassword.ReadOnly = false;
+            this.tbPassword.ReadOnly = true;
             this.tbPassword.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.tbPassword.SelectedText = "";
             this.tbPassword.SelectionLength = 0;
             this.tbPassword.SelectionStart = 0;
             this.tbPassword.ShortcutsEnabled = true;
-            this.tbPassword.Size = new System.Drawing.Size(292, 40);
+            this.tbPassword.Size = new System.Drawing.Size(438, 69);
             this.tbPassword.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.tbPassword.TabIndex = 15;
             this.tbPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -258,7 +261,7 @@
             this.tbPassword.TextMarginLeft = 3;
             this.tbPassword.TextMarginTop = 1;
             this.tbPassword.TextPlaceholder = "Enter password";
-            this.tbPassword.UseSystemPasswordChar = false;
+            this.tbPassword.UseSystemPasswordChar = true;
             this.tbPassword.WordWrap = true;
             this.tbPassword.TextChanged += new System.EventHandler(this.tbPassword_TextChanged);
             // 
@@ -268,13 +271,13 @@
             this.lbPassword.AutoEllipsis = false;
             this.lbPassword.CursorType = null;
             this.lbPassword.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.lbPassword.Location = new System.Drawing.Point(373, 287);
-            this.lbPassword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.lbPassword.Location = new System.Drawing.Point(560, 442);
+            this.lbPassword.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.lbPassword.Name = "lbPassword";
             this.lbPassword.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbPassword.Size = new System.Drawing.Size(67, 21);
+            this.lbPassword.Size = new System.Drawing.Size(222, 32);
             this.lbPassword.TabIndex = 14;
-            this.lbPassword.Text = "Password";
+            this.lbPassword.Text = "Password (Can\'t edit)";
             this.lbPassword.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lbPassword.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -307,10 +310,10 @@
             this.tbAddress.IconRight = null;
             this.tbAddress.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.tbAddress.Lines = new string[0];
-            this.tbAddress.Location = new System.Drawing.Point(371, 225);
-            this.tbAddress.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbAddress.Location = new System.Drawing.Point(556, 346);
+            this.tbAddress.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.tbAddress.MaxLength = 32767;
-            this.tbAddress.MinimumSize = new System.Drawing.Size(2, 2);
+            this.tbAddress.MinimumSize = new System.Drawing.Size(3, 3);
             this.tbAddress.Modified = false;
             this.tbAddress.Multiline = false;
             this.tbAddress.Name = "tbAddress";
@@ -334,7 +337,7 @@
             stateProperties8.ForeColor = System.Drawing.Color.Empty;
             stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.tbAddress.OnIdleState = stateProperties8;
-            this.tbAddress.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbAddress.Padding = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.tbAddress.PasswordChar = '\0';
             this.tbAddress.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.tbAddress.PlaceholderText = "Enter address";
@@ -344,7 +347,7 @@
             this.tbAddress.SelectionLength = 0;
             this.tbAddress.SelectionStart = 0;
             this.tbAddress.ShortcutsEnabled = true;
-            this.tbAddress.Size = new System.Drawing.Size(292, 40);
+            this.tbAddress.Size = new System.Drawing.Size(438, 62);
             this.tbAddress.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.tbAddress.TabIndex = 13;
             this.tbAddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -362,11 +365,11 @@
             this.bunifuLabel6.AutoEllipsis = false;
             this.bunifuLabel6.CursorType = null;
             this.bunifuLabel6.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.bunifuLabel6.Location = new System.Drawing.Point(373, 199);
-            this.bunifuLabel6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.bunifuLabel6.Location = new System.Drawing.Point(560, 306);
+            this.bunifuLabel6.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.bunifuLabel6.Name = "bunifuLabel6";
             this.bunifuLabel6.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel6.Size = new System.Drawing.Size(56, 21);
+            this.bunifuLabel6.Size = new System.Drawing.Size(84, 32);
             this.bunifuLabel6.TabIndex = 12;
             this.bunifuLabel6.Text = "Address";
             this.bunifuLabel6.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -378,11 +381,11 @@
             this.bunifuLabel7.AutoEllipsis = false;
             this.bunifuLabel7.CursorType = null;
             this.bunifuLabel7.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.bunifuLabel7.Location = new System.Drawing.Point(371, 116);
-            this.bunifuLabel7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.bunifuLabel7.Location = new System.Drawing.Point(556, 178);
+            this.bunifuLabel7.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.bunifuLabel7.Name = "bunifuLabel7";
             this.bunifuLabel7.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel7.Size = new System.Drawing.Size(56, 21);
+            this.bunifuLabel7.Size = new System.Drawing.Size(85, 32);
             this.bunifuLabel7.TabIndex = 10;
             this.bunifuLabel7.Text = "Position";
             this.bunifuLabel7.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -417,10 +420,10 @@
             this.tbPhone.IconRight = null;
             this.tbPhone.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.tbPhone.Lines = new string[0];
-            this.tbPhone.Location = new System.Drawing.Point(371, 44);
-            this.tbPhone.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbPhone.Location = new System.Drawing.Point(556, 68);
+            this.tbPhone.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.tbPhone.MaxLength = 32767;
-            this.tbPhone.MinimumSize = new System.Drawing.Size(2, 2);
+            this.tbPhone.MinimumSize = new System.Drawing.Size(3, 3);
             this.tbPhone.Modified = false;
             this.tbPhone.Multiline = false;
             this.tbPhone.Name = "tbPhone";
@@ -444,7 +447,7 @@
             stateProperties12.ForeColor = System.Drawing.Color.Empty;
             stateProperties12.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.tbPhone.OnIdleState = stateProperties12;
-            this.tbPhone.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbPhone.Padding = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.tbPhone.PasswordChar = '\0';
             this.tbPhone.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.tbPhone.PlaceholderText = "Enter number";
@@ -454,7 +457,7 @@
             this.tbPhone.SelectionLength = 0;
             this.tbPhone.SelectionStart = 0;
             this.tbPhone.ShortcutsEnabled = true;
-            this.tbPhone.Size = new System.Drawing.Size(292, 40);
+            this.tbPhone.Size = new System.Drawing.Size(438, 62);
             this.tbPhone.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.tbPhone.TabIndex = 9;
             this.tbPhone.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -472,11 +475,11 @@
             this.bunifuLabel8.AutoEllipsis = false;
             this.bunifuLabel8.CursorType = null;
             this.bunifuLabel8.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.bunifuLabel8.Location = new System.Drawing.Point(371, 18);
-            this.bunifuLabel8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.bunifuLabel8.Location = new System.Drawing.Point(556, 28);
+            this.bunifuLabel8.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.bunifuLabel8.Name = "bunifuLabel8";
             this.bunifuLabel8.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel8.Size = new System.Drawing.Size(103, 21);
+            this.bunifuLabel8.Size = new System.Drawing.Size(159, 32);
             this.bunifuLabel8.TabIndex = 8;
             this.bunifuLabel8.Text = "Phone number";
             this.bunifuLabel8.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -511,10 +514,10 @@
             this.tbUsername.IconRight = null;
             this.tbUsername.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.tbUsername.Lines = new string[0];
-            this.tbUsername.Location = new System.Drawing.Point(18, 313);
-            this.tbUsername.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbUsername.Location = new System.Drawing.Point(27, 482);
+            this.tbUsername.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.tbUsername.MaxLength = 32767;
-            this.tbUsername.MinimumSize = new System.Drawing.Size(2, 2);
+            this.tbUsername.MinimumSize = new System.Drawing.Size(3, 3);
             this.tbUsername.Modified = false;
             this.tbUsername.Multiline = false;
             this.tbUsername.Name = "tbUsername";
@@ -538,7 +541,7 @@
             stateProperties16.ForeColor = System.Drawing.Color.Empty;
             stateProperties16.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.tbUsername.OnIdleState = stateProperties16;
-            this.tbUsername.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbUsername.Padding = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.tbUsername.PasswordChar = '\0';
             this.tbUsername.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.tbUsername.PlaceholderText = "Enter username";
@@ -548,7 +551,7 @@
             this.tbUsername.SelectionLength = 0;
             this.tbUsername.SelectionStart = 0;
             this.tbUsername.ShortcutsEnabled = true;
-            this.tbUsername.Size = new System.Drawing.Size(292, 40);
+            this.tbUsername.Size = new System.Drawing.Size(438, 62);
             this.tbUsername.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.tbUsername.TabIndex = 7;
             this.tbUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -566,11 +569,11 @@
             this.lbUsername.AutoEllipsis = false;
             this.lbUsername.CursorType = null;
             this.lbUsername.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.lbUsername.Location = new System.Drawing.Point(18, 287);
-            this.lbUsername.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.lbUsername.Location = new System.Drawing.Point(27, 442);
+            this.lbUsername.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.lbUsername.Name = "lbUsername";
             this.lbUsername.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbUsername.Size = new System.Drawing.Size(71, 21);
+            this.lbUsername.Size = new System.Drawing.Size(107, 32);
             this.lbUsername.TabIndex = 6;
             this.lbUsername.Text = "Username";
             this.lbUsername.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -605,10 +608,10 @@
             this.tbEmail.IconRight = null;
             this.tbEmail.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.tbEmail.Lines = new string[0];
-            this.tbEmail.Location = new System.Drawing.Point(18, 225);
-            this.tbEmail.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbEmail.Location = new System.Drawing.Point(27, 346);
+            this.tbEmail.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.tbEmail.MaxLength = 32767;
-            this.tbEmail.MinimumSize = new System.Drawing.Size(2, 2);
+            this.tbEmail.MinimumSize = new System.Drawing.Size(3, 3);
             this.tbEmail.Modified = false;
             this.tbEmail.Multiline = false;
             this.tbEmail.Name = "tbEmail";
@@ -632,7 +635,7 @@
             stateProperties20.ForeColor = System.Drawing.Color.Empty;
             stateProperties20.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.tbEmail.OnIdleState = stateProperties20;
-            this.tbEmail.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbEmail.Padding = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.tbEmail.PasswordChar = '\0';
             this.tbEmail.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.tbEmail.PlaceholderText = "Enter email";
@@ -642,7 +645,7 @@
             this.tbEmail.SelectionLength = 0;
             this.tbEmail.SelectionStart = 0;
             this.tbEmail.ShortcutsEnabled = true;
-            this.tbEmail.Size = new System.Drawing.Size(292, 40);
+            this.tbEmail.Size = new System.Drawing.Size(438, 62);
             this.tbEmail.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.tbEmail.TabIndex = 5;
             this.tbEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -660,11 +663,11 @@
             this.bunifuLabel3.AutoEllipsis = false;
             this.bunifuLabel3.CursorType = null;
             this.bunifuLabel3.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.bunifuLabel3.Location = new System.Drawing.Point(18, 199);
-            this.bunifuLabel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.bunifuLabel3.Location = new System.Drawing.Point(27, 306);
+            this.bunifuLabel3.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.bunifuLabel3.Name = "bunifuLabel3";
             this.bunifuLabel3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel3.Size = new System.Drawing.Size(38, 21);
+            this.bunifuLabel3.Size = new System.Drawing.Size(57, 32);
             this.bunifuLabel3.TabIndex = 4;
             this.bunifuLabel3.Text = "Email";
             this.bunifuLabel3.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -699,10 +702,10 @@
             this.tbCitizenID.IconRight = null;
             this.tbCitizenID.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.tbCitizenID.Lines = new string[0];
-            this.tbCitizenID.Location = new System.Drawing.Point(18, 133);
-            this.tbCitizenID.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbCitizenID.Location = new System.Drawing.Point(27, 205);
+            this.tbCitizenID.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.tbCitizenID.MaxLength = 32767;
-            this.tbCitizenID.MinimumSize = new System.Drawing.Size(2, 2);
+            this.tbCitizenID.MinimumSize = new System.Drawing.Size(3, 3);
             this.tbCitizenID.Modified = false;
             this.tbCitizenID.Multiline = false;
             this.tbCitizenID.Name = "tbCitizenID";
@@ -726,7 +729,7 @@
             stateProperties24.ForeColor = System.Drawing.Color.Empty;
             stateProperties24.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.tbCitizenID.OnIdleState = stateProperties24;
-            this.tbCitizenID.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbCitizenID.Padding = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.tbCitizenID.PasswordChar = '\0';
             this.tbCitizenID.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.tbCitizenID.PlaceholderText = "Enter number";
@@ -736,7 +739,7 @@
             this.tbCitizenID.SelectionLength = 0;
             this.tbCitizenID.SelectionStart = 0;
             this.tbCitizenID.ShortcutsEnabled = true;
-            this.tbCitizenID.Size = new System.Drawing.Size(292, 40);
+            this.tbCitizenID.Size = new System.Drawing.Size(438, 62);
             this.tbCitizenID.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.tbCitizenID.TabIndex = 3;
             this.tbCitizenID.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -754,11 +757,11 @@
             this.bunifuLabel2.AutoEllipsis = false;
             this.bunifuLabel2.CursorType = null;
             this.bunifuLabel2.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.bunifuLabel2.Location = new System.Drawing.Point(18, 107);
-            this.bunifuLabel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.bunifuLabel2.Location = new System.Drawing.Point(27, 165);
+            this.bunifuLabel2.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.bunifuLabel2.Name = "bunifuLabel2";
             this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel2.Size = new System.Drawing.Size(66, 21);
+            this.bunifuLabel2.Size = new System.Drawing.Size(103, 32);
             this.bunifuLabel2.TabIndex = 2;
             this.bunifuLabel2.Text = "Citizen ID";
             this.bunifuLabel2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -793,10 +796,10 @@
             this.tbName.IconRight = null;
             this.tbName.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.tbName.Lines = new string[0];
-            this.tbName.Location = new System.Drawing.Point(18, 44);
-            this.tbName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbName.Location = new System.Drawing.Point(27, 68);
+            this.tbName.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.tbName.MaxLength = 32767;
-            this.tbName.MinimumSize = new System.Drawing.Size(2, 2);
+            this.tbName.MinimumSize = new System.Drawing.Size(3, 3);
             this.tbName.Modified = false;
             this.tbName.Multiline = false;
             this.tbName.Name = "tbName";
@@ -820,7 +823,7 @@
             stateProperties28.ForeColor = System.Drawing.Color.Empty;
             stateProperties28.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.tbName.OnIdleState = stateProperties28;
-            this.tbName.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbName.Padding = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.tbName.PasswordChar = '\0';
             this.tbName.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.tbName.PlaceholderText = "Enter name";
@@ -830,7 +833,7 @@
             this.tbName.SelectionLength = 0;
             this.tbName.SelectionStart = 0;
             this.tbName.ShortcutsEnabled = true;
-            this.tbName.Size = new System.Drawing.Size(292, 40);
+            this.tbName.Size = new System.Drawing.Size(438, 62);
             this.tbName.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.tbName.TabIndex = 1;
             this.tbName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -849,11 +852,11 @@
             this.bunifuLabel1.Cursor = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel1.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.bunifuLabel1.Location = new System.Drawing.Point(18, 18);
-            this.bunifuLabel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.bunifuLabel1.Location = new System.Drawing.Point(27, 28);
+            this.bunifuLabel1.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.bunifuLabel1.Name = "bunifuLabel1";
             this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(132, 21);
+            this.bunifuLabel1.Size = new System.Drawing.Size(206, 32);
             this.bunifuLabel1.TabIndex = 0;
             this.bunifuLabel1.Text = "Name of employee";
             this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -864,10 +867,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.Green;
-            this.label1.Location = new System.Drawing.Point(227, 22);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(340, 34);
+            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(285, 32);
+            this.label1.Size = new System.Drawing.Size(418, 48);
             this.label1.TabIndex = 52;
             this.label1.Text = "Employee\'s Information";
             // 
@@ -920,7 +923,8 @@
             this.btnCancel.IdleIconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnCancel.IdleIconLeftImage")));
             this.btnCancel.IdleIconRightImage = null;
             this.btnCancel.IndicateFocus = false;
-            this.btnCancel.Location = new System.Drawing.Point(398, 448);
+            this.btnCancel.Location = new System.Drawing.Point(597, 689);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnCancel.OnDisabledState.BorderRadius = 15;
@@ -954,7 +958,7 @@
             this.btnCancel.OnPressedState.ForeColor = System.Drawing.Color.Black;
             this.btnCancel.OnPressedState.IconLeftImage = null;
             this.btnCancel.OnPressedState.IconRightImage = null;
-            this.btnCancel.Size = new System.Drawing.Size(98, 45);
+            this.btnCancel.Size = new System.Drawing.Size(147, 69);
             this.btnCancel.TabIndex = 56;
             this.btnCancel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnCancel.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1012,7 +1016,8 @@
             this.btnSave.IdleIconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnSave.IdleIconLeftImage")));
             this.btnSave.IdleIconRightImage = null;
             this.btnSave.IndicateFocus = false;
-            this.btnSave.Location = new System.Drawing.Point(225, 448);
+            this.btnSave.Location = new System.Drawing.Point(338, 689);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSave.Name = "btnSave";
             this.btnSave.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnSave.OnDisabledState.BorderRadius = 15;
@@ -1046,7 +1051,7 @@
             this.btnSave.OnPressedState.ForeColor = System.Drawing.Color.Black;
             this.btnSave.OnPressedState.IconLeftImage = null;
             this.btnSave.OnPressedState.IconRightImage = null;
-            this.btnSave.Size = new System.Drawing.Size(98, 44);
+            this.btnSave.Size = new System.Drawing.Size(147, 68);
             this.btnSave.TabIndex = 54;
             this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnSave.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1057,13 +1062,14 @@
             // 
             // NewEmployeeView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(707, 503);
+            this.ClientSize = new System.Drawing.Size(1060, 774);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.bunifuPanel1);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "NewEmployeeView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NewEmployeeViewForm1";
