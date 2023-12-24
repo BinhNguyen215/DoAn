@@ -131,5 +131,15 @@ namespace _DoAn.Presenters
             else
                 return true;
         }
+        public bool CheckStockQuantity(int productId)
+        {
+            int stockQuantity = product.GetDataQuantity(productId); // Hàm này trả về số lượng hàng tồn kho dựa trên productId
+            if (stockQuantity <= 0)
+            {
+                ProductView.ShowAlert($"Sản phẩm {productId} sắp hết hàng! Số lượng còn lại: {stockQuantity}");
+                return true;
+            }
+            return false;
+        }
     }
 }

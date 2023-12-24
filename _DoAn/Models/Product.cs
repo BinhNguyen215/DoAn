@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using Microsoft.SqlServer.Server;
 using System.Net.NetworkInformation;
 using System.Windows.Forms;
+using _DoAn.Views.Product;
 
 namespace _DoAn.Models
 {
@@ -127,6 +128,12 @@ namespace _DoAn.Models
             }
             else
                 return false;
+        }
+        public int GetDataQuantity(int productid)//**
+        {
+            ConnectDB connect = new ConnectDB();
+            string sqlQuery = "SELECT * FROM Product WHERE ProductId = @Product_id";
+            return Convert.ToInt32(connect.GetData(sqlQuery).Rows[0]["lv1Quantity"]);
         }
     }
 }

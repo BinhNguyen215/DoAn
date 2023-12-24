@@ -308,5 +308,10 @@ namespace _DoAn.Views.Product
             lbNofiWrite.Visible = false;
 
         }
+
+        internal static void ShowAlert(string v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
