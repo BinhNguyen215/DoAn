@@ -142,7 +142,7 @@
             this.bunifuLabel4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bunifuLabel4.Name = "bunifuLabel4";
             this.bunifuLabel4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel4.Size = new System.Drawing.Size(326, 32);
+            this.bunifuLabel4.Size = new System.Drawing.Size(214, 21);
             this.bunifuLabel4.TabIndex = 3;
             this.bunifuLabel4.Text = "Copyright by GREEN Company";
             this.bunifuLabel4.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -160,7 +160,7 @@
             this.bunifuLabel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bunifuLabel1.Name = "bunifuLabel1";
             this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(276, 74);
+            this.bunifuLabel1.Size = new System.Drawing.Size(182, 50);
             this.bunifuLabel1.TabIndex = 1;
             this.bunifuLabel1.Text = "WELCOME";
             this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -194,7 +194,7 @@
             this.bunifuLabel3.Location = new System.Drawing.Point(149, 47);
             this.bunifuLabel3.Name = "bunifuLabel3";
             this.bunifuLabel3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel3.Size = new System.Drawing.Size(185, 81);
+            this.bunifuLabel3.Size = new System.Drawing.Size(123, 54);
             this.bunifuLabel3.TabIndex = 1;
             this.bunifuLabel3.Text = "LOGIN";
             this.bunifuLabel3.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -319,7 +319,7 @@
             this.tbxPassword.IconLeft = ((System.Drawing.Image)(resources.GetObject("tbxPassword.IconLeft")));
             this.tbxPassword.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
             this.tbxPassword.IconPadding = 10;
-            this.tbxPassword.IconRight = null;
+            this.tbxPassword.IconRight = ((System.Drawing.Image)(resources.GetObject("tbxPassword.IconRight")));
             this.tbxPassword.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.tbxPassword.Lines = new string[0];
             this.tbxPassword.Location = new System.Drawing.Point(43, 251);
@@ -369,6 +369,7 @@
             this.tbxPassword.UseSystemPasswordChar = true;
             this.tbxPassword.WordWrap = true;
             this.tbxPassword.TextChange += new System.EventHandler(this.tbxPassword_TextChange);
+            this.tbxPassword.OnIconRightClick += new System.EventHandler(this.tbxPassword_OnIconRightClick);
             this.tbxPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbxPassword_KeyDown);
             // 
             // btnSignin
@@ -531,7 +532,7 @@
             this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel1.Location = new System.Drawing.Point(222, 327);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(223, 29);
+            this.linkLabel1.Size = new System.Drawing.Size(153, 20);
             this.linkLabel1.TabIndex = 8;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Forgot password?";
@@ -659,7 +660,7 @@
             this.labelBackToLoginCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.labelBackToLoginCP.Location = new System.Drawing.Point(62, 348);
             this.labelBackToLoginCP.Name = "labelBackToLoginCP";
-            this.labelBackToLoginCP.Size = new System.Drawing.Size(172, 30);
+            this.labelBackToLoginCP.Size = new System.Drawing.Size(126, 22);
             this.labelBackToLoginCP.TabIndex = 8;
             this.labelBackToLoginCP.TabStop = true;
             this.labelBackToLoginCP.Text = "Back to login";
@@ -845,7 +846,7 @@
             this.lbChangePassword.Location = new System.Drawing.Point(57, 28);
             this.lbChangePassword.Name = "lbChangePassword";
             this.lbChangePassword.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbChangePassword.Size = new System.Drawing.Size(494, 81);
+            this.lbChangePassword.Size = new System.Drawing.Size(333, 54);
             this.lbChangePassword.TabIndex = 1;
             this.lbChangePassword.Text = "Change Password";
             this.lbChangePassword.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -895,7 +896,7 @@
             this.lbBackToLoginFP.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.lbBackToLoginFP.Location = new System.Drawing.Point(46, 324);
             this.lbBackToLoginFP.Name = "lbBackToLoginFP";
-            this.lbBackToLoginFP.Size = new System.Drawing.Size(172, 30);
+            this.lbBackToLoginFP.Size = new System.Drawing.Size(126, 22);
             this.lbBackToLoginFP.TabIndex = 11;
             this.lbBackToLoginFP.TabStop = true;
             this.lbBackToLoginFP.Text = "Back to login";
@@ -907,7 +908,7 @@
             this.lbSend.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
             this.lbSend.Location = new System.Drawing.Point(50, 248);
             this.lbSend.Name = "lbSend";
-            this.lbSend.Size = new System.Drawing.Size(132, 30);
+            this.lbSend.Size = new System.Drawing.Size(95, 22);
             this.lbSend.TabIndex = 7;
             this.lbSend.TabStop = true;
             this.lbSend.Text = "Send OTP";
@@ -1169,7 +1170,7 @@
             this.lbForgotpassword.Location = new System.Drawing.Point(51, 32);
             this.lbForgotpassword.Name = "lbForgotpassword";
             this.lbForgotpassword.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbForgotpassword.Size = new System.Drawing.Size(473, 81);
+            this.lbForgotpassword.Size = new System.Drawing.Size(317, 54);
             this.lbForgotpassword.TabIndex = 1;
             this.lbForgotpassword.Text = "Forgot Password";
             this.lbForgotpassword.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -1197,7 +1198,7 @@
             this.lbResend.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.lbResend.Location = new System.Drawing.Point(51, 248);
             this.lbResend.Name = "lbResend";
-            this.lbResend.Size = new System.Drawing.Size(137, 26);
+            this.lbResend.Size = new System.Drawing.Size(100, 20);
             this.lbResend.TabIndex = 8;
             this.lbResend.TabStop = true;
             this.lbResend.Text = "Resend OTP";

@@ -199,5 +199,14 @@ namespace _DoAn.Views
             tbxPassword.Text = newText; 
             tbxPassword.SelectionStart = tbxPassword.Text.Length; 
         }
+        bool flag = false;
+
+        private void tbxPassword_OnIconRightClick(object sender, EventArgs e)
+        {
+            if (flag)
+            {
+                tbxPassword.
+            }
+        }
     }
 }
