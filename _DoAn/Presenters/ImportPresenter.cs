@@ -270,17 +270,17 @@ namespace _DoAn.Presenters
                         string Name = row.Cells[1].Value.ToString();
                         int Quantities = int.Parse(row.Cells[3].Value.ToString());
                         float UnitPrice = float.Parse(row.Cells[2].Value.ToString());
-                        float Total = float.Parse(row.Cells[4].Value.ToString());
+                        double Total = double.Parse(row.Cells[4].Value.ToString());
 
                         graphic.DrawString(Name, font, new SolidBrush(Color.Black), startX, startY + offset);
                         graphic.DrawString(Quantities.ToString(), font, new SolidBrush(Color.Black), 260, startY + offset);
                         graphic.DrawString(UnitPrice.ToString(), font, new SolidBrush(Color.Black), 440, startY + offset);
-                        graphic.DrawString(Total.ToString(), font, new SolidBrush(Color.Black), 630, startY + offset);
+                        graphic.DrawString(Total.ToString("###,###"), font, new SolidBrush(Color.Black), 630, startY + offset);
                         offset = offset + (int)fontHeight + 5; //make the spacing consistent       
                     }
                 }
-                float total = 0f;
-                float productTotal = float.Parse(importview.TotalPriceProduct);
+                double total = 0f;
+                double productTotal = double.Parse(importview.TotalPriceProduct);
                 total = productTotal;
                 offset = offset + 20;
                 graphic.DrawString("Total: ".PadRight(60) + total.ToString("###,###"), new Font("Courier New", 12, FontStyle.Bold), new SolidBrush(Color.Black), startX, startY + offset);

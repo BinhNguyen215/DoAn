@@ -14,12 +14,12 @@ namespace _DoAn
         SqlConnection connect;
         public ConnectDB()
         {
-            this.connect = new SqlConnection(@"Data Source=LAPTOP-7UOGDK8A;Initial Catalog=ComesticDB;Integrated Security=True");
+            this.connect = new SqlConnection(@"Data Source=DESKTOP-C801P81\BINHNGUYEN;Initial Catalog=ComesticDB;Integrated Security=True");
         }
         public DataTable GetData(string sqlquery)
         {
             SqlDataAdapter sqldata = new SqlDataAdapter(sqlquery, this.connect);
-            DataTable dataTable = new DataTable();  
+            DataTable dataTable = new DataTable();
             sqldata.Fill(dataTable);
             return dataTable;
         }

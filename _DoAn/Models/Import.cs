@@ -46,7 +46,7 @@ namespace _DoAn.Models
         public string GetTypeString(string name)
         {
             ConnectDB connect = new ConnectDB();
-            string sqlQuery = "select Supplier_id from Supplier where SuplierName = '" + name + "'";
+            string sqlQuery = "select Supplier_id from Supplier where SupplierName = '" + name + "'";
             return connect.GetData(sqlQuery).Rows[0]["Supplier_id"].ToString();
         }
         public string AddData(string employee, string suplier, string totalprice)
@@ -71,7 +71,7 @@ namespace _DoAn.Models
         }
         public bool UpdateProduct(string quantity, string id)//**
         {
-            SqlCommand cmd = new SqlCommand("Update Product setlv1Quantity =lv1Quantity + @quan Where Product_id = @id ");
+            SqlCommand cmd = new SqlCommand("Update Product set lv1Quantity =lv1Quantity + @quan Where Product_id = @id ");
             cmd.Parameters.Add("@quan", SqlDbType.Int);
             cmd.Parameters["@quan"].Value = Convert.ToInt32(quantity);
             cmd.Parameters.Add("@id", SqlDbType.Int);
