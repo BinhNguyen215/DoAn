@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,11 +11,13 @@ namespace _DoAn.Models
 {
     public class Statistics
     {
-        public DataTable GetTop10ProductData()//**
+        public DataTable GetTop10ProductData( string month, string year)//**
         {
             ConnectDB connect = new ConnectDB();
-            string sqlQuery = "SELECT TOP 10 with TIES ProductName as Name , Sum(Quantities) as Sales from Product, DetailBill "
-                + "Where DetailBill.Product_id = Product.Product_id "
+            string sqlQuery = "SELECT TOP 10 with TIES ProductName as Name , Sum(Quantities) as Sales from Product, DetailBill, Bill "
+                + "Where DetailBill.Product_id = Product.Product_id and Bill.Bill_id = DetailBill.Bill_id"
+                + " and Month(DateBill) = '" + month + "'"
+                + " and Year(DateBill)='" + year + "'"
                 + "Group BY ProductName "
                 + "Order By Sum(Quantities) DESC";
             return connect.GetData(sqlQuery);
@@ -105,12 +108,14 @@ namespace _DoAn.Models
             string sqlQuerry = "SELECT DateBill FROM Bill WHERE Bill_id='" + bill + "'";
             return connect.GetData(sqlQuerry).Rows[0][0].ToString();
         }
-        public DataTable GetTopData()
+        public DataTable GetTopData(string month, string year)
         {
             ConnectDB connect = new ConnectDB();
             string sqlQuery = "Select top 5 with ties em.EmployName 'Employee Name', Sum(BillValue) 'Doanh thu' "
                 + " FROM Bill bi, Employee em"
                 + " WHERE bi.Employee_id = em.Employee_id"
+                + " and Month(DateBill) = '" + month + "'"
+                + " and Year(DateBill)='" + year + "'"
                    + " Group by em.EmployName"
                    + " Order by  Sum(BillValue) Desc";
             return connect.GetData(sqlQuery);

@@ -85,10 +85,10 @@ namespace _DoAn.Presenters
                 return true;
             }
         }
-        public bool GetTopProduct()
+        public bool GetTopProduct( string month, string year)
         {
             DataTable dt = new DataTable();
-            dt = statistics.GetTop10ProductData();
+            dt = statistics.GetTop10ProductData(month,year);
             statisticview.gvBestSeller.DataSource = dt;
             return true;
         }
@@ -98,10 +98,10 @@ namespace _DoAn.Presenters
             dt = statistics.GetEmployee();
             statisticview.gvEmployee.DataSource = dt;
         }
-        public void GetTopResult()
+        public void GetTopResult(string month, string year)
         {
             DataTable dt = new DataTable();
-            dt=statistics.GetTopData();
+            dt=statistics.GetTopData(month, year);
             statisticview.gvEmployee.DataSource = dt;
         }        
         public bool GetLineChart(string month, string year)
@@ -120,6 +120,8 @@ namespace _DoAn.Presenters
             GetLineChart(arrayDate[1], arrayDate[2]);
             GetProductMonth(arrayDate[1], arrayDate[2]);
             GetProductToday(arrayDate[0], arrayDate[1], arrayDate[2]);
+            GetTopProduct(arrayDate[1], arrayDate[2]);
+            GetTopResult(arrayDate[1], arrayDate[2]);
             return true;
         }
         public bool Print(System.Drawing.Printing.PrintPageEventArgs e)

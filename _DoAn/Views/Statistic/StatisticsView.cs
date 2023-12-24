@@ -131,7 +131,7 @@ namespace _DoAn.Views.Statistic
             statisticPresenter.GetRevenueMonth(sMonth, sYear);
             statisticPresenter.GetRevenueToday(sDay, sMonth, sYear);
             lbViewAllBill_Click(sender, e);
-            statisticPresenter.GetTopProduct();
+            statisticPresenter.GetTopProduct(sMonth,sYear);
             statisticPresenter.GetSaleStatus();
             statisticPresenter.GetLineChart(sMonth, sYear);
             statisticPresenter.GetProductMonth(sMonth, sYear);
@@ -151,10 +151,12 @@ namespace _DoAn.Views.Statistic
 
         private void lbViewAllBill_Click(object sender, EventArgs e)
         {
+            string sMonth = DateTime.Now.ToString("MM");
+            string sYear = DateTime.Now.ToString("yyyy");
             if (lbViewAllBill.Text == "View all statuses")
             {
                 StatisticPresenter statisticPresenter = new StatisticPresenter(this);
-                statisticPresenter.GetTopResult();
+                statisticPresenter.GetTopResult(sMonth,sYear);
                 lbViewAllBill.Text = "View sale results"; 
                 lbstt.Text = "Sale statuses";
             }
