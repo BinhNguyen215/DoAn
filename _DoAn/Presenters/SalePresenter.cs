@@ -224,7 +224,7 @@ namespace _DoAn.Presenters
             graphic.DrawString("Customer: " + saleview.Cus_Name, new Font("Courier New", 12, FontStyle.Bold), new SolidBrush(Color.Black), startX, 120);
             graphic.DrawString("Phone: " + saleview.Phone, new Font("Courier New", 12), new SolidBrush(Color.Black), startX, 140);
 
-            string top = "Product".PadRight(40) + "Quantities".PadRight(20) + "Total".PadRight(20);
+            string top = "Product".PadRight(40) + "Quantities".PadRight(20) + "Unit Price".PadRight(20);
             graphic.DrawString(top, font, new SolidBrush(Color.Black), startX, startY + offset);
             offset = offset + (int)fontHeight; //make the spacing consistent
             graphic.DrawString("-------------------------------------------------------------------", font, new SolidBrush(Color.Black), startX, startY + offset);

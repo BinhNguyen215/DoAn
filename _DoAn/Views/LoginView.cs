@@ -203,10 +203,10 @@ namespace _DoAn.Views
 
         private void tbxPassword_OnIconRightClick(object sender, EventArgs e)
         {
-            if (flag)
-            {
-                tbxPassword.
-            }
+            //if (flag)
+            //{
+            //    tbxPassword.
+            //}
         }
     }
 }
