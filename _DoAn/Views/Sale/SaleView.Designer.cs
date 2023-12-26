@@ -270,6 +270,9 @@
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             this.dgvListProduct.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvListProduct.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvListProduct.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvListProduct.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvListProduct.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -310,7 +313,6 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvListProduct.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvListProduct.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvListProduct.EnableHeadersVisualStyles = false;
             this.dgvListProduct.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(220)))), ((int)(((byte)(188)))));
             this.dgvListProduct.HeaderBackColor = System.Drawing.Color.ForestGreen;
@@ -378,6 +380,9 @@
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
             this.dgvDetailBill.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvDetailBill.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvDetailBill.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDetailBill.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dgvDetailBill.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -418,7 +423,6 @@
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvDetailBill.DefaultCellStyle = dataGridViewCellStyle6;
-            this.dgvDetailBill.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvDetailBill.EnableHeadersVisualStyles = false;
             this.dgvDetailBill.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.dgvDetailBill.HeaderBackColor = System.Drawing.Color.DodgerBlue;
@@ -465,6 +469,9 @@
             dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
             this.dgvCart.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            this.dgvCart.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvCart.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvCart.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dgvCart.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -511,7 +518,6 @@
             dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvCart.DefaultCellStyle = dataGridViewCellStyle9;
-            this.dgvCart.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvCart.EnableHeadersVisualStyles = false;
             this.dgvCart.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.dgvCart.HeaderBackColor = System.Drawing.Color.ForestGreen;
@@ -609,7 +615,7 @@
             this.gpInvoce.LabelAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.gpInvoce.LabelIndent = 10;
             this.gpInvoce.LineStyle = Bunifu.UI.WinForms.BunifuGroupBox.LineStyles.Solid;
-            this.gpInvoce.Location = new System.Drawing.Point(807, 592);
+            this.gpInvoce.Location = new System.Drawing.Point(803, 592);
             this.gpInvoce.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.gpInvoce.Name = "gpInvoce";
             this.gpInvoce.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
