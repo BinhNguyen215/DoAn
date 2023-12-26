@@ -26,7 +26,7 @@ namespace _DoAn.Models
         public DataTable GetProductData()//**
         {
             ConnectDB connect = new ConnectDB();
-            string sqlQuery = "select Product_id as ID, ProductName as Name, Price as 'Price-UnitBig',  uni.Unit_Namelv2 as 'Unit(Small)', uni.Unit_Namelv1 as 'Unit(Big)', uni.Value as 'Coef' from Product, Unit uni ";
+            string sqlQuery = "select Product_id as ID, ProductName as Name,  Price as 'Price-UnitBig', lv2Quantity as 'Available-LV2',  uni.Unit_Namelv2 as 'Unit(Small)', lv1Quantity as 'Available-LV1',uni.Unit_Namelv1 as 'Unit(Big)', uni.Value as 'Coef' from Product, Unit uni ";
             return connect.GetData(sqlQuery);
         }
 

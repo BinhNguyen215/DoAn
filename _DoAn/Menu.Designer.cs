@@ -87,7 +87,7 @@
             this.bunifuGradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
-            this.bunifuGradientPanel1.Size = new System.Drawing.Size(1283, 690);
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(1495, 909);
             this.bunifuGradientPanel1.TabIndex = 0;
             // 
             // panelDesktop
@@ -103,7 +103,7 @@
             this.panelDesktop.Name = "panelDesktop";
             this.panelDesktop.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.panelDesktop.ShowBorders = true;
-            this.panelDesktop.Size = new System.Drawing.Size(1083, 590);
+            this.panelDesktop.Size = new System.Drawing.Size(1295, 809);
             this.panelDesktop.TabIndex = 2;
             // 
             // bunifuGradientPanel2
@@ -124,7 +124,7 @@
             this.bunifuGradientPanel2.Location = new System.Drawing.Point(200, 0);
             this.bunifuGradientPanel2.Name = "bunifuGradientPanel2";
             this.bunifuGradientPanel2.Quality = 10;
-            this.bunifuGradientPanel2.Size = new System.Drawing.Size(1083, 100);
+            this.bunifuGradientPanel2.Size = new System.Drawing.Size(1295, 100);
             this.bunifuGradientPanel2.TabIndex = 1;
             // 
             // bunifuFormControlBox1
@@ -156,7 +156,7 @@
             this.bunifuFormControlBox1.HelpBoxOptions.IconPressedColor = System.Drawing.Color.Black;
             this.bunifuFormControlBox1.HelpBoxOptions.IconSize = new System.Drawing.Size(22, 22);
             this.bunifuFormControlBox1.HelpBoxOptions.PressedColor = System.Drawing.Color.Silver;
-            this.bunifuFormControlBox1.Location = new System.Drawing.Point(991, 2);
+            this.bunifuFormControlBox1.Location = new System.Drawing.Point(1203, 2);
             this.bunifuFormControlBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bunifuFormControlBox1.MaximizeBox = false;
             this.bunifuFormControlBox1.MaximizeBoxOptions.BackColor = System.Drawing.Color.Transparent;
@@ -209,7 +209,7 @@
             this.btnIn4.ImageSize = new System.Drawing.Size(40, 40);
             this.btnIn4.ImageZoomSize = new System.Drawing.Size(60, 60);
             this.btnIn4.InitialImage = ((System.Drawing.Image)(resources.GetObject("btnIn4.InitialImage")));
-            this.btnIn4.Location = new System.Drawing.Point(1445, 24);
+            this.btnIn4.Location = new System.Drawing.Point(1223, 40);
             this.btnIn4.Name = "btnIn4";
             this.btnIn4.Rotation = 0;
             this.btnIn4.ShowActiveImage = false;
@@ -359,7 +359,7 @@
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.ShowBorders = true;
-            this.panelMenu.Size = new System.Drawing.Size(200, 690);
+            this.panelMenu.Size = new System.Drawing.Size(200, 909);
             this.panelMenu.TabIndex = 0;
             // 
             // inlicator
@@ -406,7 +406,7 @@
             this.btnLogout.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnLogout.DisabledFillColor = System.Drawing.Color.Empty;
             this.btnLogout.DisabledForecolor = System.Drawing.Color.Empty;
-            this.btnLogout.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnLogout.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnLogout.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
             this.btnLogout.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.btnLogout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -428,7 +428,7 @@
             this.btnLogout.IdleIconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnLogout.IdleIconLeftImage")));
             this.btnLogout.IdleIconRightImage = null;
             this.btnLogout.IndicateFocus = false;
-            this.btnLogout.Location = new System.Drawing.Point(0, 680);
+            this.btnLogout.Location = new System.Drawing.Point(0, 849);
             this.btnLogout.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
@@ -1131,12 +1131,12 @@
             this.bunifuShapes3.BorderThickness = 3;
             this.bunifuShapes3.FillColor = System.Drawing.Color.Transparent;
             this.bunifuShapes3.FillShape = true;
-            this.bunifuShapes3.Location = new System.Drawing.Point(2, 195);
+            this.bunifuShapes3.Location = new System.Drawing.Point(1, 194);
             this.bunifuShapes3.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuShapes3.Name = "bunifuShapes3";
             this.bunifuShapes3.Shape = Bunifu.UI.WinForms.BunifuShapes.Shapes.Line;
             this.bunifuShapes3.Sides = 5;
-            this.bunifuShapes3.Size = new System.Drawing.Size(194, 6);
+            this.bunifuShapes3.Size = new System.Drawing.Size(198, 6);
             this.bunifuShapes3.TabIndex = 25;
             this.bunifuShapes3.Text = "bunifuShapes3";
             // 
@@ -1320,7 +1320,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1283, 690);
+            this.ClientSize = new System.Drawing.Size(1495, 909);
             this.Controls.Add(this.bunifuGradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

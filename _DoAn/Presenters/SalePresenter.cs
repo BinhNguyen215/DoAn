@@ -41,10 +41,23 @@ namespace _DoAn.Presenters
             saleview.Price = "";
             saleview.Quantities = "";
             saleview.Unit_Name = "";
+
+            saleview.dgv_ListProduct.ClearSelection();
+            saleview.ValueLv1 = "Undefine";
+            saleview.ValueLv2 = "Undefine";
             return true;
         }
-
-        public bool RetriveProduct(int index, string id, string name, string price,string unit, string quan="1")
+        public bool CheckSoldOutLv1()
+        {
+            if (int.Parse(saleview.ValueLv1) > 0) return false;
+            return true;
+        }
+        public bool CheckSoldOutLv2()
+        {
+            if (int.Parse(saleview.ValueLv2) > 0) return false;
+            return true;
+        }
+        public bool RetriveProduct(int index, string id, string name, string price,string valueLv2,string unit2,string valueLv1,string unit1)
         {
             if (index != -1)
             {
@@ -52,8 +65,11 @@ namespace _DoAn.Presenters
                 saleview.Product_id = id;
                 saleview.Product_Name = name;
                 saleview.Price = price;
-                saleview.Quantities = quan;
-                saleview.Unit_Name=unit;
+                saleview.Unit_Name= unit1;
+                saleview.lbUnitLv1 = unit1;
+                saleview.lbUnitLv2 = unit2;
+                saleview.ValueLv1= valueLv1;
+                saleview.ValueLv2 = valueLv2;
             }
             return true;
         }
@@ -69,7 +85,7 @@ namespace _DoAn.Presenters
                     {
                         if (Convert.ToString(row.Cells[0].Value) == saleview.Product_id && row.Cells[4].Value==saleview.Unit_Name)
                         {
-                            row.Cells[3].Value = (int.Parse(saleview.Quantities) *Convert.ToInt16(row.Cells[3].Value.ToString()));
+                            row.Cells[3].Value = (int.Parse(saleview.Quantities) + int.Parse(row.Cells[3].Value.ToString()));
                             found = true;
                             return true;
                         }
