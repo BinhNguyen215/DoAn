@@ -140,7 +140,7 @@ namespace _DoAn.Views
 
         private void tbxPassword_KeyDown(object sender, KeyEventArgs e)
         {
-            if(e.KeyCode == Keys.Enter)
+            if (e.KeyCode == Keys.Enter)
             {
                 btnSignin_Click(sender, e);
             }
@@ -148,7 +148,7 @@ namespace _DoAn.Views
 
         private void tbxOTP_KeyDown(object sender, KeyEventArgs e)
         {
-            if( e.KeyCode == Keys.Enter)
+            if (e.KeyCode == Keys.Enter)
             {
                 tbnChangePassword_Click(sender, e);
             }
@@ -156,7 +156,7 @@ namespace _DoAn.Views
 
         private void tbxNewPassword2_KeyDown(object sender, KeyEventArgs e)
         {
-            if(e.KeyCode == Keys.Enter)
+            if (e.KeyCode == Keys.Enter)
             {
                 tbnConfirm_Click(sender, e);
             }
@@ -164,49 +164,42 @@ namespace _DoAn.Views
 
         private void tbxUsername_TextChange(object sender, EventArgs e)
         {
-            string allowedChars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"; 
+            string allowedChars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
             string currentText = tbxUsername.Text;
-            string newText = ""; 
+            string newText = "";
 
             foreach (char c in currentText)
             {
-                if (allowedChars.Contains(c)) 
+                if (allowedChars.Contains(c))
                 {
                     newText += c;
                 }
             }
 
-            tbxUsername.Text = newText; 
-            tbxUsername.SelectionStart = tbxUsername.Text.Length; 
+            tbxUsername.Text = newText;
+            tbxUsername.SelectionStart = tbxUsername.Text.Length;
         }
 
         private void tbxPassword_TextChange(object sender, EventArgs e)
         {
-            string allowedChars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"; 
+            string allowedChars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
             string currentText = tbxPassword.Text;
-            string newText = ""; 
+            string newText = "";
 
             foreach (char c in currentText)
             {
-                if (allowedChars.Contains(c)) 
+                if (allowedChars.Contains(c))
                 {
                     newText += c;
                 }
             }
 
-            tbxPassword.Text = newText; 
-            tbxPassword.SelectionStart = tbxPassword.Text.Length; 
+            tbxPassword.Text = newText;
+            tbxPassword.SelectionStart = tbxPassword.Text.Length;
         }
-        bool flag = false;
 
-        private void tbxPassword_OnIconRightClick(object sender, EventArgs e)
-        {
-            //if (flag)
-            //{
-            //    tbxPassword.
-            //}
-        }
+         
     }
 }

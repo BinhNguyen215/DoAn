@@ -85,10 +85,14 @@
             this.txtName = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuFormDock1 = new Bunifu.UI.WinForms.BunifuFormDock();
             this.gpProperties = new Bunifu.UI.WinForms.BunifuGroupBox();
+            this.checkBoxLv1 = new Bunifu.UI.WinForms.BunifuCheckBox();
+            this.lbSoldOutLv1 = new System.Windows.Forms.Label();
+            this.lbSoldOutLv2 = new System.Windows.Forms.Label();
+            this.lbValueLv2 = new System.Windows.Forms.Label();
+            this.lbValueLv1 = new System.Windows.Forms.Label();
             this.lbLv1 = new System.Windows.Forms.Label();
             this.lbLv2 = new System.Windows.Forms.Label();
-            this.checkBoxLv1 = new Bunifu.UI.WinForms.BunifuCheckBox();
-            this.checkBoxlv2 = new Bunifu.UI.WinForms.BunifuCheckBox();
+            this.checkBoxLv2 = new Bunifu.UI.WinForms.BunifuCheckBox();
             this.txtQuantities = new Bunifu.UI.WinForms.BunifuTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -134,7 +138,7 @@
             this.bunifuTextBox1.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bunifuTextBox1.Lines = new string[0];
             this.bunifuTextBox1.Location = new System.Drawing.Point(8, 0);
-            this.bunifuTextBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.bunifuTextBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bunifuTextBox1.MaxLength = 32767;
             this.bunifuTextBox1.MinimumSize = new System.Drawing.Size(1, 1);
             this.bunifuTextBox1.Modified = false;
@@ -160,7 +164,7 @@
             stateProperties4.ForeColor = System.Drawing.Color.Empty;
             stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.bunifuTextBox1.OnIdleState = stateProperties4;
-            this.bunifuTextBox1.Padding = new System.Windows.Forms.Padding(2);
+            this.bunifuTextBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bunifuTextBox1.PasswordChar = '\0';
             this.bunifuTextBox1.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.bunifuTextBox1.PlaceholderText = "Enter text";
@@ -319,18 +323,17 @@
             this.dgvListProduct.HeaderBgColor = System.Drawing.Color.Empty;
             this.dgvListProduct.HeaderForeColor = System.Drawing.Color.White;
             this.dgvListProduct.Location = new System.Drawing.Point(2, 27);
-            this.dgvListProduct.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvListProduct.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvListProduct.Name = "dgvListProduct";
             this.dgvListProduct.ReadOnly = true;
             this.dgvListProduct.RowHeadersVisible = false;
             this.dgvListProduct.RowHeadersWidth = 62;
             this.dgvListProduct.RowTemplate.Height = 40;
             this.dgvListProduct.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvListProduct.Size = new System.Drawing.Size(712, 599);
+            this.dgvListProduct.Size = new System.Drawing.Size(737, 599);
             this.dgvListProduct.TabIndex = 2;
             this.dgvListProduct.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.LimeGreen;
             this.dgvListProduct.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListProduct_CellContentClick);
-            this.dgvListProduct.DoubleClick += new System.EventHandler(this.dgvListProduct_DoubleClick);
             // 
             // gpProduct
             // 
@@ -346,7 +349,7 @@
             this.gpProduct.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.gpProduct.Name = "gpProduct";
             this.gpProduct.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.gpProduct.Size = new System.Drawing.Size(716, 629);
+            this.gpProduct.Size = new System.Drawing.Size(741, 629);
             this.gpProduct.TabIndex = 43;
             this.gpProduct.TabStop = false;
             this.gpProduct.Text = "Product Table";
@@ -361,7 +364,7 @@
             this.bunifuGroupBox4.LabelAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.bunifuGroupBox4.LabelIndent = 10;
             this.bunifuGroupBox4.LineStyle = Bunifu.UI.WinForms.BunifuGroupBox.LineStyles.Solid;
-            this.bunifuGroupBox4.Location = new System.Drawing.Point(807, 66);
+            this.bunifuGroupBox4.Location = new System.Drawing.Point(834, 66);
             this.bunifuGroupBox4.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.bunifuGroupBox4.Name = "bunifuGroupBox4";
             this.bunifuGroupBox4.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -450,7 +453,7 @@
             this.gbCart.LabelAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.gbCart.LabelIndent = 10;
             this.gbCart.LineStyle = Bunifu.UI.WinForms.BunifuGroupBox.LineStyles.Solid;
-            this.gbCart.Location = new System.Drawing.Point(805, 60);
+            this.gbCart.Location = new System.Drawing.Point(832, 60);
             this.gbCart.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.gbCart.Name = "gbCart";
             this.gbCart.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -574,6 +577,7 @@
             // 
             this.clmUnit.FillWeight = 86.92893F;
             this.clmUnit.HeaderText = "Unit";
+            this.clmUnit.MinimumWidth = 8;
             this.clmUnit.Name = "clmUnit";
             this.clmUnit.ReadOnly = true;
             // 
@@ -586,8 +590,8 @@
             this.lbViewAllBill.Cursor = System.Windows.Forms.Cursors.Default;
             this.lbViewAllBill.CursorType = System.Windows.Forms.Cursors.Default;
             this.lbViewAllBill.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
-            this.lbViewAllBill.Location = new System.Drawing.Point(1301, 23);
-            this.lbViewAllBill.Margin = new System.Windows.Forms.Padding(2);
+            this.lbViewAllBill.Location = new System.Drawing.Point(1326, 23);
+            this.lbViewAllBill.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.lbViewAllBill.Name = "lbViewAllBill";
             this.lbViewAllBill.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lbViewAllBill.Size = new System.Drawing.Size(124, 32);
@@ -599,9 +603,7 @@
             // 
             // gpInvoce
             // 
-            this.gpInvoce.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.gpInvoce.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.gpInvoce.BorderColor = System.Drawing.Color.Black;
             this.gpInvoce.BorderRadius = 4;
             this.gpInvoce.BorderThickness = 2;
@@ -615,7 +617,7 @@
             this.gpInvoce.LabelAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.gpInvoce.LabelIndent = 10;
             this.gpInvoce.LineStyle = Bunifu.UI.WinForms.BunifuGroupBox.LineStyles.Solid;
-            this.gpInvoce.Location = new System.Drawing.Point(803, 592);
+            this.gpInvoce.Location = new System.Drawing.Point(834, 592);
             this.gpInvoce.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.gpInvoce.Name = "gpInvoce";
             this.gpInvoce.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -887,7 +889,7 @@
             stateProperties12.ForeColor = System.Drawing.Color.Empty;
             stateProperties12.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtPhone.OnIdleState = stateProperties12;
-            this.txtPhone.Padding = new System.Windows.Forms.Padding(2);
+            this.txtPhone.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtPhone.PasswordChar = '\0';
             this.txtPhone.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtPhone.PlaceholderText = "Phone number";
@@ -897,7 +899,7 @@
             this.txtPhone.SelectionLength = 0;
             this.txtPhone.SelectionStart = 0;
             this.txtPhone.ShortcutsEnabled = true;
-            this.txtPhone.Size = new System.Drawing.Size(324, 44);
+            this.txtPhone.Size = new System.Drawing.Size(324, 31);
             this.txtPhone.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtPhone.TabIndex = 1;
             this.txtPhone.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -965,7 +967,7 @@
             stateProperties16.ForeColor = System.Drawing.Color.Empty;
             stateProperties16.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtName.OnIdleState = stateProperties16;
-            this.txtName.Padding = new System.Windows.Forms.Padding(2);
+            this.txtName.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtName.PasswordChar = '\0';
             this.txtName.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtName.PlaceholderText = "Customer name";
@@ -975,7 +977,7 @@
             this.txtName.SelectionLength = 0;
             this.txtName.SelectionStart = 0;
             this.txtName.ShortcutsEnabled = true;
-            this.txtName.Size = new System.Drawing.Size(324, 44);
+            this.txtName.Size = new System.Drawing.Size(324, 31);
             this.txtName.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtName.TabIndex = 0;
             this.txtName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -1029,16 +1031,18 @@
             // 
             // gpProperties
             // 
-            this.gpProperties.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.gpProperties.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.gpProperties.BorderColor = System.Drawing.Color.Black;
             this.gpProperties.BorderRadius = 4;
             this.gpProperties.BorderThickness = 2;
+            this.gpProperties.Controls.Add(this.checkBoxLv1);
+            this.gpProperties.Controls.Add(this.lbSoldOutLv1);
+            this.gpProperties.Controls.Add(this.lbSoldOutLv2);
+            this.gpProperties.Controls.Add(this.lbValueLv2);
+            this.gpProperties.Controls.Add(this.lbValueLv1);
             this.gpProperties.Controls.Add(this.lbLv1);
             this.gpProperties.Controls.Add(this.lbLv2);
-            this.gpProperties.Controls.Add(this.checkBoxLv1);
-            this.gpProperties.Controls.Add(this.checkBoxlv2);
+            this.gpProperties.Controls.Add(this.checkBoxLv2);
             this.gpProperties.Controls.Add(this.txtQuantities);
             this.gpProperties.Controls.Add(this.label4);
             this.gpProperties.Controls.Add(this.label3);
@@ -1048,36 +1052,14 @@
             this.gpProperties.LabelAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.gpProperties.LabelIndent = 10;
             this.gpProperties.LineStyle = Bunifu.UI.WinForms.BunifuGroupBox.LineStyles.Solid;
-            this.gpProperties.Location = new System.Drawing.Point(42, 700);
+            this.gpProperties.Location = new System.Drawing.Point(37, 706);
             this.gpProperties.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.gpProperties.Name = "gpProperties";
             this.gpProperties.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.gpProperties.Size = new System.Drawing.Size(716, 177);
+            this.gpProperties.Size = new System.Drawing.Size(741, 177);
             this.gpProperties.TabIndex = 55;
             this.gpProperties.TabStop = false;
             this.gpProperties.Text = "Properties";
-            // 
-            // lbLv1
-            // 
-            this.lbLv1.AutoSize = true;
-            this.lbLv1.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold);
-            this.lbLv1.Location = new System.Drawing.Point(389, 122);
-            this.lbLv1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbLv1.Name = "lbLv1";
-            this.lbLv1.Size = new System.Drawing.Size(90, 25);
-            this.lbLv1.TabIndex = 66;
-            this.lbLv1.Text = "Undefine";
-            // 
-            // lbLv2
-            // 
-            this.lbLv2.AutoSize = true;
-            this.lbLv2.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold);
-            this.lbLv2.Location = new System.Drawing.Point(240, 123);
-            this.lbLv2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbLv2.Name = "lbLv2";
-            this.lbLv2.Size = new System.Drawing.Size(90, 25);
-            this.lbLv2.TabIndex = 48;
-            this.lbLv2.Text = "Undefine";
             // 
             // checkBoxLv1
             // 
@@ -1097,7 +1079,7 @@
             this.checkBoxLv1.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.checkBoxLv1.Cursor = System.Windows.Forms.Cursors.Default;
             this.checkBoxLv1.CustomCheckmarkImage = null;
-            this.checkBoxLv1.Location = new System.Drawing.Point(363, 123);
+            this.checkBoxLv1.Location = new System.Drawing.Point(397, 52);
             this.checkBoxLv1.MinimumSize = new System.Drawing.Size(17, 17);
             this.checkBoxLv1.Name = "checkBoxLv1";
             this.checkBoxLv1.OnCheck.BorderColor = System.Drawing.Color.DodgerBlue;
@@ -1128,64 +1110,132 @@
             this.checkBoxLv1.OnUncheck.CheckBoxColor = System.Drawing.Color.Transparent;
             this.checkBoxLv1.Size = new System.Drawing.Size(21, 21);
             this.checkBoxLv1.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
-            this.checkBoxLv1.TabIndex = 65;
+            this.checkBoxLv1.TabIndex = 74;
             this.checkBoxLv1.ThreeState = false;
             this.checkBoxLv1.ToolTipText = null;
-            this.checkBoxLv1.CheckedChanged += new System.EventHandler<Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs>(this.checkBoxLv1_CheckedChanged);
+            this.checkBoxLv1.CheckedChanged += new System.EventHandler<Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs>(this.checkBoxLv1_CheckedChanged_1);
             // 
-            // checkBoxlv2
+            // lbSoldOutLv1
             // 
-            this.checkBoxlv2.AllowBindingControlAnimation = true;
-            this.checkBoxlv2.AllowBindingControlColorChanges = false;
-            this.checkBoxlv2.AllowBindingControlLocation = true;
-            this.checkBoxlv2.AllowCheckBoxAnimation = false;
-            this.checkBoxlv2.AllowCheckmarkAnimation = true;
-            this.checkBoxlv2.AllowOnHoverStates = true;
-            this.checkBoxlv2.AutoCheck = true;
-            this.checkBoxlv2.BackColor = System.Drawing.Color.Transparent;
-            this.checkBoxlv2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("checkBoxlv2.BackgroundImage")));
-            this.checkBoxlv2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.checkBoxlv2.BindingControlPosition = Bunifu.UI.WinForms.BunifuCheckBox.BindingControlPositions.Right;
-            this.checkBoxlv2.BorderRadius = 12;
-            this.checkBoxlv2.Checked = false;
-            this.checkBoxlv2.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
-            this.checkBoxlv2.Cursor = System.Windows.Forms.Cursors.Default;
-            this.checkBoxlv2.CustomCheckmarkImage = null;
-            this.checkBoxlv2.Location = new System.Drawing.Point(214, 123);
-            this.checkBoxlv2.MinimumSize = new System.Drawing.Size(17, 17);
-            this.checkBoxlv2.Name = "checkBoxlv2";
-            this.checkBoxlv2.OnCheck.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.checkBoxlv2.OnCheck.BorderRadius = 12;
-            this.checkBoxlv2.OnCheck.BorderThickness = 2;
-            this.checkBoxlv2.OnCheck.CheckBoxColor = System.Drawing.Color.DodgerBlue;
-            this.checkBoxlv2.OnCheck.CheckmarkColor = System.Drawing.Color.White;
-            this.checkBoxlv2.OnCheck.CheckmarkThickness = 2;
-            this.checkBoxlv2.OnDisable.BorderColor = System.Drawing.Color.LightGray;
-            this.checkBoxlv2.OnDisable.BorderRadius = 12;
-            this.checkBoxlv2.OnDisable.BorderThickness = 2;
-            this.checkBoxlv2.OnDisable.CheckBoxColor = System.Drawing.Color.Transparent;
-            this.checkBoxlv2.OnDisable.CheckmarkColor = System.Drawing.Color.LightGray;
-            this.checkBoxlv2.OnDisable.CheckmarkThickness = 2;
-            this.checkBoxlv2.OnHoverChecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.checkBoxlv2.OnHoverChecked.BorderRadius = 12;
-            this.checkBoxlv2.OnHoverChecked.BorderThickness = 2;
-            this.checkBoxlv2.OnHoverChecked.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.checkBoxlv2.OnHoverChecked.CheckmarkColor = System.Drawing.Color.White;
-            this.checkBoxlv2.OnHoverChecked.CheckmarkThickness = 2;
-            this.checkBoxlv2.OnHoverUnchecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.checkBoxlv2.OnHoverUnchecked.BorderRadius = 12;
-            this.checkBoxlv2.OnHoverUnchecked.BorderThickness = 1;
-            this.checkBoxlv2.OnHoverUnchecked.CheckBoxColor = System.Drawing.Color.Transparent;
-            this.checkBoxlv2.OnUncheck.BorderColor = System.Drawing.Color.DarkGray;
-            this.checkBoxlv2.OnUncheck.BorderRadius = 12;
-            this.checkBoxlv2.OnUncheck.BorderThickness = 1;
-            this.checkBoxlv2.OnUncheck.CheckBoxColor = System.Drawing.Color.Transparent;
-            this.checkBoxlv2.Size = new System.Drawing.Size(21, 21);
-            this.checkBoxlv2.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
-            this.checkBoxlv2.TabIndex = 64;
-            this.checkBoxlv2.ThreeState = false;
-            this.checkBoxlv2.ToolTipText = null;
-            this.checkBoxlv2.CheckedChanged += new System.EventHandler<Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs>(this.checkBoxlv2_CheckedChanged);
+            this.lbSoldOutLv1.AutoSize = true;
+            this.lbSoldOutLv1.Font = new System.Drawing.Font("Segoe UI Semibold", 13F, System.Drawing.FontStyle.Bold);
+            this.lbSoldOutLv1.ForeColor = System.Drawing.Color.Red;
+            this.lbSoldOutLv1.Location = new System.Drawing.Point(393, 78);
+            this.lbSoldOutLv1.Name = "lbSoldOutLv1";
+            this.lbSoldOutLv1.Size = new System.Drawing.Size(146, 25);
+            this.lbSoldOutLv1.TabIndex = 73;
+            this.lbSoldOutLv1.Text = "(Sold out items)";
+            this.lbSoldOutLv1.Visible = false;
+            // 
+            // lbSoldOutLv2
+            // 
+            this.lbSoldOutLv2.AutoSize = true;
+            this.lbSoldOutLv2.Font = new System.Drawing.Font("Segoe UI Semibold", 13F, System.Drawing.FontStyle.Bold);
+            this.lbSoldOutLv2.ForeColor = System.Drawing.Color.Red;
+            this.lbSoldOutLv2.Location = new System.Drawing.Point(216, 76);
+            this.lbSoldOutLv2.Name = "lbSoldOutLv2";
+            this.lbSoldOutLv2.Size = new System.Drawing.Size(146, 25);
+            this.lbSoldOutLv2.TabIndex = 72;
+            this.lbSoldOutLv2.Text = "(Sold out items)";
+            this.lbSoldOutLv2.Visible = false;
+            // 
+            // lbValueLv2
+            // 
+            this.lbValueLv2.AutoSize = true;
+            this.lbValueLv2.Font = new System.Drawing.Font("Segoe UI Semibold", 13F, System.Drawing.FontStyle.Bold);
+            this.lbValueLv2.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.lbValueLv2.Location = new System.Drawing.Point(214, 76);
+            this.lbValueLv2.Name = "lbValueLv2";
+            this.lbValueLv2.Size = new System.Drawing.Size(101, 25);
+            this.lbValueLv2.TabIndex = 71;
+            this.lbValueLv2.Text = "(Undefine)";
+            // 
+            // lbValueLv1
+            // 
+            this.lbValueLv1.AutoSize = true;
+            this.lbValueLv1.Font = new System.Drawing.Font("Segoe UI Semibold", 13F, System.Drawing.FontStyle.Bold);
+            this.lbValueLv1.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.lbValueLv1.Location = new System.Drawing.Point(424, 78);
+            this.lbValueLv1.Name = "lbValueLv1";
+            this.lbValueLv1.Size = new System.Drawing.Size(101, 25);
+            this.lbValueLv1.TabIndex = 70;
+            this.lbValueLv1.Text = "(Undefine)";
+            // 
+            // lbLv1
+            // 
+            this.lbLv1.AutoSize = true;
+            this.lbLv1.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold);
+            this.lbLv1.Location = new System.Drawing.Point(424, 51);
+            this.lbLv1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbLv1.Name = "lbLv1";
+            this.lbLv1.Size = new System.Drawing.Size(90, 25);
+            this.lbLv1.TabIndex = 66;
+            this.lbLv1.Text = "Undefine";
+            // 
+            // lbLv2
+            // 
+            this.lbLv2.AutoSize = true;
+            this.lbLv2.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold);
+            this.lbLv2.Location = new System.Drawing.Point(245, 52);
+            this.lbLv2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbLv2.Name = "lbLv2";
+            this.lbLv2.Size = new System.Drawing.Size(90, 25);
+            this.lbLv2.TabIndex = 48;
+            this.lbLv2.Text = "Undefine";
+            // 
+            // checkBoxLv2
+            // 
+            this.checkBoxLv2.AllowBindingControlAnimation = true;
+            this.checkBoxLv2.AllowBindingControlColorChanges = false;
+            this.checkBoxLv2.AllowBindingControlLocation = true;
+            this.checkBoxLv2.AllowCheckBoxAnimation = false;
+            this.checkBoxLv2.AllowCheckmarkAnimation = true;
+            this.checkBoxLv2.AllowOnHoverStates = true;
+            this.checkBoxLv2.AutoCheck = true;
+            this.checkBoxLv2.BackColor = System.Drawing.Color.Transparent;
+            this.checkBoxLv2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("checkBoxLv2.BackgroundImage")));
+            this.checkBoxLv2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.checkBoxLv2.BindingControlPosition = Bunifu.UI.WinForms.BunifuCheckBox.BindingControlPositions.Right;
+            this.checkBoxLv2.BorderRadius = 12;
+            this.checkBoxLv2.Checked = false;
+            this.checkBoxLv2.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
+            this.checkBoxLv2.Cursor = System.Windows.Forms.Cursors.Default;
+            this.checkBoxLv2.CustomCheckmarkImage = null;
+            this.checkBoxLv2.Location = new System.Drawing.Point(219, 52);
+            this.checkBoxLv2.MinimumSize = new System.Drawing.Size(17, 17);
+            this.checkBoxLv2.Name = "checkBoxLv2";
+            this.checkBoxLv2.OnCheck.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.checkBoxLv2.OnCheck.BorderRadius = 12;
+            this.checkBoxLv2.OnCheck.BorderThickness = 2;
+            this.checkBoxLv2.OnCheck.CheckBoxColor = System.Drawing.Color.DodgerBlue;
+            this.checkBoxLv2.OnCheck.CheckmarkColor = System.Drawing.Color.White;
+            this.checkBoxLv2.OnCheck.CheckmarkThickness = 2;
+            this.checkBoxLv2.OnDisable.BorderColor = System.Drawing.Color.LightGray;
+            this.checkBoxLv2.OnDisable.BorderRadius = 12;
+            this.checkBoxLv2.OnDisable.BorderThickness = 2;
+            this.checkBoxLv2.OnDisable.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.checkBoxLv2.OnDisable.CheckmarkColor = System.Drawing.Color.LightGray;
+            this.checkBoxLv2.OnDisable.CheckmarkThickness = 2;
+            this.checkBoxLv2.OnHoverChecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.checkBoxLv2.OnHoverChecked.BorderRadius = 12;
+            this.checkBoxLv2.OnHoverChecked.BorderThickness = 2;
+            this.checkBoxLv2.OnHoverChecked.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.checkBoxLv2.OnHoverChecked.CheckmarkColor = System.Drawing.Color.White;
+            this.checkBoxLv2.OnHoverChecked.CheckmarkThickness = 2;
+            this.checkBoxLv2.OnHoverUnchecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.checkBoxLv2.OnHoverUnchecked.BorderRadius = 12;
+            this.checkBoxLv2.OnHoverUnchecked.BorderThickness = 1;
+            this.checkBoxLv2.OnHoverUnchecked.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.checkBoxLv2.OnUncheck.BorderColor = System.Drawing.Color.DarkGray;
+            this.checkBoxLv2.OnUncheck.BorderRadius = 12;
+            this.checkBoxLv2.OnUncheck.BorderThickness = 1;
+            this.checkBoxLv2.OnUncheck.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.checkBoxLv2.Size = new System.Drawing.Size(21, 21);
+            this.checkBoxLv2.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
+            this.checkBoxLv2.TabIndex = 64;
+            this.checkBoxLv2.ThreeState = false;
+            this.checkBoxLv2.ToolTipText = null;
+            this.checkBoxLv2.CheckedChanged += new System.EventHandler<Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs>(this.checkBoxLv2_CheckedChanged_1);
             // 
             // txtQuantities
             // 
@@ -1218,7 +1268,7 @@
             this.txtQuantities.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtQuantities.Lines = new string[] {
         "0"};
-            this.txtQuantities.Location = new System.Drawing.Point(206, 51);
+            this.txtQuantities.Location = new System.Drawing.Point(207, 113);
             this.txtQuantities.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.txtQuantities.MaxLength = 32767;
             this.txtQuantities.MinimumSize = new System.Drawing.Size(1, 1);
@@ -1245,7 +1295,7 @@
             stateProperties20.ForeColor = System.Drawing.Color.Empty;
             stateProperties20.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtQuantities.OnIdleState = stateProperties20;
-            this.txtQuantities.Padding = new System.Windows.Forms.Padding(2);
+            this.txtQuantities.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtQuantities.PasswordChar = '\0';
             this.txtQuantities.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtQuantities.PlaceholderText = "Quantities";
@@ -1265,13 +1315,14 @@
             this.txtQuantities.TextPlaceholder = "Quantities";
             this.txtQuantities.UseSystemPasswordChar = false;
             this.txtQuantities.WordWrap = true;
+            this.txtQuantities.TextChanged += new System.EventHandler(this.txtQuantities_TextChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(43, 55);
+            this.label4.Location = new System.Drawing.Point(44, 117);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(112, 25);
@@ -1283,7 +1334,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(31, 118);
+            this.label3.Location = new System.Drawing.Point(36, 49);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(128, 25);
@@ -1487,7 +1538,7 @@
             this.Controls.Add(this.txtFind);
             this.Controls.Add(this.bunifuTextBox1);
             this.Controls.Add(this.bunifuGroupBox4);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "SaleView";
             this.Text = "SaleView";
             this.Load += new System.EventHandler(this.SaleView_Load);
@@ -1538,7 +1589,11 @@
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnAdd;
         private System.Windows.Forms.Label lbLv1;
         private System.Windows.Forms.Label lbLv2;
+        private Bunifu.UI.WinForms.BunifuCheckBox checkBoxLv2;
+        private System.Windows.Forms.Label lbSoldOutLv1;
+        private System.Windows.Forms.Label lbSoldOutLv2;
+        private System.Windows.Forms.Label lbValueLv2;
+        private System.Windows.Forms.Label lbValueLv1;
         private Bunifu.UI.WinForms.BunifuCheckBox checkBoxLv1;
-        private Bunifu.UI.WinForms.BunifuCheckBox checkBoxlv2;
     }
 }

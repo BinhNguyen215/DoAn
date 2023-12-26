@@ -20,6 +20,12 @@ namespace _DoAn.Views.Sale
         string Quantities { get; set; }
         string Unit_Name{ get; set; }
         string message { get; set; }
+        string lbUnitLv1 { get; set; }
+        string lbUnitLv2 { get; set; }
+
+        string ValueLv1 { get; set; }
+        string ValueLv2 { get; set; }
+
         BunifuDataGridView dgvCart { get; set; }
         BunifuDataGridView dgv_ListProduct { get; set; }
         BunifuDataGridView dgvDetailBill { get; set; }
