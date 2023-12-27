@@ -12,7 +12,7 @@ namespace _DoAn.Views.Sale
         string Find { get; set; }
         string Cus_Name { get; set; }
         string Phone { get; set; }
-        string Employee { get; }
+        string Employee_id { get; }
         string BillValue { get; set; }
         string Product_id { get; set; }
         string Product_Name { get; set; }
@@ -25,9 +25,10 @@ namespace _DoAn.Views.Sale
 
         string ValueLv1 { get; set; }
         string ValueLv2 { get; set; }
-
+        string Coef {  get; set; }
         BunifuDataGridView dgvCart { get; set; }
         BunifuDataGridView dgv_ListProduct { get; set; }
         BunifuDataGridView dgvDetailBill { get; set; }
+        BunifuDataGridView dgvAllBill { get; set; }
     }
 }

@@ -28,44 +28,45 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StatisticDetail));
             this.dtgvDetailBill = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
-            this.lbEmployName = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lbName = new System.Windows.Forms.Label();
-            this.lbBill_id = new System.Windows.Forms.Label();
             this.lbDate = new System.Windows.Forms.Label();
+            this.lbBill_id = new System.Windows.Forms.Label();
+            this.lbName = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lbEmployName = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvDetailBill)).BeginInit();
             this.bunifuPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dtgvDetailBill
             // 
-            this.dtgvDetailBill.AllowCustomTheming = false;
+            this.dtgvDetailBill.AllowCustomTheming = true;
             this.dtgvDetailBill.AllowUserToAddRows = false;
             this.dtgvDetailBill.AllowUserToDeleteRows = false;
             this.dtgvDetailBill.AllowUserToResizeColumns = false;
             this.dtgvDetailBill.AllowUserToResizeRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            this.dtgvDetailBill.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.dtgvDetailBill.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dtgvDetailBill.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgvDetailBill.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dtgvDetailBill.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dtgvDetailBill.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Green;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgvDetailBill.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.dtgvDetailBill.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.ForestGreen;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvDetailBill.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dtgvDetailBill.ColumnHeadersHeight = 40;
             this.dtgvDetailBill.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             this.dtgvDetailBill.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.dtgvDetailBill.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
@@ -73,7 +74,7 @@
             this.dtgvDetailBill.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.dtgvDetailBill.CurrentTheme.BackColor = System.Drawing.Color.White;
             this.dtgvDetailBill.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
-            this.dtgvDetailBill.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.Firebrick;
+            this.dtgvDetailBill.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.ForestGreen;
             this.dtgvDetailBill.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
             this.dtgvDetailBill.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.dtgvDetailBill.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
@@ -84,16 +85,18 @@
             this.dtgvDetailBill.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
             this.dtgvDetailBill.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
             this.dtgvDetailBill.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgvDetailBill.DefaultCellStyle = dataGridViewCellStyle6;
+            this.dtgvDetailBill.Cursor = System.Windows.Forms.Cursors.Default;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgvDetailBill.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dtgvDetailBill.EnableHeadersVisualStyles = false;
             this.dtgvDetailBill.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
-            this.dtgvDetailBill.HeaderBackColor = System.Drawing.Color.Firebrick;
+            this.dtgvDetailBill.HeaderBackColor = System.Drawing.Color.ForestGreen;
             this.dtgvDetailBill.HeaderBgColor = System.Drawing.Color.Empty;
             this.dtgvDetailBill.HeaderForeColor = System.Drawing.Color.White;
             this.dtgvDetailBill.Location = new System.Drawing.Point(12, 74);
@@ -105,7 +108,6 @@
             this.dtgvDetailBill.Size = new System.Drawing.Size(841, 615);
             this.dtgvDetailBill.TabIndex = 0;
             this.dtgvDetailBill.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
-            this.dtgvDetailBill.UseWaitCursor = true;
             // 
             // bunifuPanel1
             // 
@@ -128,46 +130,16 @@
             this.bunifuPanel1.Size = new System.Drawing.Size(867, 68);
             this.bunifuPanel1.TabIndex = 1;
             // 
-            // lbEmployName
+            // lbDate
             // 
-            this.lbEmployName.AutoSize = true;
-            this.lbEmployName.Font = new System.Drawing.Font("Segoe UI Semibold", 12.5F, System.Drawing.FontStyle.Bold);
-            this.lbEmployName.Location = new System.Drawing.Point(25, 26);
-            this.lbEmployName.Name = "lbEmployName";
-            this.lbEmployName.Size = new System.Drawing.Size(140, 23);
-            this.lbEmployName.TabIndex = 0;
-            this.lbEmployName.Text = "Employee Name:";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 12.5F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(437, 26);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 23);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "ID Bill:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 12.5F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(577, 26);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 23);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Date:";
-            // 
-            // lbName
-            // 
-            this.lbName.AutoSize = true;
-            this.lbName.Font = new System.Drawing.Font("Segoe UI Semibold", 12.5F, System.Drawing.FontStyle.Bold);
-            this.lbName.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lbName.Location = new System.Drawing.Point(164, 26);
-            this.lbName.Name = "lbName";
-            this.lbName.Size = new System.Drawing.Size(80, 23);
-            this.lbName.TabIndex = 3;
-            this.lbName.Text = "Undefine";
+            this.lbDate.AutoSize = true;
+            this.lbDate.Font = new System.Drawing.Font("Segoe UI Semibold", 12.5F, System.Drawing.FontStyle.Bold);
+            this.lbDate.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.lbDate.Location = new System.Drawing.Point(631, 26);
+            this.lbDate.Name = "lbDate";
+            this.lbDate.Size = new System.Drawing.Size(80, 23);
+            this.lbDate.TabIndex = 5;
+            this.lbDate.Text = "Undefine";
             // 
             // lbBill_id
             // 
@@ -180,16 +152,46 @@
             this.lbBill_id.TabIndex = 4;
             this.lbBill_id.Text = "Undefine";
             // 
-            // lbDate
+            // lbName
             // 
-            this.lbDate.AutoSize = true;
-            this.lbDate.Font = new System.Drawing.Font("Segoe UI Semibold", 12.5F, System.Drawing.FontStyle.Bold);
-            this.lbDate.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lbDate.Location = new System.Drawing.Point(631, 26);
-            this.lbDate.Name = "lbDate";
-            this.lbDate.Size = new System.Drawing.Size(80, 23);
-            this.lbDate.TabIndex = 5;
-            this.lbDate.Text = "Undefine";
+            this.lbName.AutoSize = true;
+            this.lbName.Font = new System.Drawing.Font("Segoe UI Semibold", 12.5F, System.Drawing.FontStyle.Bold);
+            this.lbName.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.lbName.Location = new System.Drawing.Point(164, 26);
+            this.lbName.Name = "lbName";
+            this.lbName.Size = new System.Drawing.Size(80, 23);
+            this.lbName.TabIndex = 3;
+            this.lbName.Text = "Undefine";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 12.5F, System.Drawing.FontStyle.Bold);
+            this.label2.Location = new System.Drawing.Point(577, 26);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(50, 23);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Date:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 12.5F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(437, 26);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(58, 23);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "ID Bill:";
+            // 
+            // lbEmployName
+            // 
+            this.lbEmployName.AutoSize = true;
+            this.lbEmployName.Font = new System.Drawing.Font("Segoe UI Semibold", 12.5F, System.Drawing.FontStyle.Bold);
+            this.lbEmployName.Location = new System.Drawing.Point(25, 26);
+            this.lbEmployName.Name = "lbEmployName";
+            this.lbEmployName.Size = new System.Drawing.Size(140, 23);
+            this.lbEmployName.TabIndex = 0;
+            this.lbEmployName.Text = "Employee Name:";
             // 
             // StatisticDetail
             // 

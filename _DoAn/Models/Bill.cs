@@ -26,7 +26,8 @@ namespace _DoAn.Models
         public DataTable GetProductData()//**
         {
             ConnectDB connect = new ConnectDB();
-            string sqlQuery = "select Product_id as ID, ProductName as Name,  Price as 'Price-UnitBig', lv2Quantity as 'Available-LV2',  uni.Unit_Namelv2 as 'Unit(Small)', lv1Quantity as 'Available-LV1',uni.Unit_Namelv1 as 'Unit(Big)', uni.Value as 'Coef' from Product, Unit uni ";
+            string sqlQuery = "select pro.Product_id as ID, pro.ProductName as Name,  pro.Price as 'Price-UnitBig', pro.lv2Quantity as 'Available-LV2',  uni.Unit_Namelv2 as 'Unit(Small)', pro.lv1Quantity as 'Available-LV1',uni.Unit_Namelv1 as 'Unit(Big)', uni.Value as 'Coef' from Product pro , Unit uni"
+                    +" where uni.Unit_id = pro.Unit_id";
             return connect.GetData(sqlQuery);
         }
 
@@ -48,7 +49,7 @@ namespace _DoAn.Models
         public DataTable SearchData(string search)//**
         {
             ConnectDB connect = new ConnectDB();
-            string sqlQuery = "select pro.Product_id as ID, pro.ProductName as Name, pro.Price as 'Price-UnitBig',  uni.Unit_Namelv2 as 'Unit(Small)', uni.Unit_Namelv1 as 'Unit(Big)', uni.Value as 'Coef' from Product pro, Unit uni"
+            string sqlQuery = "select pro.Product_id as ID, pro.ProductName as Name,  pro.Price as 'Price-UnitBig', pro.lv2Quantity as 'Available-LV2',  uni.Unit_Namelv2 as 'Unit(Small)', pro.lv1Quantity as 'Available-LV1',uni.Unit_Namelv1 as 'Unit(Big)', uni.Value as 'Coef' from Product pro, Unit uni"
                 + " where (pro.Product_id like '" + search + "%' or pro.ProductName like N'" + search + "%')"
                 + " and uni.Unit_id = pro.Unit_id";
             return connect.GetData(sqlQuery);
