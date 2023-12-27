@@ -200,5 +200,5 @@ namespace _DoAn.Views
             tbxPassword.SelectionStart = tbxPassword.Text.Length;
         }
 
-
+    }
 }

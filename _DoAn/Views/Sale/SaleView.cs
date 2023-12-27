@@ -359,6 +359,7 @@ namespace _DoAn.Views.Sale
                 salePresenter.CalculateTotalPrice();
                 salePresenter.ClearInformation();
             }
+            lbSoldOutLv1.Visible = lbSoldOutLv2.Visible = false;
             btnAdd.Enabled = false;
             checkBoxLv1.Enabled = checkBoxLv2.Enabled=checkBoxLv2.Visible = checkBoxLv1.Visible = false;
             txtQuantities.Enabled = false;
