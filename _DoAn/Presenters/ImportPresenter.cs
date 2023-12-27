@@ -211,7 +211,6 @@ namespace _DoAn.Presenters
         public bool AddDataToDB()
         {
             string id = import.AddData(importview.EmployeeID, importview.SuplierName, importview.TotalPriceProduct);
-
             string contentReceipt = "Import ID: " + id;
             string status = "Completed";
             import.AutoCreatePaySlip(importview.EmployeeID, contentReceipt, importview.TotalPriceProduct, status, "");

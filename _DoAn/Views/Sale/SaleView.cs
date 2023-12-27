@@ -24,7 +24,7 @@ namespace _DoAn.Views.Sale
         {
             InitializeComponent();
         }
-
+        
         public string Find
         {
             get { return txtFind.Text; }
@@ -143,7 +143,6 @@ namespace _DoAn.Views.Sale
                 btnAdd.Enabled = false;
                 lbValueLv1.Visible = lbValueLv2.Visible = false;
 
-
                 if (salePresenter.RetriveProduct(dgvListProduct.CurrentRow.Index, dgvListProduct.CurrentRow.Cells[0].Value.ToString()
                       , dgvListProduct.CurrentRow.Cells[1].Value.ToString(), dgvListProduct.CurrentRow.Cells[2].Value.ToString(), dgvListProduct.CurrentRow.Cells[3].Value.ToString(),
                       dgvListProduct.CurrentRow.Cells[4].Value.ToString(), dgvListProduct.CurrentRow.Cells[5].Value.ToString(), dgvListProduct.CurrentRow.Cells[6].Value.ToString()))
@@ -158,8 +157,6 @@ namespace _DoAn.Views.Sale
                     }
                 }
             } 
-                
-            
         }
         private void btnCreateBill_Click(object sender, EventArgs e)
         {
@@ -242,7 +239,7 @@ namespace _DoAn.Views.Sale
                 {
                     if (salePresenter.CheckSoldOutLv1()) { checkBoxLv1.Checked = false; lbSoldOutLv1.Visible = true; checkBoxLv1.Enabled = false; lbValueLv1.Visible = false; btnAdd.Enabled = false; }
                     else { checkBoxLv1.Enabled = true; lbSoldOutLv1.Visible = false; btnAdd.Enabled = true; lbValueLv1.Text += " Available"; lbValueLv1.Visible = true; }
-
+                    
                     if (salePresenter.CheckSoldOutLv2()) { checkBoxLv2.Checked = false; lbSoldOutLv2.Visible = true; checkBoxLv2.Enabled = false; lbValueLv2.Visible = false; btnAdd.Enabled = false; }
                     else
                     {

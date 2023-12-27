@@ -46,7 +46,7 @@ namespace _DoAn.Models
         public string GetTypeString(string name)
         {
             ConnectDB connect = new ConnectDB();
-            string sqlQuery = "select Supplier_id from Supplier where SupplierName = '" + name + "'";
+            string sqlQuery = "select Supplier_id from Supplier where SupplierName = N'" + name + "'";
             return connect.GetData(sqlQuery).Rows[0]["Supplier_id"].ToString();
         }
         public string AddData(string employee, string suplier, string totalprice)
@@ -54,7 +54,7 @@ namespace _DoAn.Models
             string Suplier_id = GetTypeString(suplier);
             DateTime dateTime = DateTime.UtcNow.Date;
 
-            SqlCommand cmd = new SqlCommand("INSERT INTO ImportForm (Employee_id, Suplier_id,FormDate,TotalPrice) VALUES (@employ, @sup, @date, @price)"
+            SqlCommand cmd = new SqlCommand("INSERT INTO ImportForm (Employee_id, Suplier_id,FormDate,TotalMoney) VALUES (@employ, @sup, @date, @price)"
                 + "Select Scope_Identity()");
 
             cmd.Parameters.Add("@employ", SqlDbType.Int);
