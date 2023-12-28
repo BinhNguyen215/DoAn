@@ -197,6 +197,7 @@
             this.btnIn4.AllowToggling = false;
             this.btnIn4.AllowZooming = false;
             this.btnIn4.AllowZoomingOnFocus = false;
+            this.btnIn4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnIn4.BackColor = System.Drawing.Color.Transparent;
             this.btnIn4.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnIn4.ErrorImage = ((System.Drawing.Image)(resources.GetObject("btnIn4.ErrorImage")));
@@ -501,6 +502,7 @@
             this.btnAccountant.DisabledFillColor = System.Drawing.Color.Empty;
             this.btnAccountant.DisabledForecolor = System.Drawing.Color.Empty;
             this.btnAccountant.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAccountant.Enabled = false;
             this.btnAccountant.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
             this.btnAccountant.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.btnAccountant.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -522,7 +524,7 @@
             this.btnAccountant.IdleIconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnAccountant.IdleIconLeftImage")));
             this.btnAccountant.IdleIconRightImage = null;
             this.btnAccountant.IndicateFocus = false;
-            this.btnAccountant.Location = new System.Drawing.Point(0, 620);
+            this.btnAccountant.Location = new System.Drawing.Point(0, 621);
             this.btnAccountant.Name = "btnAccountant";
             this.btnAccountant.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnAccountant.OnDisabledState.BorderRadius = 1;
@@ -594,6 +596,7 @@
             this.btnExport.DisabledFillColor = System.Drawing.Color.Empty;
             this.btnExport.DisabledForecolor = System.Drawing.Color.Empty;
             this.btnExport.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnExport.Enabled = false;
             this.btnExport.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
             this.btnExport.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.btnExport.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -615,7 +618,7 @@
             this.btnExport.IdleIconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnExport.IdleIconLeftImage")));
             this.btnExport.IdleIconRightImage = null;
             this.btnExport.IndicateFocus = false;
-            this.btnExport.Location = new System.Drawing.Point(0, 560);
+            this.btnExport.Location = new System.Drawing.Point(0, 561);
             this.btnExport.Name = "btnExport";
             this.btnExport.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnExport.OnDisabledState.BorderRadius = 1;
@@ -687,6 +690,7 @@
             this.btnImport.DisabledFillColor = System.Drawing.Color.Empty;
             this.btnImport.DisabledForecolor = System.Drawing.Color.Empty;
             this.btnImport.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnImport.Enabled = false;
             this.btnImport.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
             this.btnImport.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.btnImport.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -708,7 +712,7 @@
             this.btnImport.IdleIconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnImport.IdleIconLeftImage")));
             this.btnImport.IdleIconRightImage = null;
             this.btnImport.IndicateFocus = false;
-            this.btnImport.Location = new System.Drawing.Point(0, 500);
+            this.btnImport.Location = new System.Drawing.Point(0, 501);
             this.btnImport.Name = "btnImport";
             this.btnImport.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnImport.OnDisabledState.BorderRadius = 1;
@@ -780,6 +784,7 @@
             this.btnSuppliers.DisabledFillColor = System.Drawing.Color.Empty;
             this.btnSuppliers.DisabledForecolor = System.Drawing.Color.Empty;
             this.btnSuppliers.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSuppliers.Enabled = false;
             this.btnSuppliers.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
             this.btnSuppliers.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.btnSuppliers.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -801,7 +806,7 @@
             this.btnSuppliers.IdleIconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnSuppliers.IdleIconLeftImage")));
             this.btnSuppliers.IdleIconRightImage = null;
             this.btnSuppliers.IndicateFocus = false;
-            this.btnSuppliers.Location = new System.Drawing.Point(0, 440);
+            this.btnSuppliers.Location = new System.Drawing.Point(0, 441);
             this.btnSuppliers.Name = "btnSuppliers";
             this.btnSuppliers.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnSuppliers.OnDisabledState.BorderRadius = 1;
@@ -873,6 +878,7 @@
             this.btnEmployee.DisabledFillColor = System.Drawing.Color.Empty;
             this.btnEmployee.DisabledForecolor = System.Drawing.Color.Empty;
             this.btnEmployee.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnEmployee.Enabled = false;
             this.btnEmployee.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
             this.btnEmployee.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.btnEmployee.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -894,7 +900,7 @@
             this.btnEmployee.IdleIconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnEmployee.IdleIconLeftImage")));
             this.btnEmployee.IdleIconRightImage = null;
             this.btnEmployee.IndicateFocus = false;
-            this.btnEmployee.Location = new System.Drawing.Point(0, 380);
+            this.btnEmployee.Location = new System.Drawing.Point(0, 381);
             this.btnEmployee.Name = "btnEmployee";
             this.btnEmployee.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnEmployee.OnDisabledState.BorderRadius = 1;
@@ -966,6 +972,7 @@
             this.btnProduct.DisabledFillColor = System.Drawing.Color.Empty;
             this.btnProduct.DisabledForecolor = System.Drawing.Color.Empty;
             this.btnProduct.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnProduct.Enabled = false;
             this.btnProduct.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
             this.btnProduct.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.btnProduct.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -987,7 +994,7 @@
             this.btnProduct.IdleIconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnProduct.IdleIconLeftImage")));
             this.btnProduct.IdleIconRightImage = null;
             this.btnProduct.IndicateFocus = false;
-            this.btnProduct.Location = new System.Drawing.Point(0, 320);
+            this.btnProduct.Location = new System.Drawing.Point(0, 321);
             this.btnProduct.Name = "btnProduct";
             this.btnProduct.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnProduct.OnDisabledState.BorderRadius = 1;
@@ -1059,6 +1066,7 @@
             this.btnSale.DisabledFillColor = System.Drawing.Color.Empty;
             this.btnSale.DisabledForecolor = System.Drawing.Color.Empty;
             this.btnSale.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSale.Enabled = false;
             this.btnSale.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
             this.btnSale.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.btnSale.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -1080,7 +1088,7 @@
             this.btnSale.IdleIconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnSale.IdleIconLeftImage")));
             this.btnSale.IdleIconRightImage = null;
             this.btnSale.IndicateFocus = false;
-            this.btnSale.Location = new System.Drawing.Point(0, 260);
+            this.btnSale.Location = new System.Drawing.Point(0, 261);
             this.btnSale.Name = "btnSale";
             this.btnSale.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnSale.OnDisabledState.BorderRadius = 1;
@@ -1169,6 +1177,7 @@
             this.btnHome.DisabledFillColor = System.Drawing.Color.Empty;
             this.btnHome.DisabledForecolor = System.Drawing.Color.Empty;
             this.btnHome.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnHome.Enabled = false;
             this.btnHome.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
             this.btnHome.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.btnHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -1225,7 +1234,7 @@
             this.btnHome.OnPressedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnHome.OnPressedState.IconLeftImage = null;
             this.btnHome.OnPressedState.IconRightImage = null;
-            this.btnHome.Size = new System.Drawing.Size(200, 60);
+            this.btnHome.Size = new System.Drawing.Size(200, 61);
             this.btnHome.TabIndex = 26;
             this.btnHome.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnHome.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;

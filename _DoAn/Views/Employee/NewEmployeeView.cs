@@ -28,7 +28,7 @@ namespace _DoAn.Views.Employee
         }
 
         public NewEmployeeView(bool isNew, string employee_id, string name,
-            string phone, string address, string citizenID,
+            string citizenID, string address, string phone,
             string email, string position, string username) : this()
         {
             this._isNew = isNew;

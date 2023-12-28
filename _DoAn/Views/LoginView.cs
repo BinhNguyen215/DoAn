@@ -164,7 +164,7 @@ namespace _DoAn.Views
 
         private void tbxUsername_TextChange(object sender, EventArgs e)
         {
-            string allowedChars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            string allowedChars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789~!@#$%^&*()_-.";
 
             string currentText = tbxUsername.Text;
             string newText = "";
@@ -183,7 +183,7 @@ namespace _DoAn.Views
 
         private void tbxPassword_TextChange(object sender, EventArgs e)
         {
-            string allowedChars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            string allowedChars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789~!@#$%^&*()_-.";
 
             string currentText = tbxPassword.Text;
             string newText = "";

@@ -101,9 +101,7 @@ namespace _DoAn.Views.Statistic
         private void btnCreateBill_Click(object sender, EventArgs e)
         {
             PrintDialog printDialog = new PrintDialog();
-
             PrintDocument printDocument = new PrintDocument();
-
             printDialog.Document = printDocument;
             printDocument.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(Createform);
             DialogResult result = printDialog.ShowDialog();
@@ -130,7 +128,6 @@ namespace _DoAn.Views.Statistic
             statisticPresenter.GetBillToday(sDay, sMonth, sYear);
             statisticPresenter.GetRevenueMonth(sMonth, sYear);
             statisticPresenter.GetRevenueToday(sDay, sMonth, sYear);
-            lbViewAllBill_Click(sender, e);
             statisticPresenter.GetTopProduct(sMonth,sYear);
             statisticPresenter.GetSaleStatus();
             statisticPresenter.GetLineChart(sMonth, sYear);
@@ -141,9 +138,8 @@ namespace _DoAn.Views.Statistic
 
         private void dtgvEmployee_DoubleClick(object sender, EventArgs e)
         {
-            if (dtgvEmployee.CurrentRow.Cells[0].Value.ToString() != "")
+            if (dtgvEmployee.CurrentRow.Cells[0].Value.ToString() != "" && !lbstt.Text.Equals("Sale Results"))
             {
-               
                 StatisticDetail statisticDetail = new StatisticDetail(dtgvEmployee.CurrentRow.Cells[1].Value.ToString());
                 statisticDetail.ShowDialog();
             }
@@ -156,14 +152,14 @@ namespace _DoAn.Views.Statistic
             if (lbViewAllBill.Text == "View all statuses")
             {
                 StatisticPresenter statisticPresenter = new StatisticPresenter(this);
-                statisticPresenter.GetTopResult(sMonth,sYear);
-                lbViewAllBill.Text = "View sale results"; 
+                statisticPresenter.GetSaleStatus();
+                lbViewAllBill.Text = "View sale results";
                 lbstt.Text = "Sale statuses";
             }
             else
             {
                 StatisticPresenter statisticPresenter = new StatisticPresenter(this);
-                statisticPresenter.GetSaleStatus();
+                statisticPresenter.GetTopResult(sMonth,sYear);
                 lbViewAllBill.Text = "View all statuses";
                 lbstt.Text = "Sale Results";
             }

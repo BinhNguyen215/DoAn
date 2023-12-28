@@ -38,6 +38,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.bunifuDatePicker1 = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbBillToday = new System.Windows.Forms.Label();
@@ -60,6 +61,7 @@
             this.dtgvEmployee = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.lbstt = new System.Windows.Forms.Label();
             this.lbViewAllBill = new Bunifu.UI.WinForms.BunifuLabel();
+            this.btnCreateReport = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -70,6 +72,7 @@
             // 
             // bunifuDatePicker1
             // 
+            this.bunifuDatePicker1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bunifuDatePicker1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(189)))), ((int)(((byte)(50)))));
             this.bunifuDatePicker1.BorderColor = System.Drawing.Color.LightGray;
             this.bunifuDatePicker1.BorderRadius = 1;
@@ -91,7 +94,7 @@
             this.bunifuDatePicker1.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
             this.bunifuDatePicker1.LeftTextMargin = 5;
             this.bunifuDatePicker1.Location = new System.Drawing.Point(46, 27);
-            this.bunifuDatePicker1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bunifuDatePicker1.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuDatePicker1.MinimumSize = new System.Drawing.Size(4, 35);
             this.bunifuDatePicker1.Name = "bunifuDatePicker1";
             this.bunifuDatePicker1.Size = new System.Drawing.Size(221, 35);
@@ -101,6 +104,7 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.panel1.Controls.Add(this.lbBillToday);
             this.panel1.Controls.Add(this.lbBillThisMonth);
@@ -157,6 +161,7 @@
             // 
             // panel2
             // 
+            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel2.BackColor = System.Drawing.Color.DarkMagenta;
             this.panel2.Controls.Add(this.lbProduct);
             this.panel2.Controls.Add(this.label5);
@@ -213,6 +218,7 @@
             // 
             // panel3
             // 
+            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel3.BackColor = System.Drawing.Color.Crimson;
             this.panel3.Controls.Add(this.lbRevenueToday);
             this.panel3.Controls.Add(this.label9);
@@ -269,6 +275,7 @@
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
             this.label4.Location = new System.Drawing.Point(1172, 37);
@@ -285,6 +292,7 @@
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             this.dtgvBestSeller.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dtgvBestSeller.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dtgvBestSeller.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgvBestSeller.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dtgvBestSeller.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
@@ -330,7 +338,7 @@
             this.dtgvBestSeller.HeaderBgColor = System.Drawing.Color.Empty;
             this.dtgvBestSeller.HeaderForeColor = System.Drawing.Color.White;
             this.dtgvBestSeller.Location = new System.Drawing.Point(1085, 75);
-            this.dtgvBestSeller.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtgvBestSeller.Margin = new System.Windows.Forms.Padding(2);
             this.dtgvBestSeller.Name = "dtgvBestSeller";
             this.dtgvBestSeller.ReadOnly = true;
             this.dtgvBestSeller.RowHeadersVisible = false;
@@ -343,7 +351,26 @@
             // 
             // chart1
             // 
+            this.chart1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.chart1.BackColor = System.Drawing.SystemColors.Control;
+            chartArea1.Area3DStyle.Enable3D = true;
+            chartArea1.Area3DStyle.PointDepth = 50;
+            chartArea1.Area3DStyle.Rotation = 20;
+            chartArea1.AxisX.Interval = 1D;
+            chartArea1.AxisX.IntervalOffsetType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Days;
+            chartArea1.AxisX.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Days;
+            chartArea1.CursorX.IntervalOffset = 1D;
+            chartArea1.CursorX.IntervalOffsetType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Days;
+            chartArea1.CursorX.LineWidth = 20;
+            chartArea1.CursorY.IntervalOffset = 1D;
+            chartArea1.CursorY.IntervalOffsetType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Weeks;
+            chartArea1.CursorY.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Days;
+            chartArea1.CursorY.LineWidth = 20;
+            chartArea1.InnerPlotPosition.Auto = false;
+            chartArea1.InnerPlotPosition.Height = 92F;
+            chartArea1.InnerPlotPosition.Width = 90F;
+            chartArea1.InnerPlotPosition.X = 7.92F;
+            chartArea1.InnerPlotPosition.Y = 3F;
             chartArea1.Name = "ChartArea1";
             this.chart1.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
@@ -352,6 +379,7 @@
             this.chart1.Name = "chart1";
             this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
             series1.ChartArea = "ChartArea1";
+            series1.CustomProperties = "PointWidth=2, PixelPointWidth=50";
             series1.Legend = "Legend1";
             series1.Name = "Revenue";
             this.chart1.Series.Add(series1);
@@ -369,6 +397,7 @@
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
             this.dtgvEmployee.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dtgvEmployee.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dtgvEmployee.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgvEmployee.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dtgvEmployee.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
@@ -414,7 +443,7 @@
             this.dtgvEmployee.HeaderBgColor = System.Drawing.Color.Empty;
             this.dtgvEmployee.HeaderForeColor = System.Drawing.Color.White;
             this.dtgvEmployee.Location = new System.Drawing.Point(777, 435);
-            this.dtgvEmployee.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtgvEmployee.Margin = new System.Windows.Forms.Padding(2);
             this.dtgvEmployee.Name = "dtgvEmployee";
             this.dtgvEmployee.ReadOnly = true;
             this.dtgvEmployee.RowHeadersVisible = false;
@@ -428,6 +457,7 @@
             // 
             // lbstt
             // 
+            this.lbstt.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbstt.AutoSize = true;
             this.lbstt.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold);
             this.lbstt.Location = new System.Drawing.Point(1079, 402);
@@ -440,6 +470,7 @@
             // lbViewAllBill
             // 
             this.lbViewAllBill.AllowParentOverrides = false;
+            this.lbViewAllBill.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbViewAllBill.AutoEllipsis = false;
             this.lbViewAllBill.BackColor = System.Drawing.Color.LightGreen;
             this.lbViewAllBill.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -447,7 +478,7 @@
             this.lbViewAllBill.CursorType = System.Windows.Forms.Cursors.Default;
             this.lbViewAllBill.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
             this.lbViewAllBill.Location = new System.Drawing.Point(777, 376);
-            this.lbViewAllBill.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lbViewAllBill.Margin = new System.Windows.Forms.Padding(2);
             this.lbViewAllBill.Name = "lbViewAllBill";
             this.lbViewAllBill.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lbViewAllBill.Size = new System.Drawing.Size(185, 32);
@@ -457,11 +488,105 @@
             this.lbViewAllBill.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             this.lbViewAllBill.Click += new System.EventHandler(this.lbViewAllBill_Click);
             // 
+            // btnCreateReport
+            // 
+            this.btnCreateReport.AllowAnimations = true;
+            this.btnCreateReport.AllowMouseEffects = true;
+            this.btnCreateReport.AllowToggling = false;
+            this.btnCreateReport.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnCreateReport.AnimationSpeed = 200;
+            this.btnCreateReport.AutoGenerateColors = false;
+            this.btnCreateReport.AutoRoundBorders = false;
+            this.btnCreateReport.AutoSizeLeftIcon = true;
+            this.btnCreateReport.AutoSizeRightIcon = true;
+            this.btnCreateReport.BackColor = System.Drawing.Color.Transparent;
+            this.btnCreateReport.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
+            this.btnCreateReport.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCreateReport.BackgroundImage")));
+            this.btnCreateReport.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnCreateReport.ButtonText = "Create Report";
+            this.btnCreateReport.ButtonTextMarginLeft = 0;
+            this.btnCreateReport.ColorContrastOnClick = 45;
+            this.btnCreateReport.ColorContrastOnHover = 45;
+            this.btnCreateReport.Cursor = System.Windows.Forms.Cursors.Default;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.btnCreateReport.CustomizableEdges = borderEdges1;
+            this.btnCreateReport.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnCreateReport.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnCreateReport.DisabledFillColor = System.Drawing.Color.Empty;
+            this.btnCreateReport.DisabledForecolor = System.Drawing.Color.Empty;
+            this.btnCreateReport.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
+            this.btnCreateReport.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
+            this.btnCreateReport.ForeColor = System.Drawing.Color.DarkCyan;
+            this.btnCreateReport.IconLeft = ((System.Drawing.Image)(resources.GetObject("btnCreateReport.IconLeft")));
+            this.btnCreateReport.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCreateReport.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.btnCreateReport.IconLeftPadding = new System.Windows.Forms.Padding(10, 3, 3, 3);
+            this.btnCreateReport.IconMarginLeft = 11;
+            this.btnCreateReport.IconPadding = 15;
+            this.btnCreateReport.IconRight = null;
+            this.btnCreateReport.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCreateReport.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.btnCreateReport.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.btnCreateReport.IconSize = 25;
+            this.btnCreateReport.IdleBorderColor = System.Drawing.Color.Empty;
+            this.btnCreateReport.IdleBorderRadius = 0;
+            this.btnCreateReport.IdleBorderThickness = 0;
+            this.btnCreateReport.IdleFillColor = System.Drawing.Color.Empty;
+            this.btnCreateReport.IdleIconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnCreateReport.IdleIconLeftImage")));
+            this.btnCreateReport.IdleIconRightImage = null;
+            this.btnCreateReport.IndicateFocus = false;
+            this.btnCreateReport.Location = new System.Drawing.Point(295, 22);
+            this.btnCreateReport.Name = "btnCreateReport";
+            this.btnCreateReport.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnCreateReport.OnDisabledState.BorderRadius = 15;
+            this.btnCreateReport.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnCreateReport.OnDisabledState.BorderThickness = 1;
+            this.btnCreateReport.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnCreateReport.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnCreateReport.OnDisabledState.IconLeftImage = null;
+            this.btnCreateReport.OnDisabledState.IconRightImage = null;
+            this.btnCreateReport.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.btnCreateReport.onHoverState.BorderRadius = 15;
+            this.btnCreateReport.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnCreateReport.onHoverState.BorderThickness = 1;
+            this.btnCreateReport.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.btnCreateReport.onHoverState.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnCreateReport.onHoverState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnCreateBill.onHoverState.IconLeftImage")));
+            this.btnCreateReport.onHoverState.IconRightImage = null;
+            this.btnCreateReport.OnIdleState.BorderColor = System.Drawing.Color.DarkCyan;
+            this.btnCreateReport.OnIdleState.BorderRadius = 15;
+            this.btnCreateReport.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnCreateReport.OnIdleState.BorderThickness = 1;
+            this.btnCreateReport.OnIdleState.FillColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnCreateReport.OnIdleState.ForeColor = System.Drawing.Color.DarkCyan;
+            this.btnCreateReport.OnIdleState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnCreateBill.OnIdleState.IconLeftImage")));
+            this.btnCreateReport.OnIdleState.IconRightImage = null;
+            this.btnCreateReport.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.btnCreateReport.OnPressedState.BorderRadius = 15;
+            this.btnCreateReport.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnCreateReport.OnPressedState.BorderThickness = 1;
+            this.btnCreateReport.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.btnCreateReport.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.btnCreateReport.OnPressedState.IconLeftImage = null;
+            this.btnCreateReport.OnPressedState.IconRightImage = null;
+            this.btnCreateReport.Size = new System.Drawing.Size(174, 44);
+            this.btnCreateReport.TabIndex = 48;
+            this.btnCreateReport.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnCreateReport.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnCreateReport.TextMarginLeft = 0;
+            this.btnCreateReport.TextPadding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnCreateReport.UseDefaultRadiusAndThickness = true;
+            this.btnCreateReport.Click += new System.EventHandler(this.btnCreateBill_Click);
+            // 
             // StatisticsView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1283, 690);
+            this.ClientSize = new System.Drawing.Size(1495, 909);
+            this.Controls.Add(this.btnCreateReport);
             this.Controls.Add(this.lbViewAllBill);
             this.Controls.Add(this.lbstt);
             this.Controls.Add(this.dtgvEmployee);
@@ -512,5 +637,6 @@
         private Bunifu.UI.WinForms.BunifuDataGridView dtgvEmployee;
         private System.Windows.Forms.Label lbstt;
         private Bunifu.UI.WinForms.BunifuLabel lbViewAllBill;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnCreateReport;
     }
 }

@@ -809,6 +809,7 @@
             // 
             // bunifuGroupBox1
             // 
+            this.bunifuGroupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bunifuGroupBox1.BorderColor = System.Drawing.Color.Black;
             this.bunifuGroupBox1.BorderRadius = 5;
             this.bunifuGroupBox1.BorderThickness = 2;
@@ -1057,6 +1058,7 @@
             // 
             // bunifuGroupBox2
             // 
+            this.bunifuGroupBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bunifuGroupBox2.BorderColor = System.Drawing.Color.Black;
             this.bunifuGroupBox2.BorderRadius = 4;
             this.bunifuGroupBox2.BorderThickness = 2;
@@ -1077,6 +1079,7 @@
             // 
             // bunifuGroupBox3
             // 
+            this.bunifuGroupBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bunifuGroupBox3.BorderColor = System.Drawing.Color.Black;
             this.bunifuGroupBox3.BorderRadius = 4;
             this.bunifuGroupBox3.BorderThickness = 2;

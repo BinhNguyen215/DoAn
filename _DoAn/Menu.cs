@@ -176,6 +176,35 @@ namespace _DoAn
             flag = 0;
             btnHome_Click(sender, e);
             flag = 1;
+
+            if (position == "SalesMan")
+            {
+                btnSale.Enabled = true;
+                btnHome.Enabled = true;
+            }
+            else if (position == "InventoryDepartment")
+            {
+                btnImport.Enabled = true;
+                btnExport.Enabled = true;
+                btnProduct.Enabled = true;
+            }
+            else if (position == "AccountingDepartment")
+            {
+                btnAccountant.Enabled = true;
+                btnHome.Enabled = true;
+            }
+            else
+            {
+                btnSale.Enabled = true;
+                btnProduct.Enabled = true;
+                btnEmployee.Enabled = true;
+                btnSuppliers.Enabled = true;
+                btnImport.Enabled = true;
+                btnExport.Enabled = true;
+                btnAccountant.Enabled = true;
+                btnHome.Enabled = true;
+            }
+            
         }
 
         private void btnIn4_Click(object sender, EventArgs e)

@@ -46,6 +46,7 @@
             // 
             // dateTimePicker1
             // 
+            this.dateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dateTimePicker1.BackColor = System.Drawing.Color.LightGreen;
             this.dateTimePicker1.BorderColor = System.Drawing.Color.Silver;
             this.dateTimePicker1.BorderRadius = 1;
@@ -66,7 +67,7 @@
             this.dateTimePicker1.IconColor = System.Drawing.Color.Gray;
             this.dateTimePicker1.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
             this.dateTimePicker1.LeftTextMargin = 5;
-            this.dateTimePicker1.Location = new System.Drawing.Point(370, 17);
+            this.dateTimePicker1.Location = new System.Drawing.Point(370, 25);
             this.dateTimePicker1.MinimumSize = new System.Drawing.Size(4, 32);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(206, 32);
@@ -76,9 +77,10 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 13F);
-            this.label1.Location = new System.Drawing.Point(254, 20);
+            this.label1.Location = new System.Drawing.Point(254, 28);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(50, 25);
@@ -157,12 +159,13 @@
             // 
             // cbStatus
             // 
+            this.cbStatus.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cbStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.cbStatus.FormattingEnabled = true;
             this.cbStatus.Items.AddRange(new object[] {
             "Incomplete",
             "Completed"});
-            this.cbStatus.Location = new System.Drawing.Point(686, 20);
+            this.cbStatus.Location = new System.Drawing.Point(686, 28);
             this.cbStatus.Margin = new System.Windows.Forms.Padding(2);
             this.cbStatus.Name = "cbStatus";
             this.cbStatus.Size = new System.Drawing.Size(160, 32);
@@ -172,10 +175,11 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 13F);
-            this.label2.Location = new System.Drawing.Point(47, 17);
+            this.label2.Location = new System.Drawing.Point(47, 25);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(157, 27);
@@ -188,6 +192,7 @@
             this.btnEdit.AllowAnimations = true;
             this.btnEdit.AllowMouseEffects = true;
             this.btnEdit.AllowToggling = false;
+            this.btnEdit.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnEdit.AnimationSpeed = 200;
             this.btnEdit.AutoGenerateColors = false;
             this.btnEdit.AutoRoundBorders = false;
@@ -280,6 +285,7 @@
             this.btnAdd.AllowAnimations = true;
             this.btnAdd.AllowMouseEffects = true;
             this.btnAdd.AllowToggling = false;
+            this.btnAdd.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnAdd.AnimationSpeed = 200;
             this.btnAdd.AutoGenerateColors = false;
             this.btnAdd.AutoRoundBorders = false;
