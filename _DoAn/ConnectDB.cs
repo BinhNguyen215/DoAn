@@ -14,7 +14,7 @@ namespace _DoAn
         SqlConnection connect;
         public ConnectDB()
         {
-            this.connect = new SqlConnection(@"Data Source=desktop-c801p81\binhnguyen;Initial Catalog=MedicineDB;Integrated Security=True");
+            this.connect = new SqlConnection(@"Data Source=DESKTOP-7R66M1N;Initial Catalog=MedicineDB;Integrated Security=True");
         }
         public DataTable GetData(string sqlquery)
         {

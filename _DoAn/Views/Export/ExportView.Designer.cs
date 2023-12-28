@@ -677,7 +677,7 @@
             this.btnCreateForm.ButtonTextMarginLeft = 0;
             this.btnCreateForm.ColorContrastOnClick = 45;
             this.btnCreateForm.ColorContrastOnHover = 45;
-            this.btnCreateForm.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnCreateForm.Cursor = System.Windows.Forms.Cursors.Hand;
             borderEdges1.BottomLeft = true;
             borderEdges1.BottomRight = true;
             borderEdges1.TopLeft = true;
@@ -1384,7 +1384,7 @@
             this.btnCancel.ButtonTextMarginLeft = 0;
             this.btnCancel.ColorContrastOnClick = 45;
             this.btnCancel.ColorContrastOnHover = 45;
-            this.btnCancel.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             borderEdges5.BottomLeft = true;
             borderEdges5.BottomRight = true;
             borderEdges5.TopLeft = true;
@@ -1468,6 +1468,7 @@
             this.Controls.Add(this.tbxSearch);
             this.Controls.Add(this.bunifuGroupBox2);
             this.Controls.Add(this.bunifuGroupBox1);
+            this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Name = "ExportView";
             this.Text = "ExportView";
             this.Load += new System.EventHandler(this.ExportForm_Load);

@@ -178,6 +178,7 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 13F);
             this.label2.Location = new System.Drawing.Point(47, 25);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);

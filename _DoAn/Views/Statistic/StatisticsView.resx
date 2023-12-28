@@ -208,7 +208,7 @@
         RU5ErkJggg==
 </value>
   </data>
-  <data name="btnCreateBill.onHoverState.IconLeftImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnCreateReport.onHoverState.IconLeftImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1
         MAAA6mAAADqYAAAXcJy6UTwAAAAHdElNRQfnDAgUITaf28+iAAAFj0lEQVR4Xu2bzWtcVRjG0xhKrbpQ
@@ -238,7 +238,7 @@
         sDLMx6AT7E9KX2Dc5oTDHT3sq+jp+R9+iGUCm4uzPQAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="btnCreateBill.OnIdleState.IconLeftImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnCreateReport.OnIdleState.IconLeftImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1
         MAAA6mAAADqYAAAXcJy6UTwAAAAHdElNRQfnDAgUIhhoIJGuAAAFL0lEQVR4Xu2bz4scRRTHWw3irxwU

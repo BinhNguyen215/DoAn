@@ -605,8 +605,8 @@
             this.lbViewAllBill.AutoEllipsis = false;
             this.lbViewAllBill.BackColor = System.Drawing.Color.LightGreen;
             this.lbViewAllBill.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lbViewAllBill.Cursor = System.Windows.Forms.Cursors.Default;
-            this.lbViewAllBill.CursorType = System.Windows.Forms.Cursors.Default;
+            this.lbViewAllBill.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbViewAllBill.CursorType = System.Windows.Forms.Cursors.Hand;
             this.lbViewAllBill.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
             this.lbViewAllBill.Location = new System.Drawing.Point(1326, 23);
             this.lbViewAllBill.Margin = new System.Windows.Forms.Padding(2);
@@ -662,7 +662,7 @@
             this.btnCreateBill.ButtonTextMarginLeft = 0;
             this.btnCreateBill.ColorContrastOnClick = 45;
             this.btnCreateBill.ColorContrastOnHover = 45;
-            this.btnCreateBill.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnCreateBill.Cursor = System.Windows.Forms.Cursors.Hand;
             borderEdges1.BottomLeft = true;
             borderEdges1.BottomRight = true;
             borderEdges1.TopLeft = true;
@@ -754,7 +754,7 @@
             this.btnCancel.ButtonTextMarginLeft = 0;
             this.btnCancel.ColorContrastOnClick = 45;
             this.btnCancel.ColorContrastOnHover = 45;
-            this.btnCancel.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             borderEdges2.BottomLeft = true;
             borderEdges2.BottomRight = true;
             borderEdges2.TopLeft = true;
@@ -1120,6 +1120,7 @@
             this.checkBoxLv1.BindingControlPosition = Bunifu.UI.WinForms.BunifuRadioButton.BindingControlPositions.Right;
             this.checkBoxLv1.BorderThickness = 1;
             this.checkBoxLv1.Checked = true;
+            this.checkBoxLv1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.checkBoxLv1.Location = new System.Drawing.Point(35, 18);
             this.checkBoxLv1.Name = "checkBoxLv1";
             this.checkBoxLv1.OutlineColor = System.Drawing.Color.DodgerBlue;
@@ -1191,6 +1192,7 @@
             this.checkBoxLv2.BindingControlPosition = Bunifu.UI.WinForms.BunifuRadioButton.BindingControlPositions.Right;
             this.checkBoxLv2.BorderThickness = 1;
             this.checkBoxLv2.Checked = true;
+            this.checkBoxLv2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.checkBoxLv2.Location = new System.Drawing.Point(13, 14);
             this.checkBoxLv2.Name = "checkBoxLv2";
             this.checkBoxLv2.OutlineColor = System.Drawing.Color.DodgerBlue;

@@ -188,6 +188,7 @@
             this.bunifuFormControlBox1.ShowDesignBorders = false;
             this.bunifuFormControlBox1.Size = new System.Drawing.Size(92, 41);
             this.bunifuFormControlBox1.TabIndex = 7;
+            this.bunifuFormControlBox1.CloseClicked += new System.EventHandler(this.bunifuFormControlBox1_CloseClicked);
             // 
             // btnIn4
             // 
@@ -199,6 +200,7 @@
             this.btnIn4.AllowZoomingOnFocus = false;
             this.btnIn4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnIn4.BackColor = System.Drawing.Color.Transparent;
+            this.btnIn4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnIn4.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnIn4.ErrorImage = ((System.Drawing.Image)(resources.GetObject("btnIn4.ErrorImage")));
             this.btnIn4.FadeWhenInactive = false;
@@ -1269,8 +1271,10 @@
             this.btnLogo.AllowZooming = true;
             this.btnLogo.AllowZoomingOnFocus = false;
             this.btnLogo.BackColor = System.Drawing.Color.Transparent;
+            this.btnLogo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLogo.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnLogo.Enabled = false;
             this.btnLogo.ErrorImage = ((System.Drawing.Image)(resources.GetObject("btnLogo.ErrorImage")));
             this.btnLogo.FadeWhenInactive = false;
             this.btnLogo.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
@@ -1338,6 +1342,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Menu_FormClosing);
             this.Load += new System.EventHandler(this.Menu_Load);
             this.bunifuGradientPanel1.ResumeLayout(false);
             this.bunifuGradientPanel2.ResumeLayout(false);

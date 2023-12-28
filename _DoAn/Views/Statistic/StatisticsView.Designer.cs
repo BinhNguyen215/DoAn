@@ -474,8 +474,8 @@
             this.lbViewAllBill.AutoEllipsis = false;
             this.lbViewAllBill.BackColor = System.Drawing.Color.LightGreen;
             this.lbViewAllBill.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lbViewAllBill.Cursor = System.Windows.Forms.Cursors.Default;
-            this.lbViewAllBill.CursorType = System.Windows.Forms.Cursors.Default;
+            this.lbViewAllBill.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbViewAllBill.CursorType = System.Windows.Forms.Cursors.Hand;
             this.lbViewAllBill.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
             this.lbViewAllBill.Location = new System.Drawing.Point(777, 376);
             this.lbViewAllBill.Margin = new System.Windows.Forms.Padding(2);
@@ -507,7 +507,7 @@
             this.btnCreateReport.ButtonTextMarginLeft = 0;
             this.btnCreateReport.ColorContrastOnClick = 45;
             this.btnCreateReport.ColorContrastOnHover = 45;
-            this.btnCreateReport.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnCreateReport.Cursor = System.Windows.Forms.Cursors.Hand;
             borderEdges1.BottomLeft = true;
             borderEdges1.BottomRight = true;
             borderEdges1.TopLeft = true;
@@ -554,7 +554,7 @@
             this.btnCreateReport.onHoverState.BorderThickness = 1;
             this.btnCreateReport.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
             this.btnCreateReport.onHoverState.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnCreateReport.onHoverState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnCreateBill.onHoverState.IconLeftImage")));
+            this.btnCreateReport.onHoverState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnCreateReport.onHoverState.IconLeftImage")));
             this.btnCreateReport.onHoverState.IconRightImage = null;
             this.btnCreateReport.OnIdleState.BorderColor = System.Drawing.Color.DarkCyan;
             this.btnCreateReport.OnIdleState.BorderRadius = 15;
@@ -562,7 +562,7 @@
             this.btnCreateReport.OnIdleState.BorderThickness = 1;
             this.btnCreateReport.OnIdleState.FillColor = System.Drawing.SystemColors.ButtonFace;
             this.btnCreateReport.OnIdleState.ForeColor = System.Drawing.Color.DarkCyan;
-            this.btnCreateReport.OnIdleState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnCreateBill.OnIdleState.IconLeftImage")));
+            this.btnCreateReport.OnIdleState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnCreateReport.OnIdleState.IconLeftImage")));
             this.btnCreateReport.OnIdleState.IconRightImage = null;
             this.btnCreateReport.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
             this.btnCreateReport.OnPressedState.BorderRadius = 15;
@@ -597,6 +597,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.bunifuDatePicker1);
+            this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Name = "StatisticsView";
             this.Text = "StatisticView";
             this.Load += new System.EventHandler(this.StatisticsView_Load);

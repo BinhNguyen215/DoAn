@@ -1176,6 +1176,7 @@
             this.Controls.Add(this.bunifuGroupBox1);
             this.Controls.Add(this.bunifuGroupBox2);
             this.Controls.Add(this.bunifuGroupBox3);
+            this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Name = "ProductView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "ProductView";

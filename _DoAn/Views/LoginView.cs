@@ -27,7 +27,9 @@ namespace _DoAn.Views
             panelChangePassword.Hide();
             panelForgotpassword.Hide();
             lbResend.Hide();
-
+            tbxPassword.PasswordChar = '\0';
+            tbxNewPassword.PasswordChar = '\0';
+            tbxNewPassword2.PasswordChar = '\0';
         }
 
 
@@ -78,6 +80,8 @@ namespace _DoAn.Views
                 panelChangePassword.Show();
                 panelLogin.Hide();
                 panelForgotpassword.Hide();
+                tbxOTP.Clear();
+                tbxUsernameFP.Clear();
             }
             else
             {
@@ -99,6 +103,8 @@ namespace _DoAn.Views
             panelForgotpassword.Hide();
             lbResend.Hide();
             lbSend.Show();
+            tbxNewPassword.Clear();
+            tbxNewPassword2.Clear();
         }
 
         private void lbSend_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -183,8 +189,9 @@ namespace _DoAn.Views
 
         private void tbxPassword_TextChange(object sender, EventArgs e)
         {
+            tbxPassword.PasswordChar = string.IsNullOrEmpty(tbxPassword.Text) ? '\0' : '●';
             string allowedChars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789~!@#$%^&*()_-.";
-
+            
             string currentText = tbxPassword.Text;
             string newText = "";
 
@@ -200,5 +207,24 @@ namespace _DoAn.Views
             tbxPassword.SelectionStart = tbxPassword.Text.Length;
         }
 
+        private void checkShowHidePassword_CheckedChanged(object sender, Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs e)
+        {
+            tbxPassword.PasswordChar = checkShowHidePassword.Checked ? '\0' : '●';
+        }
+
+        private void tbxNewPassword_TextChanged(object sender, EventArgs e)
+        {
+            tbxNewPassword.PasswordChar = string.IsNullOrEmpty(tbxNewPassword.Text) ? '\0' : '●';
+        }
+
+        private void tbxNewPassword2_TextChanged(object sender, EventArgs e)
+        {
+            tbxNewPassword2.PasswordChar = string.IsNullOrEmpty(tbxNewPassword2.Text) ? '\0' : '●';
+        }
+
+        private void checkShowHidePasswordCP_CheckedChanged(object sender, Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs e)
+        {
+            tbxNewPassword.PasswordChar  = tbxNewPassword2.PasswordChar = checkShowHidePasswordCP.Checked ? '\0' : '●';
+        }
     }
 }
