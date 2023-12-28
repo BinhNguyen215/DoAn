@@ -300,6 +300,9 @@
             // cbStatus
             // 
             this.cbStatus.FormattingEnabled = true;
+            this.cbStatus.Items.AddRange(new object[] {
+            "Incomplete",
+            "Completed"});
             this.cbStatus.Location = new System.Drawing.Point(270, 181);
             this.cbStatus.Name = "cbStatus";
             this.cbStatus.Size = new System.Drawing.Size(207, 21);
