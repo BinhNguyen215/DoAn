@@ -21,10 +21,6 @@ namespace _DoAn.Presenters
 
         public bool AddDataToDB()
         {
-                MessageBox.Show(addReceiptsview.Employee);
-                MessageBox.Show(addReceiptsview.Content);
-                MessageBox.Show(addReceiptsview.Value);
-                MessageBox.Show(addReceiptsview.Status);
             if (CheckInformation())
             {
                 receipts.AddReceipts(addReceiptsview.Employee, addReceiptsview.Content, addReceiptsview.Value, addReceiptsview.Status, "");

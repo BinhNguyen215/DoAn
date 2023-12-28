@@ -31,7 +31,6 @@ namespace _DoAn.Views.Accountant
         }
         public AddReceiptsForm(bool isNew, string id) : this()
         {
-            MessageBox.Show(id.ToString());
             this._isNew = isNew;
             this._id = id;
         }
