@@ -97,7 +97,7 @@
             this.bunifuDatePicker1.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuDatePicker1.MinimumSize = new System.Drawing.Size(4, 35);
             this.bunifuDatePicker1.Name = "bunifuDatePicker1";
-            this.bunifuDatePicker1.Size = new System.Drawing.Size(221, 35);
+            this.bunifuDatePicker1.Size = new System.Drawing.Size(330, 39);
             this.bunifuDatePicker1.TabIndex = 32;
             this.bunifuDatePicker1.Value = new System.DateTime(2023, 12, 22, 21, 24, 0, 0);
             this.bunifuDatePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
@@ -110,9 +110,10 @@
             this.panel1.Controls.Add(this.lbBillThisMonth);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(46, 75);
+            this.panel1.Location = new System.Drawing.Point(69, 115);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(300, 150);
+            this.panel1.Size = new System.Drawing.Size(450, 231);
             this.panel1.TabIndex = 13;
             // 
             // lbBillToday
@@ -120,9 +121,10 @@
             this.lbBillToday.AutoSize = true;
             this.lbBillToday.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.lbBillToday.ForeColor = System.Drawing.Color.White;
-            this.lbBillToday.Location = new System.Drawing.Point(73, 96);
+            this.lbBillToday.Location = new System.Drawing.Point(110, 148);
+            this.lbBillToday.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbBillToday.Name = "lbBillToday";
-            this.lbBillToday.Size = new System.Drawing.Size(75, 24);
+            this.lbBillToday.Size = new System.Drawing.Size(118, 32);
             this.lbBillToday.TabIndex = 36;
             this.lbBillToday.Text = "500.000";
             // 
@@ -131,9 +133,10 @@
             this.lbBillThisMonth.AutoSize = true;
             this.lbBillThisMonth.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
             this.lbBillThisMonth.ForeColor = System.Drawing.Color.White;
-            this.lbBillThisMonth.Location = new System.Drawing.Point(14, 49);
+            this.lbBillThisMonth.Location = new System.Drawing.Point(21, 75);
+            this.lbBillThisMonth.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbBillThisMonth.Name = "lbBillThisMonth";
-            this.lbBillThisMonth.Size = new System.Drawing.Size(177, 37);
+            this.lbBillThisMonth.Size = new System.Drawing.Size(266, 55);
             this.lbBillThisMonth.TabIndex = 35;
             this.lbBillThisMonth.Text = "10.000.000";
             // 
@@ -142,9 +145,10 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(17, 96);
+            this.label2.Location = new System.Drawing.Point(26, 148);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(68, 24);
+            this.label2.Size = new System.Drawing.Size(101, 32);
             this.label2.TabIndex = 34;
             this.label2.Text = "Today:";
             // 
@@ -153,9 +157,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(16, 16);
+            this.label1.Location = new System.Drawing.Point(24, 25);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(121, 24);
+            this.label1.Size = new System.Drawing.Size(185, 32);
             this.label1.TabIndex = 33;
             this.label1.Text = "Bills of month";
             // 
@@ -167,9 +172,10 @@
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.lbSumProduct);
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Location = new System.Drawing.Point(395, 75);
+            this.panel2.Location = new System.Drawing.Point(592, 115);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(300, 150);
+            this.panel2.Size = new System.Drawing.Size(450, 231);
             this.panel2.TabIndex = 34;
             // 
             // lbProduct
@@ -177,9 +183,10 @@
             this.lbProduct.AutoSize = true;
             this.lbProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.lbProduct.ForeColor = System.Drawing.Color.White;
-            this.lbProduct.Location = new System.Drawing.Point(83, 96);
+            this.lbProduct.Location = new System.Drawing.Point(124, 148);
+            this.lbProduct.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbProduct.Name = "lbProduct";
-            this.lbProduct.Size = new System.Drawing.Size(75, 24);
+            this.lbProduct.Size = new System.Drawing.Size(118, 32);
             this.lbProduct.TabIndex = 38;
             this.lbProduct.Text = "500.000";
             // 
@@ -188,9 +195,10 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(21, 96);
+            this.label5.Location = new System.Drawing.Point(32, 148);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(68, 24);
+            this.label5.Size = new System.Drawing.Size(101, 32);
             this.label5.TabIndex = 37;
             this.label5.Text = "Today:";
             // 
@@ -199,9 +207,10 @@
             this.lbSumProduct.AutoSize = true;
             this.lbSumProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
             this.lbSumProduct.ForeColor = System.Drawing.Color.White;
-            this.lbSumProduct.Location = new System.Drawing.Point(19, 49);
+            this.lbSumProduct.Location = new System.Drawing.Point(28, 75);
+            this.lbSumProduct.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbSumProduct.Name = "lbSumProduct";
-            this.lbSumProduct.Size = new System.Drawing.Size(177, 37);
+            this.lbSumProduct.Size = new System.Drawing.Size(266, 55);
             this.lbSumProduct.TabIndex = 36;
             this.lbSumProduct.Text = "10.000.000";
             // 
@@ -210,9 +219,10 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(21, 16);
+            this.label3.Location = new System.Drawing.Point(32, 25);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(182, 24);
+            this.label3.Size = new System.Drawing.Size(272, 32);
             this.label3.TabIndex = 34;
             this.label3.Text = "Products sold month";
             // 
@@ -224,9 +234,10 @@
             this.panel3.Controls.Add(this.label9);
             this.panel3.Controls.Add(this.lbRevenueThisMonth);
             this.panel3.Controls.Add(this.label7);
-            this.panel3.Location = new System.Drawing.Point(748, 75);
+            this.panel3.Location = new System.Drawing.Point(1122, 115);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(300, 150);
+            this.panel3.Size = new System.Drawing.Size(450, 231);
             this.panel3.TabIndex = 35;
             // 
             // lbRevenueToday
@@ -234,9 +245,10 @@
             this.lbRevenueToday.AutoSize = true;
             this.lbRevenueToday.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.lbRevenueToday.ForeColor = System.Drawing.Color.White;
-            this.lbRevenueToday.Location = new System.Drawing.Point(86, 96);
+            this.lbRevenueToday.Location = new System.Drawing.Point(129, 148);
+            this.lbRevenueToday.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbRevenueToday.Name = "lbRevenueToday";
-            this.lbRevenueToday.Size = new System.Drawing.Size(75, 24);
+            this.lbRevenueToday.Size = new System.Drawing.Size(118, 32);
             this.lbRevenueToday.TabIndex = 39;
             this.lbRevenueToday.Text = "500.000";
             // 
@@ -245,9 +257,10 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(24, 96);
+            this.label9.Location = new System.Drawing.Point(36, 148);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(68, 24);
+            this.label9.Size = new System.Drawing.Size(101, 32);
             this.label9.TabIndex = 38;
             this.label9.Text = "Today:";
             // 
@@ -256,9 +269,10 @@
             this.lbRevenueThisMonth.AutoSize = true;
             this.lbRevenueThisMonth.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
             this.lbRevenueThisMonth.ForeColor = System.Drawing.Color.White;
-            this.lbRevenueThisMonth.Location = new System.Drawing.Point(22, 49);
+            this.lbRevenueThisMonth.Location = new System.Drawing.Point(33, 75);
+            this.lbRevenueThisMonth.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbRevenueThisMonth.Name = "lbRevenueThisMonth";
-            this.lbRevenueThisMonth.Size = new System.Drawing.Size(177, 37);
+            this.lbRevenueThisMonth.Size = new System.Drawing.Size(266, 55);
             this.lbRevenueThisMonth.TabIndex = 37;
             this.lbRevenueThisMonth.Text = "10.000.000";
             // 
@@ -267,9 +281,10 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(24, 16);
+            this.label7.Location = new System.Drawing.Point(36, 25);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(178, 24);
+            this.label7.Size = new System.Drawing.Size(266, 32);
             this.label7.TabIndex = 35;
             this.label7.Text = "Revenue this month";
             // 
@@ -278,10 +293,9 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(1172, 37);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(1758, 57);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(218, 25);
+            this.label4.Size = new System.Drawing.Size(320, 36);
             this.label4.TabIndex = 36;
             this.label4.Text = "Best-Selling products";
             // 
@@ -345,7 +359,7 @@
             this.dtgvBestSeller.RowHeadersWidth = 62;
             this.dtgvBestSeller.RowTemplate.Height = 40;
             this.dtgvBestSeller.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgvBestSeller.Size = new System.Drawing.Size(380, 309);
+            this.dtgvBestSeller.Size = new System.Drawing.Size(570, 475);
             this.dtgvBestSeller.TabIndex = 1;
             this.dtgvBestSeller.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.LimeGreen;
             // 
@@ -373,9 +387,11 @@
             chartArea1.InnerPlotPosition.Y = 3F;
             chartArea1.Name = "ChartArea1";
             this.chart1.ChartAreas.Add(chartArea1);
+            legend1.ItemColumnSpacing = 10;
             legend1.Name = "Legend1";
             this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(46, 252);
+            this.chart1.Location = new System.Drawing.Point(69, 388);
+            this.chart1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.chart1.Name = "chart1";
             this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
             series1.ChartArea = "ChartArea1";
@@ -383,7 +399,7 @@
             series1.Legend = "Legend1";
             series1.Name = "Revenue";
             this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(794, 666);
+            this.chart1.Size = new System.Drawing.Size(1191, 1025);
             this.chart1.TabIndex = 1;
             this.chart1.Text = "chart1";
             // 
@@ -450,7 +466,7 @@
             this.dtgvEmployee.RowHeadersWidth = 62;
             this.dtgvEmployee.RowTemplate.Height = 40;
             this.dtgvEmployee.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgvEmployee.Size = new System.Drawing.Size(688, 431);
+            this.dtgvEmployee.Size = new System.Drawing.Size(1032, 663);
             this.dtgvEmployee.TabIndex = 37;
             this.dtgvEmployee.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.LimeGreen;
             this.dtgvEmployee.DoubleClick += new System.EventHandler(this.dtgvEmployee_DoubleClick);
@@ -460,10 +476,9 @@
             this.lbstt.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbstt.AutoSize = true;
             this.lbstt.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold);
-            this.lbstt.Location = new System.Drawing.Point(1079, 402);
-            this.lbstt.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbstt.Location = new System.Drawing.Point(1618, 618);
             this.lbstt.Name = "lbstt";
-            this.lbstt.Size = new System.Drawing.Size(285, 31);
+            this.lbstt.Size = new System.Drawing.Size(407, 46);
             this.lbstt.TabIndex = 38;
             this.lbstt.Text = "Follow sale activities";
             // 
@@ -481,7 +496,7 @@
             this.lbViewAllBill.Margin = new System.Windows.Forms.Padding(2);
             this.lbViewAllBill.Name = "lbViewAllBill";
             this.lbViewAllBill.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbViewAllBill.Size = new System.Drawing.Size(185, 32);
+            this.lbViewAllBill.Size = new System.Drawing.Size(269, 45);
             this.lbViewAllBill.TabIndex = 47;
             this.lbViewAllBill.Text = "View sales statuses";
             this.lbViewAllBill.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -583,7 +598,7 @@
             // 
             // StatisticsView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1495, 909);
             this.Controls.Add(this.btnCreateReport);
