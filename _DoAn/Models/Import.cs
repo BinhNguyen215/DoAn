@@ -113,5 +113,17 @@ namespace _DoAn.Models
                 return false;
             }
         }
+        public DataTable GetProductOffer()//**
+        {
+            ConnectDB connect = new ConnectDB();
+            string sqlQuery = "select Product_id as ID, ProductName as Name, Price, Description, Origin, Unit.Unit_Namelv1 as Unit, TypeName as Type from Product , ProductType ,Unit where Product.ProductType = ProductType.ProductType_id and Unit.Unit_id=Product.Unit_id and lv1Quantity < 5 ";
+            return connect.GetData(sqlQuery);
+        }
+        public DataTable SearchDataOffer(string search)//**
+        {
+            ConnectDB connect = new ConnectDB();
+            string sqlQuery = "select Product_id as ID, ProductName as Name, Price, Description, Origin, Unit.Unit_Namelv1, TypeName as Type from Product , ProductType, Unit where Product.ProductType = ProductType.ProductType_id and Unit.Unit_id = Product.Unit_id and(Product_id like '" + search + "%' or ProductName like '% " + search + "%') and lv1Quantity < 5";
+            return connect.GetData(sqlQuery);
+        }
     }
 }
