@@ -119,7 +119,7 @@ namespace _DoAn.Models
         public bool AddEmployee(string name, string citizen_id, string email, string phone, string position, string address)
         {
             string _pass = GeneratePassword(true, true, true, false, 6);
-            SqlCommand cmd = new SqlCommand("INSERT INTO Employee (EmployName, Citizen_id, Address, PhoneNumber, Email, Position, Username, DefaultPassword) VALUES (@name, @citizen_id, @address, @phone, @email, @position, @username, @password)");
+            SqlCommand cmd = new SqlCommand("INSERT INTO Employee (EmployName, Citizen_id, Address, PhoneNumber, Email, Position, Username,DefaultPassWord) VALUES (@name, @citizen_id, @address, @phone, @email, @position, @username,@default)");
 
             cmd.Parameters.AddWithValue("@name", name);
             cmd.Parameters.AddWithValue("@citizen_id", citizen_id);
@@ -128,8 +128,7 @@ namespace _DoAn.Models
             cmd.Parameters.AddWithValue("@position", position);
             cmd.Parameters.AddWithValue("@address", address);
             cmd.Parameters.AddWithValue("@username", email);
-            cmd.Parameters.AddWithValue("@password", _pass);
-
+            cmd.Parameters.AddWithValue("@default", _pass);
             ConnectDB connect = new ConnectDB();
             if (connect.HandleData(cmd))
             {
@@ -155,7 +154,7 @@ namespace _DoAn.Models
         }
 
         public bool UpdateEmployee(string id, string name, string citizen_id, string email, string phone, string position,
-            string address, string username, string password)
+            string address, string username)
         {
             SqlCommand cmd = new SqlCommand("UPDATE	Employee SET EmployName = @name, Citizen_id = @citizen_id, Address = @address, PhoneNumber = @phone, Email = @email, Position = @position, Password = @password, Username = @username WHERE Employee_id = @id");
             cmd.Parameters.AddWithValue("@name", name);
@@ -165,7 +164,6 @@ namespace _DoAn.Models
             cmd.Parameters.AddWithValue("@position", position);
             cmd.Parameters.AddWithValue("@address", address);
             cmd.Parameters.AddWithValue("@username", username);
-            cmd.Parameters.AddWithValue("@password", password);
             cmd.Parameters.Add("@id", SqlDbType.Int);
             cmd.Parameters["@id"].Value = Convert.ToInt32(id);
 

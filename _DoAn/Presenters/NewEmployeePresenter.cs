@@ -58,7 +58,7 @@ namespace _DoAn.Presenters
                 {
                     if (user.UpdateEmployee(newEmployeeview.employee_id, newEmployeeview.Nametext,
                   newEmployeeview.Citizen_idtext, newEmployeeview.Emailtext, newEmployeeview.PhoneNumtext,
-                  newEmployeeview.Positiontext, newEmployeeview.Addresstext, newEmployeeview.Username, newEmployeeview.Password))
+                  newEmployeeview.Positiontext, newEmployeeview.Addresstext, newEmployeeview.Username))
                     {
                         newEmployeeview.message = "Update employee successfully";
                         return true;
@@ -129,7 +129,6 @@ namespace _DoAn.Presenters
             newEmployeeview.Emailtext = "";
             newEmployeeview.Addresstext = "";
             newEmployeeview.Username = "";
-            newEmployeeview.Password = "";
 
             return true;
         }

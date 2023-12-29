@@ -117,17 +117,7 @@ namespace _DoAn.Views.Employee
                 tbUsername.Text = value;
             }
         }
-        public string Password
-        {
-            get
-            {
-                return tbPassword.Text;
-            }
-            set
-            {
-                tbPassword.Text = value;
-            }
-        }
+   
 
         private string _message;
 
