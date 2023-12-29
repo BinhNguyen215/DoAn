@@ -156,14 +156,14 @@ namespace _DoAn.Views.Statistic
             if (lbViewAllBill.Text == "View all statuses")
             {
                 StatisticPresenter statisticPresenter = new StatisticPresenter(this);
-                statisticPresenter.GetTopResult(sMonth,sYear);
-                lbViewAllBill.Text = "View sale results"; 
+                statisticPresenter.GetSaleStatus();
+                lbViewAllBill.Text = "View sale results";
                 lbstt.Text = "Sale statuses";
             }
             else
             {
                 StatisticPresenter statisticPresenter = new StatisticPresenter(this);
-                statisticPresenter.GetSaleStatus();
+                statisticPresenter.GetTopResult(sMonth, sYear);
                 lbViewAllBill.Text = "View all statuses";
                 lbstt.Text = "Sale Results";
             }
