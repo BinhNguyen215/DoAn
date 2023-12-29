@@ -13,7 +13,7 @@ using System.Windows.Forms;
 
 namespace _DoAn.Views.Employee
 {
-    public partial class NewEmployeeView : Form,INewEmployee
+    public partial class NewEmployeeView : Form, INewEmployee
     {
         public NewEmployeeView()
         {
@@ -132,6 +132,8 @@ namespace _DoAn.Views.Employee
 
 
         string INewEmployee.employee_id { get { return employeeID; } }
+
+        public string Password { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
         private void btnSave_Click(object sender, EventArgs e)
         {

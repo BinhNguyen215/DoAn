@@ -41,7 +41,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnEdit = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnAdd = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.bunifuGroupBox3 = new Bunifu.UI.WinForms.BunifuGroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReceipts)).BeginInit();
+            this.bunifuGroupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // dateTimePicker1
@@ -50,6 +52,7 @@
             this.dateTimePicker1.BackColor = System.Drawing.Color.LightGreen;
             this.dateTimePicker1.BorderColor = System.Drawing.Color.Silver;
             this.dateTimePicker1.BorderRadius = 1;
+            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Segoe UI", 13F);
             this.dateTimePicker1.CalendarForeColor = System.Drawing.Color.White;
             this.dateTimePicker1.Color = System.Drawing.Color.Silver;
             this.dateTimePicker1.CustomFormat = "dd-MM-yyyy";
@@ -67,7 +70,7 @@
             this.dateTimePicker1.IconColor = System.Drawing.Color.Gray;
             this.dateTimePicker1.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
             this.dateTimePicker1.LeftTextMargin = 5;
-            this.dateTimePicker1.Location = new System.Drawing.Point(370, 25);
+            this.dateTimePicker1.Location = new System.Drawing.Point(370, 28);
             this.dateTimePicker1.MinimumSize = new System.Drawing.Size(4, 32);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(206, 32);
@@ -80,7 +83,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 13F);
-            this.label1.Location = new System.Drawing.Point(254, 28);
+            this.label1.Location = new System.Drawing.Point(254, 30);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(50, 25);
@@ -138,13 +141,13 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvReceipts.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvReceipts.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dgvReceipts.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvReceipts.EnableHeadersVisualStyles = false;
             this.dgvReceipts.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(220)))), ((int)(((byte)(188)))));
             this.dgvReceipts.HeaderBackColor = System.Drawing.Color.ForestGreen;
             this.dgvReceipts.HeaderBgColor = System.Drawing.Color.Empty;
             this.dgvReceipts.HeaderForeColor = System.Drawing.Color.White;
-            this.dgvReceipts.Location = new System.Drawing.Point(0, 86);
+            this.dgvReceipts.Location = new System.Drawing.Point(3, 27);
             this.dgvReceipts.Margin = new System.Windows.Forms.Padding(6);
             this.dgvReceipts.Name = "dgvReceipts";
             this.dgvReceipts.ReadOnly = true;
@@ -152,7 +155,7 @@
             this.dgvReceipts.RowHeadersWidth = 51;
             this.dgvReceipts.RowTemplate.Height = 40;
             this.dgvReceipts.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvReceipts.Size = new System.Drawing.Size(1495, 823);
+            this.dgvReceipts.Size = new System.Drawing.Size(1379, 779);
             this.dgvReceipts.TabIndex = 75;
             this.dgvReceipts.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             this.dgvReceipts.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvReceipts_CellContentClick_1);
@@ -180,7 +183,7 @@
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 13F);
-            this.label2.Location = new System.Drawing.Point(47, 25);
+            this.label2.Location = new System.Drawing.Point(48, 29);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(157, 27);
@@ -374,21 +377,40 @@
             this.btnAdd.UseDefaultRadiusAndThickness = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
+            // bunifuGroupBox3
+            // 
+            this.bunifuGroupBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bunifuGroupBox3.BorderColor = System.Drawing.Color.Black;
+            this.bunifuGroupBox3.BorderRadius = 4;
+            this.bunifuGroupBox3.BorderThickness = 2;
+            this.bunifuGroupBox3.Controls.Add(this.dgvReceipts);
+            this.bunifuGroupBox3.Font = new System.Drawing.Font("Segoe UI", 13F);
+            this.bunifuGroupBox3.LabelAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.bunifuGroupBox3.LabelIndent = 10;
+            this.bunifuGroupBox3.LineStyle = Bunifu.UI.WinForms.BunifuGroupBox.LineStyles.Solid;
+            this.bunifuGroupBox3.Location = new System.Drawing.Point(47, 80);
+            this.bunifuGroupBox3.Name = "bunifuGroupBox3";
+            this.bunifuGroupBox3.Size = new System.Drawing.Size(1385, 809);
+            this.bunifuGroupBox3.TabIndex = 80;
+            this.bunifuGroupBox3.TabStop = false;
+            this.bunifuGroupBox3.Text = "Receipts";
+            // 
             // ReceiptsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1495, 909);
+            this.Controls.Add(this.bunifuGroupBox3);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cbStatus);
-            this.Controls.Add(this.dgvReceipts);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label1);
             this.Name = "ReceiptsForm";
             this.Text = "ReceiptsForm";
             ((System.ComponentModel.ISupportInitialize)(this.dgvReceipts)).EndInit();
+            this.bunifuGroupBox3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -402,5 +424,6 @@
         private System.Windows.Forms.Label label2;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnEdit;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnAdd;
+        private Bunifu.UI.WinForms.BunifuGroupBox bunifuGroupBox3;
     }
 }

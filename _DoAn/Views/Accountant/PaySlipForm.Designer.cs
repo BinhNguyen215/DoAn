@@ -41,7 +41,9 @@
             this.dateTimePicker1 = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.btnEdit = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnAdd = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.bunifuGroupBox3 = new Bunifu.UI.WinForms.BunifuGroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPaySlip)).BeginInit();
+            this.bunifuGroupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvPaySlip
@@ -95,13 +97,13 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvPaySlip.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvPaySlip.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dgvPaySlip.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvPaySlip.EnableHeadersVisualStyles = false;
             this.dgvPaySlip.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(220)))), ((int)(((byte)(188)))));
             this.dgvPaySlip.HeaderBackColor = System.Drawing.Color.Empty;
             this.dgvPaySlip.HeaderBgColor = System.Drawing.Color.Empty;
             this.dgvPaySlip.HeaderForeColor = System.Drawing.Color.White;
-            this.dgvPaySlip.Location = new System.Drawing.Point(0, 81);
+            this.dgvPaySlip.Location = new System.Drawing.Point(3, 27);
             this.dgvPaySlip.Margin = new System.Windows.Forms.Padding(6);
             this.dgvPaySlip.Name = "dgvPaySlip";
             this.dgvPaySlip.ReadOnly = true;
@@ -109,7 +111,7 @@
             this.dgvPaySlip.RowHeadersWidth = 51;
             this.dgvPaySlip.RowTemplate.Height = 40;
             this.dgvPaySlip.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPaySlip.Size = new System.Drawing.Size(1495, 828);
+            this.dgvPaySlip.Size = new System.Drawing.Size(1355, 772);
             this.dgvPaySlip.TabIndex = 50;
             this.dgvPaySlip.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             this.dgvPaySlip.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPaySlip_CellContentClick);
@@ -122,7 +124,7 @@
             this.cbStatus.Items.AddRange(new object[] {
             "Incomplete",
             "Completed"});
-            this.cbStatus.Location = new System.Drawing.Point(618, 27);
+            this.cbStatus.Location = new System.Drawing.Point(618, 31);
             this.cbStatus.Margin = new System.Windows.Forms.Padding(2);
             this.cbStatus.Name = "cbStatus";
             this.cbStatus.Size = new System.Drawing.Size(139, 32);
@@ -136,11 +138,11 @@
             this.label2.AutoSize = true;
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 13F);
             this.label2.Location = new System.Drawing.Point(67, 32);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(131, 23);
+            this.label2.Size = new System.Drawing.Size(152, 27);
             this.label2.TabIndex = 58;
             this.label2.Text = "All of the pay slip";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -149,11 +151,11 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 13F);
             this.label1.Location = new System.Drawing.Point(253, 34);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(45, 21);
+            this.label1.Size = new System.Drawing.Size(50, 25);
             this.label1.TabIndex = 57;
             this.label1.Text = "Filter";
             // 
@@ -174,14 +176,14 @@
             this.dateTimePicker1.DPHeight = 0;
             this.dateTimePicker1.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
             this.dateTimePicker1.FillDatePicker = false;
-            this.dateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.dateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 13F);
             this.dateTimePicker1.ForeColor = System.Drawing.Color.Black;
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker1.Icon = ((System.Drawing.Image)(resources.GetObject("dateTimePicker1.Icon")));
             this.dateTimePicker1.IconColor = System.Drawing.Color.Gray;
             this.dateTimePicker1.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
             this.dateTimePicker1.LeftTextMargin = 5;
-            this.dateTimePicker1.Location = new System.Drawing.Point(347, 27);
+            this.dateTimePicker1.Location = new System.Drawing.Point(347, 31);
             this.dateTimePicker1.MinimumSize = new System.Drawing.Size(4, 32);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(206, 32);
@@ -375,23 +377,42 @@
             this.btnAdd.UseDefaultRadiusAndThickness = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
+            // bunifuGroupBox3
+            // 
+            this.bunifuGroupBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bunifuGroupBox3.BorderColor = System.Drawing.Color.Black;
+            this.bunifuGroupBox3.BorderRadius = 4;
+            this.bunifuGroupBox3.BorderThickness = 2;
+            this.bunifuGroupBox3.Controls.Add(this.dgvPaySlip);
+            this.bunifuGroupBox3.Font = new System.Drawing.Font("Segoe UI", 13F);
+            this.bunifuGroupBox3.LabelAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.bunifuGroupBox3.LabelIndent = 10;
+            this.bunifuGroupBox3.LineStyle = Bunifu.UI.WinForms.BunifuGroupBox.LineStyles.Solid;
+            this.bunifuGroupBox3.Location = new System.Drawing.Point(67, 78);
+            this.bunifuGroupBox3.Name = "bunifuGroupBox3";
+            this.bunifuGroupBox3.Size = new System.Drawing.Size(1361, 802);
+            this.bunifuGroupBox3.TabIndex = 67;
+            this.bunifuGroupBox3.TabStop = false;
+            this.bunifuGroupBox3.Text = "Pay slip";
+            // 
             // PaySlipForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1495, 909);
+            this.Controls.Add(this.bunifuGroupBox3);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.cbStatus);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dgvPaySlip);
             this.Name = "PaySlipForm";
             this.Text = "PaySlipForm";
             this.Load += new System.EventHandler(this.PaySlipForm_Load);
             this.Click += new System.EventHandler(this.label2_Click);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPaySlip)).EndInit();
+            this.bunifuGroupBox3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -406,5 +427,6 @@
         private Bunifu.UI.WinForms.BunifuDatePicker dateTimePicker1;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnEdit;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnAdd;
+        private Bunifu.UI.WinForms.BunifuGroupBox bunifuGroupBox3;
     }
 }

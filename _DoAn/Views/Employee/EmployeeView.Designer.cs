@@ -48,9 +48,11 @@
             this.tbSearch = new Bunifu.UI.WinForms.BunifuTextBox();
             this.lbShow = new Bunifu.UI.WinForms.BunifuLabel();
             this.dgvEmployee = new Bunifu.UI.WinForms.BunifuDataGridView();
+            this.gpEmployee = new Bunifu.UI.WinForms.BunifuGroupBox();
             this.bunifuPanel1.SuspendLayout();
             this.bunifuGroupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmployee)).BeginInit();
+            this.gpEmployee.SuspendLayout();
             this.SuspendLayout();
             // 
             // bunifuPanel1
@@ -397,7 +399,7 @@
             this.tbSearch.IconRight = null;
             this.tbSearch.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.tbSearch.Lines = new string[0];
-            this.tbSearch.Location = new System.Drawing.Point(30, 63);
+            this.tbSearch.Location = new System.Drawing.Point(33, 84);
             this.tbSearch.MaxLength = 32767;
             this.tbSearch.MinimumSize = new System.Drawing.Size(1, 1);
             this.tbSearch.Modified = false;
@@ -450,13 +452,14 @@
             this.lbShow.AllowParentOverrides = false;
             this.lbShow.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbShow.AutoEllipsis = false;
+            this.lbShow.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lbShow.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lbShow.CursorType = System.Windows.Forms.Cursors.Hand;
             this.lbShow.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.lbShow.Location = new System.Drawing.Point(30, 30);
+            this.lbShow.Location = new System.Drawing.Point(36, 41);
             this.lbShow.Name = "lbShow";
             this.lbShow.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbShow.Size = new System.Drawing.Size(215, 25);
+            this.lbShow.Size = new System.Drawing.Size(219, 29);
             this.lbShow.TabIndex = 1;
             this.lbShow.Text = "Load all of the employees";
             this.lbShow.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -519,13 +522,13 @@
             this.dgvEmployee.HeaderBackColor = System.Drawing.Color.Green;
             this.dgvEmployee.HeaderBgColor = System.Drawing.Color.Empty;
             this.dgvEmployee.HeaderForeColor = System.Drawing.Color.White;
-            this.dgvEmployee.Location = new System.Drawing.Point(0, 167);
+            this.dgvEmployee.Location = new System.Drawing.Point(3, 26);
             this.dgvEmployee.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgvEmployee.Name = "dgvEmployee";
             this.dgvEmployee.ReadOnly = true;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(201)))), ((int)(((byte)(54)))));
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -535,17 +538,35 @@
             this.dgvEmployee.RowHeadersWidth = 62;
             this.dgvEmployee.RowTemplate.Height = 40;
             this.dgvEmployee.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvEmployee.Size = new System.Drawing.Size(1495, 742);
+            this.dgvEmployee.Size = new System.Drawing.Size(1433, 722);
             this.dgvEmployee.TabIndex = 3;
             this.dgvEmployee.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             this.dgvEmployee.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEmployee_CellContentClick);
+            // 
+            // gpEmployee
+            // 
+            this.gpEmployee.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.gpEmployee.BorderColor = System.Drawing.Color.Black;
+            this.gpEmployee.BorderRadius = 4;
+            this.gpEmployee.BorderThickness = 2;
+            this.gpEmployee.Controls.Add(this.dgvEmployee);
+            this.gpEmployee.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gpEmployee.LabelAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.gpEmployee.LabelIndent = 10;
+            this.gpEmployee.LineStyle = Bunifu.UI.WinForms.BunifuGroupBox.LineStyles.Solid;
+            this.gpEmployee.Location = new System.Drawing.Point(30, 147);
+            this.gpEmployee.Name = "gpEmployee";
+            this.gpEmployee.Size = new System.Drawing.Size(1439, 751);
+            this.gpEmployee.TabIndex = 67;
+            this.gpEmployee.TabStop = false;
+            this.gpEmployee.Text = "Employee";
             // 
             // EmployeeView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1495, 909);
-            this.Controls.Add(this.dgvEmployee);
+            this.ClientSize = new System.Drawing.Size(1495, 911);
+            this.Controls.Add(this.gpEmployee);
             this.Controls.Add(this.bunifuPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "EmployeeView";
@@ -556,6 +577,7 @@
             this.bunifuPanel1.PerformLayout();
             this.bunifuGroupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmployee)).EndInit();
+            this.gpEmployee.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -570,5 +592,6 @@
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnAdd;
         private Bunifu.UI.WinForms.BunifuDataGridView dgvEmployee;
         private Bunifu.UI.WinForms.BunifuGroupBox bunifuGroupBox3;
+        private Bunifu.UI.WinForms.BunifuGroupBox gpEmployee;
     }
 }

@@ -128,7 +128,7 @@ namespace _DoAn.Presenters
             return valid;
         }
 
-        public bool UpdatePassword( int index)
+        public bool UpdatePassword(int index)
         {
             User user = new User();
             if  (index == 1)
