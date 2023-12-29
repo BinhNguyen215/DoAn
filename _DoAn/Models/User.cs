@@ -6,6 +6,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
+using System.Security.Cryptography;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace _DoAn.Models
 {
@@ -23,6 +26,7 @@ namespace _DoAn.Models
         public int CheckValidate(string username, string password)
         {
             ConnectDB connect = new ConnectDB();
+            password = GetHash(password);
             string sqlQuery = "Select * from Employee where Username = '" + username + "' and DefaultPassword = '" + password + "'";
             if (connect.GetData(sqlQuery).Rows.Count == 1)
             {
@@ -43,18 +47,21 @@ namespace _DoAn.Models
         public string UserID(string username, string password)
         {
             ConnectDB connect = new ConnectDB();
+            password = GetHash(password);
             string sqlQuery = "Select Employee_id from Employee where Username = '" + username + "' and Password = '" + password + "'";
             return connect.GetData(sqlQuery).Rows[0]["Employee_id"].ToString();
         }
         public string UserName(string username, string password)
         {
             ConnectDB connect = new ConnectDB();
+            password = GetHash(password);
             string sqlQuery = "Select EmployName from Employee where Username = '" + username + "' and Password = '" + password + "'";
             return connect.GetData(sqlQuery).Rows[0]["EmployName"].ToString();
         }
         public string GetPosition(string username, string password)
         {
             ConnectDB connect = new ConnectDB();
+            password = GetHash(password);
             string sqlQuery = "Select Position from Employee where Username = '" + username + "' and Password = '" + password + "'";
             return connect.GetData(sqlQuery).Rows[0]["Position"].ToString();
         }
@@ -112,7 +119,7 @@ namespace _DoAn.Models
         public bool AddEmployee(string name, string citizen_id, string email, string phone, string position, string address)
         {
             string _pass = GeneratePassword(true, true, true, false, 6);
-            SqlCommand cmd = new SqlCommand("INSERT INTO Employee (EmployName, Citizen_id, Address, PhoneNumber, Email, Position, Username, Password) VALUES (@name, @citizen_id, @address, @phone, @email, @position, @username, @password)");
+            SqlCommand cmd = new SqlCommand("INSERT INTO Employee (EmployName, Citizen_id, Address, PhoneNumber, Email, Position, Username,DefaultPassWord) VALUES (@name, @citizen_id, @address, @phone, @email, @position, @username,@default)");
 
             cmd.Parameters.AddWithValue("@name", name);
             cmd.Parameters.AddWithValue("@citizen_id", citizen_id);
@@ -121,8 +128,7 @@ namespace _DoAn.Models
             cmd.Parameters.AddWithValue("@position", position);
             cmd.Parameters.AddWithValue("@address", address);
             cmd.Parameters.AddWithValue("@username", email);
-            cmd.Parameters.AddWithValue("@password", _pass);
-
+            cmd.Parameters.AddWithValue("@default", _pass);
             ConnectDB connect = new ConnectDB();
             if (connect.HandleData(cmd))
             {
@@ -148,7 +154,7 @@ namespace _DoAn.Models
         }
 
         public bool UpdateEmployee(string id, string name, string citizen_id, string email, string phone, string position,
-            string address, string username, string password)
+            string address, string username)
         {
             SqlCommand cmd = new SqlCommand("UPDATE	Employee SET EmployName = @name, Citizen_id = @citizen_id, Address = @address, PhoneNumber = @phone, Email = @email, Position = @position, Password = @password, Username = @username WHERE Employee_id = @id");
             cmd.Parameters.AddWithValue("@name", name);
@@ -158,7 +164,6 @@ namespace _DoAn.Models
             cmd.Parameters.AddWithValue("@position", position);
             cmd.Parameters.AddWithValue("@address", address);
             cmd.Parameters.AddWithValue("@username", username);
-            cmd.Parameters.AddWithValue("@password", password);
             cmd.Parameters.Add("@id", SqlDbType.Int);
             cmd.Parameters["@id"].Value = Convert.ToInt32(id);
 
@@ -179,11 +184,23 @@ namespace _DoAn.Models
             return connect.GetData(sqlQuery);
         }
 
-        public bool UpdatePassword(string username,string newPassword)
+        public bool UpdatePassword(string username,string newPassword,int index)
         {
-            SqlCommand cmd = new SqlCommand("UPDATE Employee SET Password = @newpassword WHERE Username = @username");
-            cmd.Parameters.AddWithValue("@newpassword", newPassword);
-            cmd.Parameters.AddWithValue("@username", username);
+            newPassword = GetHash(newPassword);
+
+            SqlCommand cmd;
+            if (index == 0)
+            {
+                 cmd = new SqlCommand("UPDATE Employee SET Password = @newpassword, DefaultPassword = NULL  WHERE Username = @username ");
+                cmd.Parameters.AddWithValue("@newpassword", newPassword);
+                cmd.Parameters.AddWithValue("@username", username);
+            }    
+            else
+            {
+                 cmd = new SqlCommand("UPDATE Employee SET Password = @newpassword WHERE Username = @username ");
+                cmd.Parameters.AddWithValue("@newpassword", newPassword);
+                cmd.Parameters.AddWithValue("@username", username);
+            }
             ConnectDB connect = new ConnectDB();
             if (connect.HandleData(cmd))
             {
@@ -191,6 +208,21 @@ namespace _DoAn.Models
             }
             else
                 return false;
+        }
+        public string GetHash(string plainText)
+        {
+            MD5 md5 = new MD5CryptoServiceProvider();
+            // Compute hash from the bytes of text
+            md5.ComputeHash(ASCIIEncoding.ASCII.GetBytes(plainText));
+            // Get hash result after compute it
+            byte[] result = md5.Hash;
+            StringBuilder strBuilder = new StringBuilder();
+            for (int i = 0; i < result.Length; i++)
+            {
+                strBuilder.Append(result[i].ToString("x2"));
+            }
+
+            return strBuilder.ToString();
         }
     }
 }

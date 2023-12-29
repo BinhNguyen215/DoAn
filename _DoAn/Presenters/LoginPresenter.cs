@@ -27,6 +27,10 @@ namespace _DoAn.Presenters
         {
             User user = new User();
             int valid = user.CheckValidate(loginView.username, loginView.password);
+            if (valid == 1)
+            {
+                loginView.message = string.Format("Welcome! Please change your password");
+            }
             if (valid == 2)
             {
                 loginView.message = string.Format("Login successfully!");
@@ -124,10 +128,17 @@ namespace _DoAn.Presenters
             return valid;
         }
 
-        public bool UpdatePassword()
+        public bool UpdatePassword( int index)
         {
             User user = new User();
-            return user.UpdatePassword(loginView.usernameFP,loginView.newPasswordAgain);
+            if  (index == 1)
+            {
+                return user.UpdatePassword(loginView.usernameFP,loginView.newPasswordAgain,index);
+            }    
+            else
+            {
+                return user.UpdatePassword(loginView.username, loginView.newPasswordAgain,index);
+            }
         }
 
         public void CheckInfoFill()

@@ -19,7 +19,7 @@ namespace _DoAn.Views
     {
         private string _message;
         private LoginPresenter loginPresenter;
-
+        int index; //0: username login, 1: usernam FP
         public LoginView()
         {
             InitializeComponent();
@@ -59,6 +59,7 @@ namespace _DoAn.Views
             else
             if (valid == 1)
             {
+                index = 0;
                 panelChangePassword.Show();
                 panelForgotpassword.Hide();
                 panelLogin.Hide();
@@ -71,17 +72,17 @@ namespace _DoAn.Views
         }
 
 
-
+        
         private void tbnChangePassword_Click(object sender, EventArgs e)
         {
             loginPresenter.CheckInfoFill();
             if (loginPresenter.VerifyOTP())
             {
+                index = 1;
                 panelChangePassword.Show();
                 panelLogin.Hide();
                 panelForgotpassword.Hide();
                 tbxOTP.Clear();
-                tbxUsernameFP.Clear();
             }
             else
             {
@@ -123,12 +124,11 @@ namespace _DoAn.Views
             }
             else loginPresenter.SendEmailOTP(email);
         }
-
         private void tbnConfirm_Click(object sender, EventArgs e)
         {
             if (loginPresenter.VerifyNewPassword())
             {
-                if (loginPresenter.UpdatePassword())
+                if (loginPresenter.UpdatePassword(index))
                 {
                     MessageBox.Show("Password is now changed!");
                 }
