@@ -128,10 +128,17 @@ namespace _DoAn.Presenters
             return valid;
         }
 
-        public bool UpdatePassword()
+        public bool UpdatePassword( int index)
         {
             User user = new User();
-            return user.UpdatePassword(loginView.usernameFP,loginView.newPasswordAgain);
+            if  (index == 1)
+            {
+                return user.UpdatePassword(loginView.usernameFP,loginView.newPasswordAgain,index);
+            }    
+            else
+            {
+                return user.UpdatePassword(loginView.username, loginView.newPasswordAgain,index);
+            }
         }
 
         public void CheckInfoFill()

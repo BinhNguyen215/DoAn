@@ -26,6 +26,7 @@ namespace _DoAn.Models
         public int CheckValidate(string username, string password)
         {
             ConnectDB connect = new ConnectDB();
+            password = GetHash(password);
             string sqlQuery = "Select * from Employee where Username = '" + username + "' and DefaultPassword = '" + password + "'";
             if (connect.GetData(sqlQuery).Rows.Count == 1)
             {
@@ -46,18 +47,21 @@ namespace _DoAn.Models
         public string UserID(string username, string password)
         {
             ConnectDB connect = new ConnectDB();
+            password = GetHash(password);
             string sqlQuery = "Select Employee_id from Employee where Username = '" + username + "' and Password = '" + password + "'";
             return connect.GetData(sqlQuery).Rows[0]["Employee_id"].ToString();
         }
         public string UserName(string username, string password)
         {
             ConnectDB connect = new ConnectDB();
+            password = GetHash(password);
             string sqlQuery = "Select EmployName from Employee where Username = '" + username + "' and Password = '" + password + "'";
             return connect.GetData(sqlQuery).Rows[0]["EmployName"].ToString();
         }
         public string GetPosition(string username, string password)
         {
             ConnectDB connect = new ConnectDB();
+            password = GetHash(password);
             string sqlQuery = "Select Position from Employee where Username = '" + username + "' and Password = '" + password + "'";
             return connect.GetData(sqlQuery).Rows[0]["Position"].ToString();
         }
@@ -182,12 +186,23 @@ namespace _DoAn.Models
             return connect.GetData(sqlQuery);
         }
 
-        public bool UpdatePassword(string username,string newPassword)
+        public bool UpdatePassword(string username,string newPassword,int index)
         {
             newPassword = GetHash(newPassword);
-            SqlCommand cmd = new SqlCommand("UPDATE Employee SET Password = @newpassword WHERE Username = @username");
-            cmd.Parameters.AddWithValue("@newpassword", newPassword);
-            cmd.Parameters.AddWithValue("@username", username);
+
+            SqlCommand cmd;
+            if (index == 0)
+            {
+                 cmd = new SqlCommand("UPDATE Employee SET Password = @newpassword, DefaultPassword = NULL  WHERE Username = @username ");
+                cmd.Parameters.AddWithValue("@newpassword", newPassword);
+                cmd.Parameters.AddWithValue("@username", username);
+            }    
+            else
+            {
+                 cmd = new SqlCommand("UPDATE Employee SET Password = @newpassword WHERE Username = @username ");
+                cmd.Parameters.AddWithValue("@newpassword", newPassword);
+                cmd.Parameters.AddWithValue("@username", username);
+            }
             ConnectDB connect = new ConnectDB();
             if (connect.HandleData(cmd))
             {
