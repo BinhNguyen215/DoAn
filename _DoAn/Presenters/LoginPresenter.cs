@@ -27,6 +27,10 @@ namespace _DoAn.Presenters
         {
             User user = new User();
             int valid = user.CheckValidate(loginView.username, loginView.password);
+            if (valid == 1)
+            {
+                loginView.message = string.Format("Welcome! Please change your password");
+            }
             if (valid == 2)
             {
                 loginView.message = string.Format("Login successfully!");

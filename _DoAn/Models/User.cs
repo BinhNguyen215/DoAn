@@ -6,6 +6,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
+using System.Security.Cryptography;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace _DoAn.Models
 {
@@ -112,7 +115,7 @@ namespace _DoAn.Models
         public bool AddEmployee(string name, string citizen_id, string email, string phone, string position, string address)
         {
             string _pass = GeneratePassword(true, true, true, false, 6);
-            SqlCommand cmd = new SqlCommand("INSERT INTO Employee (EmployName, Citizen_id, Address, PhoneNumber, Email, Position, Username, Password) VALUES (@name, @citizen_id, @address, @phone, @email, @position, @username, @password)");
+            SqlCommand cmd = new SqlCommand("INSERT INTO Employee (EmployName, Citizen_id, Address, PhoneNumber, Email, Position, Username, DefaultPassword) VALUES (@name, @citizen_id, @address, @phone, @email, @position, @username, @password)");
 
             cmd.Parameters.AddWithValue("@name", name);
             cmd.Parameters.AddWithValue("@citizen_id", citizen_id);
@@ -181,6 +184,7 @@ namespace _DoAn.Models
 
         public bool UpdatePassword(string username,string newPassword)
         {
+            newPassword = GetHash(newPassword);
             SqlCommand cmd = new SqlCommand("UPDATE Employee SET Password = @newpassword WHERE Username = @username");
             cmd.Parameters.AddWithValue("@newpassword", newPassword);
             cmd.Parameters.AddWithValue("@username", username);
@@ -191,6 +195,21 @@ namespace _DoAn.Models
             }
             else
                 return false;
+        }
+        public string GetHash(string plainText)
+        {
+            MD5 md5 = new MD5CryptoServiceProvider();
+            // Compute hash from the bytes of text
+            md5.ComputeHash(ASCIIEncoding.ASCII.GetBytes(plainText));
+            // Get hash result after compute it
+            byte[] result = md5.Hash;
+            StringBuilder strBuilder = new StringBuilder();
+            for (int i = 0; i < result.Length; i++)
+            {
+                strBuilder.Append(result[i].ToString("x2"));
+            }
+
+            return strBuilder.ToString();
         }
     }
 }

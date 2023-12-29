@@ -1348,9 +1348,9 @@
             this.ClientSize = new System.Drawing.Size(972, 619);
             this.Controls.Add(this.bunifuFormControlBox1);
             this.Controls.Add(this.bunifuGradientPanel1);
+            this.Controls.Add(this.panelChangePassword);
             this.Controls.Add(this.panelLogin);
             this.Controls.Add(this.panelForgotpassword);
-            this.Controls.Add(this.panelChangePassword);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
