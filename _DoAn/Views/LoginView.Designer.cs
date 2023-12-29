@@ -70,8 +70,10 @@
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.panelLogin = new Bunifu.UI.WinForms.BunifuPanel();
             this.linkShow = new System.Windows.Forms.LinkLabel();
-            this.checkShow = new Bunifu.UI.WinForms.BunifuCheckBox();
+            this.checkShowHidePassword = new Bunifu.UI.WinForms.BunifuCheckBox();
             this.panelChangePassword = new Bunifu.UI.WinForms.BunifuPanel();
+            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
+            this.checkShowHidePasswordCP = new Bunifu.UI.WinForms.BunifuCheckBox();
             this.tbxNewPassword = new Bunifu.UI.WinForms.BunifuTextBox();
             this.labelBackToLoginCP = new System.Windows.Forms.LinkLabel();
             this.tbnConfirm = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
@@ -351,7 +353,7 @@
             stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.tbxPassword.OnIdleState = stateProperties8;
             this.tbxPassword.Padding = new System.Windows.Forms.Padding(3);
-            this.tbxPassword.PasswordChar = '\0';
+            this.tbxPassword.PasswordChar = '●';
             this.tbxPassword.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.tbxPassword.PlaceholderText = "Enter password";
             this.tbxPassword.ReadOnly = false;
@@ -368,7 +370,7 @@
             this.tbxPassword.TextMarginLeft = 8;
             this.tbxPassword.TextMarginTop = 1;
             this.tbxPassword.TextPlaceholder = "Enter password";
-            this.tbxPassword.UseSystemPasswordChar = true;
+            this.tbxPassword.UseSystemPasswordChar = false;
             this.tbxPassword.WordWrap = true;
             this.tbxPassword.TextChange += new System.EventHandler(this.tbxPassword_TextChange);
             this.tbxPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbxPassword_KeyDown);
@@ -547,15 +549,15 @@
             this.panelLogin.BorderColor = System.Drawing.Color.Transparent;
             this.panelLogin.BorderRadius = 3;
             this.panelLogin.BorderThickness = 1;
-            this.panelLogin.Controls.Add(this.linkShow);
-            this.panelLogin.Controls.Add(this.checkShow);
             this.panelLogin.Controls.Add(this.linkLabel1);
             this.panelLogin.Controls.Add(this.btnSignin);
             this.panelLogin.Controls.Add(this.tbxPassword);
             this.panelLogin.Controls.Add(this.tbxUsername);
             this.panelLogin.Controls.Add(this.bunifuLabel3);
             this.panelLogin.Controls.Add(this.bunifuShapes1);
-            this.panelLogin.Location = new System.Drawing.Point(27, 46);
+            this.panelLogin.Controls.Add(this.linkShow);
+            this.panelLogin.Controls.Add(this.checkShowHidePassword);
+            this.panelLogin.Location = new System.Drawing.Point(530, 78);
             this.panelLogin.Name = "panelLogin";
             this.panelLogin.ShowBorders = true;
             this.panelLogin.Size = new System.Drawing.Size(414, 460);
@@ -572,58 +574,59 @@
             this.linkShow.TabStop = true;
             this.linkShow.Text = "Show the password ";
             // 
-            // checkShow
+            // checkShowHidePassword
             // 
-            this.checkShow.AllowBindingControlAnimation = true;
-            this.checkShow.AllowBindingControlColorChanges = false;
-            this.checkShow.AllowBindingControlLocation = true;
-            this.checkShow.AllowCheckBoxAnimation = false;
-            this.checkShow.AllowCheckmarkAnimation = true;
-            this.checkShow.AllowOnHoverStates = true;
-            this.checkShow.AutoCheck = true;
-            this.checkShow.BackColor = System.Drawing.Color.Transparent;
-            this.checkShow.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("checkShow.BackgroundImage")));
-            this.checkShow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.checkShow.BindingControlPosition = Bunifu.UI.WinForms.BunifuCheckBox.BindingControlPositions.Right;
-            this.checkShow.BorderRadius = 12;
-            this.checkShow.Checked = false;
-            this.checkShow.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
-            this.checkShow.Cursor = System.Windows.Forms.Cursors.Default;
-            this.checkShow.CustomCheckmarkImage = null;
-            this.checkShow.Location = new System.Drawing.Point(177, 295);
-            this.checkShow.MinimumSize = new System.Drawing.Size(17, 17);
-            this.checkShow.Name = "checkShow";
-            this.checkShow.OnCheck.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.checkShow.OnCheck.BorderRadius = 12;
-            this.checkShow.OnCheck.BorderThickness = 2;
-            this.checkShow.OnCheck.CheckBoxColor = System.Drawing.Color.DodgerBlue;
-            this.checkShow.OnCheck.CheckmarkColor = System.Drawing.Color.White;
-            this.checkShow.OnCheck.CheckmarkThickness = 2;
-            this.checkShow.OnDisable.BorderColor = System.Drawing.Color.LightGray;
-            this.checkShow.OnDisable.BorderRadius = 12;
-            this.checkShow.OnDisable.BorderThickness = 2;
-            this.checkShow.OnDisable.CheckBoxColor = System.Drawing.Color.Transparent;
-            this.checkShow.OnDisable.CheckmarkColor = System.Drawing.Color.LightGray;
-            this.checkShow.OnDisable.CheckmarkThickness = 2;
-            this.checkShow.OnHoverChecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.checkShow.OnHoverChecked.BorderRadius = 12;
-            this.checkShow.OnHoverChecked.BorderThickness = 2;
-            this.checkShow.OnHoverChecked.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.checkShow.OnHoverChecked.CheckmarkColor = System.Drawing.Color.White;
-            this.checkShow.OnHoverChecked.CheckmarkThickness = 2;
-            this.checkShow.OnHoverUnchecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.checkShow.OnHoverUnchecked.BorderRadius = 12;
-            this.checkShow.OnHoverUnchecked.BorderThickness = 1;
-            this.checkShow.OnHoverUnchecked.CheckBoxColor = System.Drawing.Color.Transparent;
-            this.checkShow.OnUncheck.BorderColor = System.Drawing.Color.DarkGray;
-            this.checkShow.OnUncheck.BorderRadius = 12;
-            this.checkShow.OnUncheck.BorderThickness = 1;
-            this.checkShow.OnUncheck.CheckBoxColor = System.Drawing.Color.Transparent;
-            this.checkShow.Size = new System.Drawing.Size(21, 21);
-            this.checkShow.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
-            this.checkShow.TabIndex = 9;
-            this.checkShow.ThreeState = false;
-            this.checkShow.ToolTipText = null;
+            this.checkShowHidePassword.AllowBindingControlAnimation = true;
+            this.checkShowHidePassword.AllowBindingControlColorChanges = false;
+            this.checkShowHidePassword.AllowBindingControlLocation = true;
+            this.checkShowHidePassword.AllowCheckBoxAnimation = false;
+            this.checkShowHidePassword.AllowCheckmarkAnimation = true;
+            this.checkShowHidePassword.AllowOnHoverStates = true;
+            this.checkShowHidePassword.AutoCheck = true;
+            this.checkShowHidePassword.BackColor = System.Drawing.Color.Transparent;
+            this.checkShowHidePassword.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("checkShowHidePassword.BackgroundImage")));
+            this.checkShowHidePassword.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.checkShowHidePassword.BindingControlPosition = Bunifu.UI.WinForms.BunifuCheckBox.BindingControlPositions.Right;
+            this.checkShowHidePassword.BorderRadius = 12;
+            this.checkShowHidePassword.Checked = false;
+            this.checkShowHidePassword.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
+            this.checkShowHidePassword.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.checkShowHidePassword.CustomCheckmarkImage = null;
+            this.checkShowHidePassword.Location = new System.Drawing.Point(177, 295);
+            this.checkShowHidePassword.MinimumSize = new System.Drawing.Size(17, 17);
+            this.checkShowHidePassword.Name = "checkShowHidePassword";
+            this.checkShowHidePassword.OnCheck.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.checkShowHidePassword.OnCheck.BorderRadius = 12;
+            this.checkShowHidePassword.OnCheck.BorderThickness = 2;
+            this.checkShowHidePassword.OnCheck.CheckBoxColor = System.Drawing.Color.DodgerBlue;
+            this.checkShowHidePassword.OnCheck.CheckmarkColor = System.Drawing.Color.White;
+            this.checkShowHidePassword.OnCheck.CheckmarkThickness = 2;
+            this.checkShowHidePassword.OnDisable.BorderColor = System.Drawing.Color.LightGray;
+            this.checkShowHidePassword.OnDisable.BorderRadius = 12;
+            this.checkShowHidePassword.OnDisable.BorderThickness = 2;
+            this.checkShowHidePassword.OnDisable.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.checkShowHidePassword.OnDisable.CheckmarkColor = System.Drawing.Color.LightGray;
+            this.checkShowHidePassword.OnDisable.CheckmarkThickness = 2;
+            this.checkShowHidePassword.OnHoverChecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.checkShowHidePassword.OnHoverChecked.BorderRadius = 12;
+            this.checkShowHidePassword.OnHoverChecked.BorderThickness = 2;
+            this.checkShowHidePassword.OnHoverChecked.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.checkShowHidePassword.OnHoverChecked.CheckmarkColor = System.Drawing.Color.White;
+            this.checkShowHidePassword.OnHoverChecked.CheckmarkThickness = 2;
+            this.checkShowHidePassword.OnHoverUnchecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.checkShowHidePassword.OnHoverUnchecked.BorderRadius = 12;
+            this.checkShowHidePassword.OnHoverUnchecked.BorderThickness = 1;
+            this.checkShowHidePassword.OnHoverUnchecked.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.checkShowHidePassword.OnUncheck.BorderColor = System.Drawing.Color.DarkGray;
+            this.checkShowHidePassword.OnUncheck.BorderRadius = 12;
+            this.checkShowHidePassword.OnUncheck.BorderThickness = 1;
+            this.checkShowHidePassword.OnUncheck.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.checkShowHidePassword.Size = new System.Drawing.Size(21, 21);
+            this.checkShowHidePassword.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
+            this.checkShowHidePassword.TabIndex = 9;
+            this.checkShowHidePassword.ThreeState = false;
+            this.checkShowHidePassword.ToolTipText = null;
+            this.checkShowHidePassword.CheckedChanged += new System.EventHandler<Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs>(this.checkShowHidePassword_CheckedChanged);
             // 
             // panelChangePassword
             // 
@@ -633,17 +636,84 @@
             this.panelChangePassword.BorderColor = System.Drawing.Color.Transparent;
             this.panelChangePassword.BorderRadius = 3;
             this.panelChangePassword.BorderThickness = 1;
+            this.panelChangePassword.Controls.Add(this.linkLabel2);
+            this.panelChangePassword.Controls.Add(this.checkShowHidePasswordCP);
             this.panelChangePassword.Controls.Add(this.tbxNewPassword);
             this.panelChangePassword.Controls.Add(this.labelBackToLoginCP);
             this.panelChangePassword.Controls.Add(this.tbnConfirm);
             this.panelChangePassword.Controls.Add(this.tbxNewPassword2);
             this.panelChangePassword.Controls.Add(this.lbChangePassword);
             this.panelChangePassword.Controls.Add(this.bunifuShapes3);
-            this.panelChangePassword.Location = new System.Drawing.Point(519, 78);
+            this.panelChangePassword.Location = new System.Drawing.Point(530, 78);
             this.panelChangePassword.Name = "panelChangePassword";
             this.panelChangePassword.ShowBorders = true;
             this.panelChangePassword.Size = new System.Drawing.Size(430, 480);
             this.panelChangePassword.TabIndex = 10;
+            // 
+            // linkLabel2
+            // 
+            this.linkLabel2.AutoSize = true;
+            this.linkLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel2.Location = new System.Drawing.Point(226, 301);
+            this.linkLabel2.Name = "linkLabel2";
+            this.linkLabel2.Size = new System.Drawing.Size(170, 20);
+            this.linkLabel2.TabIndex = 12;
+            this.linkLabel2.TabStop = true;
+            this.linkLabel2.Text = "Show the password ";
+            // 
+            // checkShowHidePasswordCP
+            // 
+            this.checkShowHidePasswordCP.AllowBindingControlAnimation = true;
+            this.checkShowHidePasswordCP.AllowBindingControlColorChanges = false;
+            this.checkShowHidePasswordCP.AllowBindingControlLocation = true;
+            this.checkShowHidePasswordCP.AllowCheckBoxAnimation = false;
+            this.checkShowHidePasswordCP.AllowCheckmarkAnimation = true;
+            this.checkShowHidePasswordCP.AllowOnHoverStates = true;
+            this.checkShowHidePasswordCP.AutoCheck = true;
+            this.checkShowHidePasswordCP.BackColor = System.Drawing.Color.Transparent;
+            this.checkShowHidePasswordCP.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("checkShowHidePasswordCP.BackgroundImage")));
+            this.checkShowHidePasswordCP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.checkShowHidePasswordCP.BindingControlPosition = Bunifu.UI.WinForms.BunifuCheckBox.BindingControlPositions.Right;
+            this.checkShowHidePasswordCP.BorderRadius = 12;
+            this.checkShowHidePasswordCP.Checked = false;
+            this.checkShowHidePasswordCP.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
+            this.checkShowHidePasswordCP.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.checkShowHidePasswordCP.CustomCheckmarkImage = null;
+            this.checkShowHidePasswordCP.Location = new System.Drawing.Point(198, 300);
+            this.checkShowHidePasswordCP.MinimumSize = new System.Drawing.Size(17, 17);
+            this.checkShowHidePasswordCP.Name = "checkShowHidePasswordCP";
+            this.checkShowHidePasswordCP.OnCheck.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.checkShowHidePasswordCP.OnCheck.BorderRadius = 12;
+            this.checkShowHidePasswordCP.OnCheck.BorderThickness = 2;
+            this.checkShowHidePasswordCP.OnCheck.CheckBoxColor = System.Drawing.Color.DodgerBlue;
+            this.checkShowHidePasswordCP.OnCheck.CheckmarkColor = System.Drawing.Color.White;
+            this.checkShowHidePasswordCP.OnCheck.CheckmarkThickness = 2;
+            this.checkShowHidePasswordCP.OnDisable.BorderColor = System.Drawing.Color.LightGray;
+            this.checkShowHidePasswordCP.OnDisable.BorderRadius = 12;
+            this.checkShowHidePasswordCP.OnDisable.BorderThickness = 2;
+            this.checkShowHidePasswordCP.OnDisable.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.checkShowHidePasswordCP.OnDisable.CheckmarkColor = System.Drawing.Color.LightGray;
+            this.checkShowHidePasswordCP.OnDisable.CheckmarkThickness = 2;
+            this.checkShowHidePasswordCP.OnHoverChecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.checkShowHidePasswordCP.OnHoverChecked.BorderRadius = 12;
+            this.checkShowHidePasswordCP.OnHoverChecked.BorderThickness = 2;
+            this.checkShowHidePasswordCP.OnHoverChecked.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.checkShowHidePasswordCP.OnHoverChecked.CheckmarkColor = System.Drawing.Color.White;
+            this.checkShowHidePasswordCP.OnHoverChecked.CheckmarkThickness = 2;
+            this.checkShowHidePasswordCP.OnHoverUnchecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.checkShowHidePasswordCP.OnHoverUnchecked.BorderRadius = 12;
+            this.checkShowHidePasswordCP.OnHoverUnchecked.BorderThickness = 1;
+            this.checkShowHidePasswordCP.OnHoverUnchecked.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.checkShowHidePasswordCP.OnUncheck.BorderColor = System.Drawing.Color.DarkGray;
+            this.checkShowHidePasswordCP.OnUncheck.BorderRadius = 12;
+            this.checkShowHidePasswordCP.OnUncheck.BorderThickness = 1;
+            this.checkShowHidePasswordCP.OnUncheck.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.checkShowHidePasswordCP.Size = new System.Drawing.Size(21, 21);
+            this.checkShowHidePasswordCP.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
+            this.checkShowHidePasswordCP.TabIndex = 11;
+            this.checkShowHidePasswordCP.ThreeState = false;
+            this.checkShowHidePasswordCP.ToolTipText = null;
+            this.checkShowHidePasswordCP.CheckedChanged += new System.EventHandler<Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs>(this.checkShowHidePasswordCP_CheckedChanged);
             // 
             // tbxNewPassword
             // 
@@ -701,7 +771,7 @@
             stateProperties12.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.tbxNewPassword.OnIdleState = stateProperties12;
             this.tbxNewPassword.Padding = new System.Windows.Forms.Padding(3);
-            this.tbxNewPassword.PasswordChar = '\0';
+            this.tbxNewPassword.PasswordChar = '●';
             this.tbxNewPassword.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.tbxNewPassword.PlaceholderText = "Enter password ";
             this.tbxNewPassword.ReadOnly = false;
@@ -718,8 +788,9 @@
             this.tbxNewPassword.TextMarginLeft = 8;
             this.tbxNewPassword.TextMarginTop = 1;
             this.tbxNewPassword.TextPlaceholder = "Enter password ";
-            this.tbxNewPassword.UseSystemPasswordChar = true;
+            this.tbxNewPassword.UseSystemPasswordChar = false;
             this.tbxNewPassword.WordWrap = true;
+            this.tbxNewPassword.TextChanged += new System.EventHandler(this.tbxNewPassword_TextChanged);
             // 
             // labelBackToLoginCP
             // 
@@ -854,7 +925,7 @@
             this.tbxNewPassword2.IconRight = null;
             this.tbxNewPassword2.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.tbxNewPassword2.Lines = new string[0];
-            this.tbxNewPassword2.Location = new System.Drawing.Point(57, 244);
+            this.tbxNewPassword2.Location = new System.Drawing.Point(57, 233);
             this.tbxNewPassword2.MaxLength = 32767;
             this.tbxNewPassword2.MinimumSize = new System.Drawing.Size(1, 1);
             this.tbxNewPassword2.Modified = false;
@@ -881,7 +952,7 @@
             stateProperties16.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.tbxNewPassword2.OnIdleState = stateProperties16;
             this.tbxNewPassword2.Padding = new System.Windows.Forms.Padding(3);
-            this.tbxNewPassword2.PasswordChar = '\0';
+            this.tbxNewPassword2.PasswordChar = '●';
             this.tbxNewPassword2.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.tbxNewPassword2.PlaceholderText = "Enter password again";
             this.tbxNewPassword2.ReadOnly = false;
@@ -898,8 +969,9 @@
             this.tbxNewPassword2.TextMarginLeft = 8;
             this.tbxNewPassword2.TextMarginTop = 1;
             this.tbxNewPassword2.TextPlaceholder = "Enter password again";
-            this.tbxNewPassword2.UseSystemPasswordChar = true;
+            this.tbxNewPassword2.UseSystemPasswordChar = false;
             this.tbxNewPassword2.WordWrap = true;
+            this.tbxNewPassword2.TextChanged += new System.EventHandler(this.tbxNewPassword2_TextChanged);
             this.tbxNewPassword2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbxNewPassword2_KeyDown);
             // 
             // lbChangePassword
@@ -952,7 +1024,7 @@
             this.panelForgotpassword.Controls.Add(this.lbForgotpassword);
             this.panelForgotpassword.Controls.Add(this.bunifuShapes2);
             this.panelForgotpassword.Controls.Add(this.lbResend);
-            this.panelForgotpassword.Location = new System.Drawing.Point(519, 81);
+            this.panelForgotpassword.Location = new System.Drawing.Point(530, 81);
             this.panelForgotpassword.Name = "panelForgotpassword";
             this.panelForgotpassword.ShowBorders = true;
             this.panelForgotpassword.Size = new System.Drawing.Size(430, 460);
@@ -1331,6 +1403,8 @@
         private System.Windows.Forms.LinkLabel lbBackToLoginFP;
         private Bunifu.UI.WinForms.BunifuTextBox tbxNewPassword;
         private System.Windows.Forms.LinkLabel linkShow;
-        private Bunifu.UI.WinForms.BunifuCheckBox checkShow;
+        private Bunifu.UI.WinForms.BunifuCheckBox checkShowHidePassword;
+        private System.Windows.Forms.LinkLabel linkLabel2;
+        private Bunifu.UI.WinForms.BunifuCheckBox checkShowHidePasswordCP;
     }
 }

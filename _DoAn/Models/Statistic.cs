@@ -43,7 +43,7 @@ namespace _DoAn.Models
         {
             //string sMonth = DateTime.Now.ToString("MM");
             ConnectDB connect = new ConnectDB();
-            string sqlQuery = "SELECT SUM(TotalPrice) as SL from ImportForm Where Month(FormDate) ='" + month + "' and Year(FormDate) = '" + year + "'";
+            string sqlQuery = "SELECT SUM(TotalMoney) as SL from ImportForm Where Month(FormDate) ='" + month + "' and Year(FormDate) = '" + year + "'";
             return connect.GetData(sqlQuery).Rows[0]["SL"].ToString();
         }
         public string GetNumberOfProductMonth(string month, string year)//**

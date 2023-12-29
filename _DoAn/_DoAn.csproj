@@ -343,11 +343,6 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ComesticDBDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ComesticDBDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="ConnectDB.cs" />
     <Compile Include="Custom\ProfileForm.cs">
       <SubType>Form</SubType>
@@ -559,17 +554,6 @@
     <EmbeddedResource Include="Views\Supplier\SupplierView.resx">
       <DependentUpon>SupplierView.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="ComesticDBDataSet.xsc">
-      <DependentUpon>ComesticDBDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="ComesticDBDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>ComesticDBDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="ComesticDBDataSet.xss">
-      <DependentUpon>ComesticDBDataSet.xsd</DependentUpon>
-    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

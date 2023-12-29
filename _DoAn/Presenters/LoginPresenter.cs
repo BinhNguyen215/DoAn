@@ -67,7 +67,7 @@ namespace _DoAn.Presenters
                 var fromAddress = new MailAddress("kiseryouta2003@gmail.com");
                 var toAddress = new MailAddress(email);
 
-                const string fromPass = "ixrb qaxf csve vpvt";
+                const string fromPass = "qcqa slmu vkbr edha";
                 const string subject = "OTP code";
                 string body = $"Your OTP code is {storedOTP}";
 

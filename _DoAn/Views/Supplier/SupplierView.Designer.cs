@@ -159,6 +159,7 @@ namespace _DoAn.Views.Supplier
             // 
             // gbSupplier
             // 
+            this.gbSupplier.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.gbSupplier.BorderColor = System.Drawing.Color.Black;
             this.gbSupplier.BorderRadius = 4;
             this.gbSupplier.BorderThickness = 2;
@@ -219,6 +220,7 @@ namespace _DoAn.Views.Supplier
             this.dtgvSupplier.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
             this.dtgvSupplier.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
             this.dtgvSupplier.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.dtgvSupplier.Cursor = System.Windows.Forms.Cursors.Hand;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
@@ -830,6 +832,7 @@ namespace _DoAn.Views.Supplier
             // 
             // bunifuGroupBox1
             // 
+            this.bunifuGroupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bunifuGroupBox1.BorderColor = System.Drawing.Color.Black;
             this.bunifuGroupBox1.BorderRadius = 4;
             this.bunifuGroupBox1.BorderThickness = 2;
@@ -906,6 +909,7 @@ namespace _DoAn.Views.Supplier
             // 
             // bunifuGroupBox2
             // 
+            this.bunifuGroupBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bunifuGroupBox2.BorderColor = System.Drawing.Color.Black;
             this.bunifuGroupBox2.BorderRadius = 4;
             this.bunifuGroupBox2.BorderThickness = 2;

@@ -34,8 +34,9 @@ namespace _DoAn
         private bool isDropdownMenuOpening = false;
         public bool isOpenInfo = false;
         public ProfileForm p;
+        private bool shouldClose = false;
         public Menu()
-        { 
+        {
             InitializeComponent();
             leftBorderbtn = new Panel();
             leftBorderbtn.Size = new Size(7, 60);
@@ -96,11 +97,11 @@ namespace _DoAn
             Open_DropdownMenu(rjDropdownMenu1, sender);
         }
 
-        
 
-        private void Open_DropdownMenu(RJDropdownMenu dropdownMenu ,object sender)
+
+        private void Open_DropdownMenu(RJDropdownMenu dropdownMenu, object sender)
         {
-            Control control = (Control)sender; 
+            Control control = (Control)sender;
             isDropdownMenuOpening = true;
 
             dropdownMenu.Show(control, control.Width - dropdownMenu.Width, control.Height);
@@ -109,21 +110,21 @@ namespace _DoAn
 
         private void recieptToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+
             OpenChildForm(new ReceiptsForm(id));
             lbName.Text = "Receipt";
         }
 
         private void pAyToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+
             OpenChildForm(new PaySlipForm(id));
             lbName.Text = "PaySlip";
         }
         int flag = 1;
         private void btnHome_Click(object sender, EventArgs e)
         {
-            if(flag==1)
+            if (flag == 1)
                 inlicator.Top = ((Control)sender).Top;
             OpenChildForm(new StatisticsView(name));
             lbName.Text = "Dashboard";
@@ -131,8 +132,17 @@ namespace _DoAn
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            this.Close();
-            
+            DialogResult result = MessageBox.Show("Do you want to quit?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (result == DialogResult.Yes)
+            {
+                shouldClose = true;
+                this.Close();
+            }
+            else
+            {
+                this.Focus();
+            }
         }
 
         private void btnSuppliers_Click(object sender, EventArgs e)
@@ -176,12 +186,45 @@ namespace _DoAn
             flag = 0;
             btnHome_Click(sender, e);
             flag = 1;
+
+            if (position == "SalesMan")
+            {
+                btnSale.Enabled = true;
+                btnHome.Enabled = true;
+                btnLogo.Enabled = true;
+            }
+            else if (position == "InventoryDepartment")
+            {
+                btnImport.Enabled = true;
+                btnExport.Enabled = true;
+                btnProduct.Enabled = true;
+            }
+            else if (position == "AccountingDepartment")
+            {
+                btnAccountant.Enabled = true;
+                btnHome.Enabled = true;
+                btnLogo.Enabled = true;
+            }
+
+            else
+            {
+                btnLogo.Enabled = true;
+                btnSale.Enabled = true;
+                btnProduct.Enabled = true;
+                btnEmployee.Enabled = true;
+                btnSuppliers.Enabled = true;
+                btnImport.Enabled = true;
+                btnExport.Enabled = true;
+                btnAccountant.Enabled = true;
+                btnHome.Enabled = true;
+            }
+
         }
 
         private void btnIn4_Click(object sender, EventArgs e)
         {
             if (!isOpenInfo)
-            { 
+            {
                 p.Show();
                 isOpenInfo = true;
             }
@@ -190,13 +233,34 @@ namespace _DoAn
                 p.Focus();
             }
         }
-       
+
         private void btnLogo_Click(object sender, EventArgs e)
         {
             flag = 0;
             inlicator.Location = new Point(2, 201);
             btnHome_Click(sender, e);
             flag = 1;
+        }
+
+        private void bunifuFormControlBox1_CloseClicked(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Do you want to quit?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (result == DialogResult.Yes)
+            {
+                shouldClose = true;
+                this.Close();
+            }
+        }
+
+        private void Menu_FormClosing(object sender, FormClosingEventArgs e)
+        {
+
+            if (!shouldClose && e.CloseReason == CloseReason.UserClosing)
+            {
+                e.Cancel = true; // Hủy việc đóng form nếu shouldClose là false và lý do là người dùng đang cố gắng đóng form
+            }
+
         }
     }
 }

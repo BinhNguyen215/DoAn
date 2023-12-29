@@ -218,6 +218,7 @@
             // 
             // bunifuGroupBox1
             // 
+            this.bunifuGroupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bunifuGroupBox1.BorderColor = System.Drawing.Color.Black;
             this.bunifuGroupBox1.BorderRadius = 4;
             this.bunifuGroupBox1.BorderThickness = 2;
@@ -237,6 +238,7 @@
             // 
             this.txtSearch.AcceptsReturn = false;
             this.txtSearch.AcceptsTab = false;
+            this.txtSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtSearch.AnimationSpeed = 200;
             this.txtSearch.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
             this.txtSearch.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
@@ -388,6 +390,7 @@
             // 
             // bunifuGroupBox2
             // 
+            this.bunifuGroupBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bunifuGroupBox2.BorderColor = System.Drawing.Color.Black;
             this.bunifuGroupBox2.BorderRadius = 4;
             this.bunifuGroupBox2.BorderThickness = 2;
@@ -1114,7 +1117,7 @@
             this.btnCancel.ButtonTextMarginLeft = 0;
             this.btnCancel.ColorContrastOnClick = 45;
             this.btnCancel.ColorContrastOnHover = 45;
-            this.btnCancel.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             borderEdges4.BottomLeft = true;
             borderEdges4.BottomRight = true;
             borderEdges4.TopLeft = true;
@@ -1206,7 +1209,7 @@
             this.btnCreate.ButtonTextMarginLeft = 0;
             this.btnCreate.ColorContrastOnClick = 45;
             this.btnCreate.ColorContrastOnHover = 45;
-            this.btnCreate.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnCreate.Cursor = System.Windows.Forms.Cursors.Hand;
             borderEdges5.BottomLeft = true;
             borderEdges5.BottomRight = true;
             borderEdges5.TopLeft = true;
@@ -1337,6 +1340,7 @@
             // 
             // bunifuGroupBox3
             // 
+            this.bunifuGroupBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bunifuGroupBox3.BorderColor = System.Drawing.Color.Black;
             this.bunifuGroupBox3.BorderRadius = 4;
             this.bunifuGroupBox3.BorderThickness = 2;
@@ -1360,6 +1364,7 @@
             // 
             // bunifuGroupBox4
             // 
+            this.bunifuGroupBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bunifuGroupBox4.BorderColor = System.Drawing.Color.Black;
             this.bunifuGroupBox4.BorderRadius = 4;
             this.bunifuGroupBox4.BorderThickness = 2;
@@ -1407,6 +1412,7 @@
             this.Controls.Add(this.bunifuGroupBox2);
             this.Controls.Add(this.bunifuGroupBox3);
             this.Controls.Add(this.bunifuGroupBox4);
+            this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Name = "ImportView";
             this.Text = "Import";
             this.Load += new System.EventHandler(this.ImportForm_Load);

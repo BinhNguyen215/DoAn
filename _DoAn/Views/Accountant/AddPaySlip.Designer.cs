@@ -266,6 +266,9 @@
             // cbStatus
             // 
             this.cbStatus.FormattingEnabled = true;
+            this.cbStatus.Items.AddRange(new object[] {
+            "Incomplete",
+            "Completed"});
             this.cbStatus.Location = new System.Drawing.Point(270, 181);
             this.cbStatus.Name = "cbStatus";
             this.cbStatus.Size = new System.Drawing.Size(207, 21);
@@ -363,7 +366,7 @@
             this.btnSave.onHoverState.BorderThickness = 1;
             this.btnSave.onHoverState.FillColor = System.Drawing.SystemColors.Control;
             this.btnSave.onHoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(168)))), ((int)(((byte)(80)))));
-            this.btnSave.onHoverState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnAdd.onHoverState.IconLeftImage")));
+            this.btnSave.onHoverState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnSave.onHoverState.IconLeftImage")));
             this.btnSave.onHoverState.IconRightImage = null;
             this.btnSave.OnIdleState.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
             this.btnSave.OnIdleState.BorderRadius = 15;
@@ -371,7 +374,7 @@
             this.btnSave.OnIdleState.BorderThickness = 1;
             this.btnSave.OnIdleState.FillColor = System.Drawing.SystemColors.Control;
             this.btnSave.OnIdleState.ForeColor = System.Drawing.Color.Green;
-            this.btnSave.OnIdleState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnAdd.OnIdleState.IconLeftImage")));
+            this.btnSave.OnIdleState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnSave.OnIdleState.IconLeftImage")));
             this.btnSave.OnIdleState.IconRightImage = null;
             this.btnSave.OnPressedState.BorderColor = System.Drawing.SystemColors.ControlDark;
             this.btnSave.OnPressedState.BorderRadius = 15;
@@ -408,7 +411,7 @@
             this.btnCancel.ButtonTextMarginLeft = 0;
             this.btnCancel.ColorContrastOnClick = 45;
             this.btnCancel.ColorContrastOnHover = 45;
-            this.btnCancel.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             borderEdges2.BottomLeft = true;
             borderEdges2.BottomRight = true;
             borderEdges2.TopLeft = true;

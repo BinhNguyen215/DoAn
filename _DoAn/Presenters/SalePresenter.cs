@@ -31,7 +31,7 @@ namespace _DoAn.Presenters
         {
             DataTable dt = new DataTable();
             dt = bill.GetBillData();
-            saleview.dgv_ListProduct.DataSource = dt;
+            saleview.dgvAllBill.DataSource = dt;
             return true;
         }
         public bool ClearInformation()
@@ -65,14 +65,33 @@ namespace _DoAn.Presenters
                 saleview.Product_id = id;
                 saleview.Product_Name = name;
                 saleview.Price = price;
-                saleview.Unit_Name= unit1;
                 saleview.lbUnitLv1 = unit1;
                 saleview.lbUnitLv2 = unit2;
-                saleview.ValueLv1= valueLv1;
+                saleview.ValueLv1 = valueLv1;
                 saleview.ValueLv2 = valueLv2;
+                if (saleview.dgvCart.Rows.Count > 0)
+                {
+                    foreach (DataGridViewRow row in saleview.dgvCart.Rows)
+                    {
+                        if (row.Cells[0].Value.Equals(saleview.Product_id) && row.Cells[4].Value.Equals(saleview.lbUnitLv1))
+                        {
+                            saleview.ValueLv1 = (int.Parse(valueLv1) - int.Parse(row.Cells[3].Value.ToString())).ToString();
+                        }
+                        else if (row.Cells[0].Value.Equals(saleview.Product_id) && row.Cells[4].Value.Equals(saleview.lbUnitLv2))
+                        {
+                            saleview.ValueLv2 = (int.Parse(valueLv2) - int.Parse(row.Cells[3].Value.ToString())).ToString();
+
+                        }
+                    }
+                }
+              
+                 
+                
             }
             return true;
         }
+
+        
 
         public bool AddDataToDataGridview()//*
         {
@@ -83,7 +102,9 @@ namespace _DoAn.Presenters
                 {
                     foreach (DataGridViewRow row in saleview.dgvCart.Rows)
                     {
-                        if (Convert.ToString(row.Cells[0].Value) == saleview.Product_id && row.Cells[4].Value==saleview.Unit_Name)
+                        MessageBox.Show(row.Cells[0].Value.ToString());
+
+                        if (row.Cells[0].Value.ToString().Equals(saleview.Product_id) && row.Cells[4].Value.Equals(saleview.Unit_Name))
                         {
                             row.Cells[3].Value = (int.Parse(saleview.Quantities) + int.Parse(row.Cells[3].Value.ToString()));
                             found = true;
@@ -92,7 +113,8 @@ namespace _DoAn.Presenters
 
                     }
                     if (!found)
-                    { 
+                    {
+
                         saleview.dgvCart.Rows.Add(saleview.Product_id, saleview.Product_Name, saleview.Price, saleview.Quantities,saleview.Unit_Name);
                         return true;
                     }
@@ -100,6 +122,7 @@ namespace _DoAn.Presenters
                 }
                 else
                 {
+
                     saleview.dgvCart.Rows.Add(saleview.Product_id, saleview.Product_Name, saleview.Price, saleview.Quantities, saleview.Unit_Name);
                     return true;
                 }
@@ -159,7 +182,7 @@ namespace _DoAn.Presenters
         {
             DataTable dt = new DataTable();
             dt = bill.SearchBill(search);
-            saleview.dgv_ListProduct.DataSource = dt;
+            saleview.dgvAllBill.DataSource = dt;
             return true;
         }
         public bool DeleteDatainDataGridview()
@@ -173,12 +196,12 @@ namespace _DoAn.Presenters
         }
         public bool AddDataToDB()
         {
-            string id = bill.AddData(saleview.Employee, saleview.Cus_Name, saleview.Phone, saleview.BillValue);
+            string id = bill.AddData(saleview.Employee_id, saleview.Cus_Name, saleview.Phone, saleview.BillValue);
 
             ///auto add receipts
             string contentReceipt = "Bill ID: " + id;
             string status = "Completed";
-            bill.AutoCreateReceipts(saleview.Employee, contentReceipt, saleview.BillValue, status, "");
+            bill.AutoCreateReceipts(saleview.Employee_id, contentReceipt, saleview.BillValue, status, "");
             ///end
             ///
             if (saleview.dgvCart.Rows.Count > 0)
@@ -233,7 +256,7 @@ namespace _DoAn.Presenters
 
             graphic.DrawString("Addresss: 136, Linh Trung, Thủ Đức, TP Thủ Đức", font, new SolidBrush(Color.Black), startX, 40);
 
-            graphic.DrawString("Phone: 1900 1555".PadRight(40) + "Employee: " + saleview.Employee, font, new SolidBrush(Color.Black), startX, 60);
+            graphic.DrawString("Phone: 1900 1555".PadRight(40) + "Employee: " + saleview.Employee_id, font, new SolidBrush(Color.Black), startX, 60);
             graphic.DrawString("RETAIL BILL".PadRight(40), fontBold, new SolidBrush(Color.Black), 270, 90);
 
             offset = offset + 120;
@@ -269,6 +292,8 @@ namespace _DoAn.Presenters
                 total = productTotal;
                 offset = offset + 20;
                 graphic.DrawString("Total: ".PadRight(60) + total.ToString("###,###"), new Font("Courier New", 12, FontStyle.Bold), new SolidBrush(Color.Black), startX, startY + offset);
+                graphic.DrawString("Note:...............................................................", font, new SolidBrush(Color.Black), startX, startY + offset);
+
             }
             return true;
         }
