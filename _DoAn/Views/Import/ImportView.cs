@@ -12,6 +12,7 @@ using _DoAn.Presenters;
 using Bunifu.UI.WinForms;
 using _DoAn.Presenters;
 using _DoAn.Presenters.cImport;
+using _DoAn.Models;
 
 namespace _DoAn.Views.Import
 {
@@ -117,6 +118,7 @@ namespace _DoAn.Views.Import
             btnCancel.Enabled = false;
             btnDelete.Enabled = false;
             btnCreate.Enabled = false;
+            CheckQuantity();
         }
 
         private void dtgvProduct_DoubleClick(object sender, EventArgs e)
@@ -149,7 +151,7 @@ namespace _DoAn.Views.Import
                 btnAdd.Enabled = true;
             }
         }
-       
+
         private void txtQuantity_TextChanged(object sender, EventArgs e)
         {
             ImportPresenter importPresenter = new ImportPresenter(this);
@@ -165,7 +167,14 @@ namespace _DoAn.Views.Import
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
             ImportPresenter importPresenter = new ImportPresenter(this);
-            importPresenter.SearchInformation(txtSearch.Text);
+            if (lbView.Text == "View offer")
+            {
+                importPresenter.SearchInformation(txtSearch.Text);
+            }
+            else
+            {
+                importPresenter.SearchInformationOffer(txtSearch.Text);
+            }
         }
 
         private void dtgvData_DoubleClick(object sender, EventArgs e)
@@ -282,9 +291,9 @@ namespace _DoAn.Views.Import
                 MessageBox.Show(_message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
             }
-        } 
-    
-  
+        }
+
+
         public void Createform(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
             ImportPresenter importPresenter = new ImportPresenter(this);
@@ -316,6 +325,31 @@ namespace _DoAn.Views.Import
         private void txtTotal_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void lbView_Click(object sender, EventArgs e)
+        {
+            ImportPresenter importPresenter = new ImportPresenter(this);
+            if (lbView.Text == "View offer")
+            {
+                lbView.Text = "View product";
+                gpProduct.Text = "Offer product";
+                importPresenter.GetProductOffer();
+            }
+            else
+            {
+                lbView.Text = "View offer";
+                gpProduct.Text = "Product Table";
+                importPresenter.GetProduct();
+            }
+        }
+        private void CheckQuantity()
+        {
+            ImportPresenter dt = new ImportPresenter(this);
+            if (dt.CheckQuantity())
+            {
+                snNotification.Show(this, "Below the specified level/limit", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Warning);
+            }
         }
     }
 }

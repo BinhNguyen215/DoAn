@@ -149,6 +149,13 @@ namespace _DoAn.Presenters
             importview.gvProductData.DataSource = dt;
             return true;
         }
+        public bool SearchInformationOffer(string search)
+        {
+            DataTable dt = new DataTable();
+            dt = import.SearchDataOffer(search);
+            importview.gvProductData.DataSource = dt;
+            return true;
+        }
         public bool DeleteDatainDataGridview()
         {
             foreach (DataGridViewRow item in importview.gvDetailProductData.SelectedRows)
@@ -285,6 +292,18 @@ namespace _DoAn.Presenters
                 graphic.DrawString("Total: ".PadRight(60) + total.ToString("###,###"), new Font("Courier New", 12, FontStyle.Bold), new SolidBrush(Color.Black), startX, startY + offset);
             }
             return true;
+        }
+        public void GetProductOffer()
+        {
+            DataTable dt = new DataTable();
+            dt = import.GetProductOffer();
+            importview.gvProductData.DataSource = dt;
+        }
+        public bool CheckQuantity()
+        {
+            DataTable dt = new DataTable();
+            dt = import.GetProductOffer();
+            return dt.Rows.Count > 0;
         }
     }
 }

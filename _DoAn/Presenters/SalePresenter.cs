@@ -297,5 +297,11 @@ namespace _DoAn.Presenters
             }
             return true;
         }
+        public bool CheckQuantity()
+        {
+            DataTable dt = new DataTable();
+            dt = bill.GetProductOffer();
+            return dt.Rows.Count>0;
+        }
     }
 }
