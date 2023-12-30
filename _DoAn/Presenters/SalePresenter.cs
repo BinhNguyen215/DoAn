@@ -106,7 +106,7 @@ namespace _DoAn.Presenters
             if (CheckInformation())
             {
 
-                if (saleview.dgvCart.Rows.Count > 0)
+               /* if (saleview.dgvCart.Rows.Count > 0)
                 {
                     foreach (DataGridViewRow row in saleview.dgvCart.Rows)
                     {
@@ -124,7 +124,7 @@ namespace _DoAn.Presenters
                         }
                         _values[saleview.Product_id] = saleview.ValueLv2.Split(' ')[0];
                     }
-                }
+                }*/
                 bool found = false;
                 if (saleview.dgvCart.Rows.Count > 0)
                 {
@@ -135,20 +135,7 @@ namespace _DoAn.Presenters
                         {
                             row.Cells[3].Value = (int.Parse(saleview.Quantities) + int.Parse(row.Cells[3].Value.ToString()));
                             found = true;
-                      /*      if (row.Cells[0].Value.Equals(saleview.Product_id) && row.Cells[4].Value.Equals(saleview.lbUnitLv1))
-                            {
-                                saleview.ValueLv1 = (int.Parse(saleview.ValueLv1) - int.Parse(row.Cells[3].Value.ToString())).ToString();//box= box- a
-                                saleview.ValueLv2 = (int.Parse(saleview.ValueLv2) - int.Parse(row.Cells[3].Value.ToString()) * int.Parse(saleview.Coef)).ToString();// pill = pill -a/coef
-
-                            }
-                            else if (row.Cells[0].Value.Equals(saleview.Product_id) && row.Cells[4].Value.Equals(saleview.lbUnitLv2))
-                            {
-                                saleview.ValueLv2 = (int.Parse(saleview.ValueLv2) - int.Parse(row.Cells[3].Value.ToString())).ToString();//pill=pill-a
-                                saleview.ValueLv1 = (int.Parse(saleview.ValueLv1) - int.Parse(row.Cells[3].Value.ToString()) / int.Parse(saleview.Coef)).ToString();// box = box -a/coef
-
-                            }
-                            _values[saleview.Product_id] = saleview.ValueLv2.Split(' ')[0];
-                            return true;*/
+                      
                         }
 
                     }
