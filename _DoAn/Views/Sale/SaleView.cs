@@ -24,6 +24,9 @@ namespace _DoAn.Views.Sale
     {
         SalePresenter salePresenter;
         private string _unit, _coef, _price;
+
+        Dictionary<string, string> _values = new Dictionary<string, string>();
+
         public SaleView()
         {
             InitializeComponent();
@@ -269,14 +272,14 @@ namespace _DoAn.Views.Sale
         {
             btnCancel.Enabled = true;
             panelLv2.Show();
-            
-            if (salePresenter.AddDataToDataGridview())
+
+            salePresenter.AddDataToDataGridview();
             {
                 checkBoxLv2.Checked = checkBoxLv1.Checked = false;
                 salePresenter.CalculateTotalPrice();
                 salePresenter.ClearInformation();
             }
-            
+            dgvListProduct_DoubleClick(sender, e);
             lbLv1.Text = lbLv2.Text = "Undefine";
             lbSoldOutLv1.Visible = lbSoldOutLv2.Visible = false;
             btnAdd.Enabled = false;
