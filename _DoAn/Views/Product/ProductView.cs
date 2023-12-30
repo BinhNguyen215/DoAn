@@ -14,8 +14,11 @@ namespace _DoAn.Views.Product
 {
     public partial class ProductView : Form, IProductView
     {
+        ProductPresenter productPresenter;
+        AddUnit addUnitExist = null;
         public ProductView()
         {
+            productPresenter = new ProductPresenter(this);
             InitializeComponent();
         }
 
@@ -81,16 +84,33 @@ namespace _DoAn.Views.Product
             set { dtgvProduct = value; }
         }
 
+        public ComboBox.ObjectCollection cbunit
+        {
+            get
+            {
+                return cbUnit.Items;
+            }
+            
+        }
+
+        public string coef { get => lbCoef.Text; set => lbCoef.Text = value; }
+
         private void ProductView_Load(object sender, EventArgs e)
         {
-            ProductPresenter productPresenter = new ProductPresenter(this);
             productPresenter.GetProductType();
             productPresenter.GetProduct();
             btnAdd.Enabled = true;
             btnEdit.Enabled = false;
             btnDelete.Enabled = false;
             setEnableF();
+            setupcbUnit();
         }
+
+        private void setupcbUnit()
+        {
+            productPresenter.GetProductUnit();
+        }
+
         private void setEnableF ()
         {
             txtDescription.Enabled = false;
@@ -111,7 +131,7 @@ namespace _DoAn.Views.Product
             cbUnit.Enabled = true;
             
         }
-        private void ProductView_DoubleClick(object sender, EventArgs e)
+        /*private void ProductView_DoubleClick(object sender, EventArgs e)
         {
             if (dtgvProduct.CurrentRow.Cells[0].Value.ToString() != "")
             {
@@ -123,13 +143,12 @@ namespace _DoAn.Views.Product
                 btnEdit.Enabled = false;
                 btnDelete.Enabled = false;
             }
-
-            ProductPresenter productPresenter = new ProductPresenter(this);
+            //Pill/Bõx
             productPresenter.RetriveProduct(dtgvProduct.CurrentRow.Index, dtgvProduct.CurrentRow.Cells[0].Value.ToString()
                 , dtgvProduct.CurrentRow.Cells[1].Value.ToString(), dtgvProduct.CurrentRow.Cells[2].Value.ToString(),
                 dtgvProduct.CurrentRow.Cells[3].Value.ToString(), dtgvProduct.CurrentRow.Cells[4].Value.ToString(),
                 dtgvProduct.CurrentRow.Cells[5].Value.ToString(), dtgvProduct.CurrentRow.Cells[6].Value.ToString());
-        }
+        }*/
         int index = 0;// xem đã ấn nút add chưa 1 - có, 0 - chưa, 2 - ấn edit rồi
         private void btnAdd_Click(object sender, EventArgs e)
         {
@@ -139,7 +158,6 @@ namespace _DoAn.Views.Product
             btnVisible(false, false, false);
             btnDone.Enabled= false;
             btnDone.Visible = true;
-            ProductPresenter productPresenter = new ProductPresenter(this);
             productPresenter.ClearInformation();
         }
 
@@ -151,7 +169,6 @@ namespace _DoAn.Views.Product
 
             if (dr == DialogResult.Yes)
             {
-                ProductPresenter productPresenter = new ProductPresenter(this);
                 if (productPresenter.DeleteData())
                 {
                     MessageBox.Show(_message, "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -183,7 +200,6 @@ namespace _DoAn.Views.Product
 
         private void txtProductName_TextChanged(object sender, EventArgs e)
         {
-            ProductPresenter productPresenter = new ProductPresenter(this);
             if (System.Text.RegularExpressions.Regex.IsMatch(txtPrice.Text, "[^0-9]"))
             {
                 MessageBox.Show("Please enter only numbers.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -206,17 +222,34 @@ namespace _DoAn.Views.Product
                 {
                     btnDone.Enabled = false;
                 }    
-            }   
-            if(!string.IsNullOrEmpty(cbUnit.Text))//*
+            }
+            if (cbUnit.Text.Equals("Add another unit..."))
+            {
+                if (addUnitExist == null || addUnitExist.IsDisposed)
+                {
+                    addUnitExist = new AddUnit(); 
+                    addUnitExist.ShowDialog();
+                }
+                else
+                {
+                    addUnitExist.Activate(); 
+                }
+                cbUnit.Items.Clear();
+                setupcbUnit();
+            }
+            else if(!string.IsNullOrEmpty(cbUnit.Text))//*
             {
                 string[] unitSlip= cbUnit.Text.Split('/');
-                lbUnitSmall.Text = unitSlip[0];
+                string[] smallUnit = unitSlip[0].Split(' ');
+                lbUnitSmall.Text = smallUnit[1];
                 lbUnitBig.Text = unitSlip[1];
+                lbValueCoef.Text = smallUnit[0];
             }
             else
             {
                 lbUnitBig.Text = "Undefine";
                 lbUnitSmall.Text = "Undefine";
+                lbValueCoef.Text = "Undefine";
             }
         }
         private void btnVisible(bool add,bool edit,bool delete)//*
@@ -248,18 +281,16 @@ namespace _DoAn.Views.Product
                 lbNofiWrite.Visible = true;
             }
             //*
-            ProductPresenter productPresenter = new ProductPresenter(this);
             productPresenter.RetriveProduct(dtgvProduct.CurrentRow.Index, dtgvProduct.CurrentRow.Cells[0].Value.ToString()
                 , dtgvProduct.CurrentRow.Cells[1].Value.ToString(), dtgvProduct.CurrentRow.Cells[2].Value.ToString(),
                 dtgvProduct.CurrentRow.Cells[3].Value.ToString(), dtgvProduct.CurrentRow.Cells[4].Value.ToString(),
-                dtgvProduct.CurrentRow.Cells[5].Value.ToString() +"/"+ dtgvProduct.CurrentRow.Cells[6].Value.ToString(), dtgvProduct.CurrentRow.Cells[7].Value.ToString());
+                dtgvProduct.CurrentRow.Cells[8].Value.ToString() + " " + dtgvProduct.CurrentRow.Cells[5].Value.ToString() +"/"+ dtgvProduct.CurrentRow.Cells[6].Value.ToString(), dtgvProduct.CurrentRow.Cells[7].Value.ToString());
         }
 
         private void btn_Done_Click(object sender, EventArgs e)
         {
             if (index == 1)
             {
-                ProductPresenter productPresenter = new ProductPresenter(this);
                 if (productPresenter.AddData())
                 {
                     MessageBox.Show(_message, "Notification", MessageBoxButtons.OK,
@@ -280,7 +311,6 @@ namespace _DoAn.Views.Product
             
             if (index==2) //ấn edit
             {
-                ProductPresenter productPresenter = new ProductPresenter(this);
                 if (productPresenter.CheckInformationEdit())
                 {
                     if (productPresenter.EditData())
@@ -309,9 +339,8 @@ namespace _DoAn.Views.Product
 
         }
 
-        internal static void ShowAlert(string v)
-        {
-            throw new NotImplementedException();
-        }
+        
+
+        
     }
 }

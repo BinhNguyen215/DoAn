@@ -369,69 +369,70 @@ namespace _DoAn.Views.Sale
             txtQuantities.Enabled = true;
             if (IsPressedCreateBill)
             {
-                IsPressedCreateBill = false; 
-            }       
-            
-                btnAdd.Enabled = false;
-                lbValueLv1.Visible = lbValueLv2.Visible = false;
+                IsPressedCreateBill = false;
+            }
+
+            btnAdd.Enabled = false;
+            lbValueLv1.Visible = lbValueLv2.Visible = false;
 
 
-                if (salePresenter.RetriveProduct(dgvListProduct.CurrentRow.Index, dgvListProduct.CurrentRow.Cells[0].Value.ToString()
-                      , dgvListProduct.CurrentRow.Cells[1].Value.ToString(), dgvListProduct.CurrentRow.Cells[2].Value.ToString(), dgvListProduct.CurrentRow.Cells[3].Value.ToString(),
-                      dgvListProduct.CurrentRow.Cells[4].Value.ToString(), dgvListProduct.CurrentRow.Cells[5].Value.ToString(), dgvListProduct.CurrentRow.Cells[6].Value.ToString()))
+            if (salePresenter.RetriveProduct(dgvListProduct.CurrentRow.Index, dgvListProduct.CurrentRow.Cells[0].Value.ToString()
+                  , dgvListProduct.CurrentRow.Cells[1].Value.ToString(), dgvListProduct.CurrentRow.Cells[2].Value.ToString(), dgvListProduct.CurrentRow.Cells[3].Value.ToString(),
+                  dgvListProduct.CurrentRow.Cells[4].Value.ToString(), dgvListProduct.CurrentRow.Cells[5].Value.ToString(), dgvListProduct.CurrentRow.Cells[6].Value.ToString()))
+            {
+                _coef = dgvListProduct.CurrentRow.Cells[7].Value.ToString();
+
+                if (lbLv1.Text.Equals(lbLv2.Text)) { panelLv2.Hide(); }
+                else { panelLv2.Show(); }
+                if (salePresenter.CheckSoldOutLv1())
                 {
-                    _coef = dgvListProduct.CurrentRow.Cells[7].Value.ToString();
 
-                    if (lbLv1.Text.Equals(lbLv2.Text)) { panelLv2.Hide(); }
-                    else { panelLv2.Show(); }
-                    if (salePresenter.CheckSoldOutLv1())
+                    checkBoxLv1.Checked = false;
+                    lbSoldOutLv1.Visible = true;
+                    checkBoxLv1.Enabled = false;
+                    lbValueLv1.Visible = false;
+                    if (!IsPressedCreateBill)
                     {
-
-                        checkBoxLv1.Checked = false;
-                        lbSoldOutLv1.Visible = true;
-                        checkBoxLv1.Enabled = false;
-                        lbValueLv1.Visible = false;
-                        if (!IsPressedCreateBill)
-                        {
-                            lbSoldOutLv1.Visible = false;
-                            lbValueLv1.Text += " Available";
-                            lbValueLv1.Visible = true;
-                        }
-                        btnAdd.Enabled = false;
-                    }
-                    else
-                    {
-                        checkBoxLv1.Enabled = true;
                         lbSoldOutLv1.Visible = false;
-                        btnAdd.Enabled = true;
                         lbValueLv1.Text += " Available";
                         lbValueLv1.Visible = true;
                     }
+                    btnAdd.Enabled = false;
+                }
+                else
+                {
+                    checkBoxLv1.Enabled = true;
+                    lbSoldOutLv1.Visible = false;
+                    btnAdd.Enabled = true;
+                    lbValueLv1.Text += " Available";
+                    lbValueLv1.Visible = true;
+                }
 
-                    if (salePresenter.CheckSoldOutLv2()) {
-                        checkBoxLv2.Checked = false; 
-                        lbSoldOutLv2.Visible = true;
-                        checkBoxLv2.Enabled = false; 
-                        lbValueLv2.Visible = false; 
-                        if (!IsPressedCreateBill)
-                        {
-                            lbSoldOutLv2.Visible = false;
-                            lbValueLv2.Text += " Available";
-                            lbValueLv2.Visible = true;
-                        }
-                        btnAdd.Enabled = false; 
-                    }
-                    else
+                if (salePresenter.CheckSoldOutLv2())
+                {
+                    checkBoxLv2.Checked = false;
+                    lbSoldOutLv2.Visible = true;
+                    checkBoxLv2.Enabled = false;
+                    lbValueLv2.Visible = false;
+                    if (!IsPressedCreateBill)
                     {
-                        checkBoxLv2.Enabled = true; 
-                        checkBoxLv2.Checked = true; 
-                        lbSoldOutLv2.Visible = false; 
-                        btnAdd.Enabled = true; 
-                        lbValueLv2.Text += " Available"; 
+                        lbSoldOutLv2.Visible = false;
+                        lbValueLv2.Text += " Available";
                         lbValueLv2.Visible = true;
                     }
+                    btnAdd.Enabled = false;
                 }
-           
+                else
+                {
+                    checkBoxLv2.Enabled = true;
+                    checkBoxLv2.Checked = true;
+                    lbSoldOutLv2.Visible = false;
+                    btnAdd.Enabled = true;
+                    lbValueLv2.Text += " Available";
+                    lbValueLv2.Visible = true;
+                }
+            }
+
         }
         private void checkBoxLv2_CheckedChanged2(object sender, BunifuRadioButton.CheckedChangedEventArgs e)
         {
@@ -466,20 +467,13 @@ namespace _DoAn.Views.Sale
             }
         }
 
-        private void gpProperties_Enter(object sender, EventArgs e)
-        {
 
-        }
 
         private void btnNotificationRed_Click(object sender, EventArgs e)
         {
             ImportView importForm = new ImportView();
             importForm.ShowDialog();
         }
-
-        private void txtFind_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
+       
 }
