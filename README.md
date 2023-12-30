@@ -3,7 +3,7 @@
 ## Table of contents
 * [Giới thiệu chung](#Giới-thiệu-chung)
 * [Các chức năng](#Các-chức-năng)
-* [Thư viện và công nghệ](#Thư-viện-và-công-nghệ)
+* [Framework và công nghệ](#Framework-và-công-nghệ)
 * [Hướng dẫn setup](#Hướng-dẫn-setup)
 ## Giới thiệu chung
 Tác giả: 
@@ -16,15 +16,68 @@ Green Pharmacy là một ứng dụng quản lý nhà thuốc tiện ích, đư�
 
 Green Pharmacy không chỉ là công cụ quản lý, mà còn là người bạn đồng hành đáng tin cậy trong việc xây dựng mối quan hệ với khách hàng. Tính năng quản lý thông tin khách hàng giúp lưu trữ thông tin cá nhân và lịch sử mua sắm của họ, trong khi chương trình khuyến mãi và ưu đãi đặc biệt tạo điều kiện thuận lợi cho khách hàng thân thiết. Đồng thời, với giao diện người dùng thân thiện, dễ sử dụng, Green Pharmacy là sự lựa chọn đáng tin cậy cho bất kỳ nhà thuốc nào mong muốn hiện đại hóa và tối ưu hóa hoạt động của mình.
 ## Các chức năng
+1. Đăng nhập
 
-## Thư viện và công nghệ
+![image](https://github.com/BinhNguyen215/DoAn/assets/127644891/66488e72-3a20-4546-972b-ff38835f6a3e)
+
+2. Quên mật khẩu
+
+![image](https://github.com/BinhNguyen215/DoAn/assets/127644891/7a16912e-c72f-4ace-a4dc-1254eef38868)
+
+3. Đổi mật khẩu
+
+![image](https://github.com/BinhNguyen215/DoAn/assets/127644891/8ecaa614-078f-4254-aaf7-0c0db00b14f9)
+
+4. Phân tích doanh thu
+
+![image](https://github.com/BinhNguyen215/DoAn/assets/127644891/6428e99f-5ffe-421b-b7a7-a829311fffa2)
+
+5. Bán hàng
+
+![image](https://github.com/BinhNguyen215/DoAn/assets/127644891/8ab53107-cc80-4a87-b173-7048d473055c)
+
+6. Quản lý kho
+
+![image](https://github.com/BinhNguyen215/DoAn/assets/127644891/3a09daca-5cf7-4e3c-afe2-5410d5d19b0c)
+
+7. Quản lý nhân viên
+
+![image](https://github.com/BinhNguyen215/DoAn/assets/127644891/f129d253-c014-47dd-8540-420488a4c8d0)
+
+8. Quản lý nhà cung cấp
+
+![image](https://github.com/BinhNguyen215/DoAn/assets/127644891/92c076ab-35fc-4198-a9a9-b8b82f645c1e)
+
+9. Quản lý nhập kho
+
+![image](https://github.com/BinhNguyen215/DoAn/assets/127644891/c46d1dd7-e0f6-4f26-9b97-fa99ece85411)
+
+10. Quản lý xuất kho
+
+![image](https://github.com/BinhNguyen215/DoAn/assets/127644891/354c6983-c4cd-4c73-a124-3c4a1211234f)
+
+11. Quản lý hóa đơn
+
+![image](https://github.com/BinhNguyen215/DoAn/assets/127644891/7b3fb8d7-5695-4f7b-8a63-7f4f8114c160)
+
+12. Quản lý phiếu lương
+
+![image](https://github.com/BinhNguyen215/DoAn/assets/127644891/1e0fe3bf-463c-489e-99e2-b4365e6750a8)
+
+13. Đăng xuất
+
+![image](https://github.com/BinhNguyen215/DoAn/assets/127644891/c35c3a52-6cad-4cf0-85ca-59f4dbd3342a)
+
+
+## Framework và công nghệ
 1. Công nghệ:
 
 Đồ án sử dụng ngôn ngữ C# kết hợp nền tảng WinForm và quản lý cơ sở dữ liệu trên SQL Server Management Studio (SSMS)
-Đồng thời sử dụng Framework Bunifu UI WinForm để thiết kế giao diện.
 
-2. Thư viện:
+2. Framework:
 
-Một số thư viện mà đồ án sử dụng:
+Một số framwork mà đồ án sử dụng:
+* Framework Bunifu UI
+* Framework RJCodeAdvance
 
 ## Hướng dẫn setup
