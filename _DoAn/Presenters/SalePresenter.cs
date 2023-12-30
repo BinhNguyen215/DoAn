@@ -102,7 +102,6 @@ namespace _DoAn.Presenters
                 {
                     foreach (DataGridViewRow row in saleview.dgvCart.Rows)
                     {
-                        MessageBox.Show(row.Cells[0].Value.ToString());
 
                         if (row.Cells[0].Value.ToString().Equals(saleview.Product_id) && row.Cells[4].Value.Equals(saleview.Unit_Name))
                         {

@@ -465,6 +465,12 @@ namespace _DoAn.Views.Sale
                 _unit = lbUnitLv1;
             }
         }
+
+        private void gpProperties_Enter(object sender, EventArgs e)
+        {
+
+        }
+
         private void btnNotificationRed_Click(object sender, EventArgs e)
         {
             ImportView importForm = new ImportView();
