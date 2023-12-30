@@ -54,7 +54,7 @@ namespace _DoAn.Presenters
         }
         public bool CheckSoldOutLv2()
         {
-            if (int.Parse(saleview.ValueLv2) > 0) return false;
+            if (!(saleview.ValueLv2=="") && int.Parse(saleview.ValueLv2) > 0) return false;
             return true;
         }
         public bool RetriveProduct(int index, string id, string name, string price,string valueLv2,string unit2,string valueLv1,string unit1)

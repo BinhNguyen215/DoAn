@@ -274,7 +274,6 @@
             this.txtFind.UseSystemPasswordChar = false;
             this.txtFind.WordWrap = true;
             this.txtFind.TextChange += new System.EventHandler(this.txtFind_TextChange);
-            this.txtFind.TextChanged += new System.EventHandler(this.txtFind_TextChanged);
             // 
             // dgvListProduct
             // 
@@ -1066,7 +1065,6 @@
             this.gpProperties.TabIndex = 55;
             this.gpProperties.TabStop = false;
             this.gpProperties.Text = "Properties";
-            this.gpProperties.Enter += new System.EventHandler(this.gpProperties_Enter);
             // 
             // panelLv1
             // 

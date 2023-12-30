@@ -3,9 +3,11 @@ using _DoAn.Views.Product;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace _DoAn.Presenters
 {
@@ -13,11 +15,13 @@ namespace _DoAn.Presenters
     {
         IProductView productview;
         Product product = new Product();
+        public List<KeyValuePair<string, int>> listUnit;
 
 
         public ProductPresenter(IProductView view)
         {
             productview = view;
+            listUnit = new List<KeyValuePair<string, int>>();
         }
         public bool GetProductType()
         {
@@ -61,10 +65,10 @@ namespace _DoAn.Presenters
             }
             return true;
         }
-        
+
         public bool AddData()
         {
-            
+
             if (product.AddProduct(productview.ProductName, productview.Price, productview.Description, productview.Original, productview.Unit, productview.ProductType))
             {
                 productview.message = "Add new product successfully";
@@ -131,7 +135,8 @@ namespace _DoAn.Presenters
             else
                 return true;
         }
-        public bool CheckStockQuantity(int productId)
+        //bao
+        /*public bool CheckStockQuantity(int productId)
         {
             int stockQuantity = product.GetDataQuantity(productId); // Hàm này trả về số lượng hàng tồn kho dựa trên productId
             if (stockQuantity <= 0)
@@ -140,6 +145,28 @@ namespace _DoAn.Presenters
                 return true;
             }
             return false;
+        }*/
+
+        public void GetProductUnit()
+        {
+            SqlDataReader dr = product.GetProductUnit();
+            while (dr.Read())
+            {
+                string key = dr["Unit"].ToString();
+                int value = int.Parse(dr["Coef"].ToString());
+                KeyValuePair<string, int> pair = new KeyValuePair<string, int>(key,value);
+                listUnit.Add(pair);
+                productview.cbunit.Add(dr["Unit"]);
+            }
+            productview.cbunit.Add("Add another unit...");
         }
+
+       /* public string setCoef(string key2Find)
+        {
+            KeyValuePair<string, int> pairUnit2Find = listUnit.Find(kvp => kvp.Key.Equals(key2Find));
+            return pairUnit2Find.Value.ToString();
+        }*/
+
+
     }
 }

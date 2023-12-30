@@ -18,7 +18,9 @@ namespace _DoAn.Views.Product
         string Original { get; set; }
         string ProductType { get; set; }
         string message { get; set; }
+        string coef { get; set; }
         ObjectCollection cbData { get; }
+        ObjectCollection cbunit { get; }
         BunifuDataGridView gvData { get; set; }
     }
 }

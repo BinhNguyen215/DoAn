@@ -79,6 +79,8 @@
             this.lbUnitBig = new System.Windows.Forms.Label();
             this.bunifuGroupBox2 = new Bunifu.UI.WinForms.BunifuGroupBox();
             this.bunifuGroupBox3 = new Bunifu.UI.WinForms.BunifuGroupBox();
+            this.lbValueCoef = new System.Windows.Forms.Label();
+            this.lbCoef = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -118,7 +120,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 13.5F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(81, 271);
+            this.label1.Location = new System.Drawing.Point(81, 269);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(48, 25);
             this.label1.TabIndex = 15;
@@ -129,12 +131,7 @@
             this.cbUnit.BackColor = System.Drawing.Color.White;
             this.cbUnit.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.cbUnit.FormattingEnabled = true;
-            this.cbUnit.Items.AddRange(new object[] {
-            "Pill/Box",
-            "Pill/Bottle",
-            "Bottle/Bottle",
-            "Type/Type"});
-            this.cbUnit.Location = new System.Drawing.Point(86, 301);
+            this.cbUnit.Location = new System.Drawing.Point(86, 299);
             this.cbUnit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbUnit.Name = "cbUnit";
             this.cbUnit.Size = new System.Drawing.Size(164, 32);
@@ -248,7 +245,7 @@
             this.txtOriginal.IconRight = null;
             this.txtOriginal.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtOriginal.Lines = new string[0];
-            this.txtOriginal.Location = new System.Drawing.Point(606, 274);
+            this.txtOriginal.Location = new System.Drawing.Point(607, 277);
             this.txtOriginal.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtOriginal.MaxLength = 32767;
             this.txtOriginal.MinimumSize = new System.Drawing.Size(2, 2);
@@ -818,9 +815,9 @@
             this.bunifuGroupBox1.LabelAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.bunifuGroupBox1.LabelIndent = 10;
             this.bunifuGroupBox1.LineStyle = Bunifu.UI.WinForms.BunifuGroupBox.LineStyles.Solid;
-            this.bunifuGroupBox1.Location = new System.Drawing.Point(46, 353);
+            this.bunifuGroupBox1.Location = new System.Drawing.Point(46, 382);
             this.bunifuGroupBox1.Name = "bunifuGroupBox1";
-            this.bunifuGroupBox1.Size = new System.Drawing.Size(1393, 544);
+            this.bunifuGroupBox1.Size = new System.Drawing.Size(1393, 515);
             this.bunifuGroupBox1.TabIndex = 21;
             this.bunifuGroupBox1.TabStop = false;
             this.bunifuGroupBox1.Text = "Product Table";
@@ -897,7 +894,7 @@
             this.dtgvProduct.RowTemplate.Height = 40;
             this.dtgvProduct.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgvProduct.ShowEditingIcon = false;
-            this.dtgvProduct.Size = new System.Drawing.Size(1387, 514);
+            this.dtgvProduct.Size = new System.Drawing.Size(1387, 485);
             this.dtgvProduct.TabIndex = 0;
             this.dtgvProduct.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             this.dtgvProduct.DoubleClick += new System.EventHandler(this.dtgvProduct_DoubleClick);
@@ -1028,7 +1025,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(284, 311);
+            this.label4.Location = new System.Drawing.Point(284, 305);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(80, 25);
             this.label4.TabIndex = 25;
@@ -1050,7 +1047,7 @@
             this.lbUnitBig.AutoSize = true;
             this.lbUnitBig.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbUnitBig.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lbUnitBig.Location = new System.Drawing.Point(370, 311);
+            this.lbUnitBig.Location = new System.Drawing.Point(370, 305);
             this.lbUnitBig.Name = "lbUnitBig";
             this.lbUnitBig.Size = new System.Drawing.Size(94, 25);
             this.lbUnitBig.TabIndex = 27;
@@ -1083,6 +1080,8 @@
             this.bunifuGroupBox3.BorderColor = System.Drawing.Color.Black;
             this.bunifuGroupBox3.BorderRadius = 4;
             this.bunifuGroupBox3.BorderThickness = 2;
+            this.bunifuGroupBox3.Controls.Add(this.lbValueCoef);
+            this.bunifuGroupBox3.Controls.Add(this.lbCoef);
             this.bunifuGroupBox3.Controls.Add(this.label9);
             this.bunifuGroupBox3.Controls.Add(this.label8);
             this.bunifuGroupBox3.Controls.Add(this.label7);
@@ -1108,10 +1107,32 @@
             this.bunifuGroupBox3.LineStyle = Bunifu.UI.WinForms.BunifuGroupBox.LineStyles.Solid;
             this.bunifuGroupBox3.Location = new System.Drawing.Point(46, 7);
             this.bunifuGroupBox3.Name = "bunifuGroupBox3";
-            this.bunifuGroupBox3.Size = new System.Drawing.Size(1122, 346);
+            this.bunifuGroupBox3.Size = new System.Drawing.Size(1122, 369);
             this.bunifuGroupBox3.TabIndex = 65;
             this.bunifuGroupBox3.TabStop = false;
             this.bunifuGroupBox3.Text = "Information Product";
+            // 
+            // lbValueCoef
+            // 
+            this.lbValueCoef.AutoSize = true;
+            this.lbValueCoef.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbValueCoef.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.lbValueCoef.Location = new System.Drawing.Point(370, 330);
+            this.lbValueCoef.Name = "lbValueCoef";
+            this.lbValueCoef.Size = new System.Drawing.Size(94, 25);
+            this.lbValueCoef.TabIndex = 34;
+            this.lbValueCoef.Text = "Undefine";
+            // 
+            // lbCoef
+            // 
+            this.lbCoef.AutoSize = true;
+            this.lbCoef.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCoef.ForeColor = System.Drawing.Color.Black;
+            this.lbCoef.Location = new System.Drawing.Point(292, 330);
+            this.lbCoef.Name = "lbCoef";
+            this.lbCoef.Size = new System.Drawing.Size(52, 25);
+            this.lbCoef.TabIndex = 33;
+            this.lbCoef.Text = "Coef";
             // 
             // label9
             // 
@@ -1162,7 +1183,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 13.5F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(601, 244);
+            this.label5.Location = new System.Drawing.Point(603, 246);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(79, 25);
             this.label5.TabIndex = 28;
@@ -1180,8 +1201,8 @@
             this.Name = "ProductView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "ProductView";
-            this.Load += new System.EventHandler(this.ProductView_Load);
-            this.DoubleClick += new System.EventHandler(this.ProductView_DoubleClick);
+            this.Load += new System.EventHandler(this.ProductView_Load);/*
+            this.DoubleClick += new System.EventHandler(this.ProductView_DoubleClick);*/
             this.bunifuGroupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgvProduct)).EndInit();
             this.bunifuGroupBox2.ResumeLayout(false);
@@ -1220,5 +1241,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lbValueCoef;
+        private System.Windows.Forms.Label lbCoef;
     }
 }

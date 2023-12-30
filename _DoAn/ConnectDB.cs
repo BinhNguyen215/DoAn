@@ -43,5 +43,13 @@ namespace _DoAn
             connect.Close();
             return i;
         }
+
+        public SqlDataReader GetDataReader(string sql)
+        {
+            SqlCommand cmd = new SqlCommand(sql,this.connect);
+            connect.Open();
+            SqlDataReader sqlDataReader = cmd.ExecuteReader();
+            return sqlDataReader;
+        }
     }
 }
