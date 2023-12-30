@@ -83,20 +83,28 @@ namespace _DoAn.Models
         }
 
         
-
-        public bool UpdateProduct(string quantity, string id, string uni)
+        public string getCoef(string id)
         {
+            ConnectDB connect = new ConnectDB();
+            string sqlQuery = "select Value from Product pro , Unit uni"
+                    + " where uni.Unit_id = pro.Unit_id and pro.Product_id = '" + id + "'";
+            return connect.GetData(sqlQuery).Rows[0]["Value"].ToString();
+        }
+        public bool UpdateProduct(string quantity, string id, string uni,string valuelv2)
+        {
+            string _coef = getCoef(id);
+            string quanLv1 = (int.Parse(valuelv2) / int.Parse(_coef)).ToString();
+            string quanLv2 = (int.Parse(valuelv2) % int.Parse(_coef)).ToString();
             string query;
-            if (uni == "Pill")
-                query = "Update Product set lv2Quantity = lv2Quantity - @quan Where Product_id = @id";
-            else
-                query = "Update Product set lv1Quantity = lv1Quantity - @quan Where Product_id =@id";
+            //cap nhat lv1 va lv2
+            query = "Update Product set lv2Quantity = @quan2 , lv1Quantity=@quan1 Where Product_id = @id";
             SqlCommand cmd = new SqlCommand(query);
-            cmd.Parameters.Add("@quan", SqlDbType.Int);
-            cmd.Parameters["@quan"].Value = Convert.ToInt32(quantity);
+            cmd.Parameters.Add("@quan1", SqlDbType.Int);
+            cmd.Parameters["@quan1"].Value = Convert.ToInt32(quanLv1);
+            cmd.Parameters.Add("@quan2", SqlDbType.Int);
+            cmd.Parameters["@quan2"].Value = Convert.ToInt32(quanLv2);
             cmd.Parameters.Add("@id", SqlDbType.Int);
             cmd.Parameters["@id"].Value = Convert.ToInt32(id);
-            cmd.Parameters.AddWithValue("@uni", uni);
 
             ConnectDB connect = new ConnectDB();
             if (connect.HandleData(cmd))
