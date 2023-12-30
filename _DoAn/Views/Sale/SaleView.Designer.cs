@@ -1066,7 +1066,6 @@
             this.gpProperties.TabIndex = 55;
             this.gpProperties.TabStop = false;
             this.gpProperties.Text = "Properties";
-            this.gpProperties.Enter += new System.EventHandler(this.gpProperties_Enter);
             // 
             // panelLv1
             // 
