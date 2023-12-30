@@ -1,4 +1,5 @@
 ﻿using _DoAn.Presenters;
+using _DoAn.Views.Import;
 using Bunifu.UI.WinForms;
 using System;
 using System.Collections.Generic;
@@ -456,15 +457,24 @@ namespace _DoAn.Views.Sale
                 btnAdd.Enabled = false;
             }
         }
-
         private void checkBoxLv1_CheckedChanged2(object sender, BunifuRadioButton.CheckedChangedEventArgs e)
         {
             if (checkBoxLv1.Checked == true)
             {
                 checkBoxLv2.Checked = false;
                 _unit = lbUnitLv1;
-
             }
+        }
+
+        private void gpProperties_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnNotificationRed_Click(object sender, EventArgs e)
+        {
+            ImportView importForm = new ImportView();
+            importForm.ShowDialog();
         }
 
         private void txtFind_TextChanged(object sender, EventArgs e)

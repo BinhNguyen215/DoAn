@@ -62,13 +62,14 @@ namespace _DoAn.Models
             int uni = GetUnitId(units[0], units[1]);//*
 
             //*
-            SqlCommand cmd = new SqlCommand("INSERT INTO Product (ProductName, Price,Description,Origin,ProductType,Unit_id) VALUES (@name, @price, @des, @ori, @ptid, @uni)");
+            SqlCommand cmd = new SqlCommand("INSERT INTO Product (ProductName, Price,Description,Origin,ProductType,lv1Quantity, lv2Quantity, Unit_id) VALUES (@name, @price, @des, @ori, @ptid, @lv1quan, @lv2quan, @uni)");
             cmd.Parameters.AddWithValue("@name", name);
             cmd.Parameters.AddWithValue("@price", price);
             cmd.Parameters.AddWithValue("@des", des);
             cmd.Parameters.AddWithValue("@ori", ori);
             cmd.Parameters.AddWithValue("@uni", uni);
-            //cmd.Parameters.Add("@uni", SqlDbType.Int);
+            cmd.Parameters.AddWithValue("@lv1quan", Convert.ToInt32(0));
+            cmd.Parameters.AddWithValue("@lv2quan", Convert.ToInt32(0));
             //cmd.Parameters["@uni"].Value = Convert.ToInt32(unit_id);
             //cmd.Parameters.AddWithValue("@ptid", 1);
             cmd.Parameters.Add("@ptid", SqlDbType.Int);

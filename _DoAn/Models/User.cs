@@ -155,7 +155,7 @@ namespace _DoAn.Models
         public bool UpdateEmployee(string id, string name, string citizen_id, string email, string phone, string position,
             string address, string username)
         {
-            SqlCommand cmd = new SqlCommand("UPDATE	Employee SET EmployName = @name, Citizen_id = @citizen_id, Address = @address, PhoneNumber = @phone, Email = @email, Position = @position, Password = @password, Username = @username WHERE Employee_id = @id");
+            SqlCommand cmd = new SqlCommand("UPDATE	Employee SET EmployName = @name, Citizen_id = @citizen_id, Address = @address, PhoneNumber = @phone, Email = @email, Position = @position, Username = @username WHERE Employee_id = @id");
             cmd.Parameters.AddWithValue("@name", name);
             cmd.Parameters.AddWithValue("@citizen_id", citizen_id);
             cmd.Parameters.AddWithValue("@email", email);
