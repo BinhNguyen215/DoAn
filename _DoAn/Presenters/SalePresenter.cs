@@ -291,6 +291,7 @@ namespace _DoAn.Presenters
                 total = productTotal;
                 offset = offset + 20;
                 graphic.DrawString("Total: ".PadRight(60) + total.ToString("###,###"), new Font("Courier New", 12, FontStyle.Bold), new SolidBrush(Color.Black), startX, startY + offset);
+                offset = offset + (int)fontHeight + 5;
                 graphic.DrawString("Note:...............................................................", font, new SolidBrush(Color.Black), startX, startY + offset);
 
             }

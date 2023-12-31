@@ -1020,9 +1020,9 @@
             this.panelForgotpassword.Controls.Add(this.btnChangePassword);
             this.panelForgotpassword.Controls.Add(this.tbxOTP);
             this.panelForgotpassword.Controls.Add(this.tbxUsernameFP);
-            this.panelForgotpassword.Controls.Add(this.lbForgotpassword);
             this.panelForgotpassword.Controls.Add(this.bunifuShapes2);
             this.panelForgotpassword.Controls.Add(this.lbResend);
+            this.panelForgotpassword.Controls.Add(this.lbForgotpassword);
             this.panelForgotpassword.Location = new System.Drawing.Point(530, 81);
             this.panelForgotpassword.Name = "panelForgotpassword";
             this.panelForgotpassword.ShowBorders = true;
