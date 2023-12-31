@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using _DoAn.Views.Sale;
 
 namespace _DoAn.Models
 {
@@ -86,15 +87,39 @@ namespace _DoAn.Models
         public string getCoef(string id)
         {
             ConnectDB connect = new ConnectDB();
-            string sqlQuery = "select Value from Product pro , Unit uni"
+            string sqlQuery = "select uni.Value as 'Value' from Product pro , Unit uni"
                     + " where uni.Unit_id = pro.Unit_id and pro.Product_id = '" + id + "'";
             return connect.GetData(sqlQuery).Rows[0]["Value"].ToString();
         }
-        public bool UpdateProduct(string quantity, string id, string uni,string valuelv2)
+        public string getQuanLv1(string id)
         {
-            string _coef = getCoef(id);
-            string quanLv1 = (int.Parse(valuelv2) / int.Parse(_coef)).ToString();
-            string quanLv2 = (int.Parse(valuelv2) % int.Parse(_coef)).ToString();
+            string sqlQuery = "select lv1Quantity from Product"
+                    + " where Product_id = '"+id+"'";
+                    
+            ConnectDB connect = new ConnectDB();
+            return connect.GetData(sqlQuery).Rows[0]["lv1Quantity"].ToString();
+        }
+        public string getQuanLv2(string id)
+        {
+            string sqlQuery = "select lv2Quantity from Product"
+                    + " where Product_id = '"+id+"'";
+            ConnectDB connect = new ConnectDB();
+            return connect.GetData(sqlQuery).Rows[0]["lv2Quantity"].ToString();
+        }
+        public DataTable getUnit(string id)
+        {
+            string sqlQuery = "select Unit_Namelv1, Unit_Namelv2 from Product pro, Unit uni"
+                    + " where pro.Product_id = '"+id+"'"
+                    + " and pro.Unit_id = uni.Unit_id";
+
+           
+            ConnectDB connect = new ConnectDB();
+            return connect.GetData(sqlQuery);
+        }
+        public bool UpdateProduct(string id, string quanLv1,string quanLv2)
+        {
+            
+            
             string query;
             //cap nhat lv1 va lv2
             query = "Update Product set lv2Quantity = @quan2 , lv1Quantity=@quan1 Where Product_id = @id";
