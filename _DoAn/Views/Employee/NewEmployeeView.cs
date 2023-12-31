@@ -15,9 +15,13 @@ namespace _DoAn.Views.Employee
 {
     public partial class NewEmployeeView : Form, INewEmployee
     {
+        NewEmployeePresenter newEmployeePresenter ;
+
         public NewEmployeeView()
         {
             InitializeComponent();
+            this.DoubleBuffered = true;
+            newEmployeePresenter = new NewEmployeePresenter(this);
         }
         private bool _isNew;
         private string employeeID;
@@ -137,7 +141,6 @@ namespace _DoAn.Views.Employee
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            NewEmployeePresenter newEmployeePresenter = new NewEmployeePresenter(this);
             if (this._isNew)
             {
 
@@ -215,7 +218,6 @@ namespace _DoAn.Views.Employee
 
         private void btnSaveEnable()
         {
-            NewEmployeePresenter newEmployeePresenter = new NewEmployeePresenter(this);
             if (newEmployeePresenter.CheckInformation()&&bPhone && bCitizenID && bEmail)
             {
                 btnSave.Enabled = true;

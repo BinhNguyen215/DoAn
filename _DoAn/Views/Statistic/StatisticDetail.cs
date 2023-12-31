@@ -20,6 +20,7 @@ namespace _DoAn.Views.Statistic
         {
             _id = bill_id;
             InitializeComponent();
+            this.DoubleBuffered = true;
         }
         string IDetailBill.BillId {
             get { return lbBill_id.Text; }

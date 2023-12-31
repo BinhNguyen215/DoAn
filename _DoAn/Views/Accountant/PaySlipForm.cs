@@ -15,9 +15,13 @@ namespace _DoAn.Views.Accountant
     public partial class PaySlipForm : Form, IPaySlip
     {
         private string id;
+        PaySlipPresenter paySlipPresenter;
+
         public PaySlipForm()
         {
             InitializeComponent();
+            this.DoubleBuffered = true;
+            paySlipPresenter = new PaySlipPresenter(this);
         }
         public PaySlipForm(string id) : this()
         {
@@ -46,7 +50,6 @@ namespace _DoAn.Views.Accountant
             label2.Font = new Font(label2.Font, FontStyle.Bold);
             btnEdit.Enabled = false;
 
-            PaySlipPresenter paySlipPresenter = new PaySlipPresenter(this);
             paySlipPresenter.LoadPaySlip();
         }
 
@@ -55,7 +58,6 @@ namespace _DoAn.Views.Accountant
             label2.Font = new Font(label2.Font, FontStyle.Regular);
             label1.Font = new Font(label1.Font, FontStyle.Bold);
 
-            PaySlipPresenter paySlipPresenter = new PaySlipPresenter(this);
             paySlipPresenter.FilterByDay();
         }
 
@@ -64,7 +66,6 @@ namespace _DoAn.Views.Accountant
             label2.Font = new Font(label2.Font, FontStyle.Bold);
             label1.Font = new Font(label1.Font, FontStyle.Regular);
             //cbStatus.Text = "Status";
-            PaySlipPresenter paySlipPresenter = new PaySlipPresenter(this);
             paySlipPresenter.LoadPaySlip();
         }
         private void btnAdd_Click(object sender, EventArgs e)
@@ -98,7 +99,6 @@ namespace _DoAn.Views.Accountant
         {
             label1.Font = new Font(label1.Font, FontStyle.Bold);
             label2.Font = new Font(label2.Font, FontStyle.Regular);
-            PaySlipPresenter paySlipPresenter = new PaySlipPresenter(this);
             paySlipPresenter.FilterByStatus();
         }
 

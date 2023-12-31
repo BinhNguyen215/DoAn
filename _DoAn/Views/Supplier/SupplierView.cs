@@ -16,9 +16,13 @@ namespace _DoAn.Views.Supplier
 {
     public partial class SupplierView : Form,ISupplier
     {
+        SupplierPresenter suplierPresenter ;
+
         public SupplierView()
         {
             InitializeComponent();
+            this.DoubleBuffered = true;
+            suplierPresenter = new SupplierPresenter(this);
         }
 
         public string SuplierId { get => tbxSuplierId.Text; set => tbxSuplierId.Text = value; }
@@ -32,7 +36,6 @@ namespace _DoAn.Views.Supplier
 
         private void SuplierForm_Load(object sender, EventArgs e)
         {
-            SupplierPresenter suplierPresenter = new SupplierPresenter(this);
             suplierPresenter.GetSuplier();
             btnAdd.Enabled = false;
             btnEdit.Enabled = false;
@@ -42,7 +45,6 @@ namespace _DoAn.Views.Supplier
         private void dtgvsuplier_DoubleClick(object sender, EventArgs e)
         {
 
-            SupplierPresenter suplierPresenter = new SupplierPresenter(this);
             suplierPresenter.RetriveSuplier(dtgvSupplier.CurrentRow.Index, dtgvSupplier.CurrentRow.Cells[0].Value.ToString()
                 , dtgvSupplier.CurrentRow.Cells[1].Value.ToString(), dtgvSupplier.CurrentRow.Cells[2].Value.ToString(),
                 dtgvSupplier.CurrentRow.Cells[3].Value.ToString(), dtgvSupplier.CurrentRow.Cells[4].Value.ToString());
@@ -59,7 +61,6 @@ namespace _DoAn.Views.Supplier
         }
         private void btnAdd_Click_1(object sender, EventArgs e)
         {
-            SupplierPresenter suplierPresenter = new SupplierPresenter(this);
             if (suplierPresenter.AddData())
             {
                 MessageBox.Show(_message, "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -78,7 +79,6 @@ namespace _DoAn.Views.Supplier
         }
         private void btnEdit_Click_1(object sender, EventArgs e)
         {
-            SupplierPresenter suplierPresenter = new SupplierPresenter(this);
             if (suplierPresenter.CheckInformationEdit())
             {
                 if (suplierPresenter.EditData())
@@ -108,7 +108,6 @@ namespace _DoAn.Views.Supplier
 
             if (dr == DialogResult.Yes)
             {
-                SupplierPresenter suplierPresenter = new SupplierPresenter(this);
                 if (suplierPresenter.DeleteData())
                 {
                     MessageBox.Show(_message, "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -124,7 +123,6 @@ namespace _DoAn.Views.Supplier
 
         private void tbxSupplierName_TextChanged(object sender, EventArgs e)
         {
-            SupplierPresenter suplierPresenter = new SupplierPresenter(this);
             if (System.Text.RegularExpressions.Regex.IsMatch(tbxPhoneNumber.Text, "[^0-9]"))
             {
                 MessageBox.Show("Please enter only numbers.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);

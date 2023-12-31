@@ -31,6 +31,7 @@ namespace _DoAn.Views.Sale
         {
             InitializeComponent();
             salePresenter = new SalePresenter(this);
+            this.DoubleBuffered = true;
         }
 
         public string Find
@@ -147,7 +148,7 @@ namespace _DoAn.Views.Sale
 
         private void btnCreateBill_Click(object sender, EventArgs e)
         {
-            salePresenter.CalculateAfterAddToCart();
+            //salePresenter.CalculateAfterAddToCart();
             if (dgvCart.Rows.Count > 0)
             {
                 if (salePresenter.AddDataToDB())
