@@ -274,7 +274,6 @@ namespace _DoAn.Views.Sale
             if(salePresenter.AddDataToDataGridview())
             {
                 checkBoxLv2.Checked = checkBoxLv1.Checked = false;
-                salePresenter.CalculateTotalQuantity() ;
                 salePresenter.CalculateTotalPrice();
                 salePresenter.ClearInformation();
             }
@@ -373,16 +372,7 @@ namespace _DoAn.Views.Sale
             }
 
         }
-        public void CaculatorQuantitySale(string quan)
-        {
-            if(_unit==lbUnitLv2)
-            {
-                if(int.Parse(quan) < int.Parse(_coef)) // TH1
-                {
-
-                }    
-            }    
-        }
+      
         private void dgvListProduct_DoubleClick(object sender, EventArgs e)
         {
             checkBoxLv2.Enabled = checkBoxLv1.Enabled = true;
