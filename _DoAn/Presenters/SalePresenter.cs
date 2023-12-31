@@ -73,6 +73,7 @@ namespace _DoAn.Presenters
                 saleview.lbUnitLv1 = unit1;
                 saleview.lbUnitLv2 = unit2;
                 saleview.ValueLv1 = valueLv1;
+                if(saleview.ValueLv2!="")
                 saleview.ValueLv2 = (int.Parse(valueLv2) + int.Parse(valueLv1) *int.Parse(saleview.Coef)).ToString();
 
                 if (saleview.dgvCart.Rows.Count > 0)
@@ -98,40 +99,43 @@ namespace _DoAn.Presenters
             }
             return true;
         }
-
-        public void CalculateTotalQuantity()
-        {
-
-           /*
-            if (saleview.Unit_Name == saleview.lbUnitLv1)
-            {
-                saleview.ValueLv1 = (int.Parse(saleview.ValueLv1.Split(' ')[0]) - int.Parse(saleview.Quantities.ToString())).ToString();//box= box- a
-                saleview.ValueLv2 = (int.Parse(saleview.ValueLv2.Split(' ')[0]) - int.Parse(saleview.Quantities.ToString()) * int.Parse(saleview.Coef)).ToString();// pill = pill -a/coef
-
-            }
-            else if (saleview.Unit_Name == saleview.lbUnitLv2)
-            {
-                if (int.Parse(saleview.Quantities.ToString()) < int.Parse(saleview.Coef))
-                    saleview.ValueLv2 = (int.Parse(saleview.ValueLv2.Split(' ')[0]) - int.Parse(saleview.Quantities.ToString())).ToString();//pill=pill-a
-                    *//*saleview.ValueLv1 = (float.Parse(saleview.ValueLv1.Split(' ')[0]) - float.Parse(saleview.Quantities.ToString()) / float.Parse(saleview.Coef)).ToString();// box = box -a/coef*//*
-                else //--------------------------------------------------------------------------------------- Trường hợp 4: a%coef  hơn hoặc bằng giá trị data.Pill
-                {
-                    saleview.ValueLv2 = (int.Parse(saleview.ValueLv2.Split(' ')[0]) + int.Parse(saleview.Coef) - int.Parse(saleview.Quantities.ToString()) % int.Parse(saleview.Coef)).ToString(); // Pil = Pil + coef- a %coef
-                    saleview.ValueLv1 = (int.Parse(saleview.ValueLv1.Split(' ')[0]) - int.Parse(saleview.Quantities.ToString()) / int.Parse(saleview.Coef) - 1).ToString();//BOX = box - a\coef-1
-                }
-
-
-            }*/
-
-        }
-
         public bool AddDataToDataGridview()//*
         {
+            string _2rdQuantities;
 
+            if (saleview.Unit_Name == saleview.lbUnitLv2 && int.Parse(saleview.Quantities) >= int.Parse(saleview.Coef))
+            {
+                bool found = false;
+                _2rdQuantities = (int.Parse(saleview.Quantities) / int.Parse(saleview.Coef)).ToString();
+                saleview.Quantities = (int.Parse(saleview.Quantities) % int.Parse(saleview.Coef)).ToString();
+
+                if (saleview.dgvCart.Rows.Count > 0)
+                {
+                    foreach (DataGridViewRow row in saleview.dgvCart.Rows)
+                    {
+
+                        if (row.Cells[0].Value.ToString().Equals(saleview.Product_id) && row.Cells[4].Value.Equals(saleview.lbUnitLv1))
+                        {
+                            row.Cells[3].Value = (int.Parse(_2rdQuantities) + int.Parse(row.Cells[3].Value.ToString()));
+                            found = true;
+                        }
+
+                    }
+                    if (!found)
+                    {
+                        saleview.dgvCart.Rows.Add(saleview.Product_id, saleview.Product_Name, (int.Parse(saleview.Price)*int.Parse(saleview.Coef)).ToString(), _2rdQuantities, saleview.lbUnitLv1);
+                    }
+
+                }
+                else
+                {
+                    saleview.dgvCart.Rows.Add(saleview.Product_id, saleview.Product_Name, (int.Parse(saleview.Price) * int.Parse(saleview.Coef)).ToString(), _2rdQuantities, saleview.lbUnitLv1);
+                }
+            }
             if (CheckInformation())
             {
                 
-                bool found = false;
+                bool found= false;
                 if (saleview.dgvCart.Rows.Count > 0)
                 {
                     foreach (DataGridViewRow row in saleview.dgvCart.Rows)
@@ -140,12 +144,26 @@ namespace _DoAn.Presenters
                         if (row.Cells[0].Value.ToString().Equals(saleview.Product_id) && row.Cells[4].Value.Equals(saleview.Unit_Name))
                         {
                             row.Cells[3].Value = (int.Parse(saleview.Quantities) + int.Parse(row.Cells[3].Value.ToString()));
+                            if (saleview.Unit_Name == saleview.lbUnitLv2 && int.Parse(row.Cells[3].Value.ToString()) >= int.Parse(saleview.Coef))///fix sau khi thêm
+                            {
+                                _2rdQuantities = (int.Parse(row.Cells[3].Value.ToString()) / int.Parse(saleview.Coef)).ToString();
+                                row.Cells[3].Value = (int.Parse(row.Cells[3].Value.ToString()) % int.Parse(saleview.Coef)).ToString();
+                                if (row.Cells[3].Value.ToString() == "0") saleview.dgvCart.Rows.RemoveAt(row.Index);
+                                foreach (DataGridViewRow row2 in saleview.dgvCart.Rows) 
+                                {
+                                    if (row2.Cells[0].Value.ToString().Equals(saleview.Product_id) && row2.Cells[4].Value.Equals(saleview.lbUnitLv1))
+                                    {
+                                        row2.Cells[3].Value = (int.Parse(_2rdQuantities) + int.Parse(row2.Cells[3].Value.ToString()));
+                                        found = true;
+                                    }
+                                }
+                            }
                             found = true;
                             return true;
                         }
 
                     }
-                    if (!found)
+                    if (!found&&saleview.Quantities!="0")
                     {
                         saleview.dgvCart.Rows.Add(saleview.Product_id, saleview.Product_Name, saleview.Price, saleview.Quantities,saleview.Unit_Name);
                         return true;
@@ -153,7 +171,7 @@ namespace _DoAn.Presenters
 
                 }
                 else
-                {
+                {   if(saleview.Quantities != "0")
                     saleview.dgvCart.Rows.Add(saleview.Product_id, saleview.Product_Name, saleview.Price, saleview.Quantities, saleview.Unit_Name);
                     return true;
                 }
@@ -298,7 +316,6 @@ namespace _DoAn.Presenters
                         CalculateUpdate(row.Cells[0].Value.ToString(), row.Cells[3].Value.ToString(),whatUnit);
                         //
                         bill.UpdateProduct(row.Cells[0].Value.ToString(), quanLv1,quanLv2);//
-
                     }
                 }
                 saleview.message = "Created bill successfully. Do you want to print this bill?";
