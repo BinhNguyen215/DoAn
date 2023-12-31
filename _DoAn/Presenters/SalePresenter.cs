@@ -54,8 +54,8 @@ namespace _DoAn.Presenters
         }
         public bool CheckSoldOutLv2()
         {
-            if (!(saleview.ValueLv2=="") && int.Parse(saleview.ValueLv2) > 0) return false;
-           /* if (!CheckSoldOutLv1())
+            if (saleview.ValueLv2!="Undefine"&&!(saleview.ValueLv2 == "") && int.Parse(saleview.ValueLv2) > 0) return false;
+           /* if (!CheckSoldOutLv1(
             {
                 saleview.ValueLv2 = saleview.Coef;
                 saleview.ValueLv1= (int.Parse(saleview.ValueLv1)-1).ToString();
@@ -73,7 +73,7 @@ namespace _DoAn.Presenters
                 saleview.lbUnitLv1 = unit1;
                 saleview.lbUnitLv2 = unit2;
                 saleview.ValueLv1 = valueLv1;
-                if(saleview.ValueLv2!="")
+                if(valueLv2 != "")
                 saleview.ValueLv2 = (int.Parse(valueLv2) + int.Parse(valueLv1) *int.Parse(saleview.Coef)).ToString();
 
                 if (saleview.dgvCart.Rows.Count > 0)
@@ -91,10 +91,8 @@ namespace _DoAn.Presenters
                             //Code cũ
                             saleview.ValueLv2 = (int.Parse(saleview.ValueLv2) - int.Parse(row.Cells[3].Value.ToString())).ToString();//pill=pill-a
                             saleview.ValueLv1 = (int.Parse(saleview.ValueLv2) / int.Parse(saleview.Coef)).ToString();//BOX = box/coef
-                           
                         }
                     }
-                   
                 }
             }
             return true;

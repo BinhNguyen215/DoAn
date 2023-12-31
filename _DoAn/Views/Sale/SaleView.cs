@@ -147,7 +147,6 @@ namespace _DoAn.Views.Sale
 
         private void btnCreateBill_Click(object sender, EventArgs e)
         {
-            salePresenter.CalculateAfterAddToCart();
             if (dgvCart.Rows.Count > 0)
             {
                 if (salePresenter.AddDataToDB())
@@ -357,11 +356,9 @@ namespace _DoAn.Views.Sale
                         MessageBox.Show("Enter number less than number of products that is available.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         txtQuantities.Text = "0";
                         btnAdd.Enabled = false;
-
                     }
                     else
                 {
-
                     btnAdd.Enabled = true;
                 }
                 }
@@ -454,7 +451,6 @@ namespace _DoAn.Views.Sale
                 _price = (int.Parse(_price) / int.Parse(_coef)).ToString();
             }
         }
-
         private void dgvCart_DoubleClick(object sender, EventArgs e)
         {
             btnDelete.Enabled = true;
@@ -478,9 +474,6 @@ namespace _DoAn.Views.Sale
                 _price = (int.Parse(_price) * int.Parse(_coef)).ToString();
             }
         }
-
-
-
         private void btnNotificationRed_Click(object sender, EventArgs e)
         {
             ImportView importForm = new ImportView();
