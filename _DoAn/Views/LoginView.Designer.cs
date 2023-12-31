@@ -496,7 +496,7 @@
             this.bunifuFormControlBox1.HelpBoxOptions.IconPressedColor = System.Drawing.Color.Black;
             this.bunifuFormControlBox1.HelpBoxOptions.IconSize = new System.Drawing.Size(22, 22);
             this.bunifuFormControlBox1.HelpBoxOptions.PressedColor = System.Drawing.Color.Silver;
-            this.bunifuFormControlBox1.Location = new System.Drawing.Point(893, 0);
+            this.bunifuFormControlBox1.Location = new System.Drawing.Point(891, 0);
             this.bunifuFormControlBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.bunifuFormControlBox1.MaximizeBox = false;
             this.bunifuFormControlBox1.MaximizeBoxOptions.BackColor = System.Drawing.Color.Transparent;
@@ -557,7 +557,7 @@
             this.panelLogin.Controls.Add(this.bunifuShapes1);
             this.panelLogin.Controls.Add(this.linkShow);
             this.panelLogin.Controls.Add(this.checkShowHidePassword);
-            this.panelLogin.Location = new System.Drawing.Point(530, 78);
+            this.panelLogin.Location = new System.Drawing.Point(528, 78);
             this.panelLogin.Name = "panelLogin";
             this.panelLogin.ShowBorders = true;
             this.panelLogin.Size = new System.Drawing.Size(414, 460);
@@ -1022,8 +1022,7 @@
             this.panelForgotpassword.Controls.Add(this.tbxUsernameFP);
             this.panelForgotpassword.Controls.Add(this.bunifuShapes2);
             this.panelForgotpassword.Controls.Add(this.lbResend);
-            this.panelForgotpassword.Controls.Add(this.lbForgotpassword);
-            this.panelForgotpassword.Location = new System.Drawing.Point(530, 81);
+            this.panelForgotpassword.Location = new System.Drawing.Point(528, 81);
             this.panelForgotpassword.Name = "panelForgotpassword";
             this.panelForgotpassword.ShowBorders = true;
             this.panelForgotpassword.Size = new System.Drawing.Size(430, 460);

@@ -16,9 +16,13 @@ namespace _DoAn.Views.Accountant
         private string _id;
         private bool _isNew; //có phải phiếu mới hay ko, true là phiếu mới, false là chỉnh sửa phiếu cũ
         private string receipts_id;
+        AddReceiptsPresenter addReceiptsPresenter;
+
         public AddReceiptsForm()
         {
             InitializeComponent();
+            this.DoubleBuffered = true;
+            addReceiptsPresenter = new AddReceiptsPresenter(this);
         }
         public string Employee
         {
@@ -41,7 +45,6 @@ namespace _DoAn.Views.Accountant
             this._id = employee_id;
             this.receipts_id = receipts_id;
 
-            AddReceiptsPresenter addReceiptsPresenter = new AddReceiptsPresenter(this);
             addReceiptsPresenter.RetriveData(content, value, date, status);
 
         }
@@ -79,7 +82,6 @@ namespace _DoAn.Views.Accountant
 
         private void btnSave_Click_1(object sender, EventArgs e)
         {
-            AddReceiptsPresenter addReceiptsPresenter = new AddReceiptsPresenter(this);
             if (this._isNew)
             {
                 if (addReceiptsPresenter.AddDataToDB())

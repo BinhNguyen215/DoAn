@@ -15,9 +15,13 @@ namespace _DoAn.Views.Accountant
     public partial class ReceiptsForm : Form, IReceiptsForm
     {
         private string id;
+        ReceiptsPresenter receiptsPresenter ;
+
         public ReceiptsForm()
         {
             InitializeComponent();
+            this.DoubleBuffered = true;
+            receiptsPresenter = new ReceiptsPresenter(this);
         }
         public ReceiptsForm(string id) : this()
         {
@@ -48,7 +52,6 @@ namespace _DoAn.Views.Accountant
             label2.Font = new Font(label2.Font, FontStyle.Bold);
             btnEdit.Enabled = false;
 
-            ReceiptsPresenter receiptsPresenter = new ReceiptsPresenter(this);
             receiptsPresenter.LoadReceipts();
         }
 
@@ -57,7 +60,6 @@ namespace _DoAn.Views.Accountant
             label2.Font = new Font(label2.Font, FontStyle.Regular);
             label1.Font = new Font(label1.Font, FontStyle.Bold);
 
-            ReceiptsPresenter receiptsPresenter = new ReceiptsPresenter(this);
             receiptsPresenter.FilterByDay();
         }
 
@@ -66,7 +68,6 @@ namespace _DoAn.Views.Accountant
             label2.Font = new Font(label2.Font, FontStyle.Bold);
             label1.Font = new Font(label1.Font, FontStyle.Regular);
             btnEdit.Enabled = false;
-            ReceiptsPresenter receiptsPresenter = new ReceiptsPresenter(this);
             receiptsPresenter.LoadReceipts();
 
         }
@@ -93,7 +94,6 @@ namespace _DoAn.Views.Accountant
         {
             label1.Font = new Font(label1.Font, FontStyle.Bold);
             label2.Font = new Font(label2.Font, FontStyle.Regular);
-            ReceiptsPresenter receiptsPresenter = new ReceiptsPresenter(this);
             receiptsPresenter.FilterByStatus();
         }
 
