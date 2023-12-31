@@ -470,6 +470,8 @@ namespace _DoAn.Views.Sale
                 btnAdd.Enabled = false;
             }
         }
+
+       
         private void checkBoxLv1_CheckedChanged2(object sender, BunifuRadioButton.CheckedChangedEventArgs e)
         {
             if (checkBoxLv1.Checked == true)
