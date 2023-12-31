@@ -18,9 +18,13 @@ namespace _DoAn.Views.Import
 {
     public partial class ImportView : Form, IImportView
     {
+        ImportPresenter importPresenter ;
+
         public ImportView()
         {
             InitializeComponent();
+            this.DoubleBuffered = true;
+            importPresenter = new ImportPresenter(this);
         }
         private string _id;
         private string _name;
@@ -110,7 +114,6 @@ namespace _DoAn.Views.Import
 
         private void ImportForm_Load(object sender, EventArgs e)
         {
-            ImportPresenter importPresenter = new ImportPresenter(this);
             importPresenter.GetProduct();
             importPresenter.GetSuplier();
             btnAdd.Enabled = false;
@@ -123,7 +126,6 @@ namespace _DoAn.Views.Import
 
         private void dtgvProduct_DoubleClick(object sender, EventArgs e)
         {
-            ImportPresenter importPresenter = new ImportPresenter(this);
             importPresenter.RetriveProduct(dtgvProduct.CurrentRow.Index, dtgvProduct.CurrentRow.Cells[0].Value.ToString()
                 , dtgvProduct.CurrentRow.Cells[1].Value.ToString());
             btnAdd.Enabled = true;
@@ -132,7 +134,6 @@ namespace _DoAn.Views.Import
         }
         private void btnAdd_Click_1(object sender, EventArgs e)
         {
-            ImportPresenter importPresenter = new ImportPresenter(this);
             Command add = new AddCommand(importPresenter);
             Command delete = new DeleteCommand(importPresenter);
             Command cancel = new CancelCommand(importPresenter);
@@ -154,7 +155,6 @@ namespace _DoAn.Views.Import
 
         private void txtQuantity_TextChanged(object sender, EventArgs e)
         {
-            ImportPresenter importPresenter = new ImportPresenter(this);
             if (System.Text.RegularExpressions.Regex.IsMatch(txtQuantity.Text, "[^0-9]"))
             {
                 MessageBox.Show("Please enter only numbers.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -166,7 +166,6 @@ namespace _DoAn.Views.Import
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-            ImportPresenter importPresenter = new ImportPresenter(this);
             if (lbView.Text == "View offer")
             {
                 importPresenter.SearchInformation(txtSearch.Text);
@@ -179,7 +178,6 @@ namespace _DoAn.Views.Import
 
         private void dtgvData_DoubleClick(object sender, EventArgs e)
         {
-            ImportPresenter importPresenter = new ImportPresenter(this);
             importPresenter.RetriveData(dtgvData.CurrentRow.Index, dtgvData.CurrentRow.Cells[0].Value.ToString()
                 , dtgvData.CurrentRow.Cells[1].Value.ToString(), dtgvData.CurrentRow.Cells[2].Value.ToString(),
                 dtgvData.CurrentRow.Cells[3].Value.ToString(), dtgvData.CurrentRow.Cells[4].Value.ToString());
@@ -190,7 +188,6 @@ namespace _DoAn.Views.Import
 
         private void btnEdit_Click_1(object sender, EventArgs e)
         {
-            ImportPresenter importPresenter = new ImportPresenter(this);
             Command edit = new EditCommand(importPresenter, dtgvData.CurrentRow.Index);
             Command add = new AddCommand(importPresenter);
             Command delete = new DeleteCommand(importPresenter);
@@ -210,7 +207,6 @@ namespace _DoAn.Views.Import
 
         private void btnDelete_Click_1(object sender, EventArgs e)
         {
-            ImportPresenter importPresenter = new ImportPresenter(this);
             Command add = new AddCommand(importPresenter);
             Command delete = new DeleteCommand(importPresenter);
             Command cancel = new CancelCommand(importPresenter);
@@ -230,7 +226,6 @@ namespace _DoAn.Views.Import
         }
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            ImportPresenter importPresenter = new ImportPresenter(this);
             Command add = new AddCommand(importPresenter);
             Command delete = new DeleteCommand(importPresenter);
             Command cancel = new CancelCommand(importPresenter);
@@ -249,7 +244,6 @@ namespace _DoAn.Views.Import
         }
         private void btnCreate_Click_1(object sender, EventArgs e)
         {
-            ImportPresenter importPresenter = new ImportPresenter(this);
             if (importPresenter.CheckSuplier())
             {
                 if (importPresenter.AddDataToDB())
@@ -296,7 +290,6 @@ namespace _DoAn.Views.Import
 
         public void Createform(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
-            ImportPresenter importPresenter = new ImportPresenter(this);
             importPresenter.Print(e);
         }
 
@@ -307,7 +300,6 @@ namespace _DoAn.Views.Import
 
         private void txtImportPrice_TextChanged(object sender, EventArgs e)
         {
-            ImportPresenter importPresenter = new ImportPresenter(this);
             if (System.Text.RegularExpressions.Regex.IsMatch(txtImportPrice.Text, "[^0-9]"))
             {
                 MessageBox.Show("Please enter only numbers.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -329,7 +321,6 @@ namespace _DoAn.Views.Import
 
         private void lbView_Click(object sender, EventArgs e)
         {
-            ImportPresenter importPresenter = new ImportPresenter(this);
             if (lbView.Text == "View offer")
             {
                 lbView.Text = "View product";
@@ -345,8 +336,7 @@ namespace _DoAn.Views.Import
         }
         private void CheckQuantity()
         {
-            ImportPresenter dt = new ImportPresenter(this);
-            if (dt.CheckQuantity())
+            if (importPresenter.CheckQuantity())
             {
                 snNotification.Show(this, "Below the specified level/limit", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Warning);
             }

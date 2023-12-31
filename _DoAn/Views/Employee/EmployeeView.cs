@@ -15,9 +15,13 @@ namespace _DoAn.Views.Employee
 {
     public partial class EmployeeView : Form,IManageEmployeeView
     {
+        EmployeePresenter employeePresenter ;
+
         public EmployeeView()
         {
             InitializeComponent();
+            this.DoubleBuffered = true;
+            employeePresenter = new EmployeePresenter(this);
         }
         private string _employee_id;
 
@@ -49,7 +53,6 @@ namespace _DoAn.Views.Employee
 
         private void EmployeeView_Load(object sender, EventArgs e)
         {
-            EmployeePresenter employeePresenter = new EmployeePresenter(this);
             employeePresenter.LoadListEmployee();
 
             btnEdit.Enabled = false;
@@ -102,7 +105,6 @@ namespace _DoAn.Views.Employee
 
         private void tbSearch_TextChanged(object sender, EventArgs e)
         {
-            EmployeePresenter employeePresenter = new EmployeePresenter(this);
             employeePresenter.SearchInformation(tbSearch.Text);
 
             btnEdit.Enabled = false;
@@ -116,7 +118,6 @@ namespace _DoAn.Views.Employee
 
             if (dr == DialogResult.Yes)
             {
-                EmployeePresenter employeePresenter = new EmployeePresenter(this);
 
                 if (employeePresenter.DeleteData())
                 {
@@ -133,7 +134,6 @@ namespace _DoAn.Views.Employee
 
         private void lbShow_Click(object sender, EventArgs e)
         {
-            EmployeePresenter employeePresenter = new EmployeePresenter(this);
             employeePresenter.LoadListEmployee();
 
             btnEdit.Enabled = false;

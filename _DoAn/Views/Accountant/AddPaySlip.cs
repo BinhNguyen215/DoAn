@@ -16,9 +16,14 @@ namespace _DoAn.Views.Accountant
         private string _id;
         private bool _isNew; //có phải phiếu mới hay ko, true là phiếu mới, false là chỉnh sửa phiếu cũ
         private string paySlip_id;
+        AddPaySlipPresenter addPaySlipPresenter;
+
+
         public AddPaySlip()
         {
             InitializeComponent();
+            this.DoubleBuffered = true;
+            addPaySlipPresenter = new AddPaySlipPresenter(this);
         }
         public string Employee
         {
@@ -41,7 +46,7 @@ namespace _DoAn.Views.Accountant
             this._isNew = isNew;
             this._id = employee_id;
             this.paySlip_id = paySlip_id;
-            AddPaySlipPresenter addPaySlipPresenter = new AddPaySlipPresenter(this);
+            this.DoubleBuffered = true;
             addPaySlipPresenter.RetriveData(content, value, date, status);
 
         }
@@ -79,7 +84,6 @@ namespace _DoAn.Views.Accountant
 
         private void btnSave_Click_1(object sender, EventArgs e)
         {
-            AddPaySlipPresenter addPaySlipPresenter = new AddPaySlipPresenter(this);
             if (this._isNew)
             {
                 if (addPaySlipPresenter.AddDataToDB())

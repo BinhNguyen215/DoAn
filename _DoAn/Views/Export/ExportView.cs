@@ -18,6 +18,9 @@ namespace _DoAn.Views.Export
         private string _id;
         private string _name;
         private string _message;
+
+        ExportPresenter exportPresenter ;
+
         public string ProductId { get => tbxProductID.Text; set => tbxProductID.Text = value; }
         string IExport.ProductName { get => tbxProductName.Text; set => tbxProductName.Text = value; }
 
@@ -39,6 +42,8 @@ namespace _DoAn.Views.Export
         public ExportView()
         {
             InitializeComponent();
+            this.DoubleBuffered = true;
+            exportPresenter = new ExportPresenter(this);
         }
 
         public ExportView(string id, string name) : this()
@@ -48,7 +53,6 @@ namespace _DoAn.Views.Export
         }
         private void ExportForm_Load(object sender, EventArgs e)
         {
-            ExportPresenter exportPresenter = new ExportPresenter(this);
             exportPresenter.GetProduct();
             btnAdd.Enabled = false;
             btnEdit.Enabled = false;
@@ -60,7 +64,6 @@ namespace _DoAn.Views.Export
 
         private void dtgvProduct_DoubleClick(object sender, EventArgs e)
         {
-            ExportPresenter exportPresenter = new ExportPresenter(this);
             exportPresenter.RetriveProduct(dtgvProduct.CurrentRow.Index, dtgvProduct.CurrentRow.Cells[0].Value.ToString()
                 , dtgvProduct.CurrentRow.Cells[1].Value.ToString(), dtgvProduct.CurrentRow.Cells[2].Value.ToString());
             btnAdd.Enabled = true;
@@ -73,7 +76,6 @@ namespace _DoAn.Views.Export
 
         private void btnAdd_Click_1(object sender, EventArgs e)
         {
-            ExportPresenter exportPresenter = new ExportPresenter(this);
             if (exportPresenter.AddDataToDataGridview())
             {
                 exportPresenter.CalculateTotalPrice();
@@ -94,7 +96,6 @@ namespace _DoAn.Views.Export
         private void dtgvData_DoubleClick(object sender, EventArgs e)
         {
 
-            ExportPresenter exportPresenter = new ExportPresenter(this);
             exportPresenter.RetriveData(dtgvData.CurrentRow.Index, dtgvData.CurrentRow.Cells[0].Value.ToString()
                 , dtgvData.CurrentRow.Cells[1].Value.ToString(), dtgvData.CurrentRow.Cells[2].Value.ToString(),
                 dtgvData.CurrentRow.Cells[3].Value.ToString(), dtgvData.CurrentRow.Cells[4].Value.ToString());
@@ -105,7 +106,6 @@ namespace _DoAn.Views.Export
         }
         private void btnEdit_Click_1(object sender, EventArgs e)
         {
-            ExportPresenter exportPresenter = new ExportPresenter(this);
             if (exportPresenter.EditData(dtgvData.CurrentRow.Index))
             {
                 btnEdit.Enabled = false;
@@ -123,7 +123,6 @@ namespace _DoAn.Views.Export
 
         private void btnDelete_Click_1(object sender, EventArgs e)
         {
-            ExportPresenter exportPresenter = new ExportPresenter(this);
             if (exportPresenter.DeleteDatainDataGridview())
             {
                 btnAdd.Enabled = false;
@@ -142,7 +141,6 @@ namespace _DoAn.Views.Export
 
         private void btnCreate_Click(object sender, EventArgs e)
         {
-            ExportPresenter exportPresenter = new ExportPresenter(this);
             if (exportPresenter.CheckReason())
             {
                 if (exportPresenter.AddDataToDB())
@@ -186,7 +184,6 @@ namespace _DoAn.Views.Export
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            ExportPresenter exportPresenter = new ExportPresenter(this);
             if (exportPresenter.ClearData())
             {
                 btnAdd.Enabled = false;
@@ -202,20 +199,17 @@ namespace _DoAn.Views.Export
         }
         public void Createform(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
-            ExportPresenter exportPresenter = new ExportPresenter(this);
             exportPresenter.Print(e);
         }
 
         private void tbxSearch_TextChanged(object sender, EventArgs e)
         {
-            ExportPresenter exportPresenter = new ExportPresenter(this);
             exportPresenter.SearchInformation(tbxSearch.Text);
         }
 
         private void tbxQuantity_TextChanged(object sender, EventArgs e)
         {
 
-            ExportPresenter exportPresenter = new ExportPresenter(this);
             if (System.Text.RegularExpressions.Regex.IsMatch(tbxQuantity.Text, "[^0-9]"))
             {
                 MessageBox.Show("Please enter only numbers.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);

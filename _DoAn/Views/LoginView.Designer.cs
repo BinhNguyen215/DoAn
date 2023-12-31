@@ -255,7 +255,26 @@
             this.tbxUsername.Modified = false;
             this.tbxUsername.Multiline = false;
             this.tbxUsername.Name = "tbxUsername";
-            
+            stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(198)))), ((int)(((byte)(53)))));
+            stateProperties1.FillColor = System.Drawing.Color.Empty;
+            stateProperties1.ForeColor = System.Drawing.Color.Empty;
+            stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tbxUsername.OnActiveState = stateProperties1;
+            stateProperties2.BorderColor = System.Drawing.Color.Silver;
+            stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties2.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.tbxUsername.OnDisabledState = stateProperties2;
+            stateProperties3.BorderColor = System.Drawing.Color.Silver;
+            stateProperties3.FillColor = System.Drawing.Color.Empty;
+            stateProperties3.ForeColor = System.Drawing.Color.Empty;
+            stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tbxUsername.OnHoverState = stateProperties3;
+            stateProperties4.BorderColor = System.Drawing.Color.Silver;
+            stateProperties4.FillColor = System.Drawing.Color.White;
+            stateProperties4.ForeColor = System.Drawing.Color.Empty;
+            stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tbxUsername.OnIdleState = stateProperties4;
             this.tbxUsername.Padding = new System.Windows.Forms.Padding(3);
             this.tbxUsername.PasswordChar = '\0';
             this.tbxUsername.PlaceholderForeColor = System.Drawing.Color.Silver;
@@ -313,7 +332,26 @@
             this.tbxPassword.Modified = false;
             this.tbxPassword.Multiline = false;
             this.tbxPassword.Name = "tbxPassword";
-           
+            stateProperties5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(198)))), ((int)(((byte)(53)))));
+            stateProperties5.FillColor = System.Drawing.Color.Empty;
+            stateProperties5.ForeColor = System.Drawing.Color.Empty;
+            stateProperties5.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tbxPassword.OnActiveState = stateProperties5;
+            stateProperties6.BorderColor = System.Drawing.Color.Silver;
+            stateProperties6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties6.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.tbxPassword.OnDisabledState = stateProperties6;
+            stateProperties7.BorderColor = System.Drawing.Color.Silver;
+            stateProperties7.FillColor = System.Drawing.Color.Empty;
+            stateProperties7.ForeColor = System.Drawing.Color.Empty;
+            stateProperties7.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tbxPassword.OnHoverState = stateProperties7;
+            stateProperties8.BorderColor = System.Drawing.Color.Silver;
+            stateProperties8.FillColor = System.Drawing.Color.White;
+            stateProperties8.ForeColor = System.Drawing.Color.Empty;
+            stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tbxPassword.OnIdleState = stateProperties8;
             this.tbxPassword.Padding = new System.Windows.Forms.Padding(3);
             this.tbxPassword.PasswordChar = '●';
             this.tbxPassword.PlaceholderForeColor = System.Drawing.Color.Silver;
@@ -356,7 +394,11 @@
             this.btnSignin.ColorContrastOnClick = 45;
             this.btnSignin.ColorContrastOnHover = 45;
             this.btnSignin.Cursor = System.Windows.Forms.Cursors.Hand;
-         
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.btnSignin.CustomizableEdges = borderEdges1;
             this.btnSignin.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnSignin.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnSignin.DisabledFillColor = System.Drawing.Color.Empty;
@@ -614,7 +656,7 @@
             this.linkLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel2.Location = new System.Drawing.Point(226, 301);
             this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(248, 29);
+            this.linkLabel2.Size = new System.Drawing.Size(170, 20);
             this.linkLabel2.TabIndex = 12;
             this.linkLabel2.TabStop = true;
             this.linkLabel2.Text = "Show the password ";
@@ -704,7 +746,11 @@
             this.tbnConfirm.ColorContrastOnClick = 45;
             this.tbnConfirm.ColorContrastOnHover = 45;
             this.tbnConfirm.Cursor = System.Windows.Forms.Cursors.Hand;
-           
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.tbnConfirm.CustomizableEdges = borderEdges2;
             this.tbnConfirm.DialogResult = System.Windows.Forms.DialogResult.None;
             this.tbnConfirm.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.tbnConfirm.DisabledFillColor = System.Drawing.Color.Empty;
@@ -974,7 +1020,6 @@
             this.panelForgotpassword.Controls.Add(this.btnChangePassword);
             this.panelForgotpassword.Controls.Add(this.tbxOTP);
             this.panelForgotpassword.Controls.Add(this.tbxUsernameFP);
-            this.panelForgotpassword.Controls.Add(this.lbForgotpassword);
             this.panelForgotpassword.Controls.Add(this.bunifuShapes2);
             this.panelForgotpassword.Controls.Add(this.lbResend);
             this.panelForgotpassword.Location = new System.Drawing.Point(528, 81);
@@ -1026,7 +1071,11 @@
             this.btnChangePassword.ColorContrastOnClick = 45;
             this.btnChangePassword.ColorContrastOnHover = 45;
             this.btnChangePassword.Cursor = System.Windows.Forms.Cursors.Hand;
-            
+            borderEdges3.BottomLeft = true;
+            borderEdges3.BottomRight = true;
+            borderEdges3.TopLeft = true;
+            borderEdges3.TopRight = true;
+            this.btnChangePassword.CustomizableEdges = borderEdges3;
             this.btnChangePassword.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnChangePassword.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnChangePassword.DisabledFillColor = System.Drawing.Color.Empty;
@@ -1130,7 +1179,26 @@
             this.tbxOTP.Modified = false;
             this.tbxOTP.Multiline = false;
             this.tbxOTP.Name = "tbxOTP";
-          
+            stateProperties17.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(198)))), ((int)(((byte)(53)))));
+            stateProperties17.FillColor = System.Drawing.Color.Empty;
+            stateProperties17.ForeColor = System.Drawing.Color.Empty;
+            stateProperties17.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tbxOTP.OnActiveState = stateProperties17;
+            stateProperties18.BorderColor = System.Drawing.Color.Silver;
+            stateProperties18.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties18.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.tbxOTP.OnDisabledState = stateProperties18;
+            stateProperties19.BorderColor = System.Drawing.Color.Silver;
+            stateProperties19.FillColor = System.Drawing.Color.Empty;
+            stateProperties19.ForeColor = System.Drawing.Color.Empty;
+            stateProperties19.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tbxOTP.OnHoverState = stateProperties19;
+            stateProperties20.BorderColor = System.Drawing.Color.Silver;
+            stateProperties20.FillColor = System.Drawing.Color.White;
+            stateProperties20.ForeColor = System.Drawing.Color.Empty;
+            stateProperties20.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tbxOTP.OnIdleState = stateProperties20;
             this.tbxOTP.Padding = new System.Windows.Forms.Padding(3);
             this.tbxOTP.PasswordChar = '\0';
             this.tbxOTP.PlaceholderForeColor = System.Drawing.Color.Silver;
@@ -1188,7 +1256,26 @@
             this.tbxUsernameFP.Modified = false;
             this.tbxUsernameFP.Multiline = false;
             this.tbxUsernameFP.Name = "tbxUsernameFP";
-          
+            stateProperties21.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(198)))), ((int)(((byte)(53)))));
+            stateProperties21.FillColor = System.Drawing.Color.Empty;
+            stateProperties21.ForeColor = System.Drawing.Color.Empty;
+            stateProperties21.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tbxUsernameFP.OnActiveState = stateProperties21;
+            stateProperties22.BorderColor = System.Drawing.Color.Silver;
+            stateProperties22.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties22.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.tbxUsernameFP.OnDisabledState = stateProperties22;
+            stateProperties23.BorderColor = System.Drawing.Color.Silver;
+            stateProperties23.FillColor = System.Drawing.Color.Empty;
+            stateProperties23.ForeColor = System.Drawing.Color.Empty;
+            stateProperties23.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tbxUsernameFP.OnHoverState = stateProperties23;
+            stateProperties24.BorderColor = System.Drawing.Color.Silver;
+            stateProperties24.FillColor = System.Drawing.Color.White;
+            stateProperties24.ForeColor = System.Drawing.Color.Empty;
+            stateProperties24.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tbxUsernameFP.OnIdleState = stateProperties24;
             this.tbxUsernameFP.Padding = new System.Windows.Forms.Padding(3);
             this.tbxUsernameFP.PasswordChar = '\0';
             this.tbxUsernameFP.PlaceholderForeColor = System.Drawing.Color.Silver;

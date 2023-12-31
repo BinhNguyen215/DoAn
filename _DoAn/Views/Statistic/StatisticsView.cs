@@ -17,9 +17,13 @@ namespace _DoAn.Views.Statistic
 {
     public partial class StatisticsView : Form, IStatistics
     {
+        StatisticPresenter statisticPresenter;
+
         public StatisticsView()
         {
             InitializeComponent();
+            this.DoubleBuffered = true;
+            statisticPresenter = new StatisticPresenter(this);
         }
         public string Date
         {
@@ -93,7 +97,6 @@ namespace _DoAn.Views.Statistic
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
-            StatisticPresenter statisticPresenter = new StatisticPresenter(this);
             statisticPresenter.RetriveData();
             ChartMoneydaybydate();
         }
@@ -114,13 +117,11 @@ namespace _DoAn.Views.Statistic
         }
         public void Createform(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
-            StatisticPresenter statisticPresenter = new StatisticPresenter(this);
             statisticPresenter.Print(e);
         }
 
         private void StatisticsView_Load(object sender, EventArgs e)
         {
-            StatisticPresenter statisticPresenter = new StatisticPresenter(this);
             string sDay = DateTime.Now.ToString("dd");
             string sMonth = DateTime.Now.ToString("MM");
             string sYear = DateTime.Now.ToString("yyyy");
@@ -151,14 +152,12 @@ namespace _DoAn.Views.Statistic
             string sYear = DateTime.Now.ToString("yyyy");
             if (lbViewAllBill.Text == "View all statuses")
             {
-                StatisticPresenter statisticPresenter = new StatisticPresenter(this);
                 statisticPresenter.GetSaleStatus();
                 lbViewAllBill.Text = "View sale results";
                 lbstt.Text = "Sale statuses";
             }
             else
             {
-                StatisticPresenter statisticPresenter = new StatisticPresenter(this);
                 statisticPresenter.GetTopResult(sMonth,sYear);
                 lbViewAllBill.Text = "View all statuses";
                 lbstt.Text = "Sale Results";

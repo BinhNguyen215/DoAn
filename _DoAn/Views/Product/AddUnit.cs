@@ -19,6 +19,7 @@ namespace _DoAn.Views.Product
         {
             addUnitPresenter = new AddUnitPresenter(this);
             InitializeComponent();
+            this.DoubleBuffered = true;
         }
 
         public AddUnit(Form parent)

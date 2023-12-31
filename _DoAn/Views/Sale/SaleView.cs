@@ -31,6 +31,7 @@ namespace _DoAn.Views.Sale
         {
             InitializeComponent();
             salePresenter = new SalePresenter(this);
+            this.DoubleBuffered = true;
         }
 
         public string Find

@@ -20,6 +20,7 @@ namespace _DoAn.Views.Product
         {
             productPresenter = new ProductPresenter(this);
             InitializeComponent();
+            this.DoubleBuffered = true;
         }
 
         private void txtProductId_TextChanged(object sender, EventArgs e)

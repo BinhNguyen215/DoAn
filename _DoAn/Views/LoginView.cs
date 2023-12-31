@@ -30,6 +30,7 @@ namespace _DoAn.Views
             tbxPassword.PasswordChar = '\0';
             tbxNewPassword.PasswordChar = '\0';
             tbxNewPassword2.PasswordChar = '\0';
+            this.DoubleBuffered = true;
         }
 
 
@@ -189,22 +190,26 @@ namespace _DoAn.Views
 
         private void tbxPassword_TextChange(object sender, EventArgs e)
         {
-            tbxPassword.PasswordChar = string.IsNullOrEmpty(tbxPassword.Text) ? '\0' : '●';
-            string allowedChars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789~!@#$%^&*()_-.";
-            
-            string currentText = tbxPassword.Text;
-            string newText = "";
-
-            foreach (char c in currentText)
+            if(checkShowHidePassword.Checked) tbxPassword.PasswordChar = '\0';
+            else
             {
-                if (allowedChars.Contains(c))
-                {
-                    newText += c;
-                }
-            }
+                tbxPassword.PasswordChar = string.IsNullOrEmpty(tbxPassword.Text) ? '\0' : '●';
+                string allowedChars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789~!@#$%^&*()_-.";
 
-            tbxPassword.Text = newText;
-            tbxPassword.SelectionStart = tbxPassword.Text.Length;
+                string currentText = tbxPassword.Text;
+                string newText = "";
+
+                foreach (char c in currentText)
+                {
+                    if (allowedChars.Contains(c))
+                    {
+                        newText += c;
+                    }
+                }
+
+                tbxPassword.Text = newText;
+                tbxPassword.SelectionStart = tbxPassword.Text.Length; 
+            }
         }
 
         private void checkShowHidePassword_CheckedChanged(object sender, Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs e)
@@ -226,5 +231,7 @@ namespace _DoAn.Views
         {
             tbxNewPassword.PasswordChar  = tbxNewPassword2.PasswordChar = checkShowHidePasswordCP.Checked ? '\0' : '●';
         }
+
+        
     }
 }
