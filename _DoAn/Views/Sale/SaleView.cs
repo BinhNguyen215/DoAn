@@ -24,6 +24,9 @@ namespace _DoAn.Views.Sale
     {
         SalePresenter salePresenter;
         private string _unit, _coef, _price;
+
+        Dictionary<string, string> _values = new Dictionary<string, string>();
+
         public SaleView()
         {
             InitializeComponent();
@@ -167,7 +170,6 @@ namespace _DoAn.Views.Sale
 
                         }
                     }
-
                     salePresenter.ClearData();
                     btnCreateBill.Enabled = false;
                     btnDelete.Enabled = false;
@@ -191,11 +193,10 @@ namespace _DoAn.Views.Sale
             salePresenter.Print(e);
         }
 
-
-
         private void btnDelete_Click_1(object sender, EventArgs e)
         {
             salePresenter.DeleteDatainDataGridview();
+            salePresenter.ClearInformation();
             salePresenter.CalculateTotalPrice();
             btnDelete.Enabled = false;
         }
@@ -269,19 +270,20 @@ namespace _DoAn.Views.Sale
         {
             btnCancel.Enabled = true;
             panelLv2.Show();
-            
-            if (salePresenter.AddDataToDataGridview())
+
+            if(salePresenter.AddDataToDataGridview())
             {
                 checkBoxLv2.Checked = checkBoxLv1.Checked = false;
+                salePresenter.CalculateTotalQuantity() ;
                 salePresenter.CalculateTotalPrice();
                 salePresenter.ClearInformation();
             }
-            
             lbLv1.Text = lbLv2.Text = "Undefine";
             lbSoldOutLv1.Visible = lbSoldOutLv2.Visible = false;
             btnAdd.Enabled = false;
             checkBoxLv2.Enabled = checkBoxLv1.Enabled = false;
             txtQuantities.Enabled = false;
+
         }
         private string _textEdit = "";
 
