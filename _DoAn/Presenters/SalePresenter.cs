@@ -98,7 +98,28 @@ namespace _DoAn.Presenters
             return true;
         }
 
-        
+        public void CalculateAfterAddToCart()
+        {
+            if (saleview.dgvCart.Rows.Count > 0)
+            {
+                foreach (DataGridViewRow row in saleview.dgvCart.Rows)
+                {
+                    if (row.Cells[0].Value.Equals(saleview.Product_id) && row.Cells[4].Value.Equals(saleview.lbUnitLv1))
+                    {
+                        saleview.ValueLv1 = (int.Parse(saleview.ValueLv1.Split(' ')[0]) - int.Parse(saleview.Quantities) - int.Parse(row.Cells[3].Value.ToString())).ToString();//box= box- a
+                        saleview.ValueLv2 = (int.Parse(saleview.ValueLv2.Split(' ')[0]) - int.Parse(saleview.Quantities) - (int.Parse(row.Cells[3].Value.ToString()) - int.Parse(saleview.Quantities)) * int.Parse(saleview.Coef)).ToString();// pill = pill -a/coef
+
+                    }
+                    else if (row.Cells[0].Value.Equals(saleview.Product_id) && row.Cells[4].Value.Equals(saleview.lbUnitLv2))
+                    {
+                        saleview.ValueLv2 = (int.Parse(saleview.ValueLv2.Split(' ')[0]) - int.Parse(saleview.Quantities) - int.Parse(row.Cells[3].Value.ToString())).ToString();//pill=pill-a
+                        saleview.ValueLv1 = (int.Parse(saleview.ValueLv1.Split(' ')[0]) - int.Parse(saleview.Quantities) - (int.Parse(row.Cells[3].Value.ToString()) - int.Parse(saleview.Quantities)) / int.Parse(saleview.Coef)).ToString();// box = box -a/coef
+
+                    }
+                    _values[saleview.Product_id] = saleview.ValueLv2.Split(' ')[0];
+                }
+            }
+        }
 
         public bool AddDataToDataGridview()//*
         {
@@ -164,6 +185,7 @@ namespace _DoAn.Presenters
                 }
                 else
                 {
+                    // ban dau chua co row ben dgvCart
                     _values[saleview.Product_id] =(int.Parse(saleview.ValueLv2.Split(' ')[0]) - int.Parse(saleview.Quantities)).ToString();
                     saleview.dgvCart.Rows.Add(saleview.Product_id, saleview.Product_Name, saleview.Price, saleview.Quantities, saleview.Unit_Name);
                     return true;

@@ -144,7 +144,7 @@ namespace _DoAn.Views.Sale
 
         private void btnCreateBill_Click(object sender, EventArgs e)
         {
-
+            salePresenter.CalculateAfterAddToCart();
             if (dgvCart.Rows.Count > 0)
             {
                 if (salePresenter.AddDataToDB())
