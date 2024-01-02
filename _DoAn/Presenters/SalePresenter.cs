@@ -74,7 +74,7 @@ namespace _DoAn.Presenters
                 saleview.lbUnitLv2 = unit2;
                 saleview.ValueLv1 = valueLv1;
                 if(valueLv2 != "")
-                saleview.ValueLv2 = (int.Parse(valueLv2) + int.Parse(valueLv1) *int.Parse(saleview.Coef)).ToString();
+                    saleview.ValueLv2 = (int.Parse(valueLv2) + int.Parse(valueLv1) *int.Parse(saleview.Coef)).ToString();
 
                 if (saleview.dgvCart.Rows.Count > 0)
                 {
@@ -101,7 +101,7 @@ namespace _DoAn.Presenters
         {
             string _2rdQuantities;
 
-            if (saleview.Unit_Name == saleview.lbUnitLv2 && int.Parse(saleview.Quantities) >= int.Parse(saleview.Coef))
+            if (saleview.lbUnitLv1 != saleview.lbUnitLv2 && saleview.Unit_Name == saleview.lbUnitLv2 && int.Parse(saleview.Quantities) >= int.Parse(saleview.Coef))
             {
                 bool found = false;
                 _2rdQuantities = (int.Parse(saleview.Quantities) / int.Parse(saleview.Coef)).ToString();

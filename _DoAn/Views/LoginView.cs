@@ -214,6 +214,7 @@ namespace _DoAn.Views
 
         private void checkShowHidePassword_CheckedChanged(object sender, Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs e)
         {
+
             tbxPassword.PasswordChar = checkShowHidePassword.Checked ? '\0' : '●';
         }
 
