@@ -467,7 +467,8 @@ namespace _DoAn.Views.Sale
             }
         }
 
-       
+    
+
         private void checkBoxLv1_CheckedChanged2(object sender, BunifuRadioButton.CheckedChangedEventArgs e)
         {
             if (checkBoxLv1.Checked == true)

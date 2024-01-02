@@ -24,7 +24,7 @@ namespace _DoAn
         {         
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new SaleView());
+            Application.Run(new LoginView());
         }
 
     }
