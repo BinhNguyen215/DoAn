@@ -374,6 +374,7 @@ namespace _DoAn.Views.Sale
         private void dgvListProduct_DoubleClick(object sender, EventArgs e)
         {
             checkBoxLv2.Enabled = checkBoxLv1.Enabled = true;
+            checkBoxLv2.Checked = checkBoxLv1.Checked = false;
             txtQuantities.Enabled = true;
             if (IsPressedCreateBill)
             {
