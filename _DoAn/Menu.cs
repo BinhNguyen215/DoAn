@@ -20,6 +20,8 @@ using _DoAn.Views.Product;
 using Bunifu.UI.WinForms.BunifuButton;
 using _DoAn.Views.Employee;
 using _DoAn.Custom;
+using _DoAn.Presenters.cImport;
+using _DoAn.Presenters;
 
 namespace _DoAn
 {
@@ -218,7 +220,7 @@ namespace _DoAn
                 btnAccountant.Enabled = true;
                 btnHome.Enabled = true;
             }
-
+            UpdateImport();
         }
 
         private void btnIn4_Click(object sender, EventArgs e)
@@ -261,6 +263,15 @@ namespace _DoAn
                 e.Cancel = true; // Hủy việc đóng form nếu shouldClose là false và lý do là người dùng đang cố gắng đóng form
             }
 
+        }
+        private void UpdateImport()
+        {
+            ImportPresenter importPresenter = new ImportPresenter(this);
+            if (importPresenter.CheckQuantity())
+            {
+                imgExclamation.Show();
+            }
+            else  imgExclamation.Hide(); 
         }
     }
 }

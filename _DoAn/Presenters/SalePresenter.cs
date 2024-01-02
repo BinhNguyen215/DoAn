@@ -74,7 +74,7 @@ namespace _DoAn.Presenters
                 saleview.lbUnitLv2 = unit2;
                 saleview.ValueLv1 = valueLv1;
                 if(valueLv2 != "")
-                saleview.ValueLv2 = (int.Parse(valueLv2) + int.Parse(valueLv1) *int.Parse(saleview.Coef)).ToString();
+                    saleview.ValueLv2 = (int.Parse(valueLv2) + int.Parse(valueLv1) *int.Parse(saleview.Coef)).ToString();
 
                 if (saleview.dgvCart.Rows.Count > 0)
                 {
