@@ -15,11 +15,18 @@ namespace _DoAn.Presenters
     {
         IImportView importview;
         Import import = new Import();
+        private Menu menu;
 
         public ImportPresenter(IImportView view)
         {
             importview = view;
         }
+
+        public ImportPresenter(Menu menu)
+        {
+            this.menu = menu;
+        }
+
         public bool GetProduct()
         {
             DataTable dt = new DataTable();
