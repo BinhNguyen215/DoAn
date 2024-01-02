@@ -13,7 +13,7 @@ using Twilio.Rest.Api.V2010.Account;
 
 namespace _DoAn.Presenters
 {
-    public  class LoginPresenter
+    public class LoginPresenter
     {
         ILoginView loginView;
         string storedOTP;

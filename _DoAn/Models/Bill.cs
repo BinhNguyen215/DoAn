@@ -126,8 +126,15 @@ namespace _DoAn.Models
             SqlCommand cmd = new SqlCommand(query);
             cmd.Parameters.Add("@quan1", SqlDbType.Int);
             cmd.Parameters["@quan1"].Value = Convert.ToInt32(quanLv1);
-            cmd.Parameters.Add("@quan2", SqlDbType.Int);
-            cmd.Parameters["@quan2"].Value = Convert.ToInt32(quanLv2);
+            if (!string.IsNullOrEmpty(quanLv2))
+            {
+                cmd.Parameters.Add("@quan2", SqlDbType.Int);
+                cmd.Parameters["@quan2"].Value = Convert.ToInt32(quanLv2);
+            }
+            else
+            {
+                cmd.Parameters.Add("@quan2", SqlDbType.Int).Value = DBNull.Value;
+            }
             cmd.Parameters.Add("@id", SqlDbType.Int);
             cmd.Parameters["@id"].Value = Convert.ToInt32(id);
 

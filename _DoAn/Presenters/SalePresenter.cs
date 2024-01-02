@@ -83,13 +83,12 @@ namespace _DoAn.Presenters
                         if (row.Cells[0].Value.Equals(saleview.Product_id) && row.Cells[4].Value.Equals(saleview.lbUnitLv1))
                         {
                             saleview.ValueLv1 = (int.Parse(saleview.ValueLv1) - int.Parse(row.Cells[3].Value.ToString())).ToString();//box= box- a
-                            saleview.ValueLv2 = (int.Parse(saleview.ValueLv2) - int.Parse(row.Cells[3].Value.ToString()) * int.Parse(saleview.Coef)).ToString();
-                            
+                           if( saleview.ValueLv2 != "Undefine") saleview.ValueLv2 = (int.Parse(saleview.ValueLv2) - int.Parse(row.Cells[3].Value.ToString()) * int.Parse(saleview.Coef)).ToString();
                         }
                         else if (row.Cells[0].Value.Equals(saleview.Product_id) && row.Cells[4].Value.Equals(saleview.lbUnitLv2))
                         {
                             //Code cũ
-                            saleview.ValueLv2 = (int.Parse(saleview.ValueLv2) - int.Parse(row.Cells[3].Value.ToString())).ToString();//pill=pill-a
+                            if (saleview.ValueLv2 != "Undefine") saleview.ValueLv2 = (int.Parse(saleview.ValueLv2) - int.Parse(row.Cells[3].Value.ToString())).ToString();//pill=pill-a
                             saleview.ValueLv1 = (int.Parse(saleview.ValueLv2) / int.Parse(saleview.Coef)).ToString();//BOX = box/coef
                         }
                     }
@@ -101,7 +100,7 @@ namespace _DoAn.Presenters
         {
             string _2rdQuantities;
 
-            if (saleview.Unit_Name == saleview.lbUnitLv2 && int.Parse(saleview.Quantities) >= int.Parse(saleview.Coef))
+            if (saleview.lbUnitLv1!=saleview.lbUnitLv2&&saleview.Unit_Name == saleview.lbUnitLv2 && int.Parse(saleview.Quantities) >= int.Parse(saleview.Coef))
             {
                 bool found = false;
                 _2rdQuantities = (int.Parse(saleview.Quantities) / int.Parse(saleview.Coef)).ToString();
@@ -123,7 +122,6 @@ namespace _DoAn.Presenters
                     {
                         saleview.dgvCart.Rows.Add(saleview.Product_id, saleview.Product_Name, (int.Parse(saleview.Price)*int.Parse(saleview.Coef)).ToString(), _2rdQuantities, saleview.lbUnitLv1);
                     }
-
                 }
                 else
                 {
@@ -132,17 +130,15 @@ namespace _DoAn.Presenters
             }
             if (CheckInformation())
             {
-                
                 bool found= false;
                 if (saleview.dgvCart.Rows.Count > 0)
                 {
                     foreach (DataGridViewRow row in saleview.dgvCart.Rows)
                     {
-
                         if (row.Cells[0].Value.ToString().Equals(saleview.Product_id) && row.Cells[4].Value.Equals(saleview.Unit_Name))
                         {
                             row.Cells[3].Value = (int.Parse(saleview.Quantities) + int.Parse(row.Cells[3].Value.ToString()));
-                            if (saleview.Unit_Name == saleview.lbUnitLv2 && int.Parse(row.Cells[3].Value.ToString()) >= int.Parse(saleview.Coef))///fix sau khi thêm
+                            if (saleview.lbUnitLv1 != saleview.lbUnitLv2&&saleview.Unit_Name == saleview.lbUnitLv2 && int.Parse(row.Cells[3].Value.ToString()) >= int.Parse(saleview.Coef))///fix sau khi thêm
                             {
                                 _2rdQuantities = (int.Parse(row.Cells[3].Value.ToString()) / int.Parse(saleview.Coef)).ToString();
                                 row.Cells[3].Value = (int.Parse(row.Cells[3].Value.ToString()) % int.Parse(saleview.Coef)).ToString();
@@ -159,7 +155,6 @@ namespace _DoAn.Presenters
                             found = true;
                             return true;
                         }
-
                     }
                     if (!found&&saleview.Quantities!="0")
                     {
@@ -198,7 +193,6 @@ namespace _DoAn.Presenters
             saleview.BillValue = sum.ToString();
             return true;
         }
-
         public bool CheckInformation()
         {
             if (string.IsNullOrEmpty(saleview.Product_id))
@@ -216,7 +210,6 @@ namespace _DoAn.Presenters
             else
                 return true;
         }
-
         public bool SearchInformation(string search)
         {
             DataTable dt = new DataTable();
@@ -252,7 +245,7 @@ namespace _DoAn.Presenters
             {
                     if (int.Parse(quantity) < int.Parse(_coef)) //A dưới giá trị Coef
                     {
-                        if (int.Parse(quantity) < int.Parse(quanLv2))//--------------------------- Trường hợp 1 : A < giá trị data.Pill
+                        if (int.Parse(quantity) <= int.Parse(quanLv2))//--------------------------- Trường hợp 1 : A < giá trị data.Pill
                         {
                             quanLv2 = (int.Parse(quanLv2) - int.Parse(quantity)).ToString(); // Pil=Pill -a
                         }
@@ -264,7 +257,7 @@ namespace _DoAn.Presenters
                     }
                     else// A trên giá trị Coef
                     {
-                        if (int.Parse(quantity) % int.Parse(_coef) < int.Parse(quanLv2)) //Trường hợp 3: nếu a % coef dưới giá trị dataBill
+                        if (int.Parse(quantity) % int.Parse(_coef) <= int.Parse(quanLv2)) //Trường hợp 3: nếu a % coef dưới giá trị dataBill
                         {
                             quanLv2 = (int.Parse(quanLv2) - int.Parse(quantity) % int.Parse(_coef)).ToString(); // Pil = Pil- a %coef
                             quanLv1 = (int.Parse(quanLv1) - int.Parse(quantity) / int.Parse(_coef)).ToString();//Box= box -a/Coef
@@ -300,15 +293,17 @@ namespace _DoAn.Presenters
                          row.Cells[3].Value.ToString(), row.Cells[4].Value.ToString());
                         //
                         DataTable dt = bill.getUnit(row.Cells[0].Value.ToString());
-                        string whatUnit = "";
-                        if (row.Cells[4].Value.ToString() == dt.Rows[0]["Unit_Namelv1"].ToString())
-                        {
-                            whatUnit = "lv1";
-                        }
-                        else
-                        {
-                            whatUnit = "lv2";
-                        }
+                        string whatUnit = "lv1";
+                        
+                            if (row.Cells[4].Value.ToString() == dt.Rows[0]["Unit_Namelv1"].ToString())
+                            {
+                                whatUnit = "lv1";
+                            }
+                            else
+                            {
+                                if (dt.Rows[0]["Unit_Namelv1"] != dt.Rows[0]["Unit_Namelv2"])
+                                whatUnit = "lv2";
+                            }
                         quanLv1 = bill.getQuanLv1(row.Cells[0].Value.ToString());
                         quanLv2 = bill.getQuanLv2(row.Cells[0].Value.ToString());
                         CalculateUpdate(row.Cells[0].Value.ToString(), row.Cells[3].Value.ToString(),whatUnit);
