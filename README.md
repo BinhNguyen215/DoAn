@@ -1,6 +1,7 @@
 ![UIT](https://img.shields.io/badge/from-UIT%20VNUHCM-blue?style=for-the-badge&link=https%3A%2F%2Fwww.uit.edu.vn%2F)
 # GREEN PHARMACY
 
+![Green   Blue Medical Center Logo (1)](https://github.com/BinhNguyen215/DoAn/assets/127644891/6a5d075a-4b89-49c7-8ac0-526e96557dd9)
 
 
 ## Table of contents
