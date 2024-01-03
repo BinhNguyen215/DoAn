@@ -12,7 +12,7 @@
 ## Giới thiệu chung
 Tác giả: 
 - Member: Nguyễn Sơn Bình - 22520135 - [Github](https://github.com/BinhNguyen215)
-- Member: Nguyễn Nguyên Ngọc Anh - 22520135 - [Github](https://github.com/AndreNguyen03)
+- Member: Nguyễn Nguyên Ngọc Anh - 22520058 - [Github](https://github.com/AndreNguyen03)
 - Member: Hồ Phạm Phú An - 22520013 - [Github](https://github.com/FhuAnn)
 - Member: Đặng Quốc Bảo - 22520098 - [Github](https://github.com/bdquoc)
 
