@@ -86,6 +86,8 @@ Một số framwork mà đồ án sử dụng:
 
 ## Hướng dẫn setup
 Đăng kí Bunifu UI Framework
+username: supernguyen2000@gmail.com
+key: deb1d35d238d6d6907fefa706c8fa1b4
 
 Khi download gói file setup.rar về -> chạy file setup.exe -> hiện hộp thoại chọn địa chỉ lưu file set up dữ liệu -> chọn next -> next -> close. Vào địa chỉ vừa chọn -> cấp quyền cho hai file MedicineDB.mdf và MedicineDB.log như sau:
 
@@ -96,3 +98,4 @@ B2: Click vào từng dòng một, chọn Edit, Click chọn tất cả option
 B3: Lặp lại thực hiện bước 2 cho tới khi không còn dòng nào 
 
 B4: Ấn ok
+Vấn đề chưa giải quyết được: Đã xuất ra fiel setup nhưng do lỗi phiên bản sql tại máy người dùng khác máy remote.
