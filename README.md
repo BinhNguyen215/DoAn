@@ -12,7 +12,7 @@
 ## Giới thiệu chung
 Tác giả: 
 - Member: Nguyễn Sơn Bình - 22520135 - [Github](https://github.com/BinhNguyen215)
-- Member: Nguyễn Nguyên Ngọc Anh - 22520135 - [Github](https://github.com/AndreNguyen03)
+- Member: Nguyễn Nguyên Ngọc Anh - 22520058 - [Github](https://github.com/AndreNguyen03)
 - Member: Hồ Phạm Phú An - 22520013 - [Github](https://github.com/FhuAnn)
 - Member: Đặng Quốc Bảo - 22520098 - [Github](https://github.com/bdquoc)
 
@@ -86,8 +86,10 @@ Một số framwork mà đồ án sử dụng:
 
 ## Hướng dẫn setup
 Đăng kí Bunifu UI Framework
-username: supernguyen2000@gmail.com
-key: deb1d35d238d6d6907fefa706c8fa1b4
+
+username: greenuitk17@gmail.com
+
+key: 622cc9d75bb56c33b811113802245e24
 
 Khi clone code về, vào App.config sửa connectionstring thành đường dẫn của máy local và attach MedicineDB.mdf vào SSMS (run as administrator).
 
