@@ -72,6 +72,7 @@ namespace _DoAn.Presenters
 
                 const string fromPass = "qcqa slmu vkbr edha";
                 const string subject = "OTP code";
+                storedOTP = generateOTP();
                 string body = $"Your OTP code is {storedOTP}";
 
                 var smtp = new SmtpClient
@@ -93,7 +94,6 @@ namespace _DoAn.Presenters
                     smtp.Send(message);
                 }
                 MessageBox.Show("OTP is now send to mail!");
-                storedOTP = generateOTP();
             }
             catch (Exception ex)
             {
