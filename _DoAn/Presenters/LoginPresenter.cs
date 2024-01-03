@@ -67,7 +67,7 @@ namespace _DoAn.Presenters
         {
             try
             { 
-                var fromAddress = new MailAddress("kiseryouta2003@gmail.com");
+                var fromAddress = new MailAddress("kiseryouta2003@gmail.com", "Green Pharmacy");
                 var toAddress = new MailAddress(email);
 
                 const string fromPass = "qcqa slmu vkbr edha";
@@ -93,6 +93,7 @@ namespace _DoAn.Presenters
                     smtp.Send(message);
                 }
                 MessageBox.Show("OTP is now send to mail!");
+                storedOTP = generateOTP();
             }
             catch (Exception ex)
             {

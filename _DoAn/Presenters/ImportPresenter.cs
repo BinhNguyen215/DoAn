@@ -312,6 +312,6 @@ namespace _DoAn.Presenters
             dt = import.GetProductOffer();
             return dt.Rows.Count > 0;
         }
-    }
+    }       
 }
 
