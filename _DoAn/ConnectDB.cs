@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
@@ -12,9 +13,10 @@ namespace _DoAn
     public class ConnectDB
     {
         SqlConnection connect;
+        string connectionString = ConfigurationManager.ConnectionStrings["SqlConnection"].ConnectionString;
         public ConnectDB()
         {
-            this.connect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\MedicineDB.mdf;Integrated Security=True");
+            this.connect = new SqlConnection(connectionString);
         }
         public DataTable GetData(string sqlquery)
         {
