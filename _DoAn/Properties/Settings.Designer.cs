@@ -48,8 +48,8 @@ namespace _DoAn.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP-7UOGDK8A;Initial Catalog=MedicineDB_Github;Integrated Security" +
-            "=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-7R66M1N\\SQLEXPRESS;Initial Catalog=D:\\NEW FOLDER\\DOAN\\_DOAN\\M" +
+            "EDICINEDB.MDF;Integrated Security=True")]
         public string SqlConnection {
             get {
                 return ((string)(this["SqlConnection"]));

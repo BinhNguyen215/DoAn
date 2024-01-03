@@ -16,7 +16,7 @@ namespace _DoAn
         string connectionString = ConfigurationManager.ConnectionStrings["SqlConnection"].ConnectionString;
         public ConnectDB()
         {
-            this.connect = new SqlConnection(connectionString);
+            this.connect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\MedicineDB.mdf;Integrated Security=True");
         }
         public DataTable GetData(string sqlquery)
         {
