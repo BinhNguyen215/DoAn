@@ -220,7 +220,7 @@ namespace _DoAn
                 btnAccountant.Enabled = true;
                 btnHome.Enabled = true;
             }
-            UpdateImport();
+            //UpdateImport();
         }
 
         private void btnIn4_Click(object sender, EventArgs e)
@@ -264,14 +264,14 @@ namespace _DoAn
             }
 
         }
-        private void UpdateImport()
-        {
-            ImportPresenter importPresenter = new ImportPresenter(this);
-            if (importPresenter.CheckQuantity())
-            {
-                imgExclamation.Show();
-            }
-            else  imgExclamation.Hide(); 
-        }
+        //private void UpdateImport()
+        //{
+        //    ImportPresenter importPresenter = new ImportPresenter(this);
+        //    if (importPresenter.CheckQuantity())
+        //    {
+        //        imgExclamation.Show();
+        //    }
+        //    else  imgExclamation.Hide(); 
+        //}
     }
 }
