@@ -32,5 +32,27 @@ namespace _DoAn.Properties {
                 return ((string)(this["ComesticDBConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP-7UOGDK8A;Initial Catalog=MedicineDB_Github;Integrated Security" +
+            "=True")]
+        public string MedicineDB_GithubConnectionString {
+            get {
+                return ((string)(this["MedicineDB_GithubConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\MedicineDB.md" +
+            "f;Integrated Security=True")]
+        public string MedicineDB_Git {
+            get {
+                return ((string)(this["MedicineDB_Git"]));
+            }
+        }
     }
 }

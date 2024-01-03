@@ -1,5 +1,9 @@
 ![UIT](https://img.shields.io/badge/from-UIT%20VNUHCM-blue?style=for-the-badge&link=https%3A%2F%2Fwww.uit.edu.vn%2F)
 # GREEN PHARMACY
+
+![Green   Blue Medical Center Logo (1)](https://github.com/BinhNguyen215/DoAn/assets/127644891/6a5d075a-4b89-49c7-8ac0-526e96557dd9)
+
+
 ## Table of contents
 * [Giới thiệu chung](#Giới-thiệu-chung)
 * [Các chức năng](#Các-chức-năng)
@@ -81,3 +85,14 @@ Một số framwork mà đồ án sử dụng:
 * Framework RJCodeAdvance
 
 ## Hướng dẫn setup
+Đăng kí Bunifu UI Framework
+
+Khi download gói file setup.rar về -> chạy file setup.exe -> hiện hộp thoại chọn địa chỉ lưu file set up dữ liệu -> chọn next -> next -> close. Vào địa chỉ vừa chọn -> cấp quyền cho hai file MedicineDB.mdf và MedicineDB.log như sau:
+
+B1: Chuột phải vào biểu tượng chọn. Properties, chọn mục Security 
+
+B2: Click vào từng dòng một, chọn Edit, Click chọn tất cả option
+
+B3: Lặp lại thực hiện bước 2 cho tới khi không còn dòng nào 
+
+B4: Ấn ok
